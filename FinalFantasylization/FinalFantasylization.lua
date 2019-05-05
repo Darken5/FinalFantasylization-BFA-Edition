@@ -1,5 +1,5 @@
 -- FinalFantasylization by Darken5
--- Version 7.0.0
+-- Version 8.0.0
 ------------------------------------------------------------
 
 -- FinalFantasylization requires this version of FFZlib:

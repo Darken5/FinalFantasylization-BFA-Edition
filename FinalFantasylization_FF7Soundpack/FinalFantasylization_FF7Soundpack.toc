@@ -1,9 +1,9 @@
-## Interface: 80000
-## Version: 7.0.0 
-## Title: FinalFantasylization [|cff8ec3e6Final Fantasy 7|r] |ff33007.0.0|r
+## Interface: 80100
+## Version: 8.0.0 
+## Title: FinalFantasylization [|cff8ec3e6Final Fantasy 7|r] |ff33008.0.0|r
 ## Notes: Soundpack for FinalFantasylization based on Final Fantasy 7.
 ## Original Author: Nackle on Shadowmoon(EU) - Alliance ; Renewed by: LorDestinY - Ad Aeternum.Horde@Frostmane.EU - http://www.ad-aeternum.org/	 WOTLK By Hellfox; Kilrogg EU - Alliance
-## Author: Hellfire and Darken5
+## Author: Darken5 and  stevenm281
 ## This Soundpack: Darken5
 ## SavedVariables:
 ## Dependencies: FinalFantasylization 

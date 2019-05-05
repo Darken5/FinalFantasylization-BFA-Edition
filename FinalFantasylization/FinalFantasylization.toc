@@ -1,8 +1,9 @@
-## Interface: 80000
-## Version: 7.0.0
-## Title: FinalFantasylization 7.0.0
+## Interface: 80100
+## Version: 8.0.0
+## Title: FinalFantasylization 8.0.0
 ## Notes: FinalFantasylization plays music and sounds based on different in-game events
-## Author: Hellfire and Darken5
+## Original Author: Nackle on Shadowmoon(EU) - Alliance ; Renewed by: LorDestinY - Ad Aeternum.Horde@Frostmane.EU - http://www.ad-aeternum.org/	 WOTLK By Hellfox; Kilrogg EU - Alliance
+## Author: Darken5 and stevenm281
 ## SavedVariablesPerCharacter: FinalFantasylizationOptions, CoreSavedVariable
 
 embeds.xml
