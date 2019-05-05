@@ -1,0 +1,8 @@
+------------------------------------------------------------------------
+r219 | nevcairiel | 2018-02-04 18:11:37 +0000 (Sun, 04 Feb 2018) | 1 line
+Changed paths:
+   M /trunk/LibBabble-Faction-3.0.lua
+
+Automated LibBabble re-generation from the localization system
+------------------------------------------------------------------------
+

@@ -1,0 +1,52 @@
+------------------------------------------------------------------------
+r104 | Resike | 2017-06-24 13:42:31 -0500 (Sat, 24 Jun 2017) | 1 line
+Changed paths:
+   M /trunk/LibBossIDs-1.0.lua
+
+- HFC fixes.
+------------------------------------------------------------------------
+r103 | Yoshimo | 2017-06-24 07:43:08 -0500 (Sat, 24 Jun 2017) | 1 line
+Changed paths:
+   M /trunk/LibBossIDs-1.0.toc
+
+Update TOC for 7.2
+------------------------------------------------------------------------
+r102 | Yoshimo | 2017-06-24 07:41:58 -0500 (Sat, 24 Jun 2017) | 4 lines
+Changed paths:
+   M /trunk/LibBossIDs-1.0.lua
+
+Add IDs for
+- Nighthold
+- Trial of Valor
+- Tomb of Sargeras
+------------------------------------------------------------------------
+r101 | Resike | 2017-01-04 18:00:22 -0600 (Wed, 04 Jan 2017) | 1 line
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+
+- Updating externals.
+------------------------------------------------------------------------
+r100 | talyrius | 2016-09-22 20:32:40 -0500 (Thu, 22 Sep 2016) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+   M /trunk/LibBossIDs-1.0.lua
+   M /trunk/LibBossIDs-1.0.toc
+
+- Discontinued using Ace3's LibStub
+- Updated for Patch 7.0.3: Legion
+------------------------------------------------------------------------
+r99 | zarnivoop | 2016-08-31 11:39:01 -0500 (Wed, 31 Aug 2016) | 1 line
+Changed paths:
+   M /trunk/LibBossIDs-1.0.toc
+
+.toc update
+------------------------------------------------------------------------
+r98 | zarnivoop | 2016-08-31 11:37:07 -0500 (Wed, 31 Aug 2016) | 1 line
+Changed paths:
+   M /trunk/LibBossIDs-1.0.lua
+
+added Legion bosses (from Kamarika)
+------------------------------------------------------------------------
+
