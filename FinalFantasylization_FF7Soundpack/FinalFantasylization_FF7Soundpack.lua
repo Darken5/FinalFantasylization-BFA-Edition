@@ -1171,11 +1171,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Zone Event:
 --		Player is Resting
 	function FinalFantasylization_EasternKingdomsBurningSteppesResting()
-		FinalFantasylization_Sleeping()
+		FinalFantasylization_Sleeping();
 	end
 --		Player is Swimming
 	function FinalFantasylization_EasternKingdomsBurningSteppesSwimming()
-		FinalFantasylization_Swimming(2)
+		FinalFantasylization_Swimming(2);
 	end
 --	TOWNS:
 --	Alliance:
@@ -1280,11 +1280,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Zone Events:
 --		Player is Resting
 	function FinalFantasylization_EasternKingdomsCapeofStranglethornResting()
-		FinalFantasylization_Sleeping()
+		FinalFantasylization_Sleeping();
 	end
 --		Player is Swimming
 	function FinalFantasylization_EasternKingdomsCapeofStranglethornSwimming()
-		FinalFantasylization_Swimming(1)
+		FinalFantasylization_Swimming(1);
 	end
 --	TOWNS:
 --	Alliance:
@@ -1334,7 +1334,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Janeiro's Point
 	function FinalFantasylization_SubzoneJaneirosPoint()
 		FinalFantasylization_PlayMusic(S ..Misc1Song);
-		FinalFantasylization_debugMsg("Misc1Song")
+		FinalFantasylization_debugMsg("Misc1Song");
 	end
 --	Mistvale Valley
 	function FinalFantasylization_SubzoneMistvaleValley()
@@ -1382,11 +1382,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	Zone Events:
 --		Player is Resting
 	function FinalFantasylization_EasternKingdomsDeadwindPassResting()
-		FinalFantasylization_Sleeping()
+		FinalFantasylization_Sleeping();
 	end
 --		Player is Swimming
 	function FinalFantasylization_EasternKingdomsDeadwindPassSwimming()
-		FinalFantasylization_Swimming(2)
+		FinalFantasylization_Swimming(2);
 	end
 --	SUBZONES:
 --	Abandoned Kirin Tor Camp
@@ -7448,9 +7448,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Snowden Chalet
 	function FinalFantasylization_NeutralTownSnowdenChalet()
-		FinalFantasylization_NeutralTowns();
+		FinalFantasylization_NeutralTowns();	
 	end
-	
 --	SUBZONES:
 --	Ban'Thallow Barrow Den
 	function FinalFantasylization_SubzoneBanThallowBarrowDen()
