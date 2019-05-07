@@ -7449,6 +7449,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --		Snowden Chalet
 	function FinalFantasylization_NeutralTownSnowdenChalet()
 		FinalFantasylization_NeutralTowns();
+	end
 	
 --	SUBZONES:
 --	Ban'Thallow Barrow Den
