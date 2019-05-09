@@ -863,7 +863,7 @@ function FinalFantasylization_GetMusic()
 			elseif ( uiMapID == 110 ) then
 				FinalFantasylization_EasternKingdomsZones_SilvermoonCity(SubZoneName)
 		-- Stormwind City
-			elseif ( uiMapID == 84 ) and not IsInInstance() then
+			elseif ( ( uiMapID == 84 ) and not IsInInstance() ) then
 				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)
 		-- Swamp of Sorrows
 			elseif ( uiMapID == 51 ) then
@@ -995,8 +995,15 @@ function FinalFantasylization_GetMusic()
 				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
 
 	-- Debug: Zone Catch-all
-			elseif not ( IsInInstance() )then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. ZoneName .. " - (ID " .. uiMapID .. ") " .. "not in FinalFantasylization")
+		-- Will not ping for Continent uiMapID's 
+		-- AKA Kalimdor, Eastern Kingdoms, Outland, Northrend, Pandaria, Draenor, Broken Isles, Zandalar, Kul Tiras, Argus, The Maelstrom
+			elseif not ( IsInInstance() or ( uiMapID == 12 ) or ( uiMapID == 13 ) or ( uiMapID == 101 ) or ( uiMapID == 113 ) or ( uiMapID == 424 ) or ( uiMapID == 572 ) or ( uiMapID == 619 ) or ( uiMapID == 875 ) or ( uiMapID == 876 ) or ( uiMapID == 905 ) or ( uiMapID == 948 ) ) then
+				if CurrentZoneID ~= uiMapID then
+					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. ZoneName .. " - (ID " .. ( tostring(uiMapID) ) .. ") " .. "not in FinalFantasylization")
+					CurrentZoneID = uiMapID
+				else
+					return
+				end
 			end
 		end
 --###########################################################################################
@@ -1192,28 +1199,37 @@ end
 --'==========================================================================================
 function FinalFantasylization_JumpOrAscendStart()
 	if IsMounted("player") and not UnitOnTaxi("player") and FinalFantasylizationOptions.ChocoboKweh == true then
-		currentSpeed, runSpeed, flightSpeed, swimSpeed = GetUnitSpeed("player");
-		if UnitAura("player", "Running Wild") ~= nil then
-			if currentSpeed == 0 then
-				FinalFantasylization_WorgenHowl();
+		currentSpeed, _, _, _ = GetUnitSpeed("player");
+		
+		local mountcount = C_MountJournal.GetNumDisplayedMounts()
+		local mountName = nil
+		i = 1
+		repeat 
+			local creatureName, spellID, _, active, _, _, _, _, _, _, _, mountID = C_MountJournal.GetMountInfoByID(i)
+			i = i + 1
+			if type(creatureName) == "string" then
+				mountName = string.lower(creatureName)
 			end
-		elseif UnitAura("player", "Felsaber") ~= nil then
+		until ( active == true )
+		-- Debug
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. creatureName .. ": SpellID = " .. spellID .. ", mountID = " .. mountID )
+		-- Chocobo Kweh
+		if string.match(mountName,'strider') then
+			FinalFantasylization_ChocoboKweh();
+		-- Felsaber Roar
+		elseif string.match(mountName,'felsaber') then 
 			if currentSpeed == 0 then
 				FinalFantasylization_FelsaberRoar();
 			end
 		else
-			local mountcount = C_MountJournal.GetNumDisplayedMounts()
-			local mountName = nil
-			i = 1
-			repeat 
-				local creatureName, spellID, _, active, _, _, _, _, _, _, _, mountID = C_MountJournal.GetMountInfoByID(i)
-				i = i + 1
-				if type(creatureName) == "string" then
-					mountName = string.lower(creatureName)
+			for i=1,40 do
+				local spellName, _, _, _, _, _, _, _, _, spellId = UnitBuff("player",i)
+				if ( spellName == "Running Wild" ) or ( spellID == 87840 ) then
+					if currentSpeed == 0 then
+						FinalFantasylization_WorgenHowl();
+						FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Worgen Howl - " .. spellName .. " - " .. spellID)
+					end
 				end
-			until ( active == true ) 
-			if string.match(mountName,'strider') then
-				FinalFantasylization_ChocoboKweh();
 			end
 		end
 	end
