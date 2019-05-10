@@ -141,6 +141,7 @@ function FinalFantasylization_OnEvent(self, event, ...)
 		FinalFantasylization_RegenGain = true
 		FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. LeaveCombat)
 		FinalFantasylization_CurrentZone = nil
+		FinalFantasylization_CurrentZoneID = nil
 	elseif event == "UNIT_AURA" then
 	elseif event == "ZONE_CHANGED" then
 	elseif event == "ZONE_CHANGED_INDOORS" then
@@ -178,6 +179,7 @@ function FinalFantasylization_ClearMusicState()
 	FinalFantasylization_InFriendlyArea = false
 	-- Zone
 	FinalFantasylization_CurrentZone = nil
+	FinalFantasylization_CurrentZoneID = nil
 	-- General Events --
 	FinalFantasylization_PlayerIsWorlding = false
 	FinalFantasylization_PlayerIsSleeping = false
@@ -566,6 +568,7 @@ function FinalFantasylization_GetMusic()
 
 	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
 		uiMapID = C_Map.GetBestMapForUnit("player")
+		UiMapDetails = C_Map.GetMapInfo(uiMapID)
 		ZoneName = GetZoneText();
 		ZoneName2 = GetRealZoneText();
 		MinimapZoneName = GetMinimapZoneText();
@@ -581,9 +584,7 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Victory)
 			FinalFantasylization_Fanfare() -- Battle fanfare call
 			FinalFantasylization_RegenGain = false
-			if FinalFantasylization_PlayerIsCombat == true then
-				StopMusic();
-			end
+			StopMusic();
 		end
 --'==========================================================================================
 --'	Music
@@ -783,7 +784,8 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' Eastern Kingdoms Zones
 --'==========================================================================================
-		if not ( ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) ) then
+		if not ( ( UiMapDetails == nil ) or ( UiMapDetails.mapType == ( 0 or 1 or 2 ) ) or ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) ) then
+			-- Debug (Print ZoneName and uiMapID)
 		-- Abyssal Depths
 			if ( uiMapID == 204 ) then
 				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)
@@ -907,7 +909,7 @@ function FinalFantasylization_GetMusic()
 			elseif ( uiMapID == 89 ) then
 				FinalFantasylization_KalimdorZones_Desolace(SubZoneName)
 		-- Durotar - Valley of Trials ( Orc ) / Echo Isles ( Troll )
-			elseif ( uiMapID == 1 ) or ( uiMapID == 461 ) or ( uiMapID == 463 ) then
+			elseif ( uiMapID == ( 1 or 2 or 3 or 4 or 5 or 6 or 461 or 463 or 464) ) then
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
 		-- Dustwallow Marsh
 			elseif ( uiMapID == 70 ) then
@@ -994,15 +996,29 @@ function FinalFantasylization_GetMusic()
 			elseif ( ( uiMapID == 710) or ( uiMapID == 711) or ( uiMapID == 712) ) then
 				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
 
-	-- Debug: Zone Catch-all
-		-- Will not ping for Continent uiMapID's 
-		-- AKA Kalimdor, Eastern Kingdoms, Outland, Northrend, Pandaria, Draenor, Broken Isles, Zandalar, Kul Tiras, Argus, The Maelstrom
-			elseif not ( IsInInstance() or ( uiMapID == 12 ) or ( uiMapID == 13 ) or ( uiMapID == 101 ) or ( uiMapID == 113 ) or ( uiMapID == 424 ) or ( uiMapID == 572 ) or ( uiMapID == 619 ) or ( uiMapID == 875 ) or ( uiMapID == 876 ) or ( uiMapID == 905 ) or ( uiMapID == 948 ) ) then
-				if CurrentZoneID ~= uiMapID then
-					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. ZoneName .. " - (ID " .. ( tostring(uiMapID) ) .. ") " .. "not in FinalFantasylization")
-					CurrentZoneID = uiMapID
-				else
-					return
+-- Debug: Zone Catch-all
+			elseif not ( IsInInstance() ) and FinalFantasylizationOptions.Debug == true and FinalFantasylization_CurrentZoneID ~= uiMapID then
+				local uiMapInfo = C_Map.GetMapInfo(uiMapID)				
+				FinalFantasylization_CurrentZoneID = uiMapID
+				local mapType = nil
+				if uiMapInfo.mapType == 0 then mapType = "Cosmic";
+				elseif uiMapInfo.mapType == 1 then mapType = "World";
+				elseif uiMapInfo.mapType == 2 then mapType = "Continent";
+				elseif uiMapInfo.mapType == 3 then mapType = "Zone";
+				elseif uiMapInfo.mapType == 4 then mapType = "Dungeon";
+				elseif uiMapInfo.mapType == 5 then mapType = "Micro";
+				elseif uiMapInfo.mapType == 6 then mapType = "Orphan";
+				end
+				if uiMapInfo.mapType == 3 then
+					FinalFantasylization_debugMsg(FFZlib.Color.Orange .. "Zone Error: " .. uiMapInfo.name .. " - (ID " .. ( tostring(uiMapInfo.mapID) ) .. ") not in FinalFantasylization")
+					PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
+				elseif uiMapInfo.mapType == ( 5 or 6 ) then
+					local uiParentMapInfo = C_Map.GetMapInfo(uiMapInfo.parentMapID)
+					FinalFantasylization_debugMsg(FFZlib.Color.Orange .. "Zone Error: " .. mapType .. " mapID detected " .. uiMapInfo.name .. " - (ID " .. ( tostring(uiMapInfo.mapID) ) .. ") in " .. uiParentMapInfo.name .. " - (ID " .. ( tostring(uiParentMapInfo.mapID) ) .. ")")
+					PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
+				elseif uiMapInfo.mapType == ( 0 or 1 or 2 or 4 ) then
+					FinalFantasylization_debugMsg(FFZlib.Color.Red .. "ZONE ERROR!!!: " .. mapType .. " mapID detected " .. uiMapInfo.name .. " - (ID " .. ( tostring(uiMapInfo.mapID) ) .. "). Please! Report this error!")
+					PlaySound(16264, "Master", false) -- "No. I must not fail. Again" - The Black Knight
 				end
 			end
 		end
