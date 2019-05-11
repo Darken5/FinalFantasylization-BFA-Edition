@@ -42,6 +42,7 @@ LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("FinalFantasylization", {
 
 function FinalFantasylization_OnLoad()
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_LEAVING_WORLD") -- Fires when the player logs out or exits a world area.
+	FinalFantasylizationFrame:RegisterEvent("PLAYER_ENTERING_WORLD") -- Fired when the player enters the world, enters/leaves an instance, or respawns at a graveyard. Also fires any other time the player sees a loading screen. 
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_ALIVE") -- This event fires after PLAYER_ENTERING_WORLD
 	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED") -- Fired when the player enters a new zone. Zones are the smallest named subdivions of the game world and are contained within areas (also called regions). Whenever the text over the minimap changes, this event is fired. 
 	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED_INDOORS") -- Fired when a player enters a new zone within a city. 
@@ -111,7 +112,7 @@ end
 local startingFunc
 local startFinalfantasylization = false
 function FinalFantasylization_OnEvent(self, event, ...)
-	if event == "PLAYER_ALIVE" then
+	if event == "PLAYER_ENTERING_WORLD" then
 		CoreSavedVariable = (CoreSavedVariable or "ff7")
 		startingFunc = _G["SoundPack" .. CoreSavedVariable .. "_SetEnabled"]
 		if startingFunc then
@@ -568,8 +569,8 @@ function FinalFantasylization_GetMusic()
 
 	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
 		uiMapID = C_Map.GetBestMapForUnit("player")
-		UiMapDetails = C_Map.GetMapInfo(uiMapID)
-		ZoneName = GetZoneText();
+		uiMapInfo = C_Map.GetMapInfo(uiMapID)
+		ZoneName = uiMapInfo.name
 		ZoneName2 = GetRealZoneText();
 		MinimapZoneName = GetMinimapZoneText();
 		SubZoneName = GetSubZoneText();
@@ -784,103 +785,105 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' Eastern Kingdoms Zones
 --'==========================================================================================
-		if not ( ( UiMapDetails == nil ) or ( UiMapDetails.mapType == ( 0 or 1 or 2 ) ) or ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) ) then
-			-- Debug (Print ZoneName and uiMapID)
+		if not ( ( uiMapInfo == nil ) or ( uiMapInfo.mapType == ( 0 or 1 or 2 ) ) or ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) ) then
+			if uiMapInfo.mapType == ( 5 or 6 ) then
+				uiMapInfo = C_Map.GetMapInfo(uiMapInfo.parentMapID)
+			end
 		-- Abyssal Depths
-			if ( uiMapID == 204 ) then
+			if ( uiMapInfo.mapID == 204 ) then
 				FinalFantasylization_EasternKingdomsZones_AbyssalDepths(SubZoneName)
 		-- Arathi Highlands
-			elseif ( uiMapID == 14 ) then
+			elseif ( uiMapInfo.mapID == 14 ) then
 				FinalFantasylization_EasternKingdomsZones_ArathiHighlands(SubZoneName)
 		-- Badlands
-			elseif ( uiMapID == 15 ) then
+			elseif ( uiMapInfo.mapID == 15 ) then
 				FinalFantasylization_EasternKingdomsZones_Badlands(SubZoneName)
 		-- Blasted Lands
-			elseif ( uiMapID == 17 ) then
+			elseif ( uiMapInfo.mapID == 17 ) then
 				FinalFantasylization_EasternKingdomsZones_BlastedLands(SubZoneName)
 		-- Burning Steppes
-			elseif ( uiMapID == 36 ) then
+			elseif ( uiMapInfo.mapID == 36 ) then
 				FinalFantasylization_EasternKingdomsZones_BurningSteppes(SubZoneName)
 		-- Cape of Stranglethorn
-			elseif ( uiMapID == 210 ) then
+			elseif ( uiMapInfo.mapID == 210 ) then
 				FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn(SubZoneName)
 		-- Deadwind Pass
-			elseif ( uiMapID == 42 ) then
+			elseif ( uiMapInfo.mapID == 42 ) then
 				FinalFantasylization_EasternKingdomsZones_DeadwindPass(SubZoneName)
 		-- Deeprun Tram
-			elseif ( uiMapID == 499 ) then
+			elseif ( uiMapInfo.mapID == 499 ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
 		-- Dun Morogh - Coldridge Valley ( Dwarf ) / New Tinkertown ( Gnome )
-			elseif ( uiMapID == 27 ) or ( uiMapID == 427 ) or ( uiMapID == 469 ) then
+			elseif ( uiMapInfo.mapID == 27 ) or ( uiMapInfo.mapID == 427 ) or ( uiMapInfo.mapID == 469 ) then
 				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)
 		-- Duskwood
-			elseif ( uiMapID == 47 ) then
+			elseif ( uiMapInfo.mapID == 47 ) then
 				FinalFantasylization_EasternKingdomsZones_Duskwood(SubZoneName)
 		-- Elwynn Forest - Northshire ( Human )
-			elseif ( uiMapID == 37 ) or ( uiMapID == 425 ) then
+			elseif ( uiMapInfo.mapID == 37 ) or ( uiMapInfo.mapID == 425 ) then
 				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)
 		-- Eversong Woods - Sunstrider Isle ( Blood Elf )
-			elseif ( uiMapID == 94 ) or ( uiMapID == 467 ) then
+			elseif ( uiMapInfo.mapID == 94 ) or ( uiMapInfo.mapID == 467 ) then
 				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)
 		-- Ghostlands
-			elseif ( uiMapID == 95 ) then
+			elseif ( uiMapInfo.mapID == 95 ) then
 				FinalFantasylization_EasternKingdomsZones_Ghostlands(SubZoneName)
 		-- Gilneas
-			elseif ( uiMapID == 179 ) then
+			elseif ( uiMapInfo.mapID == 179 ) then
 				FinalFantasylization_EasternKingdomsZones_Gilneas(SubZoneName)
 		-- Gilneas City
-			elseif ( uiMapID == 202 ) then
+			elseif ( uiMapInfo.mapID == 202 ) then
 				FinalFantasylization_EasternKingdomsZones_GilneasCity(SubZoneName)
 		-- Hillsbrad Foothills
-			elseif ( uiMapID == 25 ) then
+			elseif ( uiMapInfo.mapID == 25 ) then
 				FinalFantasylization_EasternKingdomsZones_HillsbradFoothills(SubZoneName)
 		-- The Hinterlands
-			elseif ( uiMapID == 26 ) then
+			elseif ( uiMapInfo.mapID == 26 ) then
 				FinalFantasylization_EasternKingdomsZones_TheHinterlands(SubZoneName)
 		-- Ironforge
-			elseif ( uiMapID == 87 ) then
+			elseif ( uiMapInfo.mapID == 87 ) then
 				FinalFantasylization_EasternKingdomsZones_Ironforge(SubZoneName)
 		-- Loch Modan
-			elseif ( uiMapID == 48 ) then
+			elseif ( uiMapInfo.mapID == 48 ) then
 				FinalFantasylization_EasternKingdomsZones_LochModan(SubZoneName)
 		-- Northern Stranglethorn
-			elseif ( uiMapID == 50 ) then
+			elseif ( uiMapInfo.mapID == 50 ) then
 				FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn(SubZoneName)
 		-- Plaguelands: The Scarlet Enclave
-			elseif ( uiMapID == 124 ) then
+			elseif ( uiMapInfo.mapID == 124 ) then
 				FinalFantasylization_EasternKingdomsZones_PlaguelandsTheScarletEnclave(SubZoneName)
 		-- Redridge Mountains
-			elseif ( uiMapID == 49 ) then
+			elseif ( uiMapInfo.mapID == 49 ) then
 				FinalFantasylization_EasternKingdomsZones_RedridgeMountains(SubZoneName)
 		-- Ruins of Gilneas
-			elseif ( uiMapID == 217 ) then
+			elseif ( uiMapInfo.mapID == 217 ) then
 				FinalFantasylization_EasternKingdomsZones_RuinsofGilneas(SubZoneName)
 		-- Searing Gorge
-			elseif ( uiMapID == 32 ) then
+			elseif ( uiMapInfo.mapID == 32 ) then
 				FinalFantasylization_EasternKingdomsZones_SearingGorge(SubZoneName)
 		-- Silverpine Forest
-			elseif ( uiMapID == 21 ) then
+			elseif ( uiMapInfo.mapID == 21 ) then
 				FinalFantasylization_EasternKingdomsZones_SilverpineForest(SubZoneName)
 		-- Silvermoon City
-			elseif ( uiMapID == 110 ) then
+			elseif ( uiMapInfo.mapID == 110 ) then
 				FinalFantasylization_EasternKingdomsZones_SilvermoonCity(SubZoneName)
 		-- Stormwind City
-			elseif ( ( uiMapID == 84 ) and not IsInInstance() ) then
+			elseif ( ( uiMapInfo.mapID == 84 ) and not IsInInstance() ) then
 				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)
 		-- Swamp of Sorrows
-			elseif ( uiMapID == 51 ) then
+			elseif ( uiMapInfo.mapID == 51 ) then
 				FinalFantasylization_EasternKingdomsZones_SwampofSorrows(SubZoneName)
 		-- Tirisfal Glades - Deathknell ( Undead )
-			elseif ( uiMapID == 18 ) or ( uiMapID == 465 ) then
+			elseif ( uiMapInfo.mapID == 18 ) or ( uiMapInfo.mapID == 465 ) then
 				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)
 		-- Undercity
-			elseif ( uiMapID == 90 ) then
+			elseif ( uiMapInfo.mapID == 90 ) then
 				FinalFantasylization_EasternKingdomsZones_Undercity(SubZoneName)
 		-- Westfall
-			elseif ( uiMapID == 52 ) then
+			elseif ( uiMapInfo.mapID == 52 ) then
 				FinalFantasylization_EasternKingdomsZones_Westfall(SubZoneName)
 		-- Wetlands
-			elseif ( uiMapID == 56 ) then
+			elseif ( uiMapInfo.mapID == 56 ) then
 				FinalFantasylization_EasternKingdomsZones_Wetlands(SubZoneName)
 
 
@@ -888,76 +891,76 @@ function FinalFantasylization_GetMusic()
 --' Kalimdor Zones
 --'==========================================================================================
 		-- Ashenvale
-			elseif ( uiMapID == 63 ) then
+			elseif ( uiMapInfo.mapID == 63 ) then
 				FinalFantasylization_KalimdorZones_Ashenvale(SubZoneName)
 		-- Azshara
-			elseif ( uiMapID == 76 ) then
+			elseif ( uiMapInfo.mapID == 76 ) then
 				FinalFantasylization_KalimdorZones_Azshara(SubZoneName)
 		-- Azuremyst Isle - Ammen Vale ( Draenei )
-			elseif ( uiMapID == 97 ) or ( uiMapID == 468 ) then
+			elseif ( uiMapInfo.mapID == 97 ) or ( uiMapInfo.mapID == 468 ) then
 				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)
 		-- Bloodmyst Isle
-			elseif ( uiMapID == 106 ) then
+			elseif ( uiMapInfo.mapID == 106 ) then
 				FinalFantasylization_KalimdorZones_BloodmystIsle(SubZoneName)
 		-- Darkshore
-			elseif ( uiMapID == 62 ) then
+			elseif ( uiMapInfo.mapID == 62 ) then
 				FinalFantasylization_KalimdorZones_Darkshore(SubZoneName)
 		-- Darnassus
-			elseif ( uiMapID == 381 ) then
+			elseif ( uiMapInfo.mapID == 381 ) then
 				FinalFantasylization_KalimdorZones_Darnassus(SubZoneName)
 		-- Desolace
-			elseif ( uiMapID == 89 ) then
+			elseif ( uiMapInfo.mapID == 89 ) then
 				FinalFantasylization_KalimdorZones_Desolace(SubZoneName)
 		-- Durotar - Valley of Trials ( Orc ) / Echo Isles ( Troll )
-			elseif ( uiMapID == ( 1 or 2 or 3 or 4 or 5 or 6 or 461 or 463 or 464) ) then
+			elseif ( uiMapInfo.mapID == ( 1 or 461 or 463 ) ) then
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
 		-- Dustwallow Marsh
-			elseif ( uiMapID == 70 ) then
+			elseif ( uiMapInfo.mapID == 70 ) then
 				FinalFantasylization_KalimdorZones_DustwallowMarsh(SubZoneName)
 		-- The Exodar
-			elseif ( uiMapID == 103 ) then
+			elseif ( uiMapInfo.mapID == 103 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
 		-- Felwood
-			elseif ( uiMapID == 77 ) then
+			elseif ( uiMapInfo.mapID == 77 ) then
 				FinalFantasylization_KalimdorZones_Felwood(SubZoneName)
 		-- Feralas
-			elseif ( uiMapID == 69 ) then
+			elseif ( uiMapInfo.mapID == 69 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
 		-- Mulgore - Camp Narache ( Tauren )
-			elseif ( uiMapID == 7 ) or ( uiMapID == 462 ) then
+			elseif ( uiMapInfo.mapID == 7 ) or ( uiMapInfo.mapID == 462 ) then
 				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)
 		-- Northern Barrens
-			elseif ( uiMapID == 10 ) then
+			elseif ( uiMapInfo.mapID == 10 ) then
 				FinalFantasylization_KalimdorZones_NorthernBarrens(SubZoneName)
 		-- Orgrimmar
-			elseif ( uiMapID == 85 ) then
+			elseif ( uiMapInfo.mapID == 85 ) then
 				FinalFantasylization_KalimdorZones_Orgrimmar(SubZoneName)
 		-- Southern Barrens
-			elseif ( uiMapID == 199 ) then
+			elseif ( uiMapInfo.mapID == 199 ) then
 				FinalFantasylization_KalimdorZones_SouthernBarrens(SubZoneName)
 		-- Stonetalon Mountains
-			elseif ( uiMapID == 65 ) then
+			elseif ( uiMapInfo.mapID == 65 ) then
 				FinalFantasylization_KalimdorZones_StonetalonMountains(SubZoneName)
 		-- Tanaris
-			elseif ( uiMapID == 71 ) then
+			elseif ( uiMapInfo.mapID == 71 ) then
 				FinalFantasylization_KalimdorZones_Tanaris(SubZoneName)
 		-- Teldrassil - Shadowglen ( Night Elf )
-			elseif ( uiMapID == 57 ) or ( uiMapID == 460 ) then
+			elseif ( uiMapInfo.mapID == 57 ) or ( uiMapInfo.mapID == 460 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
 		-- Thousand Needles
-			elseif ( uiMapID == 64 ) then
+			elseif ( uiMapInfo.mapID == 64 ) then
 				FinalFantasylization_KalimdorZones_ThousandNeedles(SubZoneName)
 		-- Thunder Bluff
-			elseif ( uiMapID == 88 ) then
+			elseif ( uiMapInfo.mapID == 88 ) then
 				FinalFantasylization_KalimdorZones_ThunderBluff(SubZoneName)
 		-- Uldum
-			elseif ( uiMapID == 249 ) then
+			elseif ( uiMapInfo.mapID == 249 ) then
 				FinalFantasylization_KalimdorZones_Uldum(SubZoneName)
 		-- Un'Goro Crater
-			elseif ( uiMapID == 78 ) then
+			elseif ( uiMapInfo.mapID == 78 ) then
 				FinalFantasylization_KalimdorZones_UnGoroCrater(SubZoneName)
 		-- Winterspring
-			elseif ( uiMapID == 83 ) then
+			elseif ( uiMapInfo.mapID == 83 ) then
 				FinalFantasylization_KalimdorZones_Winterspring(SubZoneName)
 
 --'==========================================================================================
@@ -972,10 +975,10 @@ function FinalFantasylization_GetMusic()
 --' Maelstrom Zones
 --'==========================================================================================
 		-- Kezan ( Goblin )
-			elseif ( uiMapID == 194 ) then
+			elseif ( uiMapInfo.mapID == 194 ) then
 				FinalFantasylization_MaelstromZones_Kezan(SubZoneName)
 		-- The Lost Isles
-			elseif ( uiMapID == 174 ) then
+			elseif ( uiMapInfo.mapID == 174 ) then
 				FinalFantasylization_MaelstromZones_TheLostIsles(SubZoneName)
 
 --'==========================================================================================
@@ -990,36 +993,16 @@ function FinalFantasylization_GetMusic()
 --' The Broken Isles Zones
 --'==========================================================================================
 		-- Mardum, the Shattered Abyss ( Demon Hunter Start )
-			elseif ( uiMapID == 672 ) then
+			elseif ( uiMapInfo.mapID == 672 ) then
 				FinalFantasylization_TheBrokenIslesZones_MardumtheShatteredAbyss(SubZoneName)
 		-- Vault of the Wardens
-			elseif ( ( uiMapID == 710) or ( uiMapID == 711) or ( uiMapID == 712) ) then
+			elseif ( ( uiMapInfo.mapID == 710) or ( uiMapInfo.mapID == 711) or ( uiMapInfo.mapID == 712) ) then
 				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
 
 -- Debug: Zone Catch-all
-			elseif not ( IsInInstance() ) and FinalFantasylizationOptions.Debug == true and FinalFantasylization_CurrentZoneID ~= uiMapID then
-				local uiMapInfo = C_Map.GetMapInfo(uiMapID)				
-				FinalFantasylization_CurrentZoneID = uiMapID
-				local mapType = nil
-				if uiMapInfo.mapType == 0 then mapType = "Cosmic";
-				elseif uiMapInfo.mapType == 1 then mapType = "World";
-				elseif uiMapInfo.mapType == 2 then mapType = "Continent";
-				elseif uiMapInfo.mapType == 3 then mapType = "Zone";
-				elseif uiMapInfo.mapType == 4 then mapType = "Dungeon";
-				elseif uiMapInfo.mapType == 5 then mapType = "Micro";
-				elseif uiMapInfo.mapType == 6 then mapType = "Orphan";
-				end
-				if uiMapInfo.mapType == 3 then
-					FinalFantasylization_debugMsg(FFZlib.Color.Orange .. "Zone Error: " .. uiMapInfo.name .. " - (ID " .. ( tostring(uiMapInfo.mapID) ) .. ") not in FinalFantasylization")
-					PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
-				elseif uiMapInfo.mapType == ( 5 or 6 ) then
-					local uiParentMapInfo = C_Map.GetMapInfo(uiMapInfo.parentMapID)
-					FinalFantasylization_debugMsg(FFZlib.Color.Orange .. "Zone Error: " .. mapType .. " mapID detected " .. uiMapInfo.name .. " - (ID " .. ( tostring(uiMapInfo.mapID) ) .. ") in " .. uiParentMapInfo.name .. " - (ID " .. ( tostring(uiParentMapInfo.mapID) ) .. ")")
-					PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
-				elseif uiMapInfo.mapType == ( 0 or 1 or 2 or 4 ) then
-					FinalFantasylization_debugMsg(FFZlib.Color.Red .. "ZONE ERROR!!!: " .. mapType .. " mapID detected " .. uiMapInfo.name .. " - (ID " .. ( tostring(uiMapInfo.mapID) ) .. "). Please! Report this error!")
-					PlaySound(16264, "Master", false) -- "No. I must not fail. Again" - The Black Knight
-				end
+			elseif not ( IsInInstance() ) and FinalFantasylizationOptions.Debug == true and FinalFantasylization_CurrentZoneID ~= uiMapInfo.mapID then
+				FinalFantasylization_debugMsg(FFZlib.Color.Orange .. "Zone Error: " .. uiMapInfo.name .. " - (ID " .. ( tostring(uiMapInfo.mapID) ) .. ") not in FinalFantasylization")
+				PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
 			end
 		end
 --###########################################################################################
