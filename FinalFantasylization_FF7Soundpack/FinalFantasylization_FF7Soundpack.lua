@@ -6143,6 +6143,50 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 --'==========================================================================================
+--' Kalimdor Zones: Moonglade
+--'==========================================================================================
+--	Zone: Moonglade
+	function FinalFantasylization_KalimdorMoonglade()
+		local x = math.random(1, 2);
+			if x == 1 then
+				FinalFantasylization_ForestSong()
+			else
+				FinalFantasylization_ContestedSong()
+			end
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_KalimdorMoongladeResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_KalimdorMoongladeSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Neutral
+--		Nighthaven
+	function FinalFantasylization_NeutralTownNighthaven()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:
+--	Lake Elune'ara
+	function FinalFantasylization_SubzoneLakeEluneara()
+
+	end
+--	Shrine of Remulos
+	function FinalFantasylization_SubzoneShrineofRemulos()
+
+	end
+--	Stormrage Barrow Dens
+	function FinalFantasylization_SubzoneStormrageBarrowDens()
+
+	end
+--	Timbermaw Hold
+	function FinalFantasylization_SubzoneTimbermawHold()
+
+	end
+--'==========================================================================================
 --' Kalimdor Zones: Mulgore : Horde
 --'==========================================================================================
 --	Zone: Mulgore

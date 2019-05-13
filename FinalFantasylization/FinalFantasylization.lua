@@ -926,6 +926,9 @@ function FinalFantasylization_GetMusic()
 		-- Feralas
 			elseif ( uiMapInfo.mapID == 69 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
+		-- Moonglade
+			elseif ( uiMapInfo.mapID == 80 ) then
+				FinalFantasylization_KalimdorZones_Moonglade(SubZoneName)
 		-- Mulgore - Camp Narache ( Tauren )
 			elseif ( uiMapInfo.mapID == 7 ) or ( uiMapInfo.mapID == 462 ) then
 				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)

@@ -47,6 +47,7 @@
 	<Script file="KalimdorZone_TheExodar.lua"/>
 	<Script file="KalimdorZone_Felwood.lua"/>
 	<Script file="KalimdorZone_Feralas.lua"/>
+	<Script file="KalimdorZone_Moonglade.lua"/>
 	<Script file="KalimdorZone_Mulgore.lua"/>
 	<Script file="KalimdorZone_NorthernBarrens.lua"/>
 	<Script file="KalimdorZone_Orgrimmar.lua"/>
