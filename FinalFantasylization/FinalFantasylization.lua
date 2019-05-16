@@ -791,7 +791,12 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' Eastern Kingdoms Zones
 --'==========================================================================================
-		if not ( uiMapInfo == nil ) and not ( uiMapInfo.mapType == ( 0 or 1 or 2 ) ) and not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) then
+		if not ( uiMapInfo == nil ) and not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) then
+			if tostring(uiMapInfo.mapType) == ( "0" or "1" or "2" ) then
+				FinalFantasylization_ClearMusicState()
+				FinalFantasylization_GetMusic()
+				return
+			end
 			if uiMapInfo.mapType == ( 5 or 6 ) then
 				uiMapInfo = C_Map.GetMapInfo(uiMapInfo.parentMapID)
 			end
@@ -1213,14 +1218,14 @@ function FinalFantasylization_JumpOrAscendStart()
 		local mountName = nil
 		i = 1
 		repeat 
-			local creatureName, spellID, _, active, _, _, _, _, _, _, _, mountID = C_MountJournal.GetMountInfoByID(i)
+			creatureName, spellID, _, active, _, _, _, _, _, _, _, mountID = C_MountJournal.GetMountInfoByID(i)
 			i = i + 1
 			if type(creatureName) == "string" then
 				mountName = string.lower(creatureName)
 			end
 		until ( active == true )
 		-- Debug
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. creatureName .. ": SpellID = " .. spellID .. ", mountID = " .. mountID )
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. creatureName .. ": SpellID = " .. tostring(spellID) .. ", mountID = " .. tostring(mountID) )
 		-- Chocobo Kweh
 		if string.match(mountName,'strider') then
 			FinalFantasylization_ChocoboKweh();
