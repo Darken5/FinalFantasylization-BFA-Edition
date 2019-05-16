@@ -149,7 +149,7 @@ function FinalFantasylization_OnEvent(self, event, ...)
 	elseif event == "ZONE_CHANGED_NEW_AREA" then
 	elseif event == "PLAYER_UPDATE_RESTING" then
 	elseif event == "PLAYER_CAMPING" then
-		FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. PlayerCamping)
+		FinalFantasylization_PlayerCamping()
 	elseif event == "CHAT_MSG_COMBAT_FACTION_CHANGE" then
 		if FinalFantasylization_PlayerIsCombat == true then
 			FinalFantasylization_RegenGain = true
@@ -651,7 +651,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --'	World Event: Player in Combat, Mounted
 --'==========================================================================================
-		if IsMounted("player") and FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
+		if IsMounted("player") and FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
 			if FinalFantasylization_PlayerIsEscape == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. MountedEscape)
 				FinalFantasylization_MountedEscape()
@@ -730,7 +730,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --'	World Event: Player is Mounted in Hostile Zone
 --'==========================================================================================
-		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
+		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
 			if FinalFantasylization_PlayerIsHostileMounting == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HostileEscape)
 				FinalFantasylization_MountedEscape()
@@ -763,11 +763,17 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --'	World Event: Player is Mounted.. Chocobo!
 --'==========================================================================================
-		if IsMounted("player") and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and UnitAura("player", "Running Wild") == nil then
+		if IsMounted("player") and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
 			if FinalFantasylization_PlayerIsMounting == false then
+				for i=1,40 do
+					local spellName, _, _, _, _, _, _, _, _, spellId = UnitBuff("player",i)
+					if ( spellName == "Running Wild" ) or ( spellID == 87840 ) then
+						return
+					end
+				end
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Mounted)
 				FinalFantasylization_ClearMusicState()
-				FinalFantasylization_Mounted()
+				FinalFantasylization_Mounted()				
 			end
 			FinalFantasylization_IsPlaying = true
 			FinalFantasylization_PlayerIsMounting = true
@@ -785,7 +791,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' Eastern Kingdoms Zones
 --'==========================================================================================
-		if not ( ( uiMapInfo == nil ) or ( uiMapInfo.mapType == ( 0 or 1 or 2 ) ) or ( FinalFantasylization_PlayerIsFlying == true ) or ( FinalFantasylization_PlayerIsMounting == true ) or ( FinalFantasylization_PlayerIsHostileMounting == true ) or ( FinalFantasylization_PlayerIsEscape == true ) or ( FinalFantasylization_PlayerIsTaxi == true ) or ( FinalFantasylization_PlayerIsGhosting == true ) ) then
+		if not ( uiMapInfo == nil ) and not ( uiMapInfo.mapType == ( 0 or 1 or 2 ) ) and not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) then
 			if uiMapInfo.mapType == ( 5 or 6 ) then
 				uiMapInfo = C_Map.GetMapInfo(uiMapInfo.parentMapID)
 			end
@@ -1003,7 +1009,7 @@ function FinalFantasylization_GetMusic()
 				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
 
 -- Debug: Zone Catch-all
-			elseif not ( IsInInstance() ) and FinalFantasylizationOptions.Debug == true and FinalFantasylization_CurrentZoneID ~= uiMapInfo.mapID then
+			elseif not ( uiMapInfo.mapType == ( nil or 0 or 1 or 2 ) and ( IsInInstance() ) ) and FinalFantasylizationOptions.Debug == true and FinalFantasylization_CurrentZoneID ~= uiMapInfo.mapID then
 				FinalFantasylization_debugMsg(FFZlib.Color.Orange .. "Zone Error: " .. uiMapInfo.name .. " - (ID " .. ( tostring(uiMapInfo.mapID) ) .. ") not in FinalFantasylization")
 				PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
 			end
@@ -1235,6 +1241,19 @@ function FinalFantasylization_JumpOrAscendStart()
 			end
 		end
 	end
+end
+
+--'==========================================================================================
+--'	Player Camping
+--'==========================================================================================
+function FinalFantasylization_PlayerCamping()
+	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
+		if FinalFantasylizationOptions.Debug == true then
+			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. PlayerCamping)
+		end
+	FinalFantasylization_Camping()
+	end
+	FinalFantasylization_IsPlaying = true
 end
 
 --'==========================================================================================

@@ -122,6 +122,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		KillSound = "Kill.wav" -- Leave combat sound
 		CombatSound = "Combat.wav" -- Enter combat sound
 		LevelUpSong = "LevelUpSong.mp3" -- Level Up song
+		CampingSong = "CampingSong.mp3"
 		
 		-- Misc Songs --
 		Misc1Song = "Misc1Song.mp3" -- 
@@ -8476,6 +8477,14 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_Sleeping()
 		FinalFantasylization_PlayMusic(S .. SleepSong);
 		FinalFantasylization_debugMsg("SleepSong")
+	end
+	
+	--#############
+	--## CAMPING
+	--#############
+	function FinalFantasylization_Camping()
+		FinalFantasylization_PlayMusic(S .. CampingSong);
+		FinalFantasylization_debugMsg("CampingSong")
 	end
 
 	--#############
