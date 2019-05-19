@@ -126,6 +126,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		
 		-- Misc Songs --
 		Misc1Song = "Misc1Song.mp3" -- 
+		Misc2Song = "Misc2Song.mp3" -- 
 
 		
 	--#######################################
@@ -7871,6 +7872,161 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTwistingNether()
 		FinalFantasylization_PlayMusic(S .. BattleGround1);
 		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--'==========================================================================================
+--' The Broken Isles Zones: The Wandering Isle ( Pandaren Start )
+--'==========================================================================================
+--	Zone: The Wandering Isle
+	function FinalFantasylization_TheBrokenIslesTheWanderingIsle()
+		FinalFantasylization_PlayMusic(S .. Misc2Song);
+		FinalFantasylization_debugMsg("Misc2Song")
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_TheBrokenIslesTheWanderingIsleResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_TheBrokenIslesTheWanderingIsleSwimming()
+		FinalFantasylization_Swimming(1)
+	end
+--	TOWNS:
+--	Pandaren Start:
+--		Shang Xi Training Grounds
+	function FinalFantasylization_Pandaren_Start_ShangXiTrainingGrounds()
+		FinalFantasylization_PlayMusic(S .. Misc2Song);
+		FinalFantasylization_debugMsg("Misc2Song")
+	end
+--	Horde:
+--		Forlorn Hut
+	function FinalFantasylization_HordeTownForlornHut()
+		FinalFantasylization_HordeTowns();
+	end
+-- Neutral:
+--	Mandori Village
+	function FinalFantasylization_NeutralTownMandoriVillage()
+		FinalFantasylization_NeutralTowns();
+	end
+--	Morning Breeze Village
+	function FinalFantasylization_NeutralTownMorningBreezeVillage()
+		FinalFantasylization_NeutralTowns();
+	end
+--	Temple of Five Dawns
+	function FinalFantasylization_NeutralTownTempleofFiveDawns()
+		FinalFantasylization_NeutralTowns();
+	end
+--	The Dai-Lo Farmstead
+	function FinalFantasylization_NeutralTownTheDaiLoFarmstead()
+		FinalFantasylization_NeutralTowns();
+	end
+--	Wu-Song Village
+	function FinalFantasylization_NeutralTownWuSongVillage()
+		FinalFantasylization_NeutralTowns();
+	end
+--	SUBZONES:	
+--	Cave of Meditation
+	function FinalFantasylization_SubzoneCaveofMeditation()
+		FinalFantasylization_CaveSong()
+	end
+--	Chamber of Whispers
+	function FinalFantasylization_SubzoneChamberofWhispers()
+
+	end
+--	The Dawning Span
+	function FinalFantasylization_SubzoneTheDawningSpan()
+
+	end
+--	The Dawning Stair
+	function FinalFantasylization_SubzoneTheDawningStair()
+		FinalFantasylization_PlayMusic(S .. Alliance4Town);
+		FinalFantasylization_debugMsg("Alliance4Town")
+	end
+--	The Dawning Valley
+	function FinalFantasylization_SubzoneTheDawningValley()
+		FinalFantasylization_PlayMusic(S .. Alliance4Town);
+		FinalFantasylization_debugMsg("Alliance4Town")
+	end
+--	The Elders' Path
+	function FinalFantasylization_SubzoneTheEldersPath()
+
+	end
+--	Fe-Feng Village
+	function FinalFantasylization_SubzoneFeFengVillage()
+
+	end
+--	Fu's Pond
+	function FinalFantasylization_SubzoneFusPond()
+		FinalFantasylization_LakeSong()
+	end
+--	Liang's Retreat
+	function FinalFantasylization_SubzoneLiangsRetreat()
+		FinalFantasylization_PlayMusic(S .. Misc2Song);
+		FinalFantasylization_debugMsg("Misc2Song")
+	end
+--	Morning Breeze Lake
+	function FinalFantasylization_SubzoneMorningBreezeLake()
+		FinalFantasylization_LakeSong()
+	end
+--	Pei-Wu Forest
+	function FinalFantasylization_SubzonePeiWuForest()
+
+	end
+--		Pool of the Paw
+	function FinalFantasylization_SubzonePoolofthePaw()
+		FinalFantasylization_LakeSong()
+	end
+--	Ridge of Laughing Winds
+	function FinalFantasylization_SubzoneRidgeofLaughingWinds()
+
+	end
+--	The Rows
+	function FinalFantasylization_SubzoneTheRows()
+
+	end
+--		Ki-Han Brewery
+	function FinalFantasylization_SubzoneKiHanBrewery()
+
+	end
+--		Teeming Burrow
+	function FinalFantasylization_SubzoneTeemingBurrow()
+
+	end
+--		Virmen Grotto
+	function FinalFantasylization_SubzoneVirmenGrotto()
+
+	end
+--	Shrine of Dreaming Stones
+	function FinalFantasylization_SubzoneShrineofDreamingStones()
+
+	end
+--	Shrine of Five Dawns
+	function FinalFantasylization_SubzoneShrineofFiveDawns()
+
+	end
+--	Shrine of Inner-Light
+	function FinalFantasylization_SubzoneShrineofInnerLight()
+		FinalFantasylization_CaveSong()
+	end
+--	The Singing Pools
+	function FinalFantasylization_SubzoneTheSingingPools()
+		FinalFantasylization_LakeSong()
+	end
+--		Pool of Reflection
+	function FinalFantasylization_SubzonePoolofReflection()
+
+	end
+--	Tranquil Grotto
+	function FinalFantasylization_SubzoneTranquilGrotto()
+		FinalFantasylization_PlayMusic(S .. Alliance4Town);
+		FinalFantasylization_debugMsg("Alliance4Town")
+	end
+--	The Wood of Staves
+	function FinalFantasylization_SubzoneTheWoodofStaves()
+
+	end
+--	Wreck of the Skyseeker
+	function FinalFantasylization_SubzoneWreckoftheSkyseeker()
+
 	end
 --'==========================================================================================
 --' The Broken Isles Zones: Vault of the Wardens
