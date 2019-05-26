@@ -1,5 +1,5 @@
 -- FinalFantasylization by Darken5
--- Version 8.0.0
+-- Version 8.0.4
 ------------------------------------------------------------
 
 -- FinalFantasylization requires this version of FFZlib:
@@ -16,10 +16,6 @@ SZR = BSZ:GetReverseLookupTable()
 F = BF:GetLookupTable()
 FR = BF:GetReverseLookupTable()
 -------------------------------------
-local FinalFantasylization_RightClick = false;
-local FinalFantasylization_LeftClick = false;
-local FinalFantasylization_RightTurn = false;
-local FinalFantasylization_LeftTurn = false;
 
 local FinalFantasylization_IsPlaying = false
 
@@ -71,7 +67,6 @@ function FinalFantasylization_OnLoad()
 	FinalFantasylizationFrame:RegisterEvent("CHAT_MSG_CHANNEL") -- Fired when the client receives a channel message. 
 	FinalFantasylizationFrame:RegisterEvent("UPDATE_MOUSEOVER_UNIT") -- Fires whenever you mouse over any NPC or PC
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_LEVEL_UP") -- Fires when player levels up
-	FinalFantasylizationFrame:RegisterEvent("CHAT_MSG_TEXT_EMOTE") -- Fires when a chat emote is used (aka /dance)	
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_GAINS_VEHICLE_DATA") -- Fires when the player gains vehicle-related attributes without necessarily entering a vehicle.
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_LOSES_VEHICLE_DATA"); -- Fires when the player loses vehicle-related attributes without necessarily having been in a vehicle.
 	
@@ -570,7 +565,11 @@ function FinalFantasylization_GetMusic()
 
 	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
 		uiMapID = C_Map.GetBestMapForUnit("player")
-		uiMapInfo = C_Map.GetMapInfo(uiMapID)
+		if uiMapID ~= nil then
+			uiMapInfo = C_Map.GetMapInfo(uiMapID)
+		else
+			return
+		end
 		ZoneName = uiMapInfo.name
 		ZoneName2 = GetRealZoneText();
 		MinimapZoneName = GetMinimapZoneText();
