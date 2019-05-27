@@ -1,6 +1,6 @@
 ## Interface: 80100
-## Version: 8.0.4
-## Title: FinalFantasylization 8.0.4
+## Version: 8.0.5
+## Title: FinalFantasylization 8.0.5
 ## Notes: FinalFantasylization plays music and sounds based on different in-game events
 ## Original Author: Nackle on Shadowmoon(EU) - Alliance ; Renewed by: LorDestinY - Ad Aeternum.Horde@Frostmane.EU - http://www.ad-aeternum.org/	 WOTLK By Hellfox; Kilrogg EU - Alliance
 ## Author: Darken5 and stevenm281
@@ -8,6 +8,7 @@
 
 embeds.xml
 
+ZoneIDfix.lua
 Locales\Locales.xml
 FinalFantasylization.xml
 zones\zones.xml
