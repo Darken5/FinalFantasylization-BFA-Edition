@@ -377,7 +377,7 @@ function FinalFantasylization_EasternKingdomsZones_TheHinterlands()
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
-			FinalFantasylization_EasternKingdomsHinterlands()
+			FinalFantasylization_EasternKingdomsTheHinterlands()
 			FinalFantasylization_IsPlaying = true
 		else
 			return

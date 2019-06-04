@@ -2569,19 +2569,19 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_EasternKingdomsTheHinterlands()
 		local x = math.random(1, 2);
 			if x == 1 then
-				FinalFantasylization_ForestSong()
+				FinalFantasylization_ForestSong();
 			else
-				FinalFantasylization_ContestedSong()
+				FinalFantasylization_ContestedSong();
 			end
 	end
 --	Zone Events:
 --		Player is Resting
 	function FinalFantasylization_EasternKingdomsTheHinterlandsResting()
-		FinalFantasylization_Sleeping()
+		FinalFantasylization_Sleeping();
 	end
 --		Player is Swimming
 	function FinalFantasylization_EasternKingdomsTheHinterlandsSwimming()
-		FinalFantasylization_Swimming(1)
+		FinalFantasylization_Swimming(1);
 	end
 --	TOWNS:
 --	Alliance:
@@ -2637,7 +2637,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Overlook Cliffs
 	function FinalFantasylization_SubzoneOverlookCliffs()
-
+		FinalFantasylization_ForestSong();
 	end
 --	Plaguemist Ravine
 	function FinalFantasylization_SubzonePlaguemistRavine()
@@ -2665,7 +2665,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Skulk Rock
 	function FinalFantasylization_SubzoneSkulkRock()
-
+		FinalFantasylization_CaveSong();
 	end
 --	Valorwind Lake
 	function FinalFantasylization_SubzoneValorwindLake()

@@ -125,7 +125,7 @@ function FinalFantasylization_OnEvent(self, event, ...)
 		end
 	elseif event == "SPELLS_CHANGED" then
 	elseif event == "PLAYER_ALIVE" then
---	elseif event == "WORLD_MAP_UPDATE" then
+	FinalFantasylization_GetMusic()
 	elseif event == "PLAYER_REGEN_DISABLED" then
 		FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. EnterCombat)
 		if FinalFantasylizationOptions.Enabled == true then
@@ -140,8 +140,11 @@ function FinalFantasylization_OnEvent(self, event, ...)
 		FinalFantasylization_CurrentZoneID = nil
 	elseif event == "UNIT_AURA" then
 	elseif event == "ZONE_CHANGED" then
+		FinalFantasylization_GetMusic()
 	elseif event == "ZONE_CHANGED_INDOORS" then
+		FinalFantasylization_GetMusic()
 	elseif event == "ZONE_CHANGED_NEW_AREA" then
+		FinalFantasylization_GetMusic()
 	elseif event == "PLAYER_UPDATE_RESTING" then
 	elseif event == "PLAYER_CAMPING" then
 		FinalFantasylization_PlayerCamping()
@@ -165,7 +168,7 @@ function FinalFantasylization_OnEvent(self, event, ...)
 			FinalFantasylization_LevelUpSong()
 		end
 	end
-	FinalFantasylization_GetMusic()
+--	FinalFantasylization_GetMusic()
 end
 
 function FinalFantasylization_ClearMusicState()
@@ -798,10 +801,10 @@ function FinalFantasylization_GetMusic()
 				return
 			elseif uiMapInfo.mapType == ( 5 ) then
 				FinalFantasylization_CurrentZoneID = ZoneIDfix.micro[uiMapInfo.mapID]
-				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "In Micro")
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "In Micro") -- for testing purposes this spams
 			elseif uiMapInfo.mapType == ( 6 ) then
 				FinalFantasylization_CurrentZoneID = ZoneIDfix.orphan[uiMapInfo.mapID]
-				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "In Orphan")
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "In Orphan") -- for testing purposes this spams
 			else
 				FinalFantasylization_CurrentZoneID = uiMapInfo.mapID
 			end			
@@ -831,16 +834,22 @@ function FinalFantasylization_GetMusic()
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 499 ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
 		-- Dun Morogh - Coldridge Valley ( Dwarf ) / New Tinkertown ( Gnome )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 27 or 427 or 469 ) ) then
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 27 ) then
 				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)
 		-- Duskwood
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 47 ) then
 				FinalFantasylization_EasternKingdomsZones_Duskwood(SubZoneName)
 		-- Elwynn Forest - Northshire ( Human )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 37 or 425 ) ) then
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 37 ) then
+				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)
+		--  - Northshire ( Human )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 425 ) then
 				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)
 		-- Eversong Woods - Sunstrider Isle ( Blood Elf )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 94 or 467 ) ) then
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 94 ) then
+				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)
+		-- 	- Sunstrider Isle ( Blood Elf )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 467 ) then
 				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)
 		-- Ghostlands
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 95 ) then
@@ -891,7 +900,10 @@ function FinalFantasylization_GetMusic()
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 51 ) then
 				FinalFantasylization_EasternKingdomsZones_SwampofSorrows(SubZoneName)
 		-- Tirisfal Glades - Deathknell ( Undead )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 18 or 465 ) ) then
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 18 ) then
+				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)
+		-- 	- Deathknell ( Undead )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 465 ) then
 				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)
 		-- Undercity
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 90 ) then
@@ -913,7 +925,10 @@ function FinalFantasylization_GetMusic()
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 76 ) then
 				FinalFantasylization_KalimdorZones_Azshara(SubZoneName)
 		-- Azuremyst Isle - Ammen Vale ( Draenei )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 97 or 468 ) ) then
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 97 ) then
+				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)
+		-- 	- Ammen Vale ( Draenei )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 468 ) then
 				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)
 		-- Bloodmyst Isle
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 106 ) then
@@ -927,8 +942,14 @@ function FinalFantasylization_GetMusic()
 		-- Desolace
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 89 ) then
 				FinalFantasylization_KalimdorZones_Desolace(SubZoneName)
-		-- Durotar - Valley of Trials ( Orc ) / Echo Isles ( Troll )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 1 or 461 or 463 ) ) then
+		-- Durotar
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 1 ) then
+				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
+		-- 	- Valley of Trials ( Orc )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 461 ) then
+				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
+		-- 	- Echo Isles ( Troll )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 463 ) then
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
 		-- Dustwallow Marsh
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 70 ) then
@@ -945,8 +966,11 @@ function FinalFantasylization_GetMusic()
 		-- Moonglade
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 80 ) then
 				FinalFantasylization_KalimdorZones_Moonglade(SubZoneName)
-		-- Mulgore - Camp Narache ( Tauren )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 7 or 462 ) ) then
+		-- Mulgore
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 7 ) then
+				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)
+		-- 	- Camp Narache ( Tauren )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 462 ) then
 				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)
 		-- Northern Barrens
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 10 ) then
@@ -963,8 +987,11 @@ function FinalFantasylization_GetMusic()
 		-- Tanaris
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 71 ) then
 				FinalFantasylization_KalimdorZones_Tanaris(SubZoneName)
-		-- Teldrassil - Shadowglen ( Night Elf )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 57 or 460 ) ) then
+		-- Teldrassil
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 57 ) then
+				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
+		-- 	- Shadowglen ( Night Elf )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 460 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
 		-- Thousand Needles
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 64 ) then
@@ -1015,11 +1042,19 @@ function FinalFantasylization_GetMusic()
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 672 ) then
 				FinalFantasylization_TheBrokenIslesZones_MardumtheShatteredAbyss(SubZoneName)
 		-- The Wandering Isle ( Pandaren Start )
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 378 or 709 ) )then
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 378 )then
+				FinalFantasylization_TheBrokenIslesZones_TheWanderingIsle(SubZoneName)
+		-- The Wandering Isle ( Pandaren Start )
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 709 )then
 				FinalFantasylization_TheBrokenIslesZones_TheWanderingIsle(SubZoneName)
 		-- Vault of the Wardens
-			elseif ( ( FinalFantasylization_CurrentZoneID ) == ( 710 or 711 or 712 ) ) then
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 710 ) then
 				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 711 ) then
+				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
+			elseif ( ( FinalFantasylization_CurrentZoneID ) == 712 ) then
+				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
+			
 
 -- Debug: Zone Catch-all
 			elseif not ( IsInInstance() ) and FinalFantasylizationOptions.Debug == true then
