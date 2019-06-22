@@ -1,7 +1,7 @@
 -- Orphan/Micro uiMapID Fix
-ZoneIDfix = {
+MapIDfix = {
 
-	micro = {	
+	micro = {
 	[ 2 ] 	= 1, -- Burning Blade Coven 	Micro 	Durotar
 	[ 3 ] 	= 1, -- Tiragarde Keep 	Micro 	Durotar
 	[ 4 ] 	= 1, -- Tiragarde Keep - Great Hall 	Micro 	Durotar
@@ -185,8 +185,8 @@ ZoneIDfix = {
 	[ 1184 ] 	= 895, -- Winterchill Mine - Lower Cave 	Micro 	Tiragarde Sound
 	[ 1185 ] 	= 895, -- Winterchill Mine - Upper Cave 	Micro 	Tiragarde Sound
 	},
-	
-	orphan  = {	
+
+	orphan  = {
 	[ 86 ] 	= 85, -- Orgrimmar - Cleft of Shadow 	Orphan 	Orgrimmar
 	[ 91 ] 	= 25, -- Alterac Valley 	Orphan 	Hillsbrad Foothills
 	[ 92 ] 	= 10, -- Warsong Gulch 	Orphan 	Northern Barrens
@@ -334,5 +334,5 @@ ZoneIDfix = {
 	[ 1475 ] 	= 641, -- The Emerald Dream 	Orphan 	The Dreamgrove
 	[ 1479 ] 	= 556, -- Baine Rescue 	Orphan 	Siege of Orgrimmar
 	},
-	}
+}
 	

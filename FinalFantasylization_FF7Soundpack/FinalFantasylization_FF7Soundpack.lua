@@ -184,12 +184,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_IsleOfConquestBG()
 		FinalFantasylization_BattleGround();
 	end
---###########################################################################################
+--#########################################################################################
 --##   EASTERN KINGDOMS ZONES
---###########################################################################################
---'==========================================================================================
+--#########################################################################################
+--'====================================================================================
 --' Eastern Kingdoms Capital: Ironforge : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Ironforge
 	function FinalFantasylization_EasternKingdoms_Ironforge()
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
@@ -290,9 +290,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Capital: Silvermoon City : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: SilvermoonCity
 	function FinalFantasylization_EasternKingdoms_SilvermoonCity()
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
@@ -443,9 +443,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Capital: Stormwind City : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Stormwind City
 	function FinalFantasylization_EasternKingdoms_StormwindCity()
 		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
@@ -606,9 +606,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
 		FinalFantasylization_debugMsg("StormwindCitySong")
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Capital: Undercity
---'==========================================================================================
+--'====================================================================================
 --	Zone: Undercity
 	function FinalFantasylization_EasternKingdoms_Undercity()
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
@@ -669,9 +669,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. UndercitySong);
 		FinalFantasylization_debugMsg("UndercitySong")
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zone: Abyssal Depths
---'==========================================================================================
+--'====================================================================================
 --	Zone: Abyssal Depths
 	function FinalFantasylization_EasternKingdomsAbyssalDepths()
 		local x = math.random(1, 4);
@@ -778,9 +778,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheUndershell()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zone: Arathi Highlands
---'==========================================================================================
+--'====================================================================================
 --	Zone: Arathi Highlands
 	function FinalFantasylization_EasternKingdomsArathiHighlands()
 		FinalFantasylization_ContestedSong();
@@ -894,9 +894,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWitherbarkVillage()
 		FinalFantasylization_ForestSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zone: Badlands
---'==========================================================================================
+--'====================================================================================
 --	Zone: Badlands
 	function FinalFantasylization_EasternKingdomsBadlands()
 		local x = math.random(1, 2);
@@ -1028,9 +1028,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneUldamanEntrance()
 		FinalFantasylization_CaveSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zone: Blasted Lands
---'==========================================================================================
+--'====================================================================================
 --	Zone: Blasted Lands
 	function FinalFantasylization_EasternKingdomsBlastedLands()
 		local x = math.random(1, 2);
@@ -1158,9 +1158,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheTaintedScar()
 		FinalFantasylization_SwampSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zone: Burning Steppes
---'==========================================================================================
+--'====================================================================================
 --	Zone: Burning Steppes
 	function FinalFantasylization_EasternKingdomsBurningSteppes()
 		local x = math.random(1, 2);
@@ -1260,16 +1260,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheWhelpingDowns()
 		FinalFantasylization_PlagueSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Deeprun Tram : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Deeprun Tram
 	function FinalFantasylization_EasternKingdoms_DeeprunTram()
 		FinalFantasylization_FriendlySong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Cape of Stranglethorn
---'==========================================================================================
+--'====================================================================================
 --	Zone: Cape of Stranglethorn
 	function FinalFantasylization_EasternKingdomsCapeofStranglethorn()
 		local x = math.random(1, 2);
@@ -1374,9 +1374,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWildShore()
 		FinalFantasylization_WaterSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Deadwind Pass
---'==========================================================================================
+--'====================================================================================
 --	Zone: Deadwind Pass
 	function FinalFantasylization_EasternKingdomsDeadwindPass()
 		FinalFantasylization_SwampSong();
@@ -1443,9 +1443,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneGroshgokCompound()
 		FinalFantasylization_SwampSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Dun Morogh : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Dun Morogh
 	function FinalFantasylization_EasternKingdomsDunMorogh()
 		local x = math.random(1, 2);
@@ -1630,9 +1630,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheTundridHills()
 		FinalFantasylization_SnowSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Duskwood
---'==========================================================================================
+--'====================================================================================
 --	Zone: Duskwood
 	function FinalFantasylization_EasternKingdomsDuskwood()
 		local x = math.random(1, 2);
@@ -1730,9 +1730,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheYorgenFarmstead()	
 		FinalFantasylization_PlagueSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zone: Elwynn Forest - Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Elwynn Forest			
 	function FinalFantasylization_EasternKingdomsElwynnForest()
 		local x = math.random(1, 2);
@@ -1872,9 +1872,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWestbrookGarrison()
 		FinalFantasylization_AllianceTowns();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Eversong Woods : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Eversong Woods
 	function FinalFantasylization_EasternKingdomsEversongWoods()
 		local x = math.random(1, 2);
@@ -2045,9 +2045,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneZebWatha()
 		FinalFantasylization_LandSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Ghostlands : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Ghostlands
 	function FinalFantasylization_EasternKingdomsGhostlands()
 		FinalFantasylization_PlagueSong();
@@ -2201,9 +2201,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneZebTela()
 		FinalFantasylization_LandSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Gilneas : Worgen
---'==========================================================================================
+--'====================================================================================
 --	Zone: Gilneas
 	function FinalFantasylization_EasternKingdomsGilneas()
 		FinalFantasylization_ForestSong();
@@ -2357,9 +2357,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWoodsEndCabin()
 		FinalFantasylization_ForestSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Gilneas City : Worgen
---'==========================================================================================
+--'====================================================================================
 --	Zone: Gilneas City
 	function FinalFantasylization_EasternKingdomsGilneasCity()
 		FinalFantasylization_BattleGround();
@@ -2399,9 +2399,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_GilneasCity_SubzoneStonewardPrison()
 		FinalFantasylization_BattleGround();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Hillsbrad Foothills
---'==========================================================================================
+--'====================================================================================
 --	Zone: Hillsbrad Foothills
 	function FinalFantasylization_EasternKingdomsHillsbradFoothills()
 		local x = math.random(1, 2);
@@ -2562,9 +2562,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWesternStrand()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: The Hinterlands
---'==========================================================================================
+--'====================================================================================
 --	Zone: The Hinterlands
 	function FinalFantasylization_EasternKingdomsTheHinterlands()
 		local x = math.random(1, 2);
@@ -2675,9 +2675,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneZunwatha()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Loch Modan : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Loch Modan
 	function FinalFantasylization_EasternKingdomsLochModan()
 		FinalFantasylization_FriendlySong();
@@ -2762,9 +2762,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneValleyofKings()
 		FinalFantasylization_FriendlySong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Northern Stranglethorn
---'==========================================================================================
+--'====================================================================================
 --	Zone: Northern Stranglethorn
 	function FinalFantasylization_EasternKingdomsNorthernStranglethorn()
 		local x = math.random(1, 2);
@@ -2894,9 +2894,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneZuuldaiaRuins()
 		FinalFantasylization_BeachSong()
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Plaguelands: The Scarlet Enclave : Death Knight Start
---'==========================================================================================
+--'====================================================================================
 --	Zone: Plaguelands: The Scarlet Enclave
 	function FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclave()
 		FinalFantasylization_BattleGround();
@@ -3039,9 +3039,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_DeathKnight_Start_MainHall()
 		FinalFantasylization_BattleGround();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Redridge Mountains
---'==========================================================================================
+--'====================================================================================
 --	Zone: Redridge Mountains
 	function FinalFantasylization_EasternKingdomsRedridgeMountains()
 		local x = math.random(1, 2);
@@ -3151,9 +3151,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneYowlersDen()
 		FinalFantasylization_CaveSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Ruins of Gilneas : Undead
---'==========================================================================================
+--'====================================================================================
 --	Zone: Ruins of Gilneas
 	function FinalFantasylization_EasternKingdomsRuinsofGilneas()
 		FinalFantasylization_ForestSong();
@@ -3218,9 +3218,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTempestsReach()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Searing Gorge
---'==========================================================================================
+--'====================================================================================
 --	Zone: Searing Gorge
 	function FinalFantasylization_EasternKingdomsSearingGorge()
 		local x = math.random(1, 2);
@@ -3294,9 +3294,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneStonewroughtPass()
 		FinalFantasylization_PlagueSong()
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Silverpine Forest
---'==========================================================================================
+--'====================================================================================
 --	Zone: Silverpine Forest
 	function FinalFantasylization_EasternKingdomsSilverpineForest()
 		local x = math.random(1, 2);
@@ -3443,9 +3443,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneValgansField()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Swamp of Sorrows
---'==========================================================================================
+--'====================================================================================
 --	Zone: Swamp of Sorrows
 	function FinalFantasylization_EasternKingdomsSwampofSorrows()
 		local x = math.random(1, 2);
@@ -3542,9 +3542,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneStagalbogCave()
 		FinalFantasylization_CaveSong()
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zone: Tirisfal Glades - Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Tirisfal Glades
 	function FinalFantasylization_EasternKingdomsTirisfalGlades()
 		local x = math.random(1, 2);
@@ -3728,9 +3728,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWhisperingShore()
 		FinalFantasylization_PlagueSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Westfall
---'==========================================================================================
+--'====================================================================================
 --	Zone: Westfall
 	function FinalFantasylization_EasternKingdomsWestfall()
 		local x = math.random(1, 2);
@@ -3833,9 +3833,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWestfallLighthouse()
 		FinalFantasylization_WaterSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Eastern Kingdoms Zones: Wetlands : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Wetlands
 	function FinalFantasylization_EasternKingdomsWetlands()
 		local x = math.random(1, 2);
@@ -3963,12 +3963,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 
 
---###########################################################################################
+--#########################################################################################
 --##   KALIMDOR ZONES
---###########################################################################################
---'==========================================================================================
+--#########################################################################################
+--'====================================================================================
 --' Kalimdor Capital: Darnassus : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Darnassus
 	function FinalFantasylization_Kalimdor_Darnassus()
 		FinalFantasylization_PlayMusic(S .. DarnassusSong);
@@ -4019,9 +4019,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. DarnassusSong);
 		FinalFantasylization_debugMsg("DarnassusSong")
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Capital: The Exodar : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: The Exodar
 	function FinalFantasylization_Kalimdor_TheExodar()
 		FinalFantasylization_PlayMusic(S .. ExodarSong);
@@ -4062,9 +4062,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. ExodarSong);
 		FinalFantasylization_debugMsg("ExodarSong")
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Capital: Orgrimmar : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Orgrimmar
 	function FinalFantasylization_Kalimdor_Orgrimmar()
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
@@ -4165,9 +4165,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
 		FinalFantasylization_debugMsg("OrgrimmarSong")
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Capital: Thunder Bluff : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Thunder Bluff
 	function FinalFantasylization_Kalimdor_ThunderBluff()
 		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
@@ -4203,9 +4203,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
 		FinalFantasylization_debugMsg("ThunderBluffSong")
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Ashenvale
---'==========================================================================================
+--'====================================================================================
 --	Zone: Ashenvale
 	function FinalFantasylization_KalimdorAshenvale()
 		local x = math.random(1, 2);
@@ -4452,9 +4452,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneRuuzelsIsle()
 		FinalFantasylization_WaterSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Azshara : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Azshara
 	function FinalFantasylization_KalimdorAzshara()
 		local x = math.random(1, 2);
@@ -4660,9 +4660,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneUrsolan()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Azuremyst Isle : Draenei
---'==========================================================================================
+--'====================================================================================
 --	Zone: Azuremyst Isle
 	function FinalFantasylization_KalimdorAzuremystIsle()
 		local x = math.random(1, 2);
@@ -4925,9 +4925,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong();
 			end
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Bloodmyst Isle
---'==========================================================================================
+--'====================================================================================
 --	Zone: Bloodmyst Isle
 	function FinalFantasylization_KalimdorBloodmystIsle()
 		local x = math.random(1, 2);
@@ -5204,9 +5204,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				FinalFantasylization_FriendlySong();
 			end
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Darkshore : Alliance
---'==========================================================================================
+--'====================================================================================
 --	Zone: Darkshore
 	function FinalFantasylization_KalimdorDarkshore()
 		local x = math.random(1, 2);
@@ -5369,9 +5369,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWreckageoftheSilverDawning()
 		FinalFantasylization_LakeSong();
 	end	
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Desolace
---'==========================================================================================
+--'====================================================================================
 --	Zone: Desolace
 	function FinalFantasylization_KalimdorDesolace()
 		local x = math.random(1, 2);
@@ -5507,9 +5507,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheVeiledSea()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Durotar : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Durotar
 	function FinalFantasylization_KalimdorDurotar()
 		local x = math.random(1, 2);
@@ -5696,9 +5696,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTorkrenFarm()
 		FinalFantasylization_LandSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Dustwallow Marsh
---'==========================================================================================
+--'====================================================================================
 --	Zone: Dustwallow Marsh
 	function FinalFantasylization_KalimdorDustwallowMarsh()
 		local x = math.random(1, 2);
@@ -5845,9 +5845,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneOnyxiasLair()
 		FinalFantasylization_CaveSong()
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Felwood
---'==========================================================================================
+--'====================================================================================
 --	Zone: Felwood
 	function FinalFantasylization_KalimdorFelwood()
 		local x = math.random(1, 2);
@@ -5962,9 +5962,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTimbermawHold()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Feralas
---'==========================================================================================
+--'====================================================================================
 --	Zone: Feralas
 	function FinalFantasylization_KalimdorFeralas()
 		local x = math.random(1, 2);
@@ -6144,9 +6144,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheWrithingDeep()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Moonglade
---'==========================================================================================
+--'====================================================================================
 --	Zone: Moonglade
 	function FinalFantasylization_KalimdorMoonglade()
 		local x = math.random(1, 2);
@@ -6188,9 +6188,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTimbermawHold()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Mulgore : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Mulgore
 	function FinalFantasylization_KalimdorMulgore()
 		local x = math.random(1, 2);
@@ -6309,9 +6309,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWinterhoofWaterWell()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Northern Barrens : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Northern Barrens
 	function FinalFantasylization_KalimdorNorthernBarrens()
 		local x = math.random(1, 2);
@@ -6448,9 +6448,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheTidusStair()
 		FinalFantasylization_SandSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Southern Barrens
---'==========================================================================================
+--'====================================================================================
 --	Zone: Southern Barrens
 	function FinalFantasylization_KalimdorSouthernBarrens()
 		local x = math.random(1, 2);
@@ -6592,9 +6592,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneStonetalonPass()
 		FinalFantasylization_LandSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Stonetalon Mountains
---'==========================================================================================
+--'====================================================================================
 --	Zone: Stonetalon Mountains
 	function FinalFantasylization_KalimdorStonetalonMountains()
 		local x = math.random(1, 2);
@@ -6765,9 +6765,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWindshearValley()
 		FinalFantasylization_LandSong()
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Tanaris
---'==========================================================================================
+--'====================================================================================
 --	Zone: Tanaris
 	function FinalFantasylization_KalimdorTanaris()
 		local x = math.random(1, 2);
@@ -6912,9 +6912,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneZulFarrak()
 		FinalFantasylization_SandSong()
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Teldrassil
---'==========================================================================================
+--'====================================================================================
 --	Zone: Teldrassil
 	function FinalFantasylization_KalimdorTeldrassil()
 		local x = math.random(1, 2);
@@ -7015,9 +7015,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWellspringRiver()
 		FinalFantasylization_LakeSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Thousand Needles
---'==========================================================================================
+--'====================================================================================
 --	Zone: Thousand Needles
 	function FinalFantasylization_KalimdorThousandNeedles()
 		local x = math.random(1, 2);
@@ -7132,9 +7132,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWhitereachPost()
 		FinalFantasylization_LandSong();
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Uldum
---'==========================================================================================
+--'====================================================================================
 --	Zone: Uldum
 	function FinalFantasylization_KalimdorUldum()
 		local x = math.random(1, 2);
@@ -7368,9 +7368,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneVirnaalRiverDelta()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Un'Goro Crater
---'==========================================================================================
+--'====================================================================================
 --	Zone: Un'Goro Crater
 	function FinalFantasylization_KalimdorUnGoroCrater()
 		local x = math.random(1, 2);
@@ -7452,9 +7452,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWaygate()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones: Winterspring
---'==========================================================================================
+--'====================================================================================
 --	Zone: Winterspring
 	function FinalFantasylization_KalimdorWinterspring()
 		local x = math.random(1, 2);
@@ -7562,12 +7562,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 
 	end
 
---###########################################################################################
+--#########################################################################################
 --##   MAELSTROM ZONES
---###########################################################################################		
---'==========================================================================================
+--#########################################################################################		
+--'====================================================================================
 --' Maelstrom Zones: Kezan : Horde
---'==========================================================================================
+--'====================================================================================
 --	Zone: Kezan
 	function FinalFantasylization_Maelstrom_Kezan()
 		FinalFantasylization_PlayMusic(S .. Alliance1Town);
@@ -7635,9 +7635,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_Goblin_Start_ThePipe()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' Maelstrom Zones: Lost Isles : Goblin
---'==========================================================================================
+--'====================================================================================
 --	Zone: Lost Isles
 	function FinalFantasylization_MaelstromLostIsles()
 
@@ -7792,12 +7792,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 
 
---###########################################################################################
+--#########################################################################################
 --##   THE BROKEN ISLES ZONES
---###########################################################################################
---'==========================================================================================
+--#########################################################################################
+--'====================================================================================
 --' The Broken Isles Zones: Mardum, the Shattered Abyss (Demon Hunter Start)
---'==========================================================================================
+--'====================================================================================
 --	Zone: Mardum, the Shattered Abyss
 	function FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyss()
 		FinalFantasylization_PlayMusic(S .. BattleGround1);
@@ -7873,9 +7873,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. BattleGround1);
 		FinalFantasylization_debugMsg("BattleGround1")
 	end
---'==========================================================================================
+--'====================================================================================
 --' The Broken Isles Zones: The Wandering Isle ( Pandaren Start )
---'==========================================================================================
+--'====================================================================================
 --	Zone: The Wandering Isle
 	function FinalFantasylization_TheBrokenIslesTheWanderingIsle()
 		FinalFantasylization_PlayMusic(S .. Misc2Song);
@@ -8028,9 +8028,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneWreckoftheSkyseeker()
 
 	end
---'==========================================================================================
+--'====================================================================================
 --' The Broken Isles Zones: Vault of the Wardens
---'==========================================================================================
+--'====================================================================================
 --	Zone: Vault of the Wardens
 	function FinalFantasylization_TheBrokenIslesVaultoftheWardens()
 		FinalFantasylization_PlayMusic(S .. BattleGround1);

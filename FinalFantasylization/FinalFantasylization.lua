@@ -581,30 +581,30 @@ function FinalFantasylization_GetMusic()
 		classification = UnitClassification("target"); --'classification: "worldboss", "rareelite", "elite", "rare", "normal" or "trivial"
 		pvpType, isFFA, faction = GetZonePVPInfo(); --'("friendly";"contested";"hostile";"sanctuary") (1;nil) ("Alliance";"Horde")
 
---'==========================================================================================
+--'====================================================================================
 --'	Sounds
---'==========================================================================================
+--'====================================================================================
 		if FinalFantasylization_PlayerIsCombat == false and FinalFantasylization_RegenGain == true and FinalFantasylizationOptions.Fanfare == true then
 			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Victory)
 			FinalFantasylization_Fanfare() -- Battle fanfare call
 			FinalFantasylization_RegenGain = false
 			StopMusic();
 		end
---'==========================================================================================
+--'====================================================================================
 --'	Music
---'==========================================================================================
+--'====================================================================================
 		FinalFantasylization_IsPlaying = false
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 --##
 --##			WORLD EVENTS
 --##
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 		
---'==========================================================================================
+--'====================================================================================
 --'	World Event: Player is Ghost
---'==========================================================================================
+--'====================================================================================
 		if ( UnitIsGhost("player") ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Dead == true then
 			if FinalFantasylization_PlayerIsGhosting == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. PlayerGhost)
@@ -616,9 +616,9 @@ function FinalFantasylization_GetMusic()
 		else
 			FinalFantasylization_PlayerIsGhosting = false
 		end
---'==========================================================================================
+--'====================================================================================
 --'	World Event: Player is Dead
---'==========================================================================================
+--'====================================================================================
 		if ( UnitIsDead("player") ) and FinalFantasylizationOptions.Dead == true then
 			if FinalFantasylization_PlayerIsDead == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. PlayerDie)
@@ -631,9 +631,9 @@ function FinalFantasylization_GetMusic()
 		else
 			FinalFantasylization_PlayerIsDead = false
 		end
---'==========================================================================================
+--'====================================================================================
 --'	World Event: Player is On Taxi "Horde and Alliance Varyiant"
---'==========================================================================================
+--'====================================================================================
 		if ( UnitOnTaxi("player") ) and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true then
 			if FinalFantasylization_PlayerIsTaxi == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "Horde" .. " " .. Taxi)
@@ -651,9 +651,9 @@ function FinalFantasylization_GetMusic()
 		else
 			FinalFantasylization_PlayerIsTaxi = false
 		end
---'==========================================================================================
+--'====================================================================================
 --'	World Event: Player in Combat, Mounted
---'==========================================================================================
+--'====================================================================================
 		if IsMounted("player") and FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
 			if FinalFantasylization_PlayerIsEscape == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. MountedEscape)
@@ -664,9 +664,9 @@ function FinalFantasylization_GetMusic()
 		else
 			FinalFantasylization_PlayerIsEscape = false
 		end
---'==========================================================================================
+--'====================================================================================
 --'	World Event: Player in Combat
---'==========================================================================================
+--'====================================================================================
 		if FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Combat == true and UnitAffectingCombat("player") then
 			--FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. InCombat)
 			local inInstance, instanceType = IsInInstance();
@@ -730,9 +730,9 @@ function FinalFantasylization_GetMusic()
 		else
 			FinalFantasylization_PlayerIsBattling = false
 		end
---'==========================================================================================
+--'====================================================================================
 --'	World Event: Player is Mounted in Hostile Zone
---'==========================================================================================
+--'====================================================================================
 		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
 			if FinalFantasylization_PlayerIsHostileMounting == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HostileEscape)
@@ -743,9 +743,9 @@ function FinalFantasylization_GetMusic()
 		else
 			FinalFantasylization_PlayerIsHostileMounting = false
 		end
---'==========================================================================================
+--'====================================================================================
 --'	World Event: Player on Flying Mount "Horde and Alliance Varyiant"
---'==========================================================================================
+--'====================================================================================
 		if IsFlying() and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true then
 			if FinalFantasylization_PlayerIsFlying == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Flying .. "(" .. "Horde" .. ")")
@@ -763,9 +763,9 @@ function FinalFantasylization_GetMusic()
 		else 
 			FinalFantasylization_PlayerIsFlying = false 
 		end
---'==========================================================================================
+--'====================================================================================
 --'	World Event: Player is Mounted.. Chocobo!
---'==========================================================================================
+--'====================================================================================
 		if IsMounted("player") and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
 			if FinalFantasylization_PlayerIsMounting == false then
 				for i=1,40 do
@@ -784,26 +784,26 @@ function FinalFantasylization_GetMusic()
 			FinalFantasylization_PlayerIsMounting = false
 		end
 
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 --##
 --##			ZONES
 --##
---###########################################################################################
---###########################################################################################
---'==========================================================================================
+--#########################################################################################
+--#########################################################################################
+--'====================================================================================
 --' Eastern Kingdoms Zones
---'==========================================================================================
+--'====================================================================================
 		if not ( uiMapInfo == nil ) and not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) then
 			if uiMapInfo.mapType == ( 0 or 1 or 2 ) then
 				FinalFantasylization_ClearMusicState()
 				FinalFantasylization_GetMusic()
 				return
 			elseif uiMapInfo.mapType == ( 5 ) then
-				FinalFantasylization_CurrentZoneID = ZoneIDfix.micro[uiMapInfo.mapID]
+				FinalFantasylization_CurrentZoneID = MapIDfix.micro[uiMapInfo.mapID]
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "In Micro") -- for testing purposes this spams
 			elseif uiMapInfo.mapType == ( 6 ) then
-				FinalFantasylization_CurrentZoneID = ZoneIDfix.orphan[uiMapInfo.mapID]
+				FinalFantasylization_CurrentZoneID = MapIDfix.orphan[uiMapInfo.mapID]
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "In Orphan") -- for testing purposes this spams
 			else
 				FinalFantasylization_CurrentZoneID = uiMapInfo.mapID
@@ -915,9 +915,9 @@ function FinalFantasylization_GetMusic()
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 56 ) then
 				FinalFantasylization_EasternKingdomsZones_Wetlands(SubZoneName)
 
---'==========================================================================================
+--'====================================================================================
 --' Kalimdor Zones
---'==========================================================================================
+--'====================================================================================
 		-- Ashenvale
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 63 ) then
 				FinalFantasylization_KalimdorZones_Ashenvale(SubZoneName)
@@ -1009,17 +1009,17 @@ function FinalFantasylization_GetMusic()
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 83 ) then
 				FinalFantasylization_KalimdorZones_Winterspring(SubZoneName)
 
---'==========================================================================================
+--'====================================================================================
 --' Outland
---'==========================================================================================
+--'====================================================================================
 
---'==========================================================================================
+--'====================================================================================
 --' Northrend
---'==========================================================================================
+--'====================================================================================
 
---'==========================================================================================
+--'====================================================================================
 --' Maelstrom Zones
---'==========================================================================================
+--'====================================================================================
 		-- Kezan ( Goblin )
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 194 ) then
 				FinalFantasylization_MaelstromZones_Kezan(SubZoneName)
@@ -1027,17 +1027,17 @@ function FinalFantasylization_GetMusic()
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 174 ) then
 				FinalFantasylization_MaelstromZones_TheLostIsles(SubZoneName)
 
---'==========================================================================================
+--'====================================================================================
 --' Pandaria Zones
---'==========================================================================================
+--'====================================================================================
 
---'==========================================================================================
+--'====================================================================================
 --' Draenor Zones
---'==========================================================================================
+--'====================================================================================
 
---'==========================================================================================
+--'====================================================================================
 --' The Broken Isles Zones
---'==========================================================================================
+--'====================================================================================
 		-- Mardum, the Shattered Abyss ( Demon Hunter Start )
 			elseif ( ( FinalFantasylization_CurrentZoneID ) == 672 ) then
 				FinalFantasylization_TheBrokenIslesZones_MardumtheShatteredAbyss(SubZoneName)
@@ -1062,13 +1062,13 @@ function FinalFantasylization_GetMusic()
 				-- PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
 			end
 		end
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 --##
 --##			DUNGEONS EVENTS
 --##
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 
 			-- 5 Man Dungeons
 		if IsInInstance() and FinalFantasylization_IsPlaying == false then
@@ -1196,25 +1196,25 @@ function FinalFantasylization_GetMusic()
 					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Instance not in FinalFantasylization")
 				end
 
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 --##
 --##			RAID EVENTS
 --##
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 
 			elseif instanceType == "raid" and FinalFantasylization_InInstance == false and FinalFantasylizationOptions.Raid == true then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerInRaid.. ZoneName)
 				FinalFantasylization_RaidSong()
 
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 --##
 --##			BATTLEGROUNDS
 --##
---###########################################################################################
---###########################################################################################			
+--#########################################################################################
+--#########################################################################################			
 
 			elseif instanceType == "pvp" and FinalFantasylization_InInstance == false and FinalFantasylizationOptions.Battleground == true then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerInBattleground.. ZoneName)
@@ -1242,17 +1242,17 @@ function FinalFantasylization_GetMusic()
 	end
 end
 
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 --##
 --##			OTHER EVENTS
 --##
---###########################################################################################
---###########################################################################################
+--#########################################################################################
+--#########################################################################################
 
---'==========================================================================================
+--'====================================================================================
 --'	Mounted Event: Howl's, Growl's, Roar's and Chocobo Kweh!! 
---'==========================================================================================
+--'====================================================================================
 function FinalFantasylization_JumpOrAscendStart()
 	if IsMounted("player") and not UnitOnTaxi("player") and FinalFantasylizationOptions.ChocoboKweh == true then
 		currentSpeed, _, _, _ = GetUnitSpeed("player");
@@ -1291,9 +1291,9 @@ function FinalFantasylization_JumpOrAscendStart()
 	end
 end
 
---'==========================================================================================
+--'====================================================================================
 --'	Player Camping
---'==========================================================================================
+--'====================================================================================
 function FinalFantasylization_PlayerCamping()
 	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
 		if FinalFantasylizationOptions.Debug == true then
@@ -1304,9 +1304,9 @@ function FinalFantasylization_PlayerCamping()
 	FinalFantasylization_IsPlaying = true
 end
 
---'==========================================================================================
+--'====================================================================================
 --'		END OF EVENTS
---'==========================================================================================
+--'====================================================================================
 
 -- Initializes FinalFantasylization after all saved variables have been loaded.
 
