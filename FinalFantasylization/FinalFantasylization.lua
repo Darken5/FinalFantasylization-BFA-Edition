@@ -830,14 +830,14 @@ function FinalFantasylization_GetMusic()
 			--'====================================================================================
 			--'	Zone Event: Player is Resting
 			--'====================================================================================
-			if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
-				if FinalFantasylization_CurrentZone ~= "Sleeping" and CurrentZoneInfo.Sleep == true then
-					if ( CurrentZoneInfo[lSubZoneName].Faction == factionEnglish ) then
+			if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and CurrentZoneInfo.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+				if FinalFantasylization_CurrentZone ~= "Sleeping" then
+					if lSubZoneName and ( CurrentZoneInfo[lSubZoneName].Faction == factionEnglish ) then
 						FinalFantasylization_Sleeping();
 					else
 						FinalFantasylization_HostileSong();
 					end
-					FFz.CurrentZone = "Sleeping"			
+					FinalFantasylization_CurrentZone = "Sleeping"
 				else
 					return
 				end
@@ -850,7 +850,7 @@ function FinalFantasylization_GetMusic()
 			elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
 				if FinalFantasylization_CurrentZone ~= "Swimming" then
 					FinalFantasylization_CurrentZone = "Swimming"
-					if CurrentZoneInfo[lSubZoneName].Swim then
+					if lSubZoneName and CurrentZoneInfo[lSubZoneName].Swim then
 						FinalFantasylization_Swimming(CurrentZoneInfo[lSubZoneName].Swim)
 					else
 						FinalFantasylization_Swimming(CurrentZoneInfo.Swim)
@@ -860,11 +860,11 @@ function FinalFantasylization_GetMusic()
 				end
 				FinalFantasylization_IsPlaying = true
 				return
-			elseif lSubZoneName ~= nil then
+			elseif lSubZoneName then
 			--'====================================================================================
 			--' Zone Event: Capitals
 			--'====================================================================================
-				if ( CurrentZoneInfo[lSubZoneName].Type == "Capital" ) then
+				if ( CurrentZoneInfo[lSubZoneName].Type == "Capital" ) and FinalFantasylizationOptions.Capital == true then
 					if FinalFantasylization_CurrentZone ~= SubZoneName then
 						if ( CurrentZoneInfo.Faction == factionEnglish ) then
 							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
@@ -872,9 +872,22 @@ function FinalFantasylization_GetMusic()
 							FinalFantasylization_debugMsg( tostring( CurrentZoneInfo[lSubZoneName].Music ) )
 						elseif ( CurrentZoneInfo.Faction ~= factionEnglish ) then
 							FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileCity .. SubZoneName..", "..ZoneName..PlayerInHostile)
-							FinalFantasylization_HostileSong()						
+							FinalFantasylization_HostileSong()
 						end
 						FinalFantasylization_CurrentZone = SubZoneName
+					else
+						return
+					end
+					FinalFantasylization_IsPlaying = true
+					return
+				elseif ( CurrentZoneInfo[lSubZoneName].Type == "Capital" ) and FinalFantasylizationOptions.Capital == false and FinalFantasylizationOptions.Sleep == true then
+					if FinalFantasylization_CurrentZone ~= "Sleeping" then
+						if ( CurrentZoneInfo[lSubZoneName].Faction == factionEnglish ) then
+							FinalFantasylization_Sleeping();
+						else
+							FinalFantasylization_HostileSong();
+						end
+						FinalFantasylization_CurrentZone = "Sleeping"
 					else
 						return
 					end
