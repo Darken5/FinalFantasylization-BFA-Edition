@@ -900,7 +900,10 @@ function FinalFantasylization_GetMusic()
 					if FinalFantasylization_CurrentZone ~= SubZoneName then
 						if ( CurrentZoneInfo[lSubZoneName].Faction == factionEnglish ) then
 							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-							if ( CurrentZoneInfo[lSubZoneName].Faction == "Horde" ) then
+							if CurrentZoneInfo[lSubZoneName].Music then
+								FinalFantasylization_PlayMusic( S .. CurrentZoneInfo[lSubZoneName].Music );
+								FinalFantasylization_debugMsg( tostring( CurrentZoneInfo[lSubZoneName].Music ) )
+							elseif ( CurrentZoneInfo[lSubZoneName].Faction == "Horde" ) then
 								FinalFantasylization_HordeTowns()
 							elseif ( CurrentZoneInfo[lSubZoneName].Faction == "Alliance" ) then
 								FinalFantasylization_AllianceTowns()

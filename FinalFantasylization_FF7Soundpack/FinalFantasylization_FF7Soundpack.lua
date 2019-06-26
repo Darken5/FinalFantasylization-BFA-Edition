@@ -971,7 +971,33 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Thelgen Rock"] = { Type = "Subzone", Music = LandSong },
 				["Whelgar's Excavation Site"] = { Type = "Subzone", Music = CaveSong },
 			},
-			[ 57 ] = nil, -- Teldrassil	-	Kalimdor
+			[ 57 ] = { -- Teldrassil	-	Kalimdor
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = Alliance7Town,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Dolanaar"] = { Type = "Town", Faction = "Alliance" },
+				["Rut'theran Village"] = { Type = "Town", Faction = "Alliance" },
+				["Wellspring Hovel"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Ban'ethil Hollow"] = { Type = "Subzone", Music = ForestSong },
+				["Ban'ethil Barrow Den"] = { Type = "Subzone", Music = SwampSong },
+				["Ban'ethil Barrow Descent"] = { Type = "Subzone", Music = SwampSong },
+				["The Cleft"] = { Type = "Subzone", Music = ForestSong },
+				["Fel Rock"] = { Type = "Subzone", Music = CaveSong },
+				["Gnarlpine Hold"] = { Type = "Subzone", Music = ForestSong },
+				["Lake Al'Ameth"] = { Type = "Subzone", Music = LakeSong },
+				["The Oracle Glade"] = { Type = "Subzone", Music = FriendlySong },
+				["Pools of Arlithrien"] = { Type = "Subzone", Music = LakeSong },
+				["Starbreeze Village"] = { Type = "Subzone", Music = ForestSong },
+				["The Veiled Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Wellspring Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Wellspring River"] = { Type = "Subzone", Music = LakeSong },
+			},
 			[ 62 ] = { -- Darkshore	-	Kalimdor
 				Faction = "Alliance",
 				Songs = 2,
@@ -1085,7 +1111,41 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["The Zoram Strand"] = { Type = "Subzone", Music = WaterSong },
 				["Ruuzel's Isle"] = { Type = "Subzone", Music = WaterSong },
 			},
-			[ 64 ] = nil, -- Thousand Needles	-	Kalimdor
+			[ 64 ] = { -- Thousand Needles	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = LakeSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Horde:
+				["Westreach Summit"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Fizzle & Pozzik's Speedbarge"] = { Type = "Town", Faction = "Neutral" },
+				["Speedbarge Bar"] = { Type = "Town", Faction = "Neutral" },
+				["Freewind Post"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Darkcloud Pinnacle"] = { Type = "Subzone", Music = LandSong },
+				["Arikara's Needle"] = { Type = "Subzone", Music = LandSong },
+				["The Great Lift"] = { Type = "Subzone", Music = LandSong },
+				["Highperch"] = { Type = "Subzone", Music = ForestSong },
+				["Razorfen Downs"] = { Type = "Subzone", Music = LandSong },
+				["The Shimmering Deep"] = { Type = "Subzone", Music = LakeSong },
+				["Mirage Abyss"] = { Type = "Subzone", Music = LakeSong },
+				["Raceway Ruins"] = { Type = "Subzone", Music = LakeSong },
+				["Sunken Dig Site"] = { Type = "Subzone", Music = LakeSong },
+				["Southsea Holdfast"] = { Type = "Subzone", Music = LandSong },
+				["The Admiral's Den"] = { Type = "Subzone", Music = LandSong },
+				["Splithoof Crag"] = { Type = "Subzone", Music = LandSong },
+				["Splithoof Hold"] = { Type = "Subzone", Music = LandSong },
+				["Splithoof Heights"] = { Type = "Subzone", Music = LandSong },
+				["Tirth's Haunt"] = { Type = "Subzone", Music = WarySong },
+				["Twilight Aerie"] = { Type = "Subzone", Music = SwampSong },
+				["Twilight Bulwark"] = { Type = "Subzone", Music = SwampSong },
+				["The Twilight Withering"] = { Type = "Subzone", Music = SwampSong },
+				["Whitereach Post"] = { Type = "Subzone", Music = LandSong },
+			},
 			[ 65 ] = { -- Stonetalon Mountains	-	Kalimdor
 				Faction = "Contested",
 				Songs = 2,
@@ -1405,7 +1465,32 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Shatter Scar Vale"] = { Type = "Subzone", Music = nil },
 				["Timbermaw Hold"] = { Type = "Subzone", Music = nil },
 			},
-			[ 78 ] = nil, -- Un'Goro Crater	-	Kalimdor
+			[ 78 ] = { -- Un'Goro Crater	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SwampSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Neutral:
+				["Marshal's Stand"] = { Type = "Town", Faction = "Neutral" },
+				["Mossy Pile"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Fire Plume Ridge"] = { Type = "Subzone", Music = nil },
+				["Fungal Rock"] = { Type = "Subzone", Music = nil },
+				["Golakka Hot Springs"] = { Type = "Subzone", Music = nil },
+				["Ironstone Plateau"] = { Type = "Subzone", Music = nil },
+				["Lakkari Tar Pits"] = { Type = "Subzone", Music = nil },
+				["Marshal's Refuge"] = { Type = "Subzone", Music = nil },
+				["The Marshlands"] = { Type = "Subzone", Music = nil },
+				["The Roiling Gardens"] = { Type = "Subzone", Music = nil },
+				["The Screaming Reaches"] = { Type = "Subzone", Music = nil },
+				["The Shaper's Terrace"] = { Type = "Subzone", Music = nil },
+				["The Slithering Scar"] = { Type = "Subzone", Music = nil },
+				["Terror Run"] = { Type = "Subzone", Music = nil },
+				["Waygate"] = { Type = "Subzone", Music = nil },
+			},
 			[ 80 ] = { -- Moonglade	-	Kalimdor
 				Faction = "Contested",
 				Songs = 2,
@@ -1423,7 +1508,39 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Timbermaw Hold"] = { Type = "Subzone", Music = CaveSong },
 			},
 			[ 81 ] = nil, -- Silithus	-	Kalimdor
-			[ 83 ] = nil, -- Winterspring	-	Kalimdor
+			[ 83 ] = { -- Winterspring	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SnowSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Starfall Village"] = { Type = "Town", Faction = "Alliance" },
+				--	Neutral:
+				["Everlook"] = { Type = "Town", Faction = "Neutral" },
+				["The Laughing Yeti"] = { Type = "Town", Faction = "Neutral" },
+				["Goodgrub Smoking Pit"] = { Type = "Town", Faction = "Neutral" },
+				["Snowden Chalet"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Ban'Thallow Barrow Den"] = { Type = "Subzone", Music = nil },
+				["Caverns of Consumption"] = { Type = "Subzone", Music = nil },
+				["Dun Mandarr"] = { Type = "Subzone", Music = nil },
+				["Frostfire Hot Springs"] = { Type = "Subzone", Music = nil },
+				["Frostsaber Rock"] = { Type = "Subzone", Music = nil },
+				["Frostwhisper Gorge"] = { Type = "Subzone", Music = nil },
+				["The Hidden Grove"] = { Type = "Subzone", Music = nil },
+				["Ice Thistle Hills"] = { Type = "Subzone", Music = nil },
+				["Lake Kel'Theril"] = { Type = "Subzone", Music = nil },
+				["Mazthoril"] = { Type = "Subzone", Music = nil },
+				["Beryl Egress"] = { Type = "Subzone", Music = nil },
+				["Moon Horror Den"] = { Type = "Subzone", Music = nil },
+				["Owl Wing Thicket"] = { Type = "Subzone", Music = nil },
+				["The Ruins of Kel'Theril"] = { Type = "Subzone", Music = nil },
+				["Timbermaw Post"] = { Type = "Subzone", Music = nil },
+				["Winterfall Village"] = { Type = "Subzone", Music = nil },
+			},
 			[ 84 ] = { -- Stormwind City	-	Eastern Kingdoms
 				Faction = "Alliance",
 				Songs = 1,
@@ -1829,7 +1946,51 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			},
 			[ 127 ] = nil, -- Crystalsong Forest	-	Northrend
 			[ 170 ] = nil, -- Hrothgar's Landing	-	Northrend
-			[ 174 ] = nil, -- The Lost Isles	-	The Maelstrom
+			[ 174 ] = { -- The Lost Isles	-	The Maelstrom
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = BeachSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Horde:
+				["Alliance Beachhead"] = { Type = "Town", Faction = "Horde" },
+				["Horde Base Camp"] = { Type = "Town", Faction = "Horde" },
+				["Shipwreck Shore"] = { Type = "Town", Faction = "Horde" },
+				["Town-In-A-Box"] = { Type = "Town", Faction = "Horde" },
+				["Warchief's Lookout"] = { Type = "Town", Faction = "Horde" },
+				["Wild Overlook"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Bilgewater Lumber Yard"] = { Type = "Subzone", Music = nil },
+				["Dire Strait"] = { Type = "Subzone", Music = nil },
+				["Draka's Fury"] = { Type = "Subzone", Music = nil },
+				["Gallywix Docks"] = { Type = "Subzone", Music = nil },
+				["Gallywix Labor Mine"] = { Type = "Subzone", Music = nil },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Kaja'mite Cavern"] = { Type = "Subzone", Music = nil },
+				["KTC Oil Platform"] = { Type = "Subzone", Music = SwampSong },
+				["Landing Site"] = { Type = "Subzone", Music = nil },
+				["Lost Caldera"] = { Type = "Subzone", Music = nil },
+				["Lost Peak"] = { Type = "Subzone", Music = nil },
+				["Oomlot Village"] = { Type = "Subzone", Music = nil },
+				["Oostan"] = { Type = "Subzone", Music = nil },
+				["Oostan Nord"] = { Type = "Subzone", Music = nil },
+				["Oostan Ost"] = { Type = "Subzone", Music = nil },
+				["Oostan Sor"] = { Type = "Subzone", Music = nil },
+				["Raptor Rise"] = { Type = "Subzone", Music = nil },
+				["Ruins of Vashj'elan"] = { Type = "Subzone", Music = nil },
+				["The Savage Glen"] = { Type = "Subzone", Music = nil },
+				["Scorched Gully"] = { Type = "Subzone", Music = nil },
+				["Sky Falls"] = { Type = "Subzone", Music = nil },
+				["The Slave Pits"] = { Type = "Subzone", Music = nil },
+				["Tranquil Coast"] = { Type = "Subzone", Music = nil },
+				["Vashj'elan Spawning Pool"] = { Type = "Subzone", Music = nil },
+				["Vengeance Wake"] = { Type = "Subzone", Music = nil },
+				["Verdant Highlands"] = { Type = "Subzone", Music = nil },
+				["The Vicious Vale"] = { Type = "Subzone", Music = nil },
+				["Volcanoth's Lair"] = { Type = "Subzone", Music = nil },
+			},
 			[ 179 ] = {	-- Gilneas	-	Eastern Kingdoms
 				Faction = "Alliance",
 				Songs = 1,
@@ -1874,7 +2035,26 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Wahl Cottage"] = { Type = "Subzone", Music = ForestSong },
 				["Wood's End Cabin"] = { Type = "Subzone", Music = ForestSong },
 			},
-			[ 194 ] = nil, -- Kezan	-	The Maelstrom
+			[ 194 ] = { -- Kezan	-	The Maelstrom
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = Alliance10Town,
+				Sleep = true,
+				Swim = 2,
+				--	SUBZONES:
+				["Bilgewater Port"] = { Type = "Subzone", Music = Horde2Town },
+				["Drudgetown"] = { Type = "Subzone", Music = Alliance10Town },
+				["First Bank of Kezan"] = { Type = "Subzone", Music = nil },
+				["Gallywix's Villa"] = { Type = "Subzone", Music = nil },
+				["Gallywix's Yacht"] = { Type = "Subzone", Music = nil },
+				["Kaja'mine"] = { Type = "Subzone", Music = nil },
+				["Kajaro Field"] = { Type = "Subzone", Music = nil },
+				["KTC Headquarters"] = { Type = "Subzone", Music = Alliance8Town },
+				["The Slick"] = { Type = "Subzone", Music = nil },
+				["South Seas"] = { Type = "Subzone", Music = WaterSong },
+				["Swindle Street"] = { Type = "Subzone", Music = nil },
+				["The Pipe"] = { Type = "Subzone", Music = nil },
+			},
 			[ 198 ] = nil, -- Mount Hyjal	-	Kalimdor
 			[ 199 ] = { -- Southern Barrens	-	Kalimdor
 				Faction = "Contested",
@@ -2032,10 +2212,114 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			[ 241 ] = nil, -- Twilight Highlands	-	Eastern Kingdoms
 			[ 244 ] = nil, -- Tol Barad	-	Eastern Kingdoms
 			[ 245 ] = nil, -- Tol Barad Peninsula	-	Eastern Kingdoms
-			[ 249 ] = nil, -- Uldum	-	Kalimdor
+			[ 249 ] = { -- Uldum	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Neutral:
+				["Mar'at"] = { Type = "Town", Faction = "Neutral" },
+				["Oasis of Vir'sar"] = { Type = "Town", Faction = "Neutral" },
+				["Sullah's Sideshow"] = { Type = "Town", Faction = "Neutral" },
+				["Ramkahen"] = { Type = "Town", Faction = "Neutral" },
+				["Schnottz's Landing"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Akhenet Fields"] = { Type = "Subzone", Music = nil },
+				["Arsad Trade Post"] = { Type = "Subzone", Music = nil },
+				["Bluff of the South Wind"] = { Type = "Subzone", Music = nil },
+				["Cloudtop Terrace"] = { Type = "Subzone", Music = nil },
+				["Cradle of the Ancients"] = { Type = "Subzone", Music = nil },
+				["The Cursed Landing"] = { Type = "Subzone", Music = nil },
+				["Gate of Hamatep"] = { Type = "Subzone", Music = nil },
+				["The Gate of Unending Cycles"] = { Type = "Subzone", Music = nil },
+				["Khartut's Tomb"] = { Type = "Subzone", Music = nil },
+				["Halls of Origination"] = { Type = "Subzone", Music = nil },
+				["Keset Pass"] = { Type = "Subzone", Music = nil },
+				["Lost City of the Tol'vir"] = { Type = "Subzone", Music = nil },
+				["Maker's Ascent"] = { Type = "Subzone", Music = nil },
+				["M.A.C. Diver"] = { Type = "Subzone", Music = nil },
+				["Mount Akher"] = { Type = "Subzone", Music = nil },
+				["Nahom"] = { Type = "Subzone", Music = nil },
+				["Neferset City"] = { Type = "Subzone", Music = nil },
+				["Neferset City Outskirts"] = { Type = "Subzone", Music = nil },
+				["Obelisk of the Moon"] = { Type = "Subzone", Music = nil },
+				["Chamber of the Moon"] = { Type = "Subzone", Music = nil },
+				["Obelisk of the Stars"] = { Type = "Subzone", Music = nil },
+				["Chamber of the Stars"] = { Type = "Subzone", Music = nil },
+				["Obelisk of the Sun"] = { Type = "Subzone", Music = nil },
+				["Chamber of the Sun"] = { Type = "Subzone", Music = nil },
+				["Orsis"] = { Type = "Subzone", Music = nil },
+				["Pilgrim's Precipice"] = { Type = "Subzone", Music = nil },
+				["The Pit of Scales"] = { Type = "Subzone", Music = nil },
+				["Ramkahen Legion Outpost"] = { Type = "Subzone", Music = nil },
+				["Ruins of Ahmtul"] = { Type = "Subzone", Music = nil },
+				["Ruins of Ammon"] = { Type = "Subzone", Music = nil },
+				["Ruins of Khintaset"] = { Type = "Subzone", Music = nil },
+				["Sahket Wastes"] = { Type = "Subzone", Music = nil },
+				["Seal of the Sun King"] = { Type = "Subzone", Music = nil },
+				["The Steps of Fate"] = { Type = "Subzone", Music = nil },
+				["Sunstone Terrace"] = { Type = "Subzone", Music = nil },
+				["Sunwatcher's Ridge"] = { Type = "Subzone", Music = nil },
+				["Surveyors' Outpost"] = { Type = "Subzone", Music = nil },
+				["Tahret Grounds"] = { Type = "Subzone", Music = nil },
+				["Temple of Uldum"] = { Type = "Subzone", Music = nil },
+				["Tomb of the Sun King"] = { Type = "Subzone", Music = nil },
+				["Tombs of the Precursors"] = { Type = "Subzone", Music = nil },
+				["The Trail of Devastation"] = { Type = "Subzone", Music = nil },
+				["Vir'naal Dam"] = { Type = "Subzone", Music = nil },
+				["Vir'naal Lake"] = { Type = "Subzone", Music = nil },
+				["Murkdeep Cavern"] = { Type = "Subzone", Music = nil },
+				["Vir'naal Oasis"] = { Type = "Subzone", Music = nil },
+				["Vir'naal River"] = { Type = "Subzone", Music = nil },
+				["Vir'naal River Delta"] = { Type = "Subzone", Music = nil },
+			},
 			[ 276 ] = nil, -- The Maelstrom	-	The Maelstrom
 			[ 371 ] = nil, -- The Jade Forest	-	Pandaria
 			[ 376 ] = nil, -- Valley of the Four Winds	-	Pandaria
+			[ 378 ] = {	-- The Wandering Isle	-	Azeroth
+				Faction = "Neutral",
+				Songs = 1,
+				Music1 = Misc2Song,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				["Shang Xi Training Grounds"] = { Type = "Town", Faction = "Neutral", Music = Misc2Song },
+				["Forlorn Hut"] = { Type = "Subzone", Music = nil },
+				["Mandori Village"] = { Type = "Town", Faction = "Neutral" },
+				["Morning Breeze Village"] = { Type = "Town", Faction = "Neutral" },
+				["Temple of Five Dawns"] = { Type = "Town", Faction = "Neutral" },
+				["The Dai-Lo Farmstead"] = { Type = "Town", Faction = "Neutral" },
+				["Wu-Song Village"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Cave of Meditation"] = { Type = "Subzone", Music = CaveSong },
+				["Chamber of Whispers"] = { Type = "Subzone", Music = nil },
+				["The Dawning Span"] = { Type = "Subzone", Music = nil },
+				["The Dawning Stair"] = { Type = "Subzone", Music = Alliance4Town },
+				["The Dawning Valley"] = { Type = "Subzone", Music = Alliance4Town },
+				["The Elders' Path"] = { Type = "Subzone", Music = nil },
+				["Fe-Feng Village"] = { Type = "Subzone", Music = nil },
+				["Fu's Pond"] = { Type = "Subzone", Music = LakeSong },
+				["Liang's Retreat"] = { Type = "Subzone", Music = Misc2Song },
+				["Morning Breeze Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Pei-Wu Forest"] = { Type = "Subzone", Music = nil },
+				["Pool of the Paw"] = { Type = "Subzone", Music = LakeSong },
+				["Ridge of Laughing Winds"] = { Type = "Subzone", Music = nil },
+				["The Rows"] = { Type = "Subzone", Music = nil },
+				["Ki-Han Brewery"] = { Type = "Subzone", Music = nil },
+				["Teeming Burrow"] = { Type = "Subzone", Music = nil },
+				["Virmen Grotto"] = { Type = "Subzone", Music = nil },
+				["Shrine of Dreaming Stones"] = { Type = "Subzone", Music = nil },
+				["Shrine of Five Dawns"] = { Type = "Subzone", Music = nil },
+				["Shrine of Inner-Light"] = { Type = "Subzone", Music = CaveSong },
+				["The Singing Pools"] = { Type = "Subzone", Music = LakeSong },
+				["Pool of Reflection"] = { Type = "Subzone", Music = nil },
+				["Tranquil Grotto"] = { Type = "Subzone", Music = Alliance4Town },
+				["The Wood of Staves"] = { Type = "Subzone", Music = nil },
+				["Wreck of the Skyseeker"] = { Type = "Subzone", Music = nil },
+			},
 			[ 379 ] = nil, -- Kun-Lai Summit	-	Pandaria
 			[ 388 ] = nil, -- Townlong Steppes	-	Pandaria
 			[ 390 ] = nil, -- Vale of Eternal Blossoms	-	Pandaria
@@ -2077,7 +2361,17 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Whitebeard's Encampment"] = { Type = "Subzone", Music = SnowSong },
 			},
 			[ 433 ] = nil, -- The Veiled Stair	-	Pandaria
-			[ 460 ] = nil, -- Shadowglen	-	Teldrassil
+			[ 460 ] = { -- Shadowglen	-	Teldrassil
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	SUBZONES:
+				["Shadowglen"] = { Type = "Subzone", Music = FriendlySong },
+				["Aldrassil"] = { Type = "Subzone", Music = Alliance7Town },
+				["Shadowthread Cave"] = { Type = "Subzone", Music = CaveSong },
+			},
 			[ 461 ] = { -- Valley of Trials - Orc Start:
 				Faction = "Horde",
 				Songs = 2,
@@ -2189,6 +2483,26 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			[ 641 ] = nil, -- Val'sharah	-	Broken Isles
 			[ 646 ] = nil, -- Broken Shore	-	Broken Isles
 			[ 650 ] = nil, -- Highmountain	-	Broken Isles
+			[ 672 ] = {	-- Mardum, the Shattered Abyss	-	Broken Isles
+				Faction = "Contested",
+				Songs = 1,
+				Music1 = BattleGround1,
+				Sleep = true,
+				Swim = 2,
+				--	SUBZONES:
+				["Cryptic Hollow"] = { Type = "Subzone", Music = nil },
+				["Despair Ridge"] = { Type = "Subzone", Music = nil },
+				["The Doom Fortress"] = { Type = "Subzone", Music = nil },
+				["The Fel Hammer"] = { Type = "Subzone", Music = nil },
+				["Forge of Corruption"] = { Type = "Subzone", Music = nil },
+				["Foul Creche"] = { Type = "Subzone", Music = nil },
+				["Illidari Foothold"] = { Type = "Subzone", Music = nil },
+				["Inferno Peak"] = { Type = "Subzone", Music = nil },
+				["Molten Shore"] = { Type = "Subzone", Music = nil },
+				["Seat of Command"] = { Type = "Subzone", Music = nil },
+				["Soul Engine"] = { Type = "Subzone", Music = nil },
+				["Twisting Nether"] = { Type = "Subzone", Music = nil },
+			},
 			[ 680 ] = nil, -- Suramar	-	Broken Isles
 			[ 739 ] = nil, -- Trueshot Lodge	-	Highmountain
 			[ 790 ] = nil, -- Eye of Azshara	-	Broken Isles
