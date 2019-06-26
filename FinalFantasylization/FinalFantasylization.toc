@@ -1,4 +1,4 @@
-## Interface: 80100
+## Interface: 80200
 ## Version: 8.1.0
 ## Title: FinalFantasylization 8.1.0
 ## Notes: FinalFantasylization plays music and sounds based on different in-game events
@@ -11,5 +11,4 @@ embeds.xml
 MapIDfix.lua
 Locales\Locales.xml
 FinalFantasylization.xml
-zones\zones.xml
 FinalFantasylizationOptions.xml

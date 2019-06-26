@@ -1,4 +1,4 @@
-## Interface: 80100
+## Interface: 80200
 ## Version: 8.0.4 
 ## Title: FinalFantasylization [|cff8ec3e6Final Fantasy 7|r] |ff33008.0.0|r
 ## Notes: Soundpack for FinalFantasylization based on Final Fantasy 7.
