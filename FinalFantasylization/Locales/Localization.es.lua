@@ -163,8 +163,8 @@ bleukreuz - Cambia al Soundpack de Bleukreuz]] -- Needs review
 	TestMessage4 = "<< Test de FinalFantasylization >> Clasificaci\195\179n de la zona: "
 	TestMessage5 = "<< Test de FinalFantasylization >> Nombre de la sub-zona: "
 	TestMessage6 = "<< Test de FinalFantasylization >> Clasificaci\195\179n de la Zona del Minimapa: "
-	TestMessage7 = "<< FinalFantasylization Test >> Clasificaci\195\179n del Objetivo:"
-	TestMessage8 = "<< FinalFantasylization Test >> MapID: "
+	TestMessage7 = "<< Test de FinalFantasylization >> Clasificaci\195\179n del Objetivo:"
+	TestMessage8 = "<< Test de FinalFantasylization >> uiMapID: "
 	Usage = [[FinalFantasylization por Hellfire et Darken5
 
 /FFSound -- Muestra el interfaz de FinalFantasylization

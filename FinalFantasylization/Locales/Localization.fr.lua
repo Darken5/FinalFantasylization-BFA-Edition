@@ -198,12 +198,12 @@ Cette fonction est en constante evolution donc des changements peuvent y etre ap
 	TestCommand = "test"
 	TestMessage1 = "<< Test de FinalFantasylization >> Serveur du joueur :  "
 	TestMessage2 = "<< Test de FinalFantasylization >> Faction du joueur :  "
-	TestMessage3 = "<< Test de FinalFantasylization>> Nom de la zone :  "
+	TestMessage3 = "<< Test de FinalFantasylization >> Nom de la zone :  "
 	TestMessage4 = "<< Test de FinalFantasylization >> Classification de la zone :  "
 	TestMessage5 = "<< Test de FinalFantasylization >> Nom de la sous-zone :  "
 	TestMessage6 = "<< Test de FinalFantasylization >> Classification de la cible :  "
-	TestMessage7 = "<<Test de FinalFantasylization>> Classification de la cible:"
-	TestMessage8 = "<< FinalFantasylization Test >> MapID: "
+	TestMessage7 = "<< Test de FinalFantasylization >> Classification de la cible:"
+	TestMessage8 = "<< Test de FinalFantasylization >> uiMapID: "
 	Usage = [[FinalFantasylization par Hellfire et Darken5
 
 

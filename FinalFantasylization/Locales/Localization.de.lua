@@ -210,7 +210,7 @@ Anwendungsweise des FinalFantasylization-Soundpack-Wechsels]]
 	TestMessage5 = "<< FinalFantasylization Test >> Name der Sub-Zone:  "
 	TestMessage6 = "<< FinalFantasylization Test >> Minimap-Zone Name:  "
 	TestMessage7 = "<< FinalFantasylization Test >> Ziel Bestimmung: "
-	TestMessage8 = "<< FinalFantasylization Test >> MapID: "
+	TestMessage8 = "<< FinalFantasylization Test >> uiMapID: "
 	Usage = [[FinalFantasylization von Hellfox and Darken5
  
 /FFSound -- Zeigt das FinalFantasylization-Konfigurationsfenster an.

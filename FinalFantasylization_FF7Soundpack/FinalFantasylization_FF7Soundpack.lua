@@ -116,8 +116,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		WorgenHowl = "Howl.mp3" -- Worgen Howl Sound
 		ChocoboKweh = "kweh.mp3" -- Chocobo Kweh Sound
 		FelsaberRoar = "FelsaberRoar.mp3"
-		SwimSong = "SwimSong.mp3" -- 
-		DarkSwimSong = "DarkSwimSong.mp3"
+		Swim1Song = "Swim1Song.mp3" -- 
+		Swim2Song = "Swim2Song.mp3"
 		SleepSong = "SleepSong.mp3" -- 
 		KillSound = "Kill.wav" -- Leave combat sound
 		CombatSound = "Combat.wav" -- Enter combat sound
@@ -188,9 +188,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--## ZONES
 	--########################
 	FFz = {
-
 		Zone = {
-			
 			[ 1 ] = { -- Durotar	-	Kalimdor
 				Faction = "Horde",
 				Songs = 2,
@@ -249,14 +247,14 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Palemane Rock"] = { Type = "Subzone", Music = nil },
 				["Ravaged Caravan"] = { Type = "Subzone", Music = nil },
 				["Red Rocks"] = { Type = "Subzone", Music = nil },
-				["The Rolling Plains"] = { Type = "Subzone", Music = nil },
+				["The Rolling Plains"] = { Type = "Subzone", Music = LandSong },
 				["Stonebull Lake"] = { Type = "Subzone", Music = LakeSong },
 				["Stonetalon Pass"] = { Type = "Subzone", Music = nil },
 				["Thunderhorn Water Well"] = { Type = "Subzone", Music = nil },
 				["The Venture Co. Mine"] = { Type = "Subzone", Music = CaveSong },
 				["Wildmane Water Well"] = { Type = "Subzone", Music = nil },
 				["Windfury Ridge"] = { Type = "Subzone", Music = nil },
-				["Winterhoof Water Well"] = { Type = "Subzone", Music = nil },				
+				["Winterhoof Water Well"] = { Type = "Subzone", Music = LandSong },				
 			},		
 			[ 10 ] = { -- Northern Barrens	-	Kalimdor
 				Faction = "Horde",
@@ -495,8 +493,98 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["South Tide's Run"] = { Type = "Subzone", Music = nil },
 				["Valgan's Field"] = { Type = "Subzone", Music = nil },
 			},
-			[ 22 ] = nil, -- Western Plaguelands	-	Eastern Kingdoms
-			[ 23 ] = nil, -- Eastern Plaguelands	-	Eastern Kingdoms
+			[ 22 ] = { -- Western Plaguelands	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = ForestSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Chillwind Camp"] = { Type = "Town", Faction = "Alliance" },
+				["Felstone Field"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Andorhal"] = { Type = "Town", Faction = "Horde" },
+				["The Bulwark"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Hearthglen"] = { Type = "Town", Faction = "Neutral" },
+				["The Menders' Stead"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Charred Outpost"] = { Type = "Subzone", Music = PlagueSong },
+				["Dalson's Farm"] = { Type = "Subzone", Music = nil },
+				["Darrowmere Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Caer Darrow"] = { Type = "Subzone", Music = nil },
+				["Scholomance"] = { Type = "Subzone", Music = SwampSong },
+				["Gahrron's Withering"] = { Type = "Subzone", Music = PlagueSong },
+				["Mardenholde Keep"] = { Type = "Subzone", Music = nil },
+				["Taelan's Tower"] = { Type = "Subzone", Music = nil },
+				["Malicia's Outpost"] = { Type = "Subzone", Music = nil },
+				["Northridge Lumber Camp"] = { Type = "Subzone", Music = nil },
+				["Plaguemist Ravine"] = { Type = "Subzone", Music = nil },
+				["Redpine Dell"] = { Type = "Subzone", Music = nil },
+				["Sorrow Hill"] = { Type = "Subzone", Music = nil },
+				["Path of Uther"] = { Type = "Subzone", Music = nil },
+				["Sorrow Hill Crypt"] = { Type = "Subzone", Music = nil },
+				["Uther's Tomb"] = { Type = "Subzone", Music = nil },
+				["Thondroril River"] = { Type = "Subzone", Music = nil },
+				["The Weeping Cave"] = { Type = "Subzone", Music = nil },
+				["The Writhing Haunt"] = { Type = "Subzone", Music = nil },
+			},
+			[ 23 ] = { -- Eastern Plaguelands	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = ForestSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Neutral:
+				["Acherus: The Ebon Hold"] = { Type = "Town", Faction = "Neutral", Music = EbonHoldSong },
+				["Light's Hope Chapel"] = { Type = "Town", Faction = "Neutral" },
+				["Sanctum of Light"] = { Type = "Town", Faction = "Neutral", Music = FriendlySong },
+				["Tyr's Hand"] = { Type = "Town", Faction = "Neutral" },
+				["Tyr's Hand Abbey"] = { Type = "Town", Faction = "Neutral" },
+				["Hall of Arms"] = { Type = "Town", Faction = "Neutral" },
+				["Main Hall"] = { Type = "Town", Faction = "Neutral" },
+				["Library Wing"] = { Type = "Town", Faction = "Neutral" },
+				["Crown Guard Tower"] = { Type = "Town", Faction = "Neutral" },
+				["Light's Shield Tower"] = { Type = "Town", Faction = "Neutral" },
+				["Eastwall Tower"] = { Type = "Town", Faction = "Neutral" },
+				["Northpass Tower"] = { Type = "Town", Faction = "Neutral" },
+				["Plaguewood Tower"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Blackwood Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Browman Mill"] = { Type = "Subzone", Music = nil },
+				["Corin's Crossing"] = { Type = "Subzone", Music = nil },
+				["Darrowshire"] = { Type = "Subzone", Music = WarySong },
+				["Darrowshire Hunting Grounds"] = { Type = "Subzone", Music = nil },
+				["Death Cultist Base Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Death's Step"] = { Type = "Subzone", Music = nil },
+				["Eastwall Gate"] = { Type = "Subzone", Music = nil },
+				["The Fungal Vale"] = { Type = "Subzone", Music = nil },
+				["The Infectis Scar"] = { Type = "Subzone", Music = SwampSong },
+				["Ix'lar's Domain"] = { Type = "Subzone", Music = nil },
+				["Lake Mereldar"] = { Type = "Subzone", Music = LakeSong },
+				["Crypt"] = { Type = "Subzone", Music = WarySong },
+				["The Marris Stead"] = { Type = "Subzone", Music = nil },
+				["Northdale"] = { Type = "Subzone", Music = nil },
+				["The Noxious Glade"] = { Type = "Subzone", Music = nil },
+				["Pestilent Scar"] = { Type = "Subzone", Music = nil },
+				["Plaguewood"] = { Type = "Subzone", Music = nil },
+				["Terrordale"] = { Type = "Subzone", Music = nil },
+				["Quel'Lithien Lodge"] = { Type = "Subzone", Music = nil },
+				["Ruins of the Scarlet Enclave"] = { Type = "Subzone", Music = nil },
+				["Death's Breach"] = { Type = "Subzone", Music = nil },
+				["Siege Vise"] = { Type = "Subzone", Music = nil },
+				["Stratholme"] = { Type = "Subzone", Music = WarySong },
+				["Terrorweb Tunnel"] = { Type = "Subzone", Music = nil },
+				["Thondroril River"] = { Type = "Subzone", Music = nil },
+				["The Scarlet Basilica"] = { Type = "Subzone", Music = nil },
+				["The Undercroft"] = { Type = "Subzone", Music = nil },
+				["Zul'Mashar"] = { Type = "Subzone", Music = nil },
+				["Mazra'Alor"] = { Type = "Subzone", Music = nil },
+			},
 			[ 25 ] = { -- Hillsbrad Foothills	-	Eastern Kingdoms
 				Faction = "Contested",
 				Songs = 2,
@@ -658,6 +746,27 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Pyrox Flats"] = { Type = "Subzone", Music = PlagueSong },
 				["The Sea of Cinders"] = { Type = "Subzone", Music = PlagueSong },
 				["Stonewrought Pass"] = { Type = "Subzone", Music = PlagueSong },
+			},
+			[ 33 ] = { -- Blackrock Mountain - 33 - Blackrock Spire, 34 - Blackrock Caverns, 35 - Blackrock Depths
+				Faction = "Contested",
+				Songs = 1,
+				Music1 = CaveSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Shadowforge City"] = { Type = "Capital", Music = IronforgeSong },
+				--	SUBZONES:
+				["Blackrock Caverns"] = { Type = "Subzone", Music = nil },
+				["Blackrock Depths"] = { Type = "Subzone", Music = nil },
+				["Blackrock Spire"] = { Type = "Subzone", Music = nil },
+				["Blackwing Lair"] = { Type = "Subzone", Music = nil },
+				["Blackwing Descent"] = { Type = "Subzone", Music = nil },
+				["The Grinding Quarry"] = { Type = "Subzone", Music = nil },
+				["The Masonary"] = { Type = "Subzone", Music = nil },
+				["Molten Core"] = { Type = "Subzone", Music = nil },
+				["The Molten Span"] = { Type = "Subzone", Music = nil },
+				["Forgewright's Tomb"] = { Type = "Subzone", Music = nil },
 			},
 			[ 36 ] = { -- Burning Steppes	-	Eastern Kingdoms
 				Faction = "Contested",
@@ -1507,7 +1616,40 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Stormrage Barrow Dens"] = { Type = "Subzone", Music = nil },
 				["Timbermaw Hold"] = { Type = "Subzone", Music = CaveSong },
 			},
-			[ 81 ] = nil, -- Silithus	-	Kalimdor
+			[ 81 ] = { -- Silithus	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Staghelm Point"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Southwind Village"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Cenarion Hold"] = { Type = "Town", Faction = "Neutral" },
+				["The Oasis Inn"] = { Type = "Town", Faction = "Neutral" },
+				["Magni's Encampment"] = { Type = "Town", Faction = "Neutral" },
+				["Valor's Rest"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Bones of Grakkarond"] = { Type = "Subzone", Music = nil },
+				["Chamber of the Heart"] = { Type = "Subzone", Music = FriendlySong },
+				["The Crystal Vale"] = { Type = "Subzone", Music = nil },
+				["Ravaged Twilight Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Hive'Ashi"] = { Type = "Subzone", Music = nil },
+				["Hive'Regal"] = { Type = "Subzone", Music = nil },
+				["Hive'Zora"] = { Type = "Subzone", Music = nil },
+				["The Scarab Wall"] = { Type = "Subzone", Music = nil },
+				["The Scarab Dais"] = { Type = "Subzone", Music = nil },
+				["Silithus: The Wound"] = { Type = "Subzone", Music = nil },
+				["The Swarming Pillar"] = { Type = "Subzone", Music = nil },
+				["Twilight Base Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Twilight Outpost"] = { Type = "Subzone", Music = SwampSong },
+				["Twilight Post"] = { Type = "Subzone", Music = nil },
+				["The Veiled Sea"] = { Type = "Subzone", Music = WaterSong },
+			},
 			[ 83 ] = { -- Winterspring	-	Kalimdor
 				Faction = "Contested",
 				Songs = 2,
@@ -1551,6 +1693,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["The Canals"] = { Type = "Capital", Music = StormwindCitySong },
 				["Cathedral Square"] = { Type = "Capital", Music = StormwindCitySong },
 				["Cathedral of Light"] = { Type = "Capital", Music = StormwindCitySong },
+				["Deeprun Tram"] = { Type = "Subzone", Music = LakeSong },
+				["Bizmo's Brawlpub"] = { Type = "Subzone", Music = BattleGround2 },
 				["Dwarven District"] = { Type = "Capital", Music = StormwindCitySong },
 				["Cut-Throat Alley"] = { Type = "Capital", Music = StormwindCitySong },
 				["Mage Quarter"] = { Type = "Capital", Music = StormwindCitySong },
@@ -1774,7 +1918,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Ammen Ford"] = { Type = "Subzone", Music = nil },
 				["Bristlelimb Village"] = { Type = "Subzone", Music = HostileSong },
 				["Emberglade"] = { Type = "Subzone", Music = nil },
-				["Fairbridge Strand"] = { Type = "Subzone", Music = nil },
+				["Fairbridge Strand"] = { Type = "Subzone", Music = BeachSong },
 				["Geezle's Camp"] = { Type = "Subzone", Music = HostileSong },
 				["Menagerie Wreckage"] = { Type = "Subzone", Music = nil },
 				["Moongraze Woods"] = { Type = "Subzone", Music = ForestSong },
@@ -1812,9 +1956,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			[ 105 ] = nil, -- Blade's Edge Mountains	-	Outland
 			[ 106 ] = { -- Bloodmyst Isle	-	Kalimdor
 				Faction = "Alliance",
-				Songs = 2,
+				Songs = 1,
 				Music1 = PlagueSong,
-				Music2 = FriendlySong,
 				Sleep = true,				
 				Swim = 2,
 				--	TOWNS:
@@ -1825,30 +1968,30 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				--	SUBZONES:
 				["Amberweb Pass"] = { Type = "Subzone", Music = nil },
 				["Axxarien"] = { Type = "Subzone", Music = nil },
-				["Beryl Coast"] = { Type = "Subzone", Music = nil },
-				["Blacksilt Shore"] = { Type = "Subzone", Music = nil },
-				["Bladewood"] = { Type = "Subzone", Music = nil },
+				["Beryl Coast"] = { Type = "Subzone", Music = PlagueSong },
+				["Blacksilt Shore"] = { Type = "Subzone", Music = PlagueSong },
+				["Bladewood"] = { Type = "Subzone", Music = HostileSong },
 				["Bloodcurse Isle"] = { Type = "Subzone", Music = nil },
-				["The Bloodcursed Reef"] = { Type = "Subzone", Music = WaterSong },
-				["The Bloodwash"] = { Type = "Subzone", Music = nil },
-				["Bristlelimb Enclave"] = { Type = "Subzone", Music = nil },
+				["The Bloodcursed Reef"] = { Type = "Subzone", Music = PlagueSong },
+				["The Bloodwash"] = { Type = "Subzone", Music = PlagueSong },
+				["Bristlelimb Enclave"] = { Type = "Subzone", Music = HostileSong },
 				["The Crimson Reach"] = { Type = "Subzone", Music = nil },
 				["The Cryo-Core"] = { Type = "Subzone", Music = nil },
 				["The Foul Pool"] = { Type = "Subzone", Music = nil },
-				["The Hidden Reef"] = { Type = "Subzone", Music = WaterSong },
-				["The Lost Fold"] = { Type = "Subzone", Music = nil },
-				["Middenvale"] = { Type = "Subzone", Music = nil },
+				["The Hidden Reef"] = { Type = "Subzone", Music = PlagueSong },
+				["The Lost Fold"] = { Type = "Subzone", Music = PlagueSong },
+				["Middenvale"] = { Type = "Subzone", Music = PlagueSong },
 				["Mystwood"] = { Type = "Subzone", Music = nil },
-				["Nazzivian"] = { Type = "Subzone", Music = nil },
+				["Nazzivian"] = { Type = "Subzone", Music = HostileSong },
 				["Ragefeather Ridge"] = { Type = "Subzone", Music = nil },
-				["Ruins of Loreth'Aran"] = { Type = "Subzone", Music = nil },
+				["Ruins of Loreth'Aran"] = { Type = "Subzone", Music = WarySong },
 				["Talon Stand"] = { Type = "Subzone", Music = nil },
 				["Tel'athion's Camp"] = { Type = "Subzone", Music = nil },
 				["The Veiled Sea"] = { Type = "Subzone", Music = WaterSong },
 				["The Vector Coil"] = { Type = "Subzone", Music = nil },
 				["Veridian Point"] = { Type = "Subzone", Music = nil },
 				["The Warp Piston"] = { Type = "Subzone", Music = nil },
-				["Wrathscale Lair"] = { Type = "Subzone", Music = nil },
+				["Wrathscale Lair"] = { Type = "Subzone", Music = WarySong },
 				["Wyrmscar Island"] = { Type = "Subzone", Music = nil },
 			},
 			[ 107 ] = nil, -- Nagrand	-	Outland
@@ -2000,18 +2143,19 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				--	TOWNS:
 				--	Alliance:
 				["Duskhaven"] = { Type = "Town", Faction = "Alliance" },
-				["Greymane Manor"] = { Type = "Town", Faction = "Alliance" },
+				["Greymane Manor"] = { Type = "Town", Faction = "Alliance", Music = Alliance8Town },
 				["Keel Harbor"] = { Type = "Town", Faction = "Alliance" },
 				["Stormglen Village"] = { Type = "Town", Faction = "Alliance" },
+				["Tal'doren"] = { Type = "Town", Faction = "Alliance" },
 				--	SUBZONES:
 				["Aderic's Repose"] = { Type = "Subzone", Music = DeadSong },
 				["Allen Farmstead"] = { Type = "Subzone", Music = ForestSong },
 				["The Bite"] = { Type = "Subzone", Music = ForestSong },
-				["The Blackwald"] = { Type = "Subzone", Music = ForestSong },
+				["The Blackwald"] = { Type = "Subzone", Music = WarySong },
 				["The Bradshaw Mill"] = { Type = "Subzone", Music = ContestedSong },
-				["Crowley Orchard"] = { Type = "Subzone", Music = ForestSong },
-				["Crowley Stable Grounds"] = { Type = "Subzone", Music = ForestSong },
-				["Duskmist Shore"] = { Type = "Subzone", Music = ForestSong },
+				["Crowley Orchard"] = { Type = "Subzone", Music = WarySong },
+				["Crowley Stable Grounds"] = { Type = "Subzone", Music = WarySong },
+				["Duskmist Shore"] = { Type = "Subzone", Music = BattleGround1 },
 				["Emberstone Mine"] = { Type = "Subzone", Music = CaveSong },
 				["Emberstone Village"] = { Type = "Subzone", Music = HostileSong },
 				["Forsaken Forward Command"] = { Type = "Subzone", Music = BattleGround1 },
@@ -2019,7 +2163,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["The Greymane Wall"] = { Type = "Subzone", Music = ForestSong },
 				["Hailwood Marsh"] = { Type = "Subzone", Music = ForestSong },
 				["Hammond Farmstead"] = { Type = "Subzone", Music = ForestSong },
-				["Hayward Fishery"] = { Type = "Subzone", Music = WaterSong },
+				["Hayward Fishery"] = { Type = "Subzone", Music = BattleGround1 },
 				["The Headlands"] = { Type = "Subzone", Music = ForestSong },
 				["King's Gate"] = { Type = "Subzone", Music = ForestSong },
 				["Koroth's Den"] = { Type = "Subzone", Music = HostileSong },
@@ -2030,7 +2174,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Queen's Gate"] = { Type = "Subzone", Music = ForestSong },
 				["Rygna's Lair"] = { Type = "Subzone", Music = ForestSong },
 				["Stagecoach Crash Site"] = { Type = "Subzone", Music = ForestSong },
-				["Tal'doren"] = { Type = "Subzone", Music = ForestSong },
 				["Tempest's Reach"] = { Type = "Subzone", Music = ForestSong },
 				["Wahl Cottage"] = { Type = "Subzone", Music = ForestSong },
 				["Wood's End Cabin"] = { Type = "Subzone", Music = ForestSong },
@@ -2122,8 +2265,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				Songs = 4,
 				Music1 = LakeSong,
 				Music2 = WaterSong,
-				Music3 = SwimSong,
-				Music4 = DarkSwimSong,
+				Music3 = Swim1Song,
+				Music4 = Swim2Song,
 				Sleep = true,
 				--	TOWNS:
 				--	Alliance:
@@ -2277,6 +2420,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Vir'naal River Delta"] = { Type = "Subzone", Music = nil },
 			},
 			[ 276 ] = nil, -- The Maelstrom	-	The Maelstrom
+			[ 327 ] = { -- Ahn'Qiraj: The Fallen Kingdom	-	Kalimdor
+				Faction = "Neutral",
+				Songs = 1,
+				Music1 = SandSong,
+				Sleep = true,
+				Swim = 1,
+				--	SUBZONES:
+				["Ruins of Ahn'Qiraj"] = { Type = "Subzone", Music = nil },
+				["Temple of Ahn'Qiraj"] = { Type = "Subzone", Music = nil },
+			},
 			[ 371 ] = nil, -- The Jade Forest	-	Pandaria
 			[ 376 ] = nil, -- Valley of the Four Winds	-	Pandaria
 			[ 378 ] = {	-- The Wandering Isle	-	Azeroth
@@ -2945,13 +3098,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 	function FinalFantasylization_WorldElite()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Fighting3Song);
-				FinalFantasylization_debugMsg("Fighting3Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Fighting2Song);
-				FinalFantasylization_debugMsg("Fighting2Song")
-			end
+			x = x + 1
+			FinalFantasylization_PlayMusic(S .. _G[ "Fighting" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Fighting" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_BattlegroundBoss()
 		FinalFantasylization_PlayMusic(S .. Fighting4Song);
@@ -2959,23 +3108,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 	function FinalFantasylization_BattlegroundPVP()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Fighting3Song);
-				FinalFantasylization_debugMsg("Fighting3Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Fighting2Song);
-				FinalFantasylization_debugMsg("Fighting2Song")
-			end
+			x = x + 1
+			FinalFantasylization_PlayMusic(S .. _G[ "Fighting" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Fighting" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_WorldPVP()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Fighting3Song);
-				FinalFantasylization_debugMsg("Fighting3Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Fighting2Song);
-				FinalFantasylization_debugMsg("Fighting2Song")
-			end
+			x = x + 1
+			FinalFantasylization_PlayMusic(S .. _G[ "Fighting" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Fighting" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_WorldNormalPVE()
 		FinalFantasylization_PlayMusic(S .. Fighting1Song);
@@ -2991,135 +3132,24 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 	function FinalFantasylization_NeutralTowns()
 		local x = math.random(1, 20);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Horde1Town);
-				FinalFantasylization_debugMsg("Horde1Town")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. Horde2Town);
-				FinalFantasylization_debugMsg("Horde2Town")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. Horde3Town);
-				FinalFantasylization_debugMsg("Horde3Town")
-			elseif x == 4 then
-				FinalFantasylization_PlayMusic(S .. Horde4Town);
-				FinalFantasylization_debugMsg("Horde4Town")
-			elseif x == 5 then
-				FinalFantasylization_PlayMusic(S .. Horde5Town);
-				FinalFantasylization_debugMsg("Horde5Town")
-			elseif x == 6 then
-				FinalFantasylization_PlayMusic(S .. Horde6Town);
-				FinalFantasylization_debugMsg("Horde6Town")
-			elseif x == 7 then
-				FinalFantasylization_PlayMusic(S .. Horde7Town);
-				FinalFantasylization_debugMsg("Horde7Town")
-			elseif x == 8 then
-				FinalFantasylization_PlayMusic(S .. Horde8Town);
-				FinalFantasylization_debugMsg("Horde8Town")
-			elseif x == 9 then
-				FinalFantasylization_PlayMusic(S .. Horde9Town);
-				FinalFantasylization_debugMsg("Horde9Town")
-			elseif x == 10 then
-				FinalFantasylization_PlayMusic(S .. Horde10Town);
-				FinalFantasylization_debugMsg("Horde10Town")
-			elseif x == 11 then
-				FinalFantasylization_PlayMusic(S .. Alliance1Town);
-				FinalFantasylization_debugMsg("Alliance1Town")
-			elseif x == 12 then
-				FinalFantasylization_PlayMusic(S .. Alliance2Town);
-				FinalFantasylization_debugMsg("Alliance2Town")
-			elseif x == 13 then
-				FinalFantasylization_PlayMusic(S .. Alliance3Town);
-				FinalFantasylization_debugMsg("Alliance3Town")
-			elseif x == 14 then
-				FinalFantasylization_PlayMusic(S .. Alliance4Town);
-				FinalFantasylization_debugMsg("Alliance4Town")
-			elseif x == 15 then
-				FinalFantasylization_PlayMusic(S .. Alliance5Town);
-				FinalFantasylization_debugMsg("Alliance5Town")
-			elseif x == 16 then
-				FinalFantasylization_PlayMusic(S .. Alliance6Town);
-				FinalFantasylization_debugMsg("Alliance6Townn")
-			elseif x == 17 then
-				FinalFantasylization_PlayMusic(S .. Alliance7Town);
-				FinalFantasylization_debugMsg("Alliance7Town")
-			elseif x == 18 then
-				FinalFantasylization_PlayMusic(S .. Alliance8Town);
-				FinalFantasylization_debugMsg("Alliance8Town")
-			elseif x == 19 then
-				FinalFantasylization_PlayMusic(S .. Alliance9Town);
-				FinalFantasylization_debugMsg("Alliance9Town")
-			else
-				FinalFantasylization_PlayMusic(S .. Alliance10Town);
-				FinalFantasylization_debugMsg("Alliance10Town")
+			if x <= 10 then
+				FinalFantasylization_PlayMusic(S .. _G[ "Alliance" .. x .. "Town" ] );
+				FinalFantasylization_debugMsg( tostring( "Alliance" .. x .. "Town" ) )
+			elseif x >= 11 then
+				x = x - 10
+				FinalFantasylization_PlayMusic(S .. _G[ "Horde" .. x .. "Town" ] );
+				FinalFantasylization_debugMsg( tostring( "Horde" .. x .. "Town" ) )
 			end
 	end
 	function FinalFantasylization_AllianceTowns()
 		local x = math.random(1, 10);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Alliance1Town);
-				FinalFantasylization_debugMsg("Alliance1Town")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. Alliance2Town);
-				FinalFantasylization_debugMsg("Alliance2Town")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. Alliance3Town);
-				FinalFantasylization_debugMsg("Alliance3Town")
-			elseif x == 4 then
-				FinalFantasylization_PlayMusic(S .. Alliance4Town);
-				FinalFantasylization_debugMsg("Alliance4Town")
-			elseif x == 5 then
-				FinalFantasylization_PlayMusic(S .. Alliance5Town);
-				FinalFantasylization_debugMsg("Alliance5Town")
-			elseif x == 6 then
-				FinalFantasylization_PlayMusic(S .. Alliance6Town);
-				FinalFantasylization_debugMsg("Alliance6Town")
-			elseif x == 7 then
-				FinalFantasylization_PlayMusic(S .. Alliance7Town);
-				FinalFantasylization_debugMsg("Alliance7Town")
-			elseif x == 8 then
-				FinalFantasylization_PlayMusic(S .. Alliance8Town);
-				FinalFantasylization_debugMsg("Alliance8Town")
-			elseif x == 9 then
-				FinalFantasylization_PlayMusic(S .. Alliance9Town);
-				FinalFantasylization_debugMsg("Alliance9Town")
-			else
-				FinalFantasylization_PlayMusic(S .. Alliance10Town);
-				FinalFantasylization_debugMsg("Alliance10Town")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Alliance" .. x .. "Town" ] );
+			FinalFantasylization_debugMsg( tostring( "Alliance" .. x .. "Town" ) )
 	end
 	function FinalFantasylization_HordeTowns()
 		local x = math.random(1, 10);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Horde1Town);
-				FinalFantasylization_debugMsg("Horde1Town")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. Horde2Town);
-				FinalFantasylization_debugMsg("Horde2Town")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. Horde3Town);
-				FinalFantasylization_debugMsg("Horde3Town")
-			elseif x == 4 then
-				FinalFantasylization_PlayMusic(S .. Horde4Town);
-				FinalFantasylization_debugMsg("Horde4Town")
-			elseif x == 5 then
-				FinalFantasylization_PlayMusic(S .. Horde5Town);
-				FinalFantasylization_debugMsg("Horde5Town")
-			elseif x == 6 then
-				FinalFantasylization_PlayMusic(S .. Horde6Town);
-				FinalFantasylization_debugMsg("Horde6Town")
-			elseif x == 7 then
-				FinalFantasylization_PlayMusic(S .. Horde7Town);
-				FinalFantasylization_debugMsg("Horde7Town")
-			elseif x == 8 then
-				FinalFantasylization_PlayMusic(S .. Horde8Town);
-				FinalFantasylization_debugMsg("Horde8Town")
-			elseif x == 9 then
-				FinalFantasylization_PlayMusic(S .. Horde9Town);
-				FinalFantasylization_debugMsg("Horde9Town")
-			else
-				FinalFantasylization_PlayMusic(S .. Horde10Town);
-				FinalFantasylization_debugMsg("Horde10Town")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Horde" .. x .. "Town" ] );
+			FinalFantasylization_debugMsg( tostring( "Horde" .. x .. "Town" ) )
 	end
 
 	--###############
@@ -3127,22 +3157,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--###############
 	function FinalFantasylization_BattleGround()
 		local x = math.random(1, 5);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. BattleGround1);
-				FinalFantasylization_debugMsg("BattleGround1")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. BattleGround2);
-				FinalFantasylization_debugMsg("BattleGround2")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. BattleGround3);
-				FinalFantasylization_debugMsg("BattleGround3")
-			elseif x == 4 then
-				FinalFantasylization_PlayMusic(S .. BattleGround4);
-				FinalFantasylization_debugMsg("BattleGround4")
-			else
-				FinalFantasylization_PlayMusic(S .. BattleGround5);
-				FinalFantasylization_debugMsg("BattleGround5")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "BattleGround" .. x ] );
+			FinalFantasylization_debugMsg( tostring( "BattleGround" .. x ) )
 	end
 
 	--#############
@@ -3176,17 +3192,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--#############
 	--## SWIMMING
 	--#############
-	function FinalFantasylization_Swimming(Zone)
-		if Zone == 1 then
-			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming)
-			FinalFantasylization_PlayMusic(S .. SwimSong);  -- Normal Swim song
-			FinalFantasylization_debugMsg("SwimSong") -- Normal Swim song
-			return
-		elseif Zone == 2 then
-			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming2)
-			FinalFantasylization_PlayMusic(S .. DarkSwimSong);  -- alt Swim song
-			FinalFantasylization_debugMsg("DarkSwimSong") -- alt Swim song
-		end
+	function FinalFantasylization_Swimming(x)
+		FinalFantasylization_PlayMusic(S .. _G[ "Swim" .. x .. "Song" ] );
+		FinalFantasylization_debugMsg( tostring( "Swim" .. x .. "Song" ) )
 	end
 
 	--#############
@@ -3194,23 +3202,13 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--#############
 	function FinalFantasylization_HordeTaxi()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Flying1Song);
-				FinalFantasylization_debugMsg("Flying1Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Flying2Song);
-				FinalFantasylization_debugMsg("Flying2Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_AllianceTaxi()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Flying1Song);
-				FinalFantasylization_debugMsg("Flying1Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Flying2Song);
-				FinalFantasylization_debugMsg("Flying2Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
 	
 	--#############
@@ -3218,23 +3216,13 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--#############
 	function FinalFantasylization_HordeFlying()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Flying1Song);
-				FinalFantasylization_debugMsg("Flying1Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Flying2Song);
-				FinalFantasylization_debugMsg("Flying2Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_AllianceFlying()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Flying1Song);
-				FinalFantasylization_debugMsg("Flying1Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Flying2Song);
-				FinalFantasylization_debugMsg("Flying2Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
 
 	--#############
@@ -3242,32 +3230,13 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--#############
 	function FinalFantasylization_Mounted()					
 		local x = math.random(1, 3);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Mounted1Song);
-				FinalFantasylization_debugMsg("Mounted1Song")
-			elseif x == 2 then 
-				FinalFantasylization_PlayMusic(S .. Mounted2Song);
-				FinalFantasylization_debugMsg("Mounted2Song")
-			else 
-				FinalFantasylization_PlayMusic(S .. Mounted3Song);
-				FinalFantasylization_debugMsg("Mounted3Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Mounted" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Mounted" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_MountedEscape()		
 		local x = math.random(1, 4);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Escape1Song);
-				FinalFantasylization_debugMsg("Escape1Song")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. Escape2Song);
-				FinalFantasylization_debugMsg("Escape2Song")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. Escape3Song);
-				FinalFantasylization_debugMsg("Escape3Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Escape4Song);
-				FinalFantasylization_debugMsg("Escape4Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Escape" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Escape" .. x .. "Song" ) )
 	end
 	
 --END of music calls

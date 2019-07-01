@@ -578,7 +578,11 @@ function FinalFantasylization_GetMusic()
 		MinimapZoneName = GetMinimapZoneText();
 		SubZoneName = GetSubZoneText();
 		if SubZoneName == ( " " ) or SubZoneName == ( "" ) or SubZoneName == ( nil ) then
-			lSubZoneName = nil
+			if MinimapZoneName == ( " " ) or MinimapZoneName == ( "" ) or MinimapZoneName == ( nil ) then
+				lSubZoneName = nil
+			else
+				lSubZoneName = SZ[MinimapZoneName]
+			end
 		else
 			lSubZoneName = SZ[SubZoneName]
 		end
@@ -807,11 +811,11 @@ function FinalFantasylization_GetMusic()
 --#########################################################################################
 
 	--Remove uiMapInfo.mapType Cosmic, World, and Continent from checks.
-		if not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) then
+		if not IsInInstance() and not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) then
 			if not ( uiMapInfo == nil ) then
 				if ( uiMapInfo.mapType == ( 0 ) ) or ( uiMapInfo.mapType == ( 1 ) ) or ( uiMapInfo.mapType == ( 2 ) ) then
 					return			
-				elseif ( uiMapInfo.mapType == ( 3 ) ) then
+				elseif ( uiMapInfo.mapType == ( 3 ) or uiMapInfo.mapType == ( 4 ) ) then
 					CurrentZoneID = uiMapInfo.mapID
 				elseif MapIDfix[uiMapInfo.mapID] == nil then
 					FinalFantasylization_debugMsg(FFZlib.Color.Red .. "MapIDfix Error? : ".. FFZlib.Color.Yellow .. uiMapInfo.name .. " : " .. uiMapInfo.mapID) -- for testing purposes this can spam
@@ -860,21 +864,21 @@ function FinalFantasylization_GetMusic()
 				end
 				FinalFantasylization_IsPlaying = true
 				return
-			elseif lSubZoneName then
+			elseif CurrentZoneInfo[lSubZoneName] then
 			--'====================================================================================
 			--' Zone Event: Capitals
 			--'====================================================================================
 				if ( CurrentZoneInfo[lSubZoneName].Type == "Capital" ) and FinalFantasylizationOptions.Capital == true then
 					if FinalFantasylization_CurrentZone ~= SubZoneName then
 						if ( CurrentZoneInfo.Faction == factionEnglish ) then
-							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. "CAPITAL: " .. lSubZoneName .. ", " .. ZoneName)
 							FinalFantasylization_PlayMusic( S .. CurrentZoneInfo[lSubZoneName].Music );
 							FinalFantasylization_debugMsg( tostring( CurrentZoneInfo[lSubZoneName].Music ) )
 						elseif ( CurrentZoneInfo.Faction ~= factionEnglish ) then
-							FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileCity .. SubZoneName..", "..ZoneName..PlayerInHostile)
+							FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileCity .. lSubZoneName .. ", " .. ZoneName .. PlayerInHostile)
 							FinalFantasylization_HostileSong()
 						end
-						FinalFantasylization_CurrentZone = SubZoneName
+						FinalFantasylization_CurrentZone = lSubZoneName
 					else
 						return
 					end
@@ -897,26 +901,27 @@ function FinalFantasylization_GetMusic()
 			--' Zone Event: Towns
 			--'====================================================================================
 				elseif ( CurrentZoneInfo[lSubZoneName].Type == "Town" ) then
-					if FinalFantasylization_CurrentZone ~= SubZoneName then
-						if ( CurrentZoneInfo[lSubZoneName].Faction == factionEnglish ) then
-							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-							if CurrentZoneInfo[lSubZoneName].Music then
-								FinalFantasylization_PlayMusic( S .. CurrentZoneInfo[lSubZoneName].Music );
-								FinalFantasylization_debugMsg( tostring( CurrentZoneInfo[lSubZoneName].Music ) )
-							elseif ( CurrentZoneInfo[lSubZoneName].Faction == "Horde" ) then
+					if FinalFantasylization_CurrentZone ~= lSubZoneName then
+						if CurrentZoneInfo[lSubZoneName].Music then
+							FinalFantasylization_PlayMusic( S .. CurrentZoneInfo[lSubZoneName].Music );
+							FinalFantasylization_debugMsg( tostring( CurrentZoneInfo[lSubZoneName].Music ) )
+						elseif ( CurrentZoneInfo[lSubZoneName].Faction == "Neutral" ) then
+							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. "TOWN: " .. lSubZoneName .. ", " .. ZoneName)
+							FinalFantasylization_NeutralTowns()
+						elseif ( CurrentZoneInfo[lSubZoneName].Faction == factionEnglish ) then
+							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. "TOWN: " .. lSubZoneName .. ", " .. ZoneName)
+							if ( CurrentZoneInfo[lSubZoneName].Faction == "Horde" ) then
 								FinalFantasylization_HordeTowns()
 							elseif ( CurrentZoneInfo[lSubZoneName].Faction == "Alliance" ) then
 								FinalFantasylization_AllianceTowns()
-							elseif ( CurrentZoneInfo[lSubZoneName].Faction == "Neutral" ) then
-								FinalFantasylization_NeutralTowns()
 							else
-								FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Town Check Error: " .. PlayerIn.. SubZoneName..", "..ZoneName)
+								FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Town Check Error: " .. PlayerIn .. lSubZoneName .. ", " .. ZoneName)
 							end
 						elseif ( CurrentZoneInfo[lSubZoneName].Faction ~= factionEnglish ) then
-							FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+							FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. lSubZoneName .. ", " .. ZoneName .. PlayerInHostile)
 							FinalFantasylization_HostileSong()						
 						end
-						FinalFantasylization_CurrentZone = SubZoneName
+						FinalFantasylization_CurrentZone = lSubZoneName
 					else
 						return
 					end
@@ -927,17 +932,17 @@ function FinalFantasylization_GetMusic()
 				--' Subzone
 				--'====================================================================================
 				elseif ( CurrentZoneInfo[lSubZoneName].Type == "Subzone" ) then
-					if FinalFantasylization_CurrentZone ~= SubZoneName then
-						FinalFantasylization_CurrentZone = SubZoneName
-						FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+					if FinalFantasylization_CurrentZone ~= lSubZoneName then
+						FinalFantasylization_CurrentZone = lSubZoneName
+						FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. "SUBZONE: " .. SubZoneName .. ", " .. ZoneName)
 						if CurrentZoneInfo[lSubZoneName].Music == nil then
 							if CurrentZoneInfo.Songs == 1 then
 								FinalFantasylization_PlayMusic( S .. CurrentZoneInfo.Music1 );
-								FinalFantasylization_debugMsg( "Subzone music nil, playing Zone music: " ..  tostring( CurrentZoneInfo.Music1 ) )
+								FinalFantasylization_debugMsg( "Subzone music nil, playing ZONE: " .. ZoneName .. " music: " ..  tostring( CurrentZoneInfo.Music1 ) )
 							else
 								local x = math.random(1, CurrentZoneInfo.Songs);
 									FinalFantasylization_PlayMusic( S .. CurrentZoneInfo[ tostring( "Music" .. x ) ] );
-									FinalFantasylization_debugMsg( "Subzone music nil, playing Zone music: " ..  tostring( CurrentZoneInfo[ tostring( "Music" .. x ) ] ) )						
+									FinalFantasylization_debugMsg( "Subzone music nil, playing ZONE: " .. ZoneName .. " music: " ..  tostring( CurrentZoneInfo[ tostring( "Music" .. x ) ] ) )						
 							end
 						else
 							FinalFantasylization_PlayMusic( S .. CurrentZoneInfo[lSubZoneName].Music );
@@ -955,7 +960,7 @@ function FinalFantasylization_GetMusic()
 				elseif ( CurrentZoneInfo[lSubZoneName].Type == "Zone" ) then
 					if FinalFantasylization_CurrentZone ~= ZoneName then
 						FinalFantasylization_CurrentZone = ZoneName
-						FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
+						FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. "ZONE: " .. ZoneName)
 						if CurrentZoneInfo.Songs == 1 then
 							FinalFantasylization_PlayMusic( S .. CurrentZoneInfo.Music1 );
 							FinalFantasylization_debugMsg( tostring( CurrentZoneInfo.Music1 ) )
@@ -970,9 +975,13 @@ function FinalFantasylization_GetMusic()
 					end
 				end
 			else
+				if lSubZoneName ~= ZoneName and FinalFantasylization_CurrentZone ~= ZoneName and FinalFantasylizationOptions.Debug == true then
+					FinalFantasylization_debugMsg(FFZlib.Color.Red .. "SubZone Error: " .. FFZlib.Color.Orange .. "|-" .. FFZlib.Color.Blue .. lSubZoneName .. FFZlib.Color.Orange ..  "-| " .. FFZlib.Color.Aqua .. "- Not in FinalFantasylization.")
+					PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
+				end
 				if FinalFantasylization_CurrentZone ~= ZoneName then
 					FinalFantasylization_CurrentZone = ZoneName
-					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
+					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. ZoneName)
 					if CurrentZoneInfo.Songs == 1 then
 						FinalFantasylization_PlayMusic( S .. CurrentZoneInfo.Music1 );
 						FinalFantasylization_debugMsg( tostring( CurrentZoneInfo.Music1 ) )
