@@ -1080,6 +1080,17 @@ function FinalFantasylization_JumpOrAscendStart()
 	if IsMounted("player") and not UnitOnTaxi("player") and FinalFantasylizationOptions.ChocoboKweh == true and FinalFantasylizationOptions.Sound == true then
 		currentSpeed, _, _, _ = GetUnitSpeed("player");
 		
+		for i=1,40 do
+			local spellName, _, _, _, _, _, _, _, _, spellId = UnitBuff("player",i)
+			if ( spellName == "Running Wild" ) or ( spellID == 87840 ) then
+				if currentSpeed == 0 then
+					FinalFantasylization_WorgenHowl();
+					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Worgen Howl - " .. spellName .. " - " .. spellID)
+				end
+				return
+			end
+		end
+			
 		local mountcount = C_MountJournal.GetNumDisplayedMounts()
 		local mountName = nil
 		i = 1
@@ -1099,16 +1110,6 @@ function FinalFantasylization_JumpOrAscendStart()
 		elseif string.match(mountName,'felsaber') then 
 			if currentSpeed == 0 then
 				FinalFantasylization_FelsaberRoar();
-			end
-		else
-			for i=1,40 do
-				local spellName, _, _, _, _, _, _, _, _, spellId = UnitBuff("player",i)
-				if ( spellName == "Running Wild" ) or ( spellID == 87840 ) then
-					if currentSpeed == 0 then
-						FinalFantasylization_WorgenHowl();
-						FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Worgen Howl - " .. spellName .. " - " .. spellID)
-					end
-				end
 			end
 		end
 	end
