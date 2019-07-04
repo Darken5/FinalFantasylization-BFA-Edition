@@ -2,7 +2,7 @@
 --##
 --##	   FinalFantasylization 8.1.0
 --##
---##	     Final Fantasy 7 
+--##	     Final Fantasy 7
 --##
 --##	        Soundpack
 --##
@@ -15,6 +15,9 @@ local soundPackID = "ff7" -- Specific /ffsoundpack <command> for this soundpack,
 _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
     flag = enabled
     if enabled then
+
+		soundPackName = "Final Fantasy 7"  -- Name of Soundpack
+
 		-- set all the sound effects variables for this pack (you know... the ones passed to PlaySoundFile())
 		--#######################################
 		--##
@@ -23,110 +26,110 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		--#######################################
 
 		S = "Interface\\AddOns\\FinalFantasylization_FF7Soundpack\\Sounds\\"
-		
+
 		-- Capital Cities Events --
-		OrgrimmarSong = "OrgrimmarSong.mp3" -- 
-		SilvermoonCitySong = "SilvermoonCitySong.mp3" -- 
-		ThunderBluffSong = "ThunderbluffSong.mp3" -- 
-		UndercitySong = "UndercitySong.mp3" -- 
+		OrgrimmarSong = "OrgrimmarSong.mp3" --
+		SilvermoonCitySong = "SilvermoonCitySong.mp3" --
+		ThunderBluffSong = "ThunderbluffSong.mp3" --
+		UndercitySong = "UndercitySong.mp3" --
 
-		DarnassusSong = "DarnassusSong.mp3" -- 
-		ExodarSong = "ExodarSong.mp3" -- 
-		IronforgeSong = "IronforgeSong.mp3" -- 
-		StormwindCitySong = "StormwindCitySong.mp3" -- 
+		DarnassusSong = "DarnassusSong.mp3" --
+		ExodarSong = "ExodarSong.mp3" --
+		IronforgeSong = "IronforgeSong.mp3" --
+		StormwindCitySong = "StormwindCitySong.mp3" --
 
-		ShattrathCitySong = "ShattrathCitySong.mp3" -- 
-		DalaranSong = "DalaranSong.mp3" -- 
-		EbonHoldSong = "EbonHoldSong.mp3" -- 
+		ShattrathCitySong = "ShattrathCitySong.mp3" --
+		DalaranSong = "DalaranSong.mp3" --
+		EbonHoldSong = "EbonHoldSong.mp3" --
 
 		-- Horde Towns Events --
-		Horde1Town = "Horde1Town.mp3" -- 
-		Horde2Town = "Horde2Town.mp3" -- 
-		Horde3Town = "Horde3Town.mp3" -- 
-		Horde4Town = "Horde4Town.mp3" -- 
+		Horde1Town = "Horde1Town.mp3" --
+		Horde2Town = "Horde2Town.mp3" --
+		Horde3Town = "Horde3Town.mp3" --
+		Horde4Town = "Horde4Town.mp3" --
 		Horde5Town = "Horde5Town.mp3" --
-		Horde6Town = "Horde6Town.mp3" -- 
-		Horde7Town = "Horde7Town.mp3" -- 
-		Horde8Town = "Horde8Town.mp3" -- 
-		Horde9Town = "Horde9Town.mp3" -- 
+		Horde6Town = "Horde6Town.mp3" --
+		Horde7Town = "Horde7Town.mp3" --
+		Horde8Town = "Horde8Town.mp3" --
+		Horde9Town = "Horde9Town.mp3" --
 		Horde10Town = "Horde10Town.mp3" --
 
 		-- Alliance Towns Events --
-		Alliance1Town = "Alliance1Town.mp3" -- 
-		Alliance2Town = "Alliance2Town.mp3" -- 
-		Alliance3Town = "Alliance3Town.mp3" -- 
-		Alliance4Town = "Alliance4Town.mp3" -- 
-		Alliance5Town = "Alliance5Town.mp3" -- 
-		Alliance6Town = "Alliance6Town.mp3" -- 
-		Alliance7Town = "Alliance7Town.mp3" -- 
-		Alliance8Town = "Alliance8Town.mp3" -- 
-		Alliance9Town = "Alliance9Town.mp3" -- 
+		Alliance1Town = "Alliance1Town.mp3" --
+		Alliance2Town = "Alliance2Town.mp3" --
+		Alliance3Town = "Alliance3Town.mp3" --
+		Alliance4Town = "Alliance4Town.mp3" --
+		Alliance5Town = "Alliance5Town.mp3" --
+		Alliance6Town = "Alliance6Town.mp3" --
+		Alliance7Town = "Alliance7Town.mp3" --
+		Alliance8Town = "Alliance8Town.mp3" --
+		Alliance9Town = "Alliance9Town.mp3" --
 		Alliance10Town = "Alliance10Town.mp3" --
 
 		-- PvP Type Zones Events --
-		FriendlySong = "FriendlySong.mp3" -- 
-		ContestedSong = "ContestedSong.mp3" -- 
-		HostileSong = "HostileSong.mp3" -- 
+		FriendlySong = "FriendlySong.mp3" --
+		ContestedSong = "ContestedSong.mp3" --
+		HostileSong = "HostileSong.mp3" --
 
-		ForestSong = "ForestSong.mp3" -- 
-		LandSong = "LandSong.mp3" -- 
-		PlagueSong = "PlagueSong.mp3" -- 
-		SandSong = "SandSong.mp3" -- 
-		SnowSong = "SnowSong.mp3" -- 
-		SwampSong = "SwampSong.mp3" -- 
-		BeachSong = "BeachSong.mp3" -- 
-		LakeSong = "LakeSong.mp3" -- 
-		WaterSong = "WaterSong.mp3" -- 
+		ForestSong = "ForestSong.mp3" --
+		LandSong = "LandSong.mp3" --
+		PlagueSong = "PlagueSong.mp3" --
+		SandSong = "SandSong.mp3" --
+		SnowSong = "SnowSong.mp3" --
+		SwampSong = "SwampSong.mp3" --
+		BeachSong = "BeachSong.mp3" --
+		LakeSong = "LakeSong.mp3" --
+		WaterSong = "WaterSong.mp3" --
 		CaveSong = "Horde4Town.mp3" --
 		WarySong = "WarySong.mp3" --
 
 		-- Battlegrounds Events --
-		BattleGround1 = "BattleGround1.mp3" -- 
-		BattleGround2 = "BattleGround2.mp3" -- 
-		BattleGround3 = "BattleGround3.mp3" -- 
-		BattleGround4 = "BattleGround4.mp3" -- 
+		BattleGround1 = "BattleGround1.mp3" --
+		BattleGround2 = "BattleGround2.mp3" --
+		BattleGround3 = "BattleGround3.mp3" --
+		BattleGround4 = "BattleGround4.mp3" --
 		BattleGround5 = "BattleGround5.mp3" --
 
 		-- Normal Mount Events --
-		Mounted1Song = "Mounted1Song.mp3" -- 
-		Mounted2Song = "Mounted2Song.mp3" -- 
-		Mounted3Song = "Mounted3Song.mp3" -- 
+		Mounted1Song = "Mounted1Song.mp3" --
+		Mounted2Song = "Mounted2Song.mp3" --
+		Mounted3Song = "Mounted3Song.mp3" --
 
-		Escape1Song = "Escape1Song.mp3" -- 
-		Escape2Song = "Escape2Song.mp3" -- 
-		Escape3Song = "Escape3Song.mp3" -- 
-		Escape4Song = "Escape4Song.mp3" -- 
-	
+		Escape1Song = "Escape1Song.mp3" --
+		Escape2Song = "Escape2Song.mp3" --
+		Escape3Song = "Escape3Song.mp3" --
+		Escape4Song = "Escape4Song.mp3" --
+
 		-- Flying Mount Events --
-		Flying1Song = "Flying1Song.mp3" -- 
-		Flying2Song = "Flying2Song.mp3" -- 
+		Flying1Song = "Flying1Song.mp3" --
+		Flying2Song = "Flying2Song.mp3" --
 
 		-- Dead/Ghost Events --
-		DeadSong = "Dead1Song.mp3" -- 
-		DieSong = "DieSong.mp3" -- 
+		DeadSong = "Dead1Song.mp3" --
+		DieSong = "DieSong.mp3" --
 
 		-- Fighting Events --
 		Fanfare = "Fanfare.mp3" -- Fanfare
-		Fighting1Song = "Fighting1Song.mp3" -- 
-		Fighting2Song = "Fighting2Song.mp3" -- 
-		Fighting3Song = "Fighting3Song.mp3" -- 
-		Fighting4Song = "Fighting4Song.mp3" -- 
-		
+		Fighting1Song = "Fighting1Song.mp3" --
+		Fighting2Song = "Fighting2Song.mp3" --
+		Fighting3Song = "Fighting3Song.mp3" --
+		Fighting4Song = "Fighting4Song.mp3" --
+
 		-- Misc Events --
 		WorgenHowl = "Howl.mp3" -- Worgen Howl Sound
 		ChocoboKweh = "kweh.mp3" -- Chocobo Kweh Sound
 		FelsaberRoar = "FelsaberRoar.mp3"
-		Swim1Song = "Swim1Song.mp3" -- 
+		Swim1Song = "Swim1Song.mp3" --
 		Swim2Song = "Swim2Song.mp3"
-		SleepSong = "SleepSong.mp3" -- 
+		SleepSong = "SleepSong.mp3" --
 		KillSound = "Kill.wav" -- Leave combat sound
 		CombatSound = "Combat.wav" -- Enter combat sound
 		LevelUpSong = "LevelUpSong.mp3" -- Level Up song
 		CampingSong = "CampingSong.mp3"
-		
+
 		-- Misc Songs --
-		Misc1Song = "Misc1Song.mp3" -- 
-		Misc2Song = "Misc2Song.mp3" -- 
+		Misc1Song = "Misc1Song.mp3" --
+		Misc2Song = "Misc2Song.mp3" --
 
 	--#######################################
 	--##
@@ -161,7 +164,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayFile( S ..  WorgenHowl );
 		FinalFantasylization_debugMsg("Worgen Howl!")
 	end
-	
+
 	--########################
 	--## BATTLEGROUNDS
 	--########################
@@ -254,8 +257,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["The Venture Co. Mine"] = { Type = "Subzone", Music = CaveSong },
 				["Wildmane Water Well"] = { Type = "Subzone", Music = nil },
 				["Windfury Ridge"] = { Type = "Subzone", Music = nil },
-				["Winterhoof Water Well"] = { Type = "Subzone", Music = LandSong },				
-			},		
+				["Winterhoof Water Well"] = { Type = "Subzone", Music = LandSong },
+			},
 			[ 10 ] = { -- Northern Barrens	-	Kalimdor
 				Faction = "Horde",
 				Songs = 2,
@@ -328,7 +331,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["The Tower of Arathor"] = { Type = "Subzone", Music = PlagueSong },
 				["Thandol Span"] = { Type = "Subzone", Music = ContestedSong },
 				["Thoradin's Wall"] = { Type = "Subzone", Music = ContestedSong },
-				["Witherbark Village"] = { Type = "Subzone", Music = ForestSong },				
+				["Witherbark Village"] = { Type = "Subzone", Music = ForestSong },
 			},
 			[ 15 ] = { -- Badlands	-	Eastern Kingdoms
 				Faction = "Contested",
@@ -1908,7 +1911,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				Songs = 2,
 				Music1 = PlagueSong,
 				Music2 = FriendlySong,
-				Sleep = true,				
+				Sleep = true,
 				Swim = 1,
 				--	TOWNS:
 				--	Alliance:
@@ -1958,7 +1961,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				Faction = "Alliance",
 				Songs = 1,
 				Music1 = PlagueSong,
-				Sleep = true,				
+				Sleep = true,
 				Swim = 2,
 				--	TOWNS:
 				--	Alliance:
@@ -2138,7 +2141,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				Faction = "Alliance",
 				Songs = 1,
 				Music1 = ForestSong,
-				Sleep = true,				
+				Sleep = true,
 				Swim = 2,
 				--	TOWNS:
 				--	Alliance:
@@ -2495,7 +2498,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Echo Ridge Mine"] = { Type = "Subzone", Music = ForestSong },
 				["Northshire River"] = { Type = "Subzone", Music = LakeSong },
 				["Northshire Valley"] = { Type = "Subzone", Music = ForestSong },
-				["Northshire Vineyards"] = { Type = "Subzone", Music = HostileSong },				
+				["Northshire Vineyards"] = { Type = "Subzone", Music = HostileSong },
 			},
 			[ 427 ] = {	-- Coldridge Valley	-	Dun Morogh
 				Faction = "Alliance",
@@ -2668,23 +2671,23 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			[ 895 ] = nil, -- Tiragarde Sound	-	Kul Tiras
 			[ 896 ] = nil, -- Drustvar	-	Kul Tiras
 			[ 942 ] = nil, -- Stormsong Valley	-	Kul Tiras
-			[ 997 ] = nil, -- Tirisfal Glades	-	
+			[ 997 ] = nil, -- Tirisfal Glades	-
 			[ 998 ] = nil, -- Undercity	-	Ruins of Lordaeron
 			[ 1010 ] = nil, -- The MOTHERLODE!!	-	Kezan
-			[ 1022 ] = nil, -- Uncharted Island	-	
-			[ 1032 ] = nil, -- Skittering Hollow	-	
-			[ 1033 ] = nil, -- The Rotting Mire	-	
-			[ 1034 ] = nil, -- Verdant Wilds	-	
-			[ 1035 ] = nil, -- Molten Cay	-	
-			[ 1036 ] = nil, -- The Dread Chain	-	
-			[ 1037 ] = nil, -- Whispering Reef	-	
+			[ 1022 ] = nil, -- Uncharted Island	-
+			[ 1032 ] = nil, -- Skittering Hollow	-
+			[ 1033 ] = nil, -- The Rotting Mire	-
+			[ 1034 ] = nil, -- Verdant Wilds	-
+			[ 1035 ] = nil, -- Molten Cay	-
+			[ 1036 ] = nil, -- The Dread Chain	-
+			[ 1037 ] = nil, -- Whispering Reef	-
 			[ 1039 ] = nil, -- Shrine of the Storm	-	Stormsong Valley
 			[ 1041 ] = nil, -- The Underrot	-	Nazmir
-			[ 1158 ] = nil, -- Arathi Highlands	-	
+			[ 1158 ] = nil, -- Arathi Highlands	-
 			[ 1161 ] = nil, -- Boralus	-	Tiragarde Sound
 			[ 1165 ] = nil, -- Dazar'alor	-	Zuldazar
 			[ 1169 ] = nil, -- Tol Dagor	-	Kul Tiras
-			[ 1170 ] = nil, -- Gorgrond - Mag'har Scenario	-	
+			[ 1170 ] = nil, -- Gorgrond - Mag'har Scenario	-
 			[ 1187 ] = nil, -- Azsuna	-	Broken Isles
 			[ 1188 ] = nil, -- Val'sharah	-	Broken Isles
 			[ 1189 ] = nil, -- Highmountain	-	Broken Isles
@@ -2759,14 +2762,14 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			[ 1330 ] = nil, -- Uldum	-	Kalimdor
 			[ 1331 ] = nil, -- The Exodar	-	Kalimdor
 			[ 1333 ] = nil, -- Darkshore	-	Kalimdor
-			[ 1334 ] = nil, -- Wintergrasp	-	
-			[ 1335 ] = nil, -- Cooking: Impossible	-	
-			[ 1336 ] = nil, -- Havenswood	-	
-			[ 1337 ] = nil, -- Jorundall	-	
+			[ 1334 ] = nil, -- Wintergrasp	-
+			[ 1335 ] = nil, -- Cooking: Impossible	-
+			[ 1336 ] = nil, -- Havenswood	-
+			[ 1337 ] = nil, -- Jorundall	-
 			[ 1339 ] = nil, -- Warsong Gulch	-	Northern Barrens
-			[ 1347 ] = nil, -- Zandalari Treasury	-	
-			[ 1355 ] = nil, -- Nazjatar	-	
-			[ 1362 ] = nil, -- Shrine of the Storm	-	
+			[ 1347 ] = nil, -- Zandalari Treasury	-
+			[ 1355 ] = nil, -- Nazjatar	-
+			[ 1362 ] = nil, -- Shrine of the Storm	-
 			[ 1396 ] = nil, -- Borean Tundra	-	Northrend
 			[ 1397 ] = nil, -- Dragonblight	-	Northrend
 			[ 1398 ] = nil, -- Grizzly Hills	-	Northrend
@@ -2778,12 +2781,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			[ 1404 ] = nil, -- Wintergrasp	-	Northrend
 			[ 1405 ] = nil, -- Crystalsong Forest	-	Northrend
 			[ 1406 ] = nil, -- Hrothgar's Landing	-	Northrend
-			[ 1408 ] = nil, -- Ashran	-	
+			[ 1408 ] = nil, -- Ashran	-
 			[ 1462 ] = nil, -- Mechagon Island	-	Kul Tiras
-			[ 1476 ] = nil, -- Twilight Highlands	-	
+			[ 1476 ] = nil, -- Twilight Highlands	-
 			[ 1478 ] = nil, -- Ashran	-	Draenor
-			[ 1501 ] = nil, -- Crestfall	-	
-			[ 1502 ] = nil, -- Snowblossom Village	-	
+			[ 1501 ] = nil, -- Crestfall	-
+			[ 1502 ] = nil, -- Snowblossom Village	-
 		},
 
 	};
@@ -3003,7 +3006,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. BattleGround5);
 		FinalFantasylization_debugMsg("BattleGround5")
 	end
-		-- Wrath of the Lich King Dungeons	
+		-- Wrath of the Lich King Dungeons
 	function FinalFantasylization_Dungeon_UtgardeKeepSong()
 		FinalFantasylization_PlayMusic(S .. BattleGround5);
 		FinalFantasylization_debugMsg("BattleGround5")
@@ -3180,7 +3183,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. SleepSong);
 		FinalFantasylization_debugMsg("SleepSong")
 	end
-	
+
 	--#############
 	--## CAMPING
 	--#############
@@ -3210,7 +3213,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
 			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
-	
+
 	--#############
 	--## FLYING
 	--#############
@@ -3228,17 +3231,17 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--#############
 	--## MOUNTED
 	--#############
-	function FinalFantasylization_Mounted()					
+	function FinalFantasylization_Mounted()
 		local x = math.random(1, 3);
 			FinalFantasylization_PlayMusic(S .. _G[ "Mounted" .. x .. "Song" ] );
 			FinalFantasylization_debugMsg( tostring( "Mounted" .. x .. "Song" ) )
 	end
-	function FinalFantasylization_MountedEscape()		
+	function FinalFantasylization_MountedEscape()
 		local x = math.random(1, 4);
 			FinalFantasylization_PlayMusic(S .. _G[ "Escape" .. x .. "Song" ] );
 			FinalFantasylization_debugMsg( tostring( "Escape" .. x .. "Song" ) )
 	end
-	
+
 --END of music calls
         CoreSavedVariable = soundPackID
         for i = 1, NUM_SOUND_PACKS do -- set NUM_SOUND_PACKS in the Core

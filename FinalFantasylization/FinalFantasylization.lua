@@ -163,7 +163,7 @@ function FinalFantasylization_OnEvent(self, event, ...)
 	elseif event == "PLAYER_DEAD" then
 	elseif event == "CHAT_MSG_TEXT_EMOTE" then
 	elseif event == "PLAYER_LEVEL_UP" then
-		if ( FinalFantasylization_RegenGain == true or FinalFantasylization_RegenGain == false ) and FinalFantasylizationOptions.LevelUp == true then
+		if ( FinalFantasylization_RegenGain == true or FinalFantasylization_RegenGain == false ) and FinalFantasylizationOptions.LevelUp == true and FinalFantasylizationOptions.Sound == true then
 			FinalFantasylization_RegenGain = false
 			FinalFantasylization_LevelUpSong()
 		end
@@ -197,6 +197,8 @@ function FinalFantasylization_ClearMusicState()
 	FinalFantasylization_RegenGain = false
 	-- Dungeons Events --
 	FinalFantasylization_InInstance = false
+	-- Play Music/Sound
+	Current_Song = nil
 end
 
 function FinalFantasylization_Msg(msg)
@@ -217,143 +219,139 @@ function FinalFantasylization_Command(Command)
 	if Lower == "" or Lower == nil then
 		FinalFantasylizationUI_Show()
 	elseif Lower == EnabledCommand then
-		FinalFantasylizationEnable(true)
-		FinalFantasylization_ClearMusicState()
+		FinalFantasylization_Options("Enabled", true)
 		FFZlib.Message(FFZlib.Color.Yellow .. EnabledMessage)
 	elseif Lower == DisabledCommand then
-		FinalFantasylizationEnable(false)
+		FinalFantasylization_Options("Enabled", false)
 		FFZlib.Message(FFZlib.Color.Yellow .. DisabledMessage)
 	elseif Lower == DebugCommand then
 		if FinalFantasylizationOptions.Debug == false then
-			FinalFantasylizationEnableDebug(true)
+			FinalFantasylization_Options("Debug", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. DebugOnMessage)
 		else
-			FinalFantasylizationEnableDebug(false)
+			FinalFantasylization_Options("Debug", false)
 			FFZlib.Message(FFZlib.Color.Yellow .. DebugOffMessage)
 		end
 	elseif Lower == MusicCommand then
-		if FinalFantasylizationOptions.Music == true then
-			FinalFantasylizationEnableMusic(false)
-			FinalFantasylization_ClearMusicState()
-			StopMusic();
-			FFZlib.Message(FFZlib.Color.Yellow .. MusicOffMessage)
-		else
-			FinalFantasylizationEnableMusic(true)
-			FinalFantasylization_debugMsg(FFZlib.Color.Red .. "Enable Music...")
-			FinalFantasylization_GetMusic()
+		if FinalFantasylizationOptions.Music == false then
+			FinalFantasylization_Options("Music", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. MusicOnMessage)
+			FinalFantasylization_GetMusic()
+		else
+			FinalFantasylization_Options("Music", false)			
+			FFZlib.Message(FFZlib.Color.Yellow .. MusicOffMessage)
 		end
 	elseif Lower == SoundCommand then
-		if FinalFantasylizationOptions.Sound == true then
-			FinalFantasylizationEnableSound(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. SoundOffMessage)
-		else
-			FinalFantasylizationEnableSound(true)
+		if FinalFantasylizationOptions.Sound == false then
+			FinalFantasylization_Options("Sound", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. SoundOnMessage)
+		else
+			FinalFantasylization_Options("Sound", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. SoundOffMessage)
 		end
 	elseif Lower == DungeonCommand then
-		if FinalFantasylizationOptions.Dungeon == true then
-			FinalFantasylizationEnableDungeon(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. DungeonOffMessage)
-		else
-			FinalFantasylizationEnableDungeon(true)
+		if FinalFantasylizationOptions.Dungeon == false then
+			FinalFantasylization_Options("Dungeon", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. DungeonOnMessage)
+		else
+			FinalFantasylization_Options("Dungeon", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. DungeonOffMessage)
 		end
 	elseif Lower == MountCommand then
-		if FinalFantasylizationOptions.Mount == true then
-			FinalFantasylizationEnableMount(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. MountOffMessage)
-		else
-			FinalFantasylizationEnableMount(true)
+		if FinalFantasylizationOptions.Mount == false then
+			FinalFantasylization_Options("Mount", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. MountOnMessage)
+		else
+			FinalFantasylization_Options("Mount", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. MountOffMessage)
 		end
 	elseif Lower == SleepCommand then
-		if FinalFantasylizationOptions.Sleep == true then
-			FinalFantasylizationEnableSleep(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. SleepOffMessage)
-		else
-			FinalFantasylizationEnableSleep(true)
+		if FinalFantasylizationOptions.Sleep == false then
+			FinalFantasylization_Options("Sleep", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. SleepOnMessage)
+		else
+			FinalFantasylization_Options("Sleep", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. SleepOffMessage)
 		end
 	elseif Lower == SwimCommand then
-		if FinalFantasylizationOptions.Swim == true then
-			FinalFantasylizationEnableSwim(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. SwimOffMessage)
-		else
-			FinalFantasylizationEnableSwim(true)
+		if FinalFantasylizationOptions.Swim == false then
+			FinalFantasylization_Options("Swim", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. SwimOnMessage)
+		else
+			FinalFantasylization_Options("Swim", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. SwimOffMessage)
 		end
 	elseif Lower == DeadCommand then
-		if FinalFantasylizationOptions.Dead == true then
-			FinalFantasylizationEnableDead(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. DeadOffMessage)
-		else
-			FinalFantasylizationEnableDead(true)
+		if FinalFantasylizationOptions.Dead == false then
+			FinalFantasylization_Options("Dead", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. DeadOnMessage)
+		else
+			FinalFantasylization_Options("Dead", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. DeadOffMessage)
 		end
 	elseif Lower == FlightCommand then
-		if FinalFantasylizationOptions.Flight == true then
-			FinalFantasylizationEnableFlight(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. FlightOffMessage)
-		else
-			FinalFantasylizationEnableFlight(true)
+		if FinalFantasylizationOptions.Flight == false then
+			FinalFantasylization_Options("Flight", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. FlightOnMessage)
+		else
+			FinalFantasylization_Options("Flight", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. FlightOffMessage)
 		end
 	elseif Lower == CapitalCommand then
-		if FinalFantasylizationOptions.Capital == true then
-			FinalFantasylizationEnableCapital(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. CapitalOffMessage)
-		else
-			FinalFantasylizationEnableCapital(true)
+		if FinalFantasylizationOptions.Capital == false then
+			FinalFantasylization_Options("Capital", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. CapitalOnMessage)
+		else
+			FinalFantasylization_Options("Capital", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. CapitalOffMessage)
 		end
 	elseif Lower == CombatCommand then
-		if FinalFantasylizationOptions.Combat == true then
-			FinalFantasylizationEnableCombat(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. CombatOffMessage)
-		else
-			FinalFantasylizationEnableCombat(true)
+		if FinalFantasylizationOptions.Combat == false then
+			FinalFantasylization_Options("Combat", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. CombatOnMessage)
+		else
+			FinalFantasylization_Options("Combat", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. CombatOffMessage)
 		end
 	elseif Lower == FanfareCommand then
-		if FinalFantasylizationOptions.Fanfare == true then
-			FinalFantasylizationEnableFanfare(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. FanfareOffMessage)
-		else
-			FinalFantasylizationEnableFanfare(true)
+		if FinalFantasylizationOptions.Fanfare == false then
+			FinalFantasylization_Options("Fanfare", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. FanfareOnMessage)
+		else
+			FinalFantasylization_Options("Fanfare", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. FanfareOffMessage)
 		end
 	elseif Lower == LevelUpCommand then
-		if FinalFantasylizationOptions.LevelUp == true then
-			FinalFantasylizationEnableLevelUp(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. LevelUpOffMessage)
-		else
-			FinalFantasylizationEnableLevelUp(true)
+		if FinalFantasylizationOptions.LevelUp == false then
+			FinalFantasylization_Options("LevelUp", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. LevelUpOnMessage)
+		else
+			FinalFantasylization_Options("LevelUp", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. LevelUpOffMessage)
 		end
 		elseif Lower == RaidCommand then
-		if FinalFantasylizationOptions.Raid == true then
-			FinalFantasylizationEnableRaid(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. RaidOffMessage)
-		else
-			FinalFantasylizationEnableRaid(true)
+		if FinalFantasylizationOptions.Raid == false then
+			FinalFantasylization_Options("Raid", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. RaidOnMessage)
+		else
+			FinalFantasylization_Options("Raid", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. RaidOffMessage)
 		end
 	elseif Lower == ChocoboKwehCommand then
-		if FinalFantasylizationOptions.ChocoboKweh == true then
-			FinalFantasylizationEnableChocoboKweh(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. ChocoboKwehOffMessage)
-		else
-			FinalFantasylizationEnableChocoboKweh(true)
+		if FinalFantasylizationOptions.ChocoboKweh == false then
+			FinalFantasylization_Options("ChocoboKweh", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. ChocoboKwehOnMessage)
+		else
+			FinalFantasylization_Options("ChocoboKweh", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. ChocoboKwehOffMessage)
 		end
 	elseif Lower == BattlegroundCommand then
-		if FinalFantasylizationOptions.Battleground == true then
-			FinalFantasylizationEnableBattleground(false)
-			FFZlib.Message(FFZlib.Color.Yellow .. BattlegroundOffMessage)
-		else
-			FinalFantasylizationEnableBattleground(true)
+		if FinalFantasylizationOptions.Battleground == false then
+			FinalFantasylization_Options("Battleground", true)
 			FFZlib.Message(FFZlib.Color.Yellow .. BattlegroundOnMessage)
+		else
+			FinalFantasylization_Options("Battleground", false)
+			FFZlib.Message(FFZlib.Color.Yellow .. BattlegroundOffMessage)
 		end
 	elseif Lower == TestCommand then
 		uiMapID = C_Map.GetBestMapForUnit("player");
@@ -413,123 +411,16 @@ function SwitchTo(soundPackID)
 	end
 end
 
-function FinalFantasylizationEnable(Enabled)
-	FFZlib.Assert(Enabled == true or Enabled == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Enabled = Enabled
-	if Enabled == true then
+function FinalFantasylization_Options(Type, Value)
+	FFZlib.Assert(Value == true or Value == false, "New value should be true or false.")
+	FinalFantasylizationOptions[Type] = Value
+	if Value == true then
 		FinalFantasylization_ClearMusicState()
-		FinalFantasylization_debugMsg(FFZlib.Color.Red .. "FinalFantasylizationEnable...")
 		FinalFantasylization_OnUpdate(self, elapsed)
-	elseif Enabled == false then
+	elseif Value == false then
 		StopMusic()
 		FinalFantasylization_ClearMusicState()
 	end
-end
-
-function FinalFantasylizationEnableMusic(Music)
-	FFZlib.Assert(Music == true or Music == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Music = Music
-	if Music == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-
-	
-function FinalFantasylizationEnableCombat(Combat)
-	FFZlib.Assert(Combat == true or Combat == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Combat = Combat
-	FinalFantasylization_ClearMusicState()
-end
-	
-function FinalFantasylizationEnableMount(Mount)
-	FFZlib.Assert(Mount == true or Mount == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Mount = Mount
-	FinalFantasylization_ClearMusicState()
-end
-	
-function FinalFantasylizationEnableDungeon(Dungeon)
-	FFZlib.Assert(Dungeon == true or Dungeon == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Dungeon = Dungeon
-	if Dungeon == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableRaid(Raid)
-	FFZlib.Assert(Raid == true or Raid == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Raid = Raid
-	if Raid == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableBattleground(Battleground)
-	FFZlib.Assert(Battleground == true or Battleground == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Battleground = Battleground
-	if Battleground == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableSleep(Sleep)
-	FFZlib.Assert(Sleep == true or Sleep == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Sleep = Sleep
-	if Sleep == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableSwim(Swim)
-	FFZlib.Assert(Swim == true or Swim == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Swim = Swim
-	if Swim == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableDead(Dead)
-	FFZlib.Assert(Dead == true or Dead == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Dead = Dead
-	if Dead == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableFlight(Flight)
-	FFZlib.Assert(Flight == true or Flight == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Flight = Flight
-	if Flight == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableCapital(Capital)
-	FFZlib.Assert(Capital == true or Capital == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Capital = Capital
-	if Capital == false then StopMusic() end
-	FinalFantasylization_ClearMusicState()
-end
-	
-function FinalFantasylizationEnableSound(Sound)
-	FFZlib.Assert(Sound == true or Sound == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Sound = Sound
-	FinalFantasylization_ClearMusicState()
-end
-	
-function FinalFantasylizationEnableFanfare(Fanfare)
-	FFZlib.Assert(Fanfare == true or Fanfare == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Fanfare = Fanfare
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableChocoboKweh(ChocoboKweh)
-	FFZlib.Assert(ChocoboKweh == true or ChocoboKweh == false, "New value should be true or false.")
-	FinalFantasylizationOptions.ChocoboKweh = ChocoboKweh
-	FinalFantasylization_ClearMusicState()
-end
-
-function FinalFantasylizationEnableLevelUp(LevelUp)
-	FFZlib.Assert(LevelUp == true or LevelUp == false, "New value should be true or false.")
-	FinalFantasylizationOptions.LevelUp = LevelUp
-	FinalFantasylization_ClearMusicState()
-end
-	
-function FinalFantasylizationEnableDebug(Debug)
-	FFZlib.Assert(Debug == true or Debug == false, "New value should be true or false.")
-	FinalFantasylizationOptions.Debug = Debug
-	FinalFantasylization_ClearMusicState()
 end
 
 -- Displays FinalFantasylization usage information.
@@ -546,26 +437,21 @@ function FinalFantasylizationSoundpackUsage()
 end
 
 function FinalFantasylization_PlayMusic( file )
-	if( FinalFantasylizationOptions.Enabled == true ) and ( FinalFantasylizationOptions.Music == true ) then
-		if( file ~= nil ) then
-			if Current_Song ~= file then
-				Current_Song = file
-				PlayMusic( file, "Master" )
-			end
+	if( file ~= nil ) then
+		if Current_Song ~= file then
+			Current_Song = file
+			PlayMusic( file, "Master" )
 		end
 	end
 end
 
 function FinalFantasylization_PlayFile( file )
-	if( FinalFantasylizationOptions.Enabled == true ) and ( FinalFantasylizationOptions.Sound == true ) then
-		if( file ~= nil ) then
-			PlaySoundFile( file, "Master" )
-		end
+	if( file ~= nil ) then
+		PlaySoundFile( file, "Master" )
 	end
 end
 
 function FinalFantasylization_GetMusic()
-
 	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
 		uiMapID = C_Map.GetBestMapForUnit("player")
 		if uiMapID ~= nil then
@@ -593,7 +479,7 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	Sounds
 --'====================================================================================
-		if FinalFantasylization_PlayerIsCombat == false and FinalFantasylization_RegenGain == true and FinalFantasylizationOptions.Fanfare == true then
+		if FinalFantasylization_PlayerIsCombat == false and FinalFantasylization_RegenGain == true and FinalFantasylizationOptions.Fanfare == true and FinalFantasylizationOptions.Sound == true then
 			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Victory)
 			FinalFantasylization_Fanfare() -- Battle fanfare call
 			FinalFantasylization_RegenGain = false
@@ -616,7 +502,7 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	World Event: Player is Ghost
 --'====================================================================================
-		if ( UnitIsGhost("player") ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Dead == true then
+		if ( UnitIsGhost("player") ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Dead == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsGhosting == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. PlayerGhost)
 				FinalFantasylization_PlayerGhost() -- Music call when youre a ghost.
@@ -631,7 +517,7 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	World Event: Player is Dead
 --'====================================================================================
-		if ( UnitIsDead("player") ) and FinalFantasylizationOptions.Dead == true then
+		if ( UnitIsDead("player") ) and FinalFantasylizationOptions.Dead == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsDead == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. PlayerDie)
 				FinalFantasylization_PlayerDie() -- music call for when you die.
@@ -647,14 +533,14 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	World Event: Player is On Taxi "Horde and Alliance Varyiant"
 --'====================================================================================
-		if ( UnitOnTaxi("player") ) and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true then
+		if ( UnitOnTaxi("player") ) and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsTaxi == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "Horde" .. " " .. Taxi)
 				FinalFantasylization_HordeTaxi() -- music call for Taxi. ...
 			end
 			FinalFantasylization_IsPlaying = true
 			FinalFantasylization_PlayerIsTaxi = true
-		elseif ( UnitOnTaxi("player") ) and ( factionEnglish == "Alliance" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true then
+		elseif ( UnitOnTaxi("player") ) and ( factionEnglish == "Alliance" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsTaxi == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. "Alliance" .. " " .. Taxi)
 				FinalFantasylization_AllianceTaxi() -- music call for Taxi. ...
@@ -668,7 +554,7 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	World Event: Player in Combat, Mounted
 --'====================================================================================
-		if IsMounted("player") and FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
+		if IsMounted("player") and FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsEscape == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. MountedEscape)
 				FinalFantasylization_MountedEscape()
@@ -682,7 +568,7 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	World Event: Player in Combat
 --'====================================================================================
-		if FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Combat == true and UnitAffectingCombat("player") then
+		if FinalFantasylization_PlayerIsCombat == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Combat == true and FinalFantasylizationOptions.Music == true and UnitAffectingCombat("player") then
 			--FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. InCombat)
 			local inInstance, instanceType = IsInInstance();
 			if FinalFantasylization_PlayerIsBattling == false then
@@ -749,7 +635,7 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	World Event: Player is Mounted in Hostile Zone
 --'====================================================================================
-		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
+		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsHostileMounting == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HostileEscape)
 				FinalFantasylization_MountedEscape()
@@ -763,14 +649,14 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	World Event: Player on Flying Mount "Horde and Alliance Varyiant"
 --'====================================================================================
-		if IsFlying() and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true then
+		if IsFlying() and ( factionEnglish == "Horde" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsFlying == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Flying .. "(" .. "Horde" .. ")")
 				FinalFantasylization_HordeFlying()
 			end
 			FinalFantasylization_IsPlaying = true 
 			FinalFantasylization_PlayerIsFlying = true 
-		elseif IsFlying() and ( factionEnglish == "Alliance" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true then
+		elseif IsFlying() and ( factionEnglish == "Alliance" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Flight == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsFlying == false then
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Flying .. "(" .. "Alliance" .. ")")
 				FinalFantasylization_AllianceFlying()
@@ -784,7 +670,7 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	World Event: Player is Mounted.. Chocobo!
 --'====================================================================================
-		if IsMounted("player") and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true then
+		if IsMounted("player") and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and FinalFantasylizationOptions.Music == true then
 			if FinalFantasylization_PlayerIsMounting == false then
 				for i=1,40 do
 					local spellName, _, _, _, _, _, _, _, _, spellId = UnitBuff("player",i)
@@ -811,7 +697,7 @@ function FinalFantasylization_GetMusic()
 --#########################################################################################
 
 	--Remove uiMapInfo.mapType Cosmic, World, and Continent from checks.
-		if not IsInInstance() and not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) then
+		if not IsInInstance() and not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) and FinalFantasylizationOptions.Music == true then
 			if not ( uiMapInfo == nil ) then
 				if ( uiMapInfo.mapType == ( 0 ) ) or ( uiMapInfo.mapType == ( 1 ) ) or ( uiMapInfo.mapType == ( 2 ) ) then
 					return			
@@ -865,6 +751,7 @@ function FinalFantasylization_GetMusic()
 				FinalFantasylization_IsPlaying = true
 				return
 			elseif CurrentZoneInfo[lSubZoneName] then
+
 			--'====================================================================================
 			--' Zone Event: Capitals
 			--'====================================================================================
@@ -897,6 +784,7 @@ function FinalFantasylization_GetMusic()
 					end
 					FinalFantasylization_IsPlaying = true
 					return
+
 			--'====================================================================================
 			--' Zone Event: Towns
 			--'====================================================================================
@@ -1006,7 +894,7 @@ function FinalFantasylization_GetMusic()
 --#########################################################################################
 
 	-- 5 Man Dungeons
-		if IsInInstance() and FinalFantasylization_IsPlaying == false then
+		if IsInInstance() and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Music == true then
 			local inInstance, instanceType = IsInInstance();
 			
 			if instanceType == "party" and FinalFantasylization_InInstance == false and FinalFantasylizationOptions.Dungeon == true then
@@ -1189,7 +1077,7 @@ end
 --'	Mounted Event: Howl's, Growl's, Roar's and Chocobo Kweh!! 
 --'====================================================================================
 function FinalFantasylization_JumpOrAscendStart()
-	if IsMounted("player") and not UnitOnTaxi("player") and FinalFantasylizationOptions.ChocoboKweh == true then
+	if IsMounted("player") and not UnitOnTaxi("player") and FinalFantasylizationOptions.ChocoboKweh == true and FinalFantasylizationOptions.Sound == true then
 		currentSpeed, _, _, _ = GetUnitSpeed("player");
 		
 		local mountcount = C_MountJournal.GetNumDisplayedMounts()
@@ -1230,7 +1118,7 @@ end
 --'	Player Camping
 --'====================================================================================
 function FinalFantasylization_PlayerCamping()
-	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
+	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true  and FinalFantasylizationOptions.Music == true then
 		if FinalFantasylizationOptions.Debug == true then
 			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. PlayerCamping)
 		end

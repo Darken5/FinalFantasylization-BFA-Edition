@@ -170,7 +170,7 @@
    	TestMessage7 = "<< FinalFantasylization Test >> Target Classification: "
 	TestMessage8 = "<< FinalFantasylization Test >> uiMapID: "
 		
-	
+	MiniMapButtonTooltip = "|cffeda55fLeft click |cffffff00to open UI.\n|cffeda55fRight click |cffffff00 to open the Soundpack List.\n|cffeda55fShift + Left Click |cffffff00 to Toggle FFz On/Off.\n|cffeda55fCtrl + Left Click |cffffff00 to open the Debug Menu.\n|cffeda55fCtrl + Right Click |cffffff00 to run Debug Test."
 	
 Usage = [[FinalFantasylization by Hellfox and Darken5
  
@@ -206,15 +206,6 @@ you want to change to.
 /FFsoundpack <command> or /FFsp <command>
 <command>
 ff7 - switches to Final Fantasy 7 Soundpack
-ff8 - switches to Final Fantasy 8 Soundpack
-ff9 - switches to Final Fantasy 9 Soundpack
-ff10 - switches to Final Fantasy 10 Soundpack
-ct - Switches to Chrono Trigger Soundpack
-khearts - Switches to Kingdom Hearts Soundpack
-wildarms - Switches to Wild Arms Soundpack
-srebirth - Switches to Sephiroths Rebirth Soundpack
-fftribute - Switches to Tribute to the Fantasy Soundpack
-bleukreuz - Switches to Bleukreuz's Soundpack
 ]]
 	
 

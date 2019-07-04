@@ -34,23 +34,43 @@ end
 
 function FinalFantasylizationUI_Show()
 	InterfaceOptionsFrame_OpenToCategory(FinalFantasylizationUIFrame)
+	InterfaceOptionsFrame_OpenToCategory(FinalFantasylizationUIFrame)
 end
 
 function FinalFantasylizationUISP_Show()
+	InterfaceOptionsFrame_OpenToCategory(FinalFantasylizationUISPA)
 	InterfaceOptionsFrame_OpenToCategory(FinalFantasylizationUISPA)
 end
 
 function FinalFantasylizationUIDebug_Show()
 	InterfaceOptionsFrame_OpenToCategory(FinalFantasylizationUIDebug)
+	InterfaceOptionsFrame_OpenToCategory(FinalFantasylizationUIDebug)
 end
 
-function FinalFantasylizationMiniMapButton_OnClick(arg1)
-	if (arg1 == "RightButton") then
-        FinalFantasylizationUISP_Show();
-    elseif (arg1 == "LeftButton") then 
-        FinalFantasylizationUI_Show();
-    end
-
+function FinalFantasylizationMiniMapButton_OnClick(self, button)
+	if IsControlKeyDown() then
+		if (button == "LeftButton") then
+			FinalFantasylizationUIDebug_Show();
+		elseif (button == "RightButton") then 
+			FFZlib.ExecuteChatCommand("/ffs " .. TestCommand)
+		end
+	elseif IsShiftKeyDown() then
+		if (button == "LeftButton") then
+			if FinalFantasylizationUIFrame_EnableCheck:GetChecked() == true then
+				FinalFantasylizationUIFrame_EnableCheck:SetChecked(nil)
+				FinalFantasylizationUIFrame_EnableCheck_OnClick()
+			else
+				FinalFantasylizationUIFrame_EnableCheck:SetChecked(true)
+				FinalFantasylizationUIFrame_EnableCheck_OnClick()
+			end
+		end
+	else
+		if (button == "LeftButton") then
+			FinalFantasylizationUI_Show();
+		elseif (button == "RightButton") then 
+			FinalFantasylizationUISP_Show();
+		end
+	end
 end
 
 function FinalFantasylizationUI_OnShow()
@@ -120,15 +140,11 @@ function FinalFantasylizationUI_OnDefaults()
 end
 
 function FinalFantasylizationUIFrame_EnableCheck_OnClick()
-	FinalFantasylizationEnable(FinalFantasylizationUIFrame_EnableCheck:GetChecked() ~= nil)
+	FinalFantasylization_Options("Enabled", FinalFantasylizationUIFrame_EnableCheck:GetChecked())
 	if FinalFantasylizationOptions.Enabled then
-		FinalFantasylizationUIFrame_DisabledWarningLabel:Hide()
-		FinalFantasylization_ClearMusicState();
-		FinalFantasylization_GetMusic()
+		FinalFantasylizationUIFrame_EnableOn_OnClick()
 	else
-		FinalFantasylizationUIFrame_DisabledWarningLabel:Show()
-		StopMusic()
-		FinalFantasylization_ClearMusicState();
+		FinalFantasylizationUIFrame_EnableOff_OnClick()
 	end
 end
 

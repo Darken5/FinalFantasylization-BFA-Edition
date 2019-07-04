@@ -152,6 +152,7 @@ if (GetLocale() == "deDE") then
 	LevelUpCommand = "levelup"
 	LevelUpOffMessage = "FinalFantasylization-Level-Up-Sound ist nun deaktiviert. Zum Aktivieren, gib folgendes ein: /FFsound levelup"
 	LevelUpOnMessage = "FinalFantasylization-Level-Up-Sound ist nun aktiviert."
+	MiniMapButtonTooltip = "|cffeda55fLeft click |cffffff00to open UI.\n|cffeda55fRight click |cffffff00 to open the Soundpack List.\n|cffeda55fShift + Left Click |cffffff00 to Toggle FFz On/Off.\n|cffeda55fCtrl + Left Click |cffffff00 to open the Debug Menu.\n|cffeda55fCtrl + Right Click |cffffff00 to run Debug Test."
 	MountCommand = "mount"
 	Mounted = "Spieler reitet... Chocobo!"
 	MountedEscape = "Spieler auf Reittier im Kampf, fliehen!"
