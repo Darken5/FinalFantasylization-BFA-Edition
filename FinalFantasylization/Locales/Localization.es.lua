@@ -107,6 +107,7 @@ if( GetLocale() == "esES" ) then
 	LevelUpCommand = "subirnivel"
 	LevelUpOffMessage = "La m\195\186sica de Subir Nivel de FinalFantasylization est\195\161 desactivada, para activarla escriba: /FFsound levelup."
 	LevelUpOnMessage = "La m\195\186sica de Subir Nivel de FinalFantasylization est\195\161 activada."
+	MiniMapButtonTooltip = "|cffeda55fLeft click |cffffff00to open UI.\n|cffeda55fRight click |cffffff00 to open the Soundpack List.\n|cffeda55fShift + Left Click |cffffff00 to Toggle FFz On/Off.\n|cffeda55fCtrl + Left Click |cffffff00 to open the Debug Menu.\n|cffeda55fCtrl + Right Click |cffffff00 to run Debug Test."
 	MountCommand = "montar"
 	Mounted = "El jugador est\195\161 montado... \194\161Chocobo!"
 	MountedEscape = "El jugador est\195\161 montando en un combate, \194\161escapa!"
@@ -163,8 +164,8 @@ bleukreuz - Cambia al Soundpack de Bleukreuz]] -- Needs review
 	TestMessage4 = "<< Test de FinalFantasylization >> Clasificaci\195\179n de la zona: "
 	TestMessage5 = "<< Test de FinalFantasylization >> Nombre de la sub-zona: "
 	TestMessage6 = "<< Test de FinalFantasylization >> Clasificaci\195\179n de la Zona del Minimapa: "
-	TestMessage7 = "<< FinalFantasylization Test >> Clasificaci\195\179n del Objetivo:"
-	TestMessage8 = "<< FinalFantasylization Test >> MapID: "
+	TestMessage7 = "<< Test de FinalFantasylization >> Clasificaci\195\179n del Objetivo:"
+	TestMessage8 = "<< Test de FinalFantasylization >> uiMapID: "
 	Usage = [[FinalFantasylization por Hellfire et Darken5
 
 /FFSound -- Muestra el interfaz de FinalFantasylization

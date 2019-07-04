@@ -11,56 +11,56 @@
 -- Interface Options UI strings
 ------------------------------------------------------------
 
--- Main Frame
-FinalFantasylizationUIFrame_AboutTab_Text = "About"
-FinalFantasylizationUIFrame_AboutHeaderLabel_Text = "by Hellfox and Darken5"
-FinalFantasylizationUIFrame_AboutVersionLabel_Text = "Version %s"
-FinalFantasylizationUIFrame_AboutTranslationLabel_Text = "Official English translation" -- Translators: credit yourself here... "Klingon translation by Stovokor"
-FinalFantasylizationUIFrame_OptionsHeaderLabel_Text = "FinalFantasylization options"
-FinalFantasylizationUIFrame_OptionsSubHeaderLabel_Text = "These options let you turn On/Off the music of FinalFantasylization."
+	-- Main Frame
+	FinalFantasylizationUIFrame_AboutTab_Text = "About"
+	FinalFantasylizationUIFrame_AboutHeaderLabel_Text = "by Hellfox and Darken5"
+	FinalFantasylizationUIFrame_AboutVersionLabel_Text = "Version %s"
+	FinalFantasylizationUIFrame_AboutTranslationLabel_Text = "Official English translation" -- Translators: credit yourself here... "Klingon translation by Stovokor"
+	FinalFantasylizationUIFrame_OptionsHeaderLabel_Text = "FinalFantasylization options"
+	FinalFantasylizationUIFrame_OptionsSubHeaderLabel_Text = "These options let you turn On/Off the music of FinalFantasylization."
 
-FinalFantasylizationUIFrame_EnableCheck_Text = "Enable Addon"
-FinalFantasylizationUIFrame_EnableCheck_Tooltip = "With this option enabled, FinalFantasylization will play music and sounds based on different in-game events. If this option is disabled, FinalFantasylization will do nothing.\n\nShortcuts:\n/ffsound on\n/ffsound off"
-FinalFantasylizationUIFrame_DisabledWarningLabel_Text = FFZlib.Color.Red .. "All FinalFantasylization music is disabled.\nThe options below will not take effect:"
-FinalFantasylizationUIFrame_MusicCheck_Text = "Play music"
-FinalFantasylizationUIFrame_MusicCheck_Tooltip = "With this option enabled, FinalFantasylization will play music based on different events in-game.  If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_CombatCheck_Text = "Play music during combat"
-FinalFantasylizationUIFrame_CombatCheck_Tooltip = "With this option enabled, FinalFantasylization will play music during battles. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_MountCheck_Text = "Play music while mounted"
-FinalFantasylizationUIFrame_MountCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while mounted, or when escaping battle on mount. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_DungeonCheck_Text = "Play music in Dungeons"
-FinalFantasylizationUIFrame_DungeonCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while in Dungeons. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_SleepCheck_Text = "Play music while in Inn's"
-FinalFantasylizationUIFrame_SleepCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while in an Inn. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_SwimCheck_Text = "Play music while swimming"
-FinalFantasylizationUIFrame_SwimCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while Swimming. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_DeadCheck_Text = "Play music while dead"
-FinalFantasylizationUIFrame_DeadCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while dead. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_FlightCheck_Text = "Play music while flying"
-FinalFantasylizationUIFrame_FlightCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while flying. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_CapitalCheck_Text = "Play music in Capital Cities"
-FinalFantasylizationUIFrame_CapitalCheck_Tooltip = "With this option enabled, FinalFantasylization will play music in Capital Cities."
-FinalFantasylizationUIFrame_RaidCheck_Text = "Play music in Raids"
-FinalFantasylizationUIFrame_RaidCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while in Raids. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_BattlegroundCheck_Text = "Play music in Battleground"
-FinalFantasylizationUIFrame_BattlegroundCheck_Tooltip = "With this option enabled, FinalFantasylization will play music in Battlegrounds. If this option is disabled, the normal World of Warcraft music will be played."
-FinalFantasylizationUIFrame_DanceCheck_Text = "Play music when /dance is used"
-FinalFantasylizationUIFrame_DanceCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while /dance is used. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_EnableCheck_Text = "Enable Addon"
+	FinalFantasylizationUIFrame_EnableCheck_Tooltip = "With this option enabled, FinalFantasylization will play music and sounds based on different in-game events. If this option is disabled, FinalFantasylization will do nothing.\n\nShortcuts:\n/ffsound on\n/ffsound off"
+	FinalFantasylizationUIFrame_DisabledWarningLabel_Text = FFZlib.Color.Red .. "All FinalFantasylization music is disabled.\nThe options below will not take effect:"
+	FinalFantasylizationUIFrame_MusicCheck_Text = "Play music"
+	FinalFantasylizationUIFrame_MusicCheck_Tooltip = "With this option enabled, FinalFantasylization will play music based on different events in-game.  If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_CombatCheck_Text = "Play music during combat"
+	FinalFantasylizationUIFrame_CombatCheck_Tooltip = "With this option enabled, FinalFantasylization will play music during battles. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_MountCheck_Text = "Play music while mounted"
+	FinalFantasylizationUIFrame_MountCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while mounted, or when escaping battle on mount. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_DungeonCheck_Text = "Play music in Dungeons"
+	FinalFantasylizationUIFrame_DungeonCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while in Dungeons. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_SleepCheck_Text = "Play music while in Inn's"
+	FinalFantasylizationUIFrame_SleepCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while in an Inn. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_SwimCheck_Text = "Play music while swimming"
+	FinalFantasylizationUIFrame_SwimCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while Swimming. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_DeadCheck_Text = "Play music while dead"
+	FinalFantasylizationUIFrame_DeadCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while dead. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_FlightCheck_Text = "Play music while flying"
+	FinalFantasylizationUIFrame_FlightCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while flying. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_CapitalCheck_Text = "Play music in Capital Cities"
+	FinalFantasylizationUIFrame_CapitalCheck_Tooltip = "With this option enabled, FinalFantasylization will play music in Capital Cities."
+	FinalFantasylizationUIFrame_RaidCheck_Text = "Play music in Raids"
+	FinalFantasylizationUIFrame_RaidCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while in Raids. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_BattlegroundCheck_Text = "Play music in Battleground"
+	FinalFantasylizationUIFrame_BattlegroundCheck_Tooltip = "With this option enabled, FinalFantasylization will play music in Battlegrounds. If this option is disabled, the normal World of Warcraft music will be played."
+	FinalFantasylizationUIFrame_DanceCheck_Text = "Play music when /dance is used"
+	FinalFantasylizationUIFrame_DanceCheck_Tooltip = "With this option enabled, FinalFantasylization will play music while /dance is used. If this option is disabled, the normal World of Warcraft music will be played."
 
-FinalFantasylizationUIFrame_SoundCheck_Text = "Play sound effects"
-FinalFantasylizationUIFrame_SoundCheck_Tooltip = "With this option enabled, FinalFantasylization will play sound effects based on different in-game events. If this option is disabled, the normal World of Warcraft sound effects will be played."
-FinalFantasylizationUIFrame_FanfareCheck_Text = "Play victory fanfare"
-FinalFantasylizationUIFrame_FanfareCheck_Tooltip = "With this option enabled, FinalFantasylization will play a Victory Fanfare after a battle has ended."
-FinalFantasylizationUIFrame_ChocoboKwehCheck_Text = "Play Chocobo Kweh Sound"
-FinalFantasylizationUIFrame_ChocoboKwehCheck_Tooltip = "With this option enabled, FinalFantasylization will play a Chocobo Kweh sound when jumping on a strider mount. (Hawkstrider, Mechastrider, etc)"
-FinalFantasylizationUIFrame_LevelUpCheck_Text = "Play Level Up sound"
-FinalFantasylizationUIFrame_LevelUpCheck_Tooltip = "With this option enabled, FinalFantasylization will play a song when you level up in game."
-FinalFantasylizationUIFrame_EnableAll_Button_Text = "Enable All"
-FinalFantasylizationUIFrame_DisableAll_Button_Text = "Disable All"
+	FinalFantasylizationUIFrame_SoundCheck_Text = "Play sound effects"
+	FinalFantasylizationUIFrame_SoundCheck_Tooltip = "With this option enabled, FinalFantasylization will play sound effects based on different in-game events. If this option is disabled, the normal World of Warcraft sound effects will be played."
+	FinalFantasylizationUIFrame_FanfareCheck_Text = "Play victory fanfare"
+	FinalFantasylizationUIFrame_FanfareCheck_Tooltip = "With this option enabled, FinalFantasylization will play a Victory Fanfare after a battle has ended."
+	FinalFantasylizationUIFrame_ChocoboKwehCheck_Text = "Play Chocobo Kweh Sound"
+	FinalFantasylizationUIFrame_ChocoboKwehCheck_Tooltip = "With this option enabled, FinalFantasylization will play a Chocobo Kweh sound when jumping on a strider mount. (Hawkstrider, Mechastrider, etc)"
+	FinalFantasylizationUIFrame_LevelUpCheck_Text = "Play Level Up sound"
+	FinalFantasylizationUIFrame_LevelUpCheck_Tooltip = "With this option enabled, FinalFantasylization will play a song when you level up in game."
+	FinalFantasylizationUIFrame_EnableAll_Button_Text = "Enable All"
+	FinalFantasylizationUIFrame_DisableAll_Button_Text = "Disable All"
 
--- Soundpack Frames
-FinalFantasylizationUISP_SP1HeaderLabel_Text = "Soundpacks"
-FinalFantasylizationUISP_SPSubHeaderLabel_Text = "Use the buttons below to easily switch between soundpacks"
+	-- Soundpack Frames
+	FinalFantasylizationUISP_SP1HeaderLabel_Text = "Soundpacks"
+	FinalFantasylizationUISP_SPSubHeaderLabel_Text = "Use the buttons below to easily switch between soundpacks"
 
 	-- Soundpack Buttons
 	FinalFantasylizationUISP_FF7_Button_Text = "Final Fantasy 7"
@@ -68,7 +68,7 @@ FinalFantasylizationUISP_SPSubHeaderLabel_Text = "Use the buttons below to easil
 	FinalFantasylizationUISP_Steven2016_Button_Text = "Steven 2016"
 	FinalFantasylizationUISP_LegendofZelda_Button_Text = "Legend of Zelda"
 	
--- Debug Frame
+	-- Debug Frame
 	FinalFantasylizationUIDebug_DebugHeaderLabel_Text = "Debug Menu"
 	FinalFantasylizationUIDebug_DebugSubHeaderLabel_Text = "The Debug function is used to determine whether or not FinalFantasylization and Soundpacks are properly installed by printing the event calls when they happen from both FinalFantasylization and the Soundpack."
 	FinalFantasylizationUIDebug_TestHeaderLabel_Text = "Test Option"
@@ -168,11 +168,11 @@ FinalFantasylizationUISP_SPSubHeaderLabel_Text = "Use the buttons below to easil
    	TestMessage5 = "<< FinalFantasylization Test >> SubZone Name: "
    	TestMessage6 = "<< FinalFantasylization Test >> MinimapZone Name: "
    	TestMessage7 = "<< FinalFantasylization Test >> Target Classification: "
-	TestMessage8 = "<< FinalFantasylization Test >> MapID: "
+	TestMessage8 = "<< FinalFantasylization Test >> uiMapID: "
 		
+	MiniMapButtonTooltip = "|cffeda55fLeft click |cffffff00to open UI.\n|cffeda55fRight click |cffffff00 to open the Soundpack List.\n|cffeda55fShift + Left Click |cffffff00 to Toggle FFz On/Off.\n|cffeda55fCtrl + Left Click |cffffff00 to open the Debug Menu.\n|cffeda55fCtrl + Right Click |cffffff00 to run Debug Test."
 	
-	
-	Usage = [[FinalFantasylization by Hellfox and Darken5
+Usage = [[FinalFantasylization by Hellfox and Darken5
  
 /FFSound -- Show the FinalFantasylization configuration UI.
 /FFsound <command> or /FFs <command>
@@ -198,7 +198,7 @@ test - Runs a debug test
 
 
 
-	SoundpackUsage = [[How to change soundpacks in FinalFantasylization:
+SoundpackUsage = [[How to change soundpacks in FinalFantasylization:
 These commands only work if you have the soundpack 
 you want to change to.
 
@@ -206,15 +206,6 @@ you want to change to.
 /FFsoundpack <command> or /FFsp <command>
 <command>
 ff7 - switches to Final Fantasy 7 Soundpack
-ff8 - switches to Final Fantasy 8 Soundpack
-ff9 - switches to Final Fantasy 9 Soundpack
-ff10 - switches to Final Fantasy 10 Soundpack
-ct - Switches to Chrono Trigger Soundpack
-khearts - Switches to Kingdom Hearts Soundpack
-wildarms - Switches to Wild Arms Soundpack
-srebirth - Switches to Sephiroths Rebirth Soundpack
-fftribute - Switches to Tribute to the Fantasy Soundpack
-bleukreuz - Switches to Bleukreuz's Soundpack
 ]]
 	
 

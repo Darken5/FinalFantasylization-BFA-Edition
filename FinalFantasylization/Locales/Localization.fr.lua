@@ -152,6 +152,7 @@ if( GetLocale() == "frFR" ) then
 	LevelUpCommand = "niveau sup\195\169rieur"
 	LevelUpOffMessage = "La musique quand vous gagnez un level sont d\195\169sactiv\195\169es, pour la r\195\169activer taper : /FFsound capital"
 	LevelUpOnMessage = "FinalFantasylization jouera un son quand vous gagnerez un level"
+	MiniMapButtonTooltip = "|cffeda55fLeft click |cffffff00to open UI.\n|cffeda55fRight click |cffffff00 to open the Soundpack List.\n|cffeda55fShift + Left Click |cffffff00 to Toggle FFz On/Off.\n|cffeda55fCtrl + Left Click |cffffff00 to open the Debug Menu.\n|cffeda55fCtrl + Right Click |cffffff00 to run Debug Test."
 	MountCommand = "monture"
 	Mounted = "Le joueur est sur sa monture.. Chocobo!"
 	MountedEscape = "Le joueur est mont\\195\\169 et en combat, fuite!"
@@ -198,12 +199,12 @@ Cette fonction est en constante evolution donc des changements peuvent y etre ap
 	TestCommand = "test"
 	TestMessage1 = "<< Test de FinalFantasylization >> Serveur du joueur :  "
 	TestMessage2 = "<< Test de FinalFantasylization >> Faction du joueur :  "
-	TestMessage3 = "<< Test de FinalFantasylization>> Nom de la zone :  "
+	TestMessage3 = "<< Test de FinalFantasylization >> Nom de la zone :  "
 	TestMessage4 = "<< Test de FinalFantasylization >> Classification de la zone :  "
 	TestMessage5 = "<< Test de FinalFantasylization >> Nom de la sous-zone :  "
 	TestMessage6 = "<< Test de FinalFantasylization >> Classification de la cible :  "
-	TestMessage7 = "<<Test de FinalFantasylization>> Classification de la cible:"
-	TestMessage8 = "<< FinalFantasylization Test >> MapID: "
+	TestMessage7 = "<< Test de FinalFantasylization >> Classification de la cible:"
+	TestMessage8 = "<< Test de FinalFantasylization >> uiMapID: "
 	Usage = [[FinalFantasylization par Hellfire et Darken5
 
 

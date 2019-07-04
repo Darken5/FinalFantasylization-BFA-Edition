@@ -1,8 +1,8 @@
 --#######################################
 --##
---##	   FinalFantasylization 8.0.5
+--##	   FinalFantasylization 8.1.0
 --##
---##	     Final Fantasy 7 
+--##	     Final Fantasy 7
 --##
 --##	        Soundpack
 --##
@@ -15,6 +15,9 @@ local soundPackID = "ff7" -- Specific /ffsoundpack <command> for this soundpack,
 _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
     flag = enabled
     if enabled then
+
+		soundPackName = "Final Fantasy 7"  -- Name of Soundpack
+
 		-- set all the sound effects variables for this pack (you know... the ones passed to PlaySoundFile())
 		--#######################################
 		--##
@@ -23,112 +26,111 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		--#######################################
 
 		S = "Interface\\AddOns\\FinalFantasylization_FF7Soundpack\\Sounds\\"
-		
+
 		-- Capital Cities Events --
-		OrgrimmarSong = "OrgrimmarSong.mp3" -- 
-		SilvermoonCitySong = "SilvermoonCitySong.mp3" -- 
-		ThunderBluffSong = "ThunderbluffSong.mp3" -- 
-		UndercitySong = "UndercitySong.mp3" -- 
+		OrgrimmarSong = "OrgrimmarSong.mp3" --
+		SilvermoonCitySong = "SilvermoonCitySong.mp3" --
+		ThunderBluffSong = "ThunderbluffSong.mp3" --
+		UndercitySong = "UndercitySong.mp3" --
 
-		DarnassusSong = "DarnassusSong.mp3" -- 
-		ExodarSong = "ExodarSong.mp3" -- 
-		IronforgeSong = "IronforgeSong.mp3" -- 
-		StormwindCitySong = "StormwindCitySong.mp3" -- 
+		DarnassusSong = "DarnassusSong.mp3" --
+		ExodarSong = "ExodarSong.mp3" --
+		IronforgeSong = "IronforgeSong.mp3" --
+		StormwindCitySong = "StormwindCitySong.mp3" --
 
-		ShattrathCitySong = "ShattrathCitySong.mp3" -- 
-		DalaranSong = "DalaranSong.mp3" -- 
-		EbonHoldSong = "EbonHoldSong.mp3" -- 
+		ShattrathCitySong = "ShattrathCitySong.mp3" --
+		DalaranSong = "DalaranSong.mp3" --
+		EbonHoldSong = "EbonHoldSong.mp3" --
 
 		-- Horde Towns Events --
-		Horde1Town = "Horde1Town.mp3" -- 
-		Horde2Town = "Horde2Town.mp3" -- 
-		Horde3Town = "Horde3Town.mp3" -- 
-		Horde4Town = "Horde4Town.mp3" -- 
+		Horde1Town = "Horde1Town.mp3" --
+		Horde2Town = "Horde2Town.mp3" --
+		Horde3Town = "Horde3Town.mp3" --
+		Horde4Town = "Horde4Town.mp3" --
 		Horde5Town = "Horde5Town.mp3" --
-		Horde6Town = "Horde6Town.mp3" -- 
-		Horde7Town = "Horde7Town.mp3" -- 
-		Horde8Town = "Horde8Town.mp3" -- 
-		Horde9Town = "Horde9Town.mp3" -- 
+		Horde6Town = "Horde6Town.mp3" --
+		Horde7Town = "Horde7Town.mp3" --
+		Horde8Town = "Horde8Town.mp3" --
+		Horde9Town = "Horde9Town.mp3" --
 		Horde10Town = "Horde10Town.mp3" --
 
 		-- Alliance Towns Events --
-		Alliance1Town = "Alliance1Town.mp3" -- 
-		Alliance2Town = "Alliance2Town.mp3" -- 
-		Alliance3Town = "Alliance3Town.mp3" -- 
-		Alliance4Town = "Alliance4Town.mp3" -- 
-		Alliance5Town = "Alliance5Town.mp3" -- 
-		Alliance6Town = "Alliance6Town.mp3" -- 
-		Alliance7Town = "Alliance7Town.mp3" -- 
-		Alliance8Town = "Alliance8Town.mp3" -- 
-		Alliance9Town = "Alliance9Town.mp3" -- 
+		Alliance1Town = "Alliance1Town.mp3" --
+		Alliance2Town = "Alliance2Town.mp3" --
+		Alliance3Town = "Alliance3Town.mp3" --
+		Alliance4Town = "Alliance4Town.mp3" --
+		Alliance5Town = "Alliance5Town.mp3" --
+		Alliance6Town = "Alliance6Town.mp3" --
+		Alliance7Town = "Alliance7Town.mp3" --
+		Alliance8Town = "Alliance8Town.mp3" --
+		Alliance9Town = "Alliance9Town.mp3" --
 		Alliance10Town = "Alliance10Town.mp3" --
 
 		-- PvP Type Zones Events --
-		FriendlySong = "FriendlySong.mp3" -- 
-		ContestedSong = "ContestedSong.mp3" -- 
-		HostileSong = "HostileSong.mp3" -- 
+		FriendlySong = "FriendlySong.mp3" --
+		ContestedSong = "ContestedSong.mp3" --
+		HostileSong = "HostileSong.mp3" --
 
-		ForestSong = "ForestSong.mp3" -- 
-		LandSong = "LandSong.mp3" -- 
-		PlagueSong = "PlagueSong.mp3" -- 
-		SandSong = "SandSong.mp3" -- 
-		SnowSong = "SnowSong.mp3" -- 
-		SwampSong = "SwampSong.mp3" -- 
-		BeachSong = "BeachSong.mp3" -- 
-		LakeSong = "LakeSong.mp3" -- 
-		WaterSong = "WaterSong.mp3" -- 
+		ForestSong = "ForestSong.mp3" --
+		LandSong = "LandSong.mp3" --
+		PlagueSong = "PlagueSong.mp3" --
+		SandSong = "SandSong.mp3" --
+		SnowSong = "SnowSong.mp3" --
+		SwampSong = "SwampSong.mp3" --
+		BeachSong = "BeachSong.mp3" --
+		LakeSong = "LakeSong.mp3" --
+		WaterSong = "WaterSong.mp3" --
 		CaveSong = "Horde4Town.mp3" --
 		WarySong = "WarySong.mp3" --
 
 		-- Battlegrounds Events --
-		BattleGround1 = "BattleGround1.mp3" -- 
-		BattleGround2 = "BattleGround2.mp3" -- 
-		BattleGround3 = "BattleGround3.mp3" -- 
-		BattleGround4 = "BattleGround4.mp3" -- 
+		BattleGround1 = "BattleGround1.mp3" --
+		BattleGround2 = "BattleGround2.mp3" --
+		BattleGround3 = "BattleGround3.mp3" --
+		BattleGround4 = "BattleGround4.mp3" --
 		BattleGround5 = "BattleGround5.mp3" --
 
 		-- Normal Mount Events --
-		Mounted1Song = "Mounted1Song.mp3" -- 
-		Mounted2Song = "Mounted2Song.mp3" -- 
-		Mounted3Song = "Mounted3Song.mp3" -- 
+		Mounted1Song = "Mounted1Song.mp3" --
+		Mounted2Song = "Mounted2Song.mp3" --
+		Mounted3Song = "Mounted3Song.mp3" --
 
-		Escape1Song = "Escape1Song.mp3" -- 
-		Escape2Song = "Escape2Song.mp3" -- 
-		Escape3Song = "Escape3Song.mp3" -- 
-		Escape4Song = "Escape4Song.mp3" -- 
-	
+		Escape1Song = "Escape1Song.mp3" --
+		Escape2Song = "Escape2Song.mp3" --
+		Escape3Song = "Escape3Song.mp3" --
+		Escape4Song = "Escape4Song.mp3" --
+
 		-- Flying Mount Events --
-		Flying1Song = "Flying1Song.mp3" -- 
-		Flying2Song = "Flying2Song.mp3" -- 
+		Flying1Song = "Flying1Song.mp3" --
+		Flying2Song = "Flying2Song.mp3" --
 
 		-- Dead/Ghost Events --
-		DeadSong = "Dead1Song.mp3" -- 
-		DieSong = "DieSong.mp3" -- 
+		DeadSong = "Dead1Song.mp3" --
+		DieSong = "DieSong.mp3" --
 
 		-- Fighting Events --
 		Fanfare = "Fanfare.mp3" -- Fanfare
-		Fighting1Song = "Fighting1Song.mp3" -- 
-		Fighting2Song = "Fighting2Song.mp3" -- 
-		Fighting3Song = "Fighting3Song.mp3" -- 
-		Fighting4Song = "Fighting4Song.mp3" -- 
-		
+		Fighting1Song = "Fighting1Song.mp3" --
+		Fighting2Song = "Fighting2Song.mp3" --
+		Fighting3Song = "Fighting3Song.mp3" --
+		Fighting4Song = "Fighting4Song.mp3" --
+
 		-- Misc Events --
 		WorgenHowl = "Howl.mp3" -- Worgen Howl Sound
 		ChocoboKweh = "kweh.mp3" -- Chocobo Kweh Sound
 		FelsaberRoar = "FelsaberRoar.mp3"
-		SwimSong = "SwimSong.mp3" -- 
-		DarkSwimSong = "DarkSwimSong.mp3"
-		SleepSong = "SleepSong.mp3" -- 
+		Swim1Song = "Swim1Song.mp3" --
+		Swim2Song = "Swim2Song.mp3"
+		SleepSong = "SleepSong.mp3" --
 		KillSound = "Kill.wav" -- Leave combat sound
 		CombatSound = "Combat.wav" -- Enter combat sound
 		LevelUpSong = "LevelUpSong.mp3" -- Level Up song
 		CampingSong = "CampingSong.mp3"
-		
-		-- Misc Songs --
-		Misc1Song = "Misc1Song.mp3" -- 
-		Misc2Song = "Misc2Song.mp3" -- 
 
-		
+		-- Misc Songs --
+		Misc1Song = "Misc1Song.mp3" --
+		Misc2Song = "Misc2Song.mp3" --
+
 	--#######################################
 	--##
 	--##	MUSIC /SOUND CALLS
@@ -162,7 +164,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayFile( S ..  WorgenHowl );
 		FinalFantasylization_debugMsg("Worgen Howl!")
 	end
-	
+
 	--########################
 	--## BATTLEGROUNDS
 	--########################
@@ -184,7926 +186,2610 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_IsleOfConquestBG()
 		FinalFantasylization_BattleGround();
 	end
---#########################################################################################
---##   EASTERN KINGDOMS ZONES
---#########################################################################################
---'====================================================================================
---' Eastern Kingdoms Capital: Ironforge : Alliance
---'====================================================================================
---	Zone: Ironforge
-	function FinalFantasylization_EasternKingdoms_Ironforge()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdoms_IronforgeResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdoms_IronforgeSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	SUBZONES:
---	The Commons
-	function FinalFantasylization_Ironforge_SubzoneTheCommons()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		The Stonefire Tavern
-	function FinalFantasylization_Ironforge_SubzoneTheStonefireTavern()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		Vault of Ironforge
-	function FinalFantasylization_Ironforge_SubzoneVaultofIronforge()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	The Forlorn Cavern
-	function FinalFantasylization_Ironforge_SubzoneTheForlornCavern()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	Gates of Ironforge
-	function FinalFantasylization_Ironforge_SubzoneGatesofIronforge()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	The Great Forge
-	function FinalFantasylization_Ironforge_SubzoneTheGreatForge()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		The High Seat
-	function FinalFantasylization_Ironforge_SubzoneTheHighSeat()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		Cask 'n' Anvil
-	function FinalFantasylization_Ironforge_SubzoneCasknAnvil()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	Hall of Explorers
-	function FinalFantasylization_Ironforge_SubzoneHallofExplorers()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		The Library
-	function FinalFantasylization_Ironforge_SubzoneTheLibrary()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	The Military Ward
-	function FinalFantasylization_Ironforge_SubzoneTheMilitaryWard()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		Hall of Arms
-	function FinalFantasylization_Ironforge_SubzoneHallofArms()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	The Mystic Ward
-	function FinalFantasylization_Ironforge_SubzoneTheMysticWard()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		Hall of Mysteries
-	function FinalFantasylization_Ironforge_SubzoneHallofMysteries()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	Old Ironforge
-	function FinalFantasylization_Ironforge_SubzoneOldIronforge()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---	Tinker Town
-	function FinalFantasylization_Ironforge_SubzoneTinkerTown()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		Deeprun Tram
-	function FinalFantasylization_Ironforge_SubzoneDeeprunTram()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---'====================================================================================
---' Eastern Kingdoms Capital: Silvermoon City : Horde
---'====================================================================================
---	Zone: SilvermoonCity
-	function FinalFantasylization_EasternKingdoms_SilvermoonCity()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdoms_SilvermoonCityResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdoms_SilvermoonCitySwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	SUBZONES:
---	The Bazaar
-	function FinalFantasylization_SilvermoonCity_SubzoneTheBazaar()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		The Bank of Silvermoon
-	function FinalFantasylization_SilvermoonCity_SubzoneTheBankofSilvermoon()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Blades & Axes
-	function FinalFantasylization_SilvermoonCity_SubzoneBladesAxes()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		General Goods
-	function FinalFantasylization_SilvermoonCity_SubzoneGeneralGoods()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Keelen's Trustworthy Tailoring
-	function FinalFantasylization_SilvermoonCity_SubzoneKeelensTrustworthyTailoring()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Shields of Silver
-	function FinalFantasylization_SilvermoonCity_SubzoneShieldsofSilver()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Silvermoon Finery
-	function FinalFantasylization_SilvermoonCity_SubzoneSilvermoonFinery()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	Court of the Sun
-	function FinalFantasylization_SilvermoonCity_SubzoneCourtoftheSun()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Sunfury Spire
-	function FinalFantasylization_SilvermoonCity_SubzoneSunfurySpire()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---			Inner Sanctum
-	function FinalFantasylization_SilvermoonCity_SubzoneInnerSanctum()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	Farstriders' Square
-	function FinalFantasylization_SilvermoonCity_SubzoneFarstridersSquare()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		The Hall of Blood
-	function FinalFantasylization_SilvermoonCity_SubzoneTheHallofBlood()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		The Rangers' Lodge
-	function FinalFantasylization_SilvermoonCity_SubzoneTheRangersLodge()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	Murder Row
-	function FinalFantasylization_SilvermoonCity_SubzoneMurderRow()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		The Sanctum
-	function FinalFantasylization_SilvermoonCity_SubzoneTheSanctum()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	The Royal Exchange
-	function FinalFantasylization_SilvermoonCity_SubzoneTheRoyalExchange()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		The Hall of Respite
-	function FinalFantasylization_SilvermoonCity_SubzoneTheHallofRespite()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---			Silvermoon Jewelery
-	function FinalFantasylization_SilvermoonCity_SubzoneSilvermoonJewelery()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		The Reliquary
-	function FinalFantasylization_SilvermoonCity_SubzoneTheReliquary()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Royal Exchange Auction House
-	function FinalFantasylization_SilvermoonCity_SubzoneRoyalExchangeAuctionHouse()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Royal Exchange Bank
-	function FinalFantasylization_SilvermoonCity_SubzoneRoyalExchangeBank()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Silvermoon City Inn
-	function FinalFantasylization_SilvermoonCity_SubzoneSilvermoonCityInn()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	The Shepherd's Gate
-	function FinalFantasylization_SilvermoonCity_SubzoneTheShepherdsGate()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	Walk of Elders
-	function FinalFantasylization_SilvermoonCity_SubzoneWalkofElders()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Silvermoon Registry
-	function FinalFantasylization_SilvermoonCity_SubzoneSilvermoonRegistry()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---		Velaani's Arcane Goods
-	function FinalFantasylization_SilvermoonCity_SubzoneVelaanisArcaneGoods()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	Wayfarer's Rest
-	function FinalFantasylization_SilvermoonCity_SubzoneWayfarersRest()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---'====================================================================================
---' Eastern Kingdoms Capital: Stormwind City : Alliance
---'====================================================================================
---	Zone: Stormwind City
-	function FinalFantasylization_EasternKingdoms_StormwindCity()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdoms_StormwindCityResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdoms_StormwindCitySwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	SUBZONES:
---	The Canals
-	function FinalFantasylization_StormwindCity_SubzoneTheCanals()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Cathedral Square
-	function FinalFantasylization_StormwindCity_SubzoneCathedralSquare()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Cathedral of Light
-	function FinalFantasylization_StormwindCity_SubzoneCathedralofLight()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Dwarven District
-	function FinalFantasylization_StormwindCity_SubzoneDwarvenDistrict()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Cut-Throat Alley
-	function FinalFantasylization_StormwindCity_SubzoneCutThroatAlley()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Mage Quarter
-	function FinalFantasylization_StormwindCity_SubzoneMageQuarter()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		The Slaughtered Lamb
-	function FinalFantasylization_StormwindCity_SubzoneTheSlaughteredLamb()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Wizard's Sanctum
-	function FinalFantasylization_StormwindCity_SubzoneWizardsSanctum()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	The Old Barracks
-	function FinalFantasylization_StormwindCity_SubzoneTheOldBarracks()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Old Town
-	function FinalFantasylization_StormwindCity_SubzoneOldTown()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Champions' Hall
-	function FinalFantasylization_StormwindCity_SubzoneChampionsHall()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Command Center
-	function FinalFantasylization_StormwindCity_SubzoneCommandCenter()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		SI:7
-	function FinalFantasylization_StormwindCity_SubzoneSI7()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Stormwind City Cemetery
-	function FinalFantasylization_StormwindCity_SubzoneStormwindCityCemetery()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Stormwind City Outskirts
-	function FinalFantasylization_StormwindCity_SubzoneStormwindCityOutskirts()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Lion's Rest
-	function FinalFantasylization_StormwindCity_SubzoneLionsRest()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Olivia's Pond
-	function FinalFantasylization_StormwindCity_SubzoneOliviasPond()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		The Wollerton Stead
-	function FinalFantasylization_StormwindCity_SubzoneTheWollertonStead()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		The Eastern Earthshrine
-	function FinalFantasylization_StormwindCity_SubzoneTheEasternEarthshrine()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Stormwind Harbor
-	function FinalFantasylization_StormwindCity_SubzoneStormwindHarbor()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Stormwind Keep
-	function FinalFantasylization_StormwindCity_SubzoneStormwindKeep()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Petitioner's Chamber
-	function FinalFantasylization_StormwindCity_SubzonePetitionersChamber()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Royal Gallery
-	function FinalFantasylization_StormwindCity_SubzoneRoyalGallery()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Royal Library
-	function FinalFantasylization_StormwindCity_SubzoneRoyalLibrary()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		War Room
-	function FinalFantasylization_StormwindCity_SubzoneWarRoom()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Stormwind Lake
-	function FinalFantasylization_StormwindCity_SubzoneStormwindLake()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Trade District
-	function FinalFantasylization_StormwindCity_SubzoneTradeDistrict()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---		Gryphon Roost
-	function FinalFantasylization_StormwindCity_SubzoneGryphonRoost()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---	Valley of Heroes
-	function FinalFantasylization_StormwindCity_SubzoneValleyofHeroes()
-		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
-		FinalFantasylization_debugMsg("StormwindCitySong")
-	end
---'====================================================================================
---' Eastern Kingdoms Capital: Undercity
---'====================================================================================
---	Zone: Undercity
-	function FinalFantasylization_EasternKingdoms_Undercity()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdoms_UndercityResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdoms_UndercitySwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	SUBZONES:
---	Apothecarium
-	function FinalFantasylization_Undercity_SubzoneTheApothecarium()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	Canals
-	function FinalFantasylization_Undercity_SubzoneCanals()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	Magic Quarter
-	function FinalFantasylization_Undercity_SubzoneMagicQuarter()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	Rogues' Quarter
-	function FinalFantasylization_Undercity_SubzoneRoguesQuarter()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	Royal Quarter
-	function FinalFantasylization_Undercity_SubzoneRoyalQuarter()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	Ruins of Lordaeron
-	function FinalFantasylization_Undercity_SubzoneRuinsofLordaeron()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	Sewers
-	function FinalFantasylization_Undercity_SubzoneSewers()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	Trade Quarter
-	function FinalFantasylization_Undercity_SubzoneTradeQuarter()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---	War Quarter
-	function FinalFantasylization_Undercity_SubzoneWarQuarter()
-		FinalFantasylization_PlayMusic(S .. UndercitySong);
-		FinalFantasylization_debugMsg("UndercitySong")
-	end
---'====================================================================================
---' Eastern Kingdoms Zone: Abyssal Depths
---'====================================================================================
---	Zone: Abyssal Depths
-	function FinalFantasylization_EasternKingdomsAbyssalDepths()
-		local x = math.random(1, 4);
-			if x == 1 then
-				FinalFantasylization_LakeSong();
-			elseif x == 2 then
-				FinalFantasylization_WaterSong();
-			elseif x == 3 then
-				FinalFantasylization_Swimming(0);
-			else
-				FinalFantasylization_Swimming(1);
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsAbyssalDepthsResting()
-		FinalFantasylization_Sleeping()
-	end
---	TOWNS:
---	Alliance:
---		Darkbreak Cove
-	function FinalFantasylization_AllianceTownDarkbreakCove()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Tenebrous Cavern
-	function FinalFantasylization_HordeTownTenebrousCavern()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Abandoned Reef
-	function FinalFantasylization_SubzoneAbandonedReef()
 
-	end
---	Abyssal Breach
-	function FinalFantasylization_SubzoneAbyssalBreach()
-
-	end
---		The Abyssal Maw
-	function FinalFantasylization_SubzoneTheAbyssalMaw()
-
-	end
---	The Cerebrillum
-	function FinalFantasylization_SubzoneTheCerebrillum()
-
-	end
---	Coldlight Chasm
-	function FinalFantasylization_SubzoneColdlightChasm()
-
-	end
---	Deepfin Ridge
-	function FinalFantasylization_SubzoneDeepfinRidge()
-
-	end
---	Fireplume Trench
-	function FinalFantasylization_SubzoneFireplumeTrench()
-
-	end
---	Korthun's End
-	function FinalFantasylization_SubzoneKorthunsEnd()
-
-	end
---	L'ghorek
-	function FinalFantasylization_SubzoneLghorek()
-
-	end
---	The Lightless Reaches
-	function FinalFantasylization_SubzoneTheLightlessReaches()
-
-	end
---	Nightmare Depths
-	function FinalFantasylization_SubzoneNightmareDepths()
-
-	end
---	The Overlook
-	function FinalFantasylization_SubzoneTheOverlook()
-
-	end
---	Promontory Point
-	function FinalFantasylization_SubzonePromontoryPoint()
-
-	end
---	The Scalding Chasm
-	function FinalFantasylization_SubzoneTheScaldingChasm()
-
-	end
---	Seabrush
-	function FinalFantasylization_SubzoneSeabrush()
-
-	end
---	Sira'kess Front
-	function FinalFantasylization_SubzoneSirakessFront()
-
-	end
---	Thermal Vents
-	function FinalFantasylization_SubzoneThermalVents()
-
-	end
---	Underlight Canyon
-	function FinalFantasylization_SubzoneUnderlightCanyon()
-
-	end
---	The Undershell
-	function FinalFantasylization_SubzoneTheUndershell()
-
-	end
---'====================================================================================
---' Eastern Kingdoms Zone: Arathi Highlands
---'====================================================================================
---	Zone: Arathi Highlands
-	function FinalFantasylization_EasternKingdomsArathiHighlands()
-		FinalFantasylization_ContestedSong();
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsArathiHighlandsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsArathiHighlandsSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Faldir's Cove
-	function FinalFantasylization_AllianceTownFaldirsCove()
-		FinalFantasylization_AllianceTowns();
-	end
---		Refuge Pointe
-	function FinalFantasylization_AllianceTownRefugePointe()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Galen's Fall
-	function FinalFantasylization_HordeTownGalensFall()
-		FinalFantasylization_HordeTowns();
-	end
---		Go'Shek Farm
-	function FinalFantasylization_HordeTownGoShekFarm()
-		FinalFantasylization_HordeTowns();
-	end
---		Hammerfall
-	function FinalFantasylization_HordeTownHammerfall()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Boulder'gor
-	function FinalFantasylization_SubzoneBouldergor()
-		FinalFantasylization_LandSong();
-	end
---		Boulderfist Outpost
-	function FinalFantasylization_SubzoneBoulderfistOutpost()
-		FinalFantasylization_CaveSong();
-	end
---	Boulderfist Hall
-	function FinalFantasylization_SubzoneBoulderfistHall()
-		FinalFantasylization_CaveSong();
-	end
---	Circle of East Binding
-	function FinalFantasylization_SubzoneCircleofEastBinding()
-		FinalFantasylization_ContestedSong();
-	end
---	Circle of Inner Binding
-	function FinalFantasylization_SubzoneCircleofInnerBinding()
-		FinalFantasylization_ContestedSong();
-	end
---	Circle of Outer Binding
-	function FinalFantasylization_SubzoneCircleofOuterBinding()
-		FinalFantasylization_ContestedSong();
-	end
---	Circle of West Binding
-	function FinalFantasylization_SubzoneCircleofWestBinding()
-		FinalFantasylization_ContestedSong();
-	end
---	Dabyrie's Farmstead
-	function FinalFantasylization_SubzoneDabyriesFarmstead()
-		FinalFantasylization_ContestedSong();
-	end
---	The Drowned Reef
-	function FinalFantasylization_SubzoneTheDrownedReef()
-		FinalFantasylization_WaterSong();
-	end
---	Drywhisker Gorge
-	function FinalFantasylization_SubzoneDrywhiskerGorge()
-		FinalFantasylization_LandSong();
-	end
---	The Forbidding Sea
-	function FinalFantasylization_SubzoneTheForbiddingSea()
-		FinalFantasylization_WaterSong();
-	end
---	Northfold Manor
-	function FinalFantasylization_SubzoneNorthfoldManor()
-		FinalFantasylization_ContestedSong();
-	end
---	Stromgarde Keep
-	function FinalFantasylization_SubzoneStromgardeKeep()
-		FinalFantasylization_PlagueSong();
-	end
---		Crypt
-	function FinalFantasylization_SubzoneCrypt()
-		FinalFantasylization_CaveSong();
-	end
---		The Sanctum
-	function FinalFantasylization_SubzoneTheSanctum()
-		FinalFantasylization_ContestedSong();
-	end
---		The Tower of Arathor
-	function FinalFantasylization_SubzoneTheTowerofArathor()
-		FinalFantasylization_PlagueSong();
-	end
---	Thandol Span
-	function FinalFantasylization_SubzoneThandolSpan()
-		FinalFantasylization_ContestedSong();
-	end
---	Thoradin's Wall
-	function FinalFantasylization_SubzoneThoradinsWall()
-		FinalFantasylization_ContestedSong();
-	end
---	Witherbark Village
-	function FinalFantasylization_SubzoneWitherbarkVillage()
-		FinalFantasylization_ForestSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zone: Badlands
---'====================================================================================
---	Zone: Badlands
-	function FinalFantasylization_EasternKingdomsBadlands()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SandSong();
-			else
-				FinalFantasylization_ContestedSong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsBadlandsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsBadlandsSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Dragon's Mouth
-	function FinalFantasylization_AllianceTownDragonsMouth()
-		FinalFantasylization_AllianceTowns();
-	end
---		Dustwind Dig
-	function FinalFantasylization_AllianceTownDustwindDig()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Bloodwatcher Point
-	function FinalFantasylization_HordeTownBloodwatcherPoint()
-		FinalFantasylization_HordeTowns();
-	end
---		New Kargath
-	function FinalFantasylization_HordeTownNewKargath()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Fuselight
-	function FinalFantasylization_NeutralTownFuselight()
-		FinalFantasylization_NeutralTowns();
-	end
---		Fuselight-by-the-Sea
-	function FinalFantasylization_NeutralTownFuselightbytheSea()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Agmond's End
-	function FinalFantasylization_SubzoneAgmondsEnd()
-		FinalFantasylization_SandSong();
-	end
---	Angor Fortress
-	function FinalFantasylization_SubzoneAngorFortress()
-		FinalFantasylization_SandSong();
-	end
---	Apocryphan's Rest
-	function FinalFantasylization_SubzoneApocryphansRest()
-
-	end
---	Camp Boff
-	function FinalFantasylization_SubzoneCampBoff()
-		FinalFantasylization_SandSong();
-	end
---	Camp Cagg
-	function FinalFantasylization_SubzoneCampCagg()
-		FinalFantasylization_SandSong();
-	end
---	Camp Kosh
-	function FinalFantasylization_SubzoneCampKosh()
-		FinalFantasylization_SandSong();
-	end
---	Crypt
-	function FinalFantasylization_SubzoneCrypt()
-		FinalFantasylization_CaveSong();
-	end
---	Dustbelch Grotto
-	function FinalFantasylization_SubzoneDustbelchGrotto()
-		FinalFantasylization_SandSong();
-	end
---	The Dustbowl
-	function FinalFantasylization_SubzoneTheDustbowl()
-		FinalFantasylization_SandSong();
-	end
---	Dustwind Gulch
-	function FinalFantasylization_SubzoneDustwindGulch()
-		FinalFantasylization_SandSong();
-	end
---	Hammertoe's Digsite
-	function FinalFantasylization_SubzoneHammertoesDigsite()
-		FinalFantasylization_SandSong();
-	end
---	The Hidden Clutch
-	function FinalFantasylization_SubzoneTheHiddenClutch()
-		FinalFantasylization_CaveSong();
-	end
---	Lethlor Ravine
-	function FinalFantasylization_SubzoneLethlorRavine()
-		FinalFantasylization_SandSong();
-	end
---	The Maker's Terrace
-	function FinalFantasylization_SubzoneTheMakersTerrace()
-		FinalFantasylization_SandSong();
-	end
---	Mirage Flats
-	function FinalFantasylization_SubzoneMirageFlats()
-		FinalFantasylization_SandSong();
-	end
---	Rhea's Camp
-	function FinalFantasylization_SubzoneRheasCamp()
-		FinalFantasylization_SandSong();
-	end
---	Ruins of Kargath
-	function FinalFantasylization_SubzoneRuinsofKargath()
-		FinalFantasylization_SandSong();
-	end
---	Scar of the Worldbreaker
-	function FinalFantasylization_SubzoneScaroftheWorldbreaker()
-		FinalFantasylization_PlagueSong();
-	end
---	Tomb of the Watchers
-	function FinalFantasylization_SubzoneTomboftheWatchers()
-		FinalFantasylization_SandSong();
-	end
---	Uldaman
-	function FinalFantasylization_SubzoneUldaman()
-		FinalFantasylization_CaveSong();
-	end
---		Uldaman Entrance
-	function FinalFantasylization_SubzoneUldamanEntrance()
-		FinalFantasylization_CaveSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zone: Blasted Lands
---'====================================================================================
---	Zone: Blasted Lands
-	function FinalFantasylization_EasternKingdomsBlastedLands()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SandSong();
-			else
-				FinalFantasylization_ContestedSong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsBlastedLandsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsBlastedLandsSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance: 
---		Nethergarde Keep
-	function FinalFantasylization_AllianceTownNethergardeKeep()
-		FinalFantasylization_AllianceTowns();
-	end
---		Shattered Beachhead
-	function FinalFantasylization_AllianceTownShatteredBeachhead()
-		FinalFantasylization_AllianceTowns();
-	end
---		Surwich
-	function FinalFantasylization_AllianceTownSurwich()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Okril'lon Hold
-	function FinalFantasylization_HordeTownOkrillonHold()
-		FinalFantasylization_HordeTowns();
-	end
---		Shattered Landing
-	function FinalFantasylization_HordeTownShatteredLanding()
-		FinalFantasylization_HordeTowns();
-	end
---		Sunveil Excursion
-	function FinalFantasylization_HordeTownSunveilExcursion()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Altar of Storms
-	function FinalFantasylization_SubzoneAltarofStorms()
-		FinalFantasylization_WarySong();
-	end
---	The Dark Portal
-	function FinalFantasylization_SubzoneTheDarkPortal()
-		FinalFantasylization_PlayMusic(S ..BattleGround2);
-		FinalFantasylization_debugMsg("BattleGround2")
-	end
---	Dreadmaul Furnace
-	function FinalFantasylization_SubzoneDreadmaulFurnace()
-
-	end
---	Dreadmaul Post
-	function FinalFantasylization_SubzoneDreadmaulPost()
-		FinalFantasylization_SandSong();
-	end
---	The Forbidding Sea
-	function FinalFantasylization_SubzoneTheForbiddingSea()
-		FinalFantasylization_WaterSong();
-	end
---	Nethergarde Mines
-	function FinalFantasylization_SubzoneNethergardeMines()
-		FinalFantasylization_CaveSong();
-	end
---	Nethergarde Supply Camps
-	function FinalFantasylization_SubzoneNethergardeSupplyCamps()
-		FinalFantasylization_SandSong();
-	end
---	The Forge Grounds
-	function FinalFantasylization_SubzoneTheForgeGrounds()
-		FinalFantasylization_SandSong();
-	end
---	The Red Reaches
-	function FinalFantasylization_SubzoneTheRedReaches()
-		FinalFantasylization_SandSong();
-	end
---		Bloodwash Cavern
-	function FinalFantasylization_SubzoneBloodwashCavern()
-		FinalFantasylization_CaveSong();
-	end
---		Bloodwash Fighting Pits
-	function FinalFantasylization_SubzoneBloodwashFightingPits()
-		FinalFantasylization_SandSong();
-	end
---		Bloodwash Shrine
-	function FinalFantasylization_SubzoneBloodwashShrine()
-		FinalFantasylization_SandSong();
-	end
---		Rockpool Village
-	function FinalFantasylization_SubzoneRockpoolVillage()
-		FinalFantasylization_SandSong();
-	end
---	Rise of the Defiler
-	function FinalFantasylization_SubzoneRiseoftheDefiler()
-		FinalFantasylization_SandSong();
-	end
---	Serpent's Coil
-	function FinalFantasylization_SubzoneSerpentsCoil()
-		FinalFantasylization_SandSong();
-	end
---	Shattershore
-	function FinalFantasylization_SubzoneShattershore()
-		FinalFantasylization_SandSong();
-	end
---		The Shattered Front
-	function FinalFantasylization_SubzoneTheShatteredFront()
-		FinalFantasylization_SandSong();
-	end
---	The Tainted Forest
-	function FinalFantasylization_SubzoneTheTaintedForest()
-		FinalFantasylization_PlagueSong();
-	end
---		Maldraz
-	function FinalFantasylization_SubzoneMaldraz()
-		FinalFantasylization_WarySong();
-	end
---	The Tainted Scar
-	function FinalFantasylization_SubzoneTheTaintedScar()
-		FinalFantasylization_SwampSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zone: Burning Steppes
---'====================================================================================
---	Zone: Burning Steppes
-	function FinalFantasylization_EasternKingdomsBurningSteppes()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_ContestedSong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsBurningSteppesResting()
-		FinalFantasylization_Sleeping();
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsBurningSteppesSwimming()
-		FinalFantasylization_Swimming(2);
-	end
---	TOWNS:
---	Alliance:
---		Morgan's Vigil
-	function FinalFantasylization_AllianceTownMorgansVigil()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Flame Crest
-	function FinalFantasylization_HordeTownFlameCrest()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Chiselgrip
-	function FinalFantasylization_NeutralTownChiselgrip()
-		FinalFantasylization_NeutralTowns();
-	end
---		Flamestar Post
-	function FinalFantasylization_NeutralTownFlamestarPost()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Altar of Storms
-	function FinalFantasylization_SubzoneAltarofStorms()
-		FinalFantasylization_PlagueSong();
-	end
---	Blackrock Mountain
-	function FinalFantasylization_SubzoneBlackrockMountain()
-		FinalFantasylization_PlagueSong();
-	end
---	Blackrock Pass
-	function FinalFantasylization_SubzoneBlackrockPass()
-		FinalFantasylization_PlagueSong();
-	end
---	Blackrock Stronghold
-	function FinalFantasylization_SubzoneBlackrockStronghold()
-		FinalFantasylization_PlagueSong();
-	end
---	Black Tooth Hovel
-	function FinalFantasylization_SubzoneBlackToothHovel()
-		FinalFantasylization_PlagueSong();
-	end
---		The Pillar of Ash
-	function FinalFantasylization_SubzoneThePillarofAsh()
-		FinalFantasylization_PlagueSong();
-	end
---	Dreadmaul Rock
-	function FinalFantasylization_SubzoneDreadmaulRock()
-		FinalFantasylization_PlagueSong();
-	end
---		Firegut Furnace
-	function FinalFantasylization_SubzoneFiregutFurnace()
-		FinalFantasylization_PlagueSong();
-	end
---		The Skull Warren
-	function FinalFantasylization_SubzoneTheSkullWarren()
-		FinalFantasylization_PlagueSong();
-	end
---	Fields of Honor
-	function FinalFantasylization_SubzoneFieldsofHonor()
-		FinalFantasylization_PlagueSong();
-	end
---	Ruins of Thaurissan
-	function FinalFantasylization_SubzoneRuinsofThaurissan()
-		FinalFantasylization_PlagueSong();
-	end
---	Slither Rock
-	function FinalFantasylization_SubzoneSlitherRock()
-		FinalFantasylization_PlagueSong();
-	end
---	Terror Wing Path
-	function FinalFantasylization_SubzoneTerrorWingPath()
-		FinalFantasylization_PlagueSong();
-	end
---	Valley of Ashes
-	function FinalFantasylization_SubzoneValleyofAshes()
-		FinalFantasylization_PlagueSong();
-	end
---	The Whelping Downs
-	function FinalFantasylization_SubzoneTheWhelpingDowns()
-		FinalFantasylization_PlagueSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Deeprun Tram : Alliance
---'====================================================================================
---	Zone: Deeprun Tram
-	function FinalFantasylization_EasternKingdoms_DeeprunTram()
-		FinalFantasylization_FriendlySong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Cape of Stranglethorn
---'====================================================================================
---	Zone: Cape of Stranglethorn
-	function FinalFantasylization_EasternKingdomsCapeofStranglethorn()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsCapeofStranglethornResting()
-		FinalFantasylization_Sleeping();
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsCapeofStranglethornSwimming()
-		FinalFantasylization_Swimming(1);
-	end
---	TOWNS:
---	Alliance:
---		Explorers' League Digsite
-	function FinalFantasylization_AllianceTownExplorersLeagueDigsite()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Hardwrench Hideaway
-	function FinalFantasylization_HordeTownHardwrenchHideaway()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Booty Bay
-	function FinalFantasylization_NeutralTownBootyBay()
-		FinalFantasylization_NeutralTowns();
-	end
---			The Salty Sailor Tavern
-	function FinalFantasylization_NeutralTownTheSaltySailorTavern()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	The Crystal Shore
-	function FinalFantasylization_SubzoneTheCrystalShore()
-		FinalFantasylization_WaterSong();
-	end
---	Crystalvein Mine
-	function FinalFantasylization_SubzoneCrystalveinMine()
-		FinalFantasylization_CaveSong();
-	end
---	Gurubashi Arena
-	function FinalFantasylization_SubzoneGurubashiArena()
-		FinalFantasylization_BattleGround();
-	end
---		The Great Arena
-	function FinalFantasylization_SubzoneTheGreatArena()
-		FinalFantasylization_BattleGround();
-	end
---		Battle Ring
-	function FinalFantasylization_SubzoneBattleRing()
-		FinalFantasylization_HostileSong();
-	end
---	Jaguero Isle
-	function FinalFantasylization_SubzoneJagueroIsle()
-		FinalFantasylization_BeachSong();
-	end
---	Janeiro's Point
-	function FinalFantasylization_SubzoneJaneirosPoint()
-		FinalFantasylization_PlayMusic(S ..Misc1Song);
-		FinalFantasylization_debugMsg("Misc1Song");
-	end
---	Mistvale Valley
-	function FinalFantasylization_SubzoneMistvaleValley()
-		FinalFantasylization_ForestSong();
-	end
---		Spirit Den
-	function FinalFantasylization_SubzoneSpiritDen()
-		FinalFantasylization_CaveSong();
-	end
---	Nek'mani Wellspring
-	function FinalFantasylization_SubzoneNekmaniWellspring()
-		FinalFantasylization_LakeSong();
-	end
---	Ruins of Aboraz
-	function FinalFantasylization_SubzoneRuinsofAboraz()
-		FinalFantasylization_WaterSong();
-	end
---	Ruins of Jubuwal
-	function FinalFantasylization_SubzoneRuinsofJubuwal()
-		FinalFantasylization_ForestSong();
-	end
---	South Seas
-	function FinalFantasylization_SubzoneSouthSeas()
-		FinalFantasylization_WaterSong();
-	end
---	Southern Savage Coast
-	function FinalFantasylization_SubzoneSouthernSavageCoast()
-		FinalFantasylization_WaterSong();
-	end
---	The Sundering
-	function FinalFantasylization_SubzoneTheSundering()
-		FinalFantasylization_WaterSong();
-	end
---	Wild Shore
-	function FinalFantasylization_SubzoneWildShore()
-		FinalFantasylization_WaterSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Deadwind Pass
---'====================================================================================
---	Zone: Deadwind Pass
-	function FinalFantasylization_EasternKingdomsDeadwindPass()
-		FinalFantasylization_SwampSong();
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsDeadwindPassResting()
-		FinalFantasylization_Sleeping();
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsDeadwindPassSwimming()
-		FinalFantasylization_Swimming(2);
-	end
---	SUBZONES:
---	Abandoned Kirin Tor Camp
-	function FinalFantasylization_SubzoneAbandonedKirinTorCamp()
-		FinalFantasylization_SwampSong();
-	end
---	Alturus' Sanctum
-	function FinalFantasylization_SubzoneAlturusSanctum()
-		FinalFantasylization_SwampSong();
-	end
---	Ariden's Camp
-	function FinalFantasylization_SubzoneAridensCamp()
-		FinalFantasylization_SwampSong();
-	end
---	Forgotten Crypt
-	function FinalFantasylization_SubzoneForgottenCrypt()
-		FinalFantasylization_SwampSong();
-	end
---	Deadman's Crossing
-	function FinalFantasylization_SubzoneDeadmansCrossing()
-		FinalFantasylization_SwampSong();
-	end
---	Deadwind Ravine
-	function FinalFantasylization_SubzoneDeadwindRavine()
-		FinalFantasylization_SwampSong();
-	end
---	Karazhan
-	function FinalFantasylization_SubzoneKarazhan()
-		FinalFantasylization_WarySong();
-	end
---	Karazhan Catacombs
-	function FinalFantasylization_SubzoneKarazhanCatacombs()
-		FinalFantasylization_CaveSong();
-	end
---	The Master's Cellar
-	function FinalFantasylization_SubzoneTheMastersCellar()
-		FinalFantasylization_SwampSong();
-	end
---	Morgan's Plot
-	function FinalFantasylization_SubzoneMorgansPlot()
-		FinalFantasylization_SwampSong();
-	end
---	Sleeping Gorge
-	function FinalFantasylization_SubzoneSleepingGorge()
-		FinalFantasylization_SwampSong();
-	end
---	The Vice
-	function FinalFantasylization_SubzoneTheVice()
-		FinalFantasylization_SwampSong();
-	end
---		Grosh'gok Compound
-	function FinalFantasylization_SubzoneGroshgokCompound()
-		FinalFantasylization_SwampSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Dun Morogh : Alliance
---'====================================================================================
---	Zone: Dun Morogh
-	function FinalFantasylization_EasternKingdomsDunMorogh()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SnowSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsDunMoroghResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsDunMoroghSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Dwarf Start:
---		Coldridge Valley
-	function FinalFantasylization_Dwarf_Start_ColdridgeValley()
-		FinalFantasylization_SnowSong();
-	end
---			Anvilmar
-	function FinalFantasylization_Dwarf_Start_Anvilmar()
-		FinalFantasylization_AllianceTowns();
-	end
---			Coldridge Pass
-	function FinalFantasylization_Dwarf_Start_ColdridgePass()
-		FinalFantasylization_SnowSong();
-	end
---			Frostmane Hovel
-	function FinalFantasylization_Dwarf_Start_FrostmaneHovel()
-		FinalFantasylization_CaveSong();
-	end
---			Whitebeard's Encampment
-	function FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
-		FinalFantasylization_SnowSong();
-	end
---	Gnome Start:
---		Chill Breeze Valley
-	function FinalFantasylization_Gnome_Start_ChillBreezeValley()
-		FinalFantasylization_SnowSong();
-	end
---			Brewnall Village
-	function FinalFantasylization_Gnome_Start_BrewnallVillage()
-		FinalFantasylization_AllianceTowns();
-	end
---			Crushcog's Arsenal
-	function FinalFantasylization_Gnome_Start_CrushcogsArsenal()
-		FinalFantasylization_SnowSong();
-	end
---			Frostmane Hold
-	function FinalFantasylization_Gnome_Start_FrostmaneHold()
-		FinalFantasylization_SnowSong();
-	end
---			Gnomeregan
-	function FinalFantasylization_Gnome_Start_Gnomeregan()
-		FinalFantasylization_HostileSong();
-	end
---				The Clockwerk Run
-	function FinalFantasylization_Gnome_Start_TheClockwerkRun()
-		FinalFantasylization_HostileSong();
-	end
---				Loading Room
-	function FinalFantasylization_Gnome_Start_LoadingRoom()
-		FinalFantasylization_HostileSong();
-	end
---				The Old Dormitory
-	function FinalFantasylization_Gnome_Start_TheOldDormitory()
-		FinalFantasylization_HostileSong();
-	end
---				Train Depot
-	function FinalFantasylization_Gnome_Start_TrainDepot()
-		FinalFantasylization_HostileSong();
-	end
---				Workshop Entrance
-	function FinalFantasylization_Gnome_Start_WorkshopEntrance()
-		FinalFantasylization_HostileSong();
-	end
---			Iceflow Lake
-	function FinalFantasylization_Gnome_Start_IceflowLake()
-		FinalFantasylization_SnowSong();
-	end
---			New Tinkertown
-	function FinalFantasylization_Gnome_Start_NewTinkertown()
-		FinalFantasylization_AllianceTowns();
-	end
---			The Toxic Airfield
-	function FinalFantasylization_Gnome_Start_TheToxicAirfield()
-		FinalFantasylization_PlagueSong();
-	end
---	Alliance:
---		Amberstill Ranch
-	function FinalFantasylization_AllianceTownAmberstillRanch()
-		FinalFantasylization_AllianceTowns();
-	end
---		Gates of Ironforge
-	function FinalFantasylization_AllianceTownGatesofIronforge()
-		FinalFantasylization_PlayMusic(S .. IronforgeSong);
-		FinalFantasylization_debugMsg("IronforgeSong")
-	end
---		Gol'Bolar Quarry
-	function FinalFantasylization_AllianceTownGolBolarQuarry()
-		FinalFantasylization_AllianceTowns();
-	end
---		Ironforge Airfield
-	function FinalFantasylization_AllianceTownIronforgeAirfield()
-		FinalFantasylization_AllianceTowns();
-	end
---		Kharanos
-	function FinalFantasylization_AllianceTownKharanos()
-		FinalFantasylization_AllianceTowns();
-	end
---			Thunderbrew Distillery
-	function FinalFantasylization_AllianceTownThunderbrewDistillery()
-		FinalFantasylization_AllianceTowns();
-	end
---		Misty Pine Refuge
-	function FinalFantasylization_AllianceTownMistyPineRefuge()
-		FinalFantasylization_AllianceTowns();
-	end
---		North Gate Outpost
-	function FinalFantasylization_AllianceTownNorthGateOutpost()
-		FinalFantasylization_AllianceTowns();
-	end
---		Steelgrill's Depot
-	function FinalFantasylization_AllianceTownSteelgrillsDepot()
-		FinalFantasylization_AllianceTowns();
-	end
---		South Gate Outpost
-	function FinalFantasylization_AllianceTownSouthGateOutpost()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Bahrum's Post
-	function FinalFantasylization_SubzoneBahrumsPost()
-		FinalFantasylization_SnowSong();
-	end
---	Frostmane Front
-	function FinalFantasylization_SubzoneFrostmaneFront()
-		FinalFantasylization_SnowSong();
-	end
---	Frostmane Retreat
-	function FinalFantasylization_SubzoneFrostmaneRetreat()
-		FinalFantasylization_SnowSong();
-	end
---	The Grizzled Den
-	function FinalFantasylization_SubzoneTheGrizzledDen()
-		FinalFantasylization_SnowSong();
-	end
---	Gol'Bolar Quarry Mine
-	function FinalFantasylization_SubzoneGolBolarQuarryMine()
-		FinalFantasylization_CaveSong();
-	end
---	Helm's Bed Lake
-	function FinalFantasylization_SubzoneHelmsBedLake()
-		FinalFantasylization_LakeSong();
-	end
---	Ironband's Compound
-	function FinalFantasylization_SubzoneIronbandsCompound()
-		FinalFantasylization_SnowSong();
-	end
---	The Mountain Den
-	function FinalFantasylization_SubzoneTheMountainDen()
-		FinalFantasylization_CaveSong();
-	end
---	North Gate Pass
-	function FinalFantasylization_SubzoneNorthGatePass()
-		FinalFantasylization_SnowSong();
-	end
---	Shimmer Ridge
-	function FinalFantasylization_SubzoneShimmerRidge()
-		FinalFantasylization_SnowSong();
-	end
---	South Gate Pass
-	function FinalFantasylization_SubzoneSouthGatePass()
-		FinalFantasylization_SnowSong();
-	end
---	The Tundrid Hills
-	function FinalFantasylization_SubzoneTheTundridHills()
-		FinalFantasylization_SnowSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Duskwood
---'====================================================================================
---	Zone: Duskwood
-	function FinalFantasylization_EasternKingdomsDuskwood()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsDuskwoodResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsDuskwoodSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Darkshire
-	function FinalFantasylization_AllianceTownDarkshire()
-		FinalFantasylization_AllianceTowns();
-	end
---		Darkshire Town Hall
-	function FinalFantasylization_AllianceTownDarkshireTownHall()
-		FinalFantasylization_AllianceTowns();
-	end
---		Scarlet Raven Tavern
-	function FinalFantasylization_AllianceTownScarletRavenTavern()
-		FinalFantasylization_AllianceTowns();
-	end
---		Raven Hill
-	function FinalFantasylization_AllianceTownRavenHill()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Addle's Stead
-	function FinalFantasylization_SubzoneAddlesStead()
-		FinalFantasylization_PlagueSong();
-	end
---	Beggar's Haunt
-	function FinalFantasylization_SubzoneBeggarsHaunt()
-		FinalFantasylization_PlagueSong();
-	end
---	Brightwood Grove
-	function FinalFantasylization_SubzoneBrightwoodGrove()
-		FinalFantasylization_PlagueSong();
-	end
---	The Darkened Bank
-	function FinalFantasylization_SubzoneTheDarkenedBank()
-		FinalFantasylization_ForestSong();
-	end
---	Forlorn Rowe
-	function FinalFantasylization_SubzoneForlornRowe()
-		FinalFantasylization_PlagueSong();
-	end
---	The Hushed Bank
-	function FinalFantasylization_SubzoneTheHushedBank()
-		FinalFantasylization_WaterSong();
-	end
---	Manor Mistmantle
-	function FinalFantasylization_SubzoneManorMistmantle()
-		FinalFantasylization_PlagueSong();
-	end
---	Raven Hill Cemetery
-	function FinalFantasylization_SubzoneRavenHillCemetery()
-		FinalFantasylization_PlagueSong();
-	end
---		Dawning Wood Catacombs
-	function FinalFantasylization_SubzoneDawningWoodCatacombs()
-		FinalFantasylization_CaveSong();
-	end
---	Roland's Doom
-	function FinalFantasylization_SubzoneRolandsDoom()
-		FinalFantasylization_PlagueSong();
-	end
---	The Rotting Orchard
-	function FinalFantasylization_SubzoneTheRottingOrchard()
-		FinalFantasylization_PlagueSong();
-	end
---	Tranquil Gardens Cemetery
-	function FinalFantasylization_SubzoneTranquilGardensCemetery()
-		FinalFantasylization_PlagueSong();
-	end
---	Twilight Grove
-	function FinalFantasylization_SubzoneTwilightGrove()
-		FinalFantasylization_WarySong();
-	end
---	Vul'Gol Ogre Mound
-	function FinalFantasylization_SubzoneVulGolOgreMound()
-		FinalFantasylization_PlagueSong();
-	end
---	The Yorgen Farmstead
-	function FinalFantasylization_SubzoneTheYorgenFarmstead()	
-		FinalFantasylization_PlagueSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zone: Elwynn Forest - Alliance
---'====================================================================================
---	Zone: Elwynn Forest			
-	function FinalFantasylization_EasternKingdomsElwynnForest()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsElwynnForestResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsElwynnForestSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Human Start:
---		Northshire Abbey			
-	function FinalFantasylization_Human_Start_NorthshireAbbey()
-		FinalFantasylization_AllianceTowns();
-	end
---			Hall of Arms			
-	function FinalFantasylization_Human_Start_HallofArms()
-		FinalFantasylization_AllianceTowns();
-	end
---			Library Wing			
-	function FinalFantasylization_Human_Start_LibraryWing()
-		FinalFantasylization_AllianceTowns();
-	end
---			Main Hall			
-	function FinalFantasylization_Human_Start_MainHall()
-		FinalFantasylization_AllianceTowns();
-	end
---		Echo Ridge Mine			
-	function FinalFantasylization_Human_Start_EchoRidgeMine()
-		FinalFantasylization_ForestSong();
-	end
---		Northshire River			
-	function FinalFantasylization_Human_Start_NorthshireRiver()
-		FinalFantasylization_LakeSong();
-	end
---		Northshire Valley			
-	function FinalFantasylization_Human_Start_NorthshireValley()
-		FinalFantasylization_ForestSong();
-	end
---		Northshire Vineyards			
-	function FinalFantasylization_Human_Start_NorthshireVineyards()
-		FinalFantasylization_HostileSong();
-	end
---	Alliance: 
---		Eastvale Logging Camp
-	function FinalFantasylization_AllianceTownEastvaleLoggingCamp()
-		FinalFantasylization_AllianceTowns();
-	end
---		Goldshire
-	function FinalFantasylization_AllianceTownGoldshire()
-		FinalFantasylization_AllianceTowns();
-	end
---			Lion's Pride Inn	(Inn)
-	function FinalFantasylization_AllianceInnLionsPrideInn()
-		FinalFantasylization_Sleeping()
-	end
---	SUBZONES:
---		Brackwell Pumpkin Patch
-	function FinalFantasylization_SubzoneBrackwellPumpkinPatch()
-		FinalFantasylization_AllianceTowns();
-	end
---		Crystal Lake
-	function FinalFantasylization_SubzoneCrystalLake()
-		FinalFantasylization_LakeSong();
-	end
---		Fargodeep Mine
-	function FinalFantasylization_SubzoneFargodeepMine()
-		FinalFantasylization_CaveSong();
-	end
---		Forest's Edge
-	function FinalFantasylization_SubzoneForestsEdge()
-		FinalFantasylization_ForestSong();
-	end
---		Goldtooth's Den
-	function FinalFantasylization_SubzoneGoldtoothsDen()
-		FinalFantasylization_ForestSong();
-	end
---		Hogger Hill
-	function FinalFantasylization_SubzoneHoggerHill()
-		FinalFantasylization_ForestSong();
-	end
---		Jasperlode Mine
-	function FinalFantasylization_SubzoneJasperlodeMine()
-		FinalFantasylization_CaveSong();
-	end
---		Jerod's Landing
-	function FinalFantasylization_SubzoneJerodsLanding()
-		FinalFantasylization_ForestSong();
-	end
---		The Maclure Vineyards
-	function FinalFantasylization_SubzoneTheMaclureVineyards()
-		FinalFantasylization_AllianceTowns();
-	end
---		Mirror Lake
-	function FinalFantasylization_SubzoneMirrorLake()
-		FinalFantasylization_LakeSong();
-	end
---			Mirror Lake Orchard
-	function FinalFantasylization_SubzoneMirrorLakeOrchard()
-		FinalFantasylization_ForestSong();
-	end
---		Ridgepoint Tower
-	function FinalFantasylization_SubzoneRidgepointTower()
-		FinalFantasylization_AllianceTowns();
-	end
---		Stone Cairn Lake
-	function FinalFantasylization_SubzoneStoneCairnLake()
-		FinalFantasylization_LakeSong();
-	end
---			Heroes' Vigil
-	function FinalFantasylization_SubzoneHeroesVigil()
-		FinalFantasylization_PlayMusic(S .. Alliance4Town);
-		FinalFantasylization_debugMsg("Alliance4Town")
-	end
---		Thunder Falls
-	function FinalFantasylization_SubzoneThunderFalls()
-		FinalFantasylization_LakeSong();
-	end
---		The Stonefield Farm
-	function FinalFantasylization_SubzoneTheStonefieldFarm()
-		FinalFantasylization_AllianceTowns();
-	end
---		Tower of Azora
-	function FinalFantasylization_SubzoneTowerofAzora()
-		FinalFantasylization_ForestSong();
-	end
---		Westbrook Garrison
-	function FinalFantasylization_SubzoneWestbrookGarrison()
-		FinalFantasylization_AllianceTowns();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Eversong Woods : Horde
---'====================================================================================
---	Zone: Eversong Woods
-	function FinalFantasylization_EasternKingdomsEversongWoods()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsEversongWoodsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsEversongWoodsSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Blood Elf Start:
---		Sunstrider Isle
-	function FinalFantasylization_BloodElf_Start_SunstriderIsle()
-		FinalFantasylization_FriendlySong();
-	end
---			Falthrien Academy
-	function FinalFantasylization_BloodElf_Start_FalthrienAcademy()
-		FinalFantasylization_PlayMusic(S ..Horde7Town);
-		FinalFantasylization_debugMsg("Horde7Town")
-	end
---			Shrine of Dath'Remar
-	function FinalFantasylization_BloodElf_Start_ShrineofDathRemar()
-		FinalFantasylization_PlayMusic(S ..DalaranSong);
-		FinalFantasylization_debugMsg("DalaranSong, Thought it fit.")
-	end
---			The Sunspire
-	function FinalFantasylization_BloodElf_Start_TheSunspire()
-		FinalFantasylization_HordeTowns();
-	end
---	Horde:
---		Fairbreeze Village
-	function FinalFantasylization_HordeTownFairbreezeVillage()
-		FinalFantasylization_HordeTowns();
-	end
---		Falconwing Square
-	function FinalFantasylization_HordeTownFalconwingSquare()
-		FinalFantasylization_HordeTowns();
-	end
---		Farstrider Retreat
-	function FinalFantasylization_HordeTownFarstriderRetreat()
-		FinalFantasylization_HordeTowns();
-	end
---		Saltheril's Haven
-	function FinalFantasylization_HordeTownSaltherilsHaven()
-		FinalFantasylization_HordeTowns();
-	end
---		Thuron's Livery
-	function FinalFantasylization_HordeTownThuronsLivery()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Azurebreeze Coast
-	function FinalFantasylization_SubzoneAzurebreezeCoast()
-		FinalFantasylization_WaterSong();
-	end
---	*The Dead Scar
-	function FinalFantasylization_SubzoneEversongWoodsTheDeadScar()
-		FinalFantasylization_SwampSong();
-	end
---	Duskwither Grounds
-	function FinalFantasylization_SubzoneDuskwitherGrounds()
-		FinalFantasylization_ForestSong();
-	end
---	Duskwither Spire
-	function FinalFantasylization_SubzoneDuskwitherSpire()
-		FinalFantasylization_ForestSong();
-	end
---	East Sanctum
-	function FinalFantasylization_SubzoneEastSanctum()
-		FinalFantasylization_SwampSong();
-	end
---	Elrendar Falls
-	function FinalFantasylization_SubzoneElrendarFalls()
-		FinalFantasylization_LakeSong();
-	end
---	Golden Strand
-	function FinalFantasylization_SubzoneGoldenStrand()
-		FinalFantasylization_WaterSong();
-	end
---	Goldenbough Pass
-	function FinalFantasylization_SubzoneGoldenboughPass()
-		FinalFantasylization_ForestSong();
-	end
---	Huntress of the Sun
-	function FinalFantasylization_SubzoneHuntressoftheSun()
-		FinalFantasylization_PlagueSong();
-	end
---	Lake Elrendar
-	function FinalFantasylization_SubzoneLakeElrendar()
-		FinalFantasylization_LakeSong();
-	end
---	The Living Wood
-	function FinalFantasylization_SubzoneTheLivingWood()
-		FinalFantasylization_ForestSong();
-	end
---	North Sanctum
-	function FinalFantasylization_SubzoneNorthSanctum()
-		FinalFantasylization_ForestSong();
-	end
---	Ruins of Silvermoon
-	function FinalFantasylization_SubzoneRuinsofSilvermoon()
-		FinalFantasylization_PlagueSong();
-	end
---		Commons Hall
-	function FinalFantasylization_SubzoneCommonsHall()
-		FinalFantasylization_PlagueSong();
-	end
---		Dawning Lane
-	function FinalFantasylization_SubzoneDawningLane()
-		FinalFantasylization_PlayMusic(S ..Misc1Song);
-		FinalFantasylization_debugMsg("Misc1Song")
-	end
---		Feth's Way
-	function FinalFantasylization_SubzoneFethsWay()
-		FinalFantasylization_PlagueSong();
-	end
---		Skulking Row
-	function FinalFantasylization_SubzoneSkulkingRow()
-		FinalFantasylization_PlagueSong();
-	end
---	Runestone Falithas
-	function FinalFantasylization_SubzoneRunestoneFalithas()
-		FinalFantasylization_PlagueSong();
-	end
---	Runestone Shan'dor
-	function FinalFantasylization_SubzoneRunestoneShandor()
-		FinalFantasylization_PlagueSong();
-	end
---	Sunsail Anchorage
-	function FinalFantasylization_SubzoneSunsailAnchorage()
-		FinalFantasylization_LakeSong();
-	end
---	The Scorched Grove
-	function FinalFantasylization_SubzoneTheScorchedGrove()
-		FinalFantasylization_SwampSong();
-	end
---	The Shepherd's Gate
-	function FinalFantasylization_SubzoneTheShepherdsGate()
-		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
-		FinalFantasylization_debugMsg("SilvermoonCitySong")
-	end
---	Stillwhisper Pond
-	function FinalFantasylization_SubzoneStillwhisperPond()
-		FinalFantasylization_LakeSong();
-	end
---	Tor'Watha
-	function FinalFantasylization_SubzoneTorWatha()
-		FinalFantasylization_LandSong();
-	end
---	Tranquil Shore
-	function FinalFantasylization_SubzoneTranquilShore()
-		FinalFantasylization_WaterSong();
-	end
---	West Sanctum
-	function FinalFantasylization_SubzoneWestSanctum()
-		FinalFantasylization_ForestSong();
-	end
---	Zeb'Watha
-	function FinalFantasylization_SubzoneZebWatha()
-		FinalFantasylization_LandSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Ghostlands : Horde
---'====================================================================================
---	Zone: Ghostlands
-	function FinalFantasylization_EasternKingdomsGhostlands()
-		FinalFantasylization_PlagueSong();
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsGhostlandsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsGhostlandsSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Horde:
---		Farstrider Enclave
-	function FinalFantasylization_HordeTownFarstriderEnclave()
-		FinalFantasylization_HordeTowns();
-	end
---		Sanctum of the Sun
-	function FinalFantasylization_HordeTownSanctumoftheSun()
-		FinalFantasylization_HordeTowns();
-	end
---		Tranquillien
-	function FinalFantasylization_HordeTownTranquillien()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Amani Catacombs
-	function FinalFantasylization_SubzoneAmaniCatacombs()
-		FinalFantasylization_LandSong();
-	end
---	Amani Mountains
-	function FinalFantasylization_SubzoneAmaniMountains()
-		FinalFantasylization_LandSong();
-	end
---	Amani Pass
-	function FinalFantasylization_SubzoneAmaniPass()
-		FinalFantasylization_LandSong();
-	end
---	Andilien Estate
-	function FinalFantasylization_SubzoneAndilienEstate()
-		FinalFantasylization_PlagueSong();
-	end
---	An'daroth
-	function FinalFantasylization_SubzoneAndaroth()
-		FinalFantasylization_PlagueSong();
-	end
---	An'owyn
-	function FinalFantasylization_SubzoneAnowyn()
-		FinalFantasylization_PlagueSong();
-	end
---	An'telas
-	function FinalFantasylization_SubzoneAntelas()
-		FinalFantasylization_PlagueSong();
-	end
---	Bleeding Ziggurat
-	function FinalFantasylization_SubzoneBleedingZiggurat()
-		FinalFantasylization_PlagueSong();
-	end
---	Dawnstar Spire
-	function FinalFantasylization_SubzoneDawnstarSpire()
-		FinalFantasylization_PlagueSong();
-	end
---	*The Dead Scar
-	function FinalFantasylization_SubzoneGhostlandsTheDeadScar()
-		FinalFantasylization_SwampSong();
-	end
---	Deatholme
-	function FinalFantasylization_SubzoneDeatholme()
-		FinalFantasylization_SwampSong();
-	end
---	Elrendar Crossing
-	function FinalFantasylization_SubzoneElrendarCrossing()
-		FinalFantasylization_WaterSong();
-	end
---	Elrendar River
-	function FinalFantasylization_SubzoneElrendarRiver()
-		FinalFantasylization_WaterSong();
-	end
---	Goldenmist Village
-	function FinalFantasylization_SubzoneGoldenmistVillage()
-		FinalFantasylization_PlagueSong();
-	end
---	Hatchet Hills
-	function FinalFantasylization_SubzoneHatchetHills()
-		FinalFantasylization_PlagueSong();
-	end
---	Howling Ziggurat
-	function FinalFantasylization_SubzoneHowlingZiggurat()
-		FinalFantasylization_PlagueSong();
-	end
---	Isle of Tribulations
-	function FinalFantasylization_SubzoneIsleofTribulations()
-		FinalFantasylization_PlagueSong();
-	end
---	Lake Elrendar
-	function FinalFantasylization_SubzoneLakeElrendar()
-		FinalFantasylization_LakeSong();
-	end
---	Sanctum of the Moon
-	function FinalFantasylization_SubzoneSanctumoftheMoon()
-		FinalFantasylization_PlagueSong();
-	end
---	Shalandis Isle
-	function FinalFantasylization_SubzoneShalandisIsle()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---	Suncrown Village
-	function FinalFantasylization_SubzoneSuncrownVillage()
-		FinalFantasylization_PlagueSong();
-	end
---	Sungraze Peak
-	function FinalFantasylization_SubzoneSungrazePeak()
-		FinalFantasylization_PlagueSong();
-	end
---	Thalassian Pass
-	function FinalFantasylization_SubzoneThalassianPass()
-		FinalFantasylization_PlagueSong();
-	end
---	Thalassian Range
-	function FinalFantasylization_SubzoneThalassianRange()
-		FinalFantasylization_PlagueSong();
-	end
---	Tower of the Damned
-	function FinalFantasylization_SubzoneToweroftheDamned()
-		FinalFantasylization_PlagueSong();
-	end
---	Underlight Mines
-	function FinalFantasylization_SubzoneUnderlightMines()
-		FinalFantasylization_PlagueSong();
-	end
---	Windrunner Spire
-	function FinalFantasylization_SubzoneWindrunnerSpire()
-		FinalFantasylization_PlagueSong();
-	end
---	Windrunner Village
-	function FinalFantasylization_SubzoneWindrunnerVillage()
-		FinalFantasylization_PlagueSong();
-	end
---	Zeb'Nowa
-	function FinalFantasylization_SubzoneZebNowa()
-		FinalFantasylization_LandSong();
-	end
---	Zeb'Sora
-	function FinalFantasylization_SubzoneZebSora()
-		FinalFantasylization_LandSong();
-	end
---	Zeb'Tela
-	function FinalFantasylization_SubzoneZebTela()
-		FinalFantasylization_LandSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Gilneas : Worgen
---'====================================================================================
---	Zone: Gilneas
-	function FinalFantasylization_EasternKingdomsGilneas()
-		FinalFantasylization_ForestSong();
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsGilneasResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsGilneasSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Duskhaven
-	function FinalFantasylization_AllianceTownDuskhaven()
-		FinalFantasylization_AllianceTowns();
-	end
---		Greymane Manor
-	function FinalFantasylization_AllianceTownGreymaneManor()
-		FinalFantasylization_AllianceTowns();
-	end
---		Keel Harbor
-	function FinalFantasylization_AllianceTownKeelHarbor()
-		FinalFantasylization_AllianceTowns();
-	end
---		Stormglen Village
-	function FinalFantasylization_AllianceTownStormglenVillage()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Aderic's Repose
-	function FinalFantasylization_SubzoneAdericsRepose()
-		FinalFantasylization_PlayMusic(S .. DeadSong);
-		FinalFantasylization_debugMsg("DeadSong")
-	end
---	Allen Farmstead
-	function FinalFantasylization_SubzoneAllenFarmstead()
-		FinalFantasylization_ForestSong();
-	end
---	The Bite
-	function FinalFantasylization_SubzoneTheBite()
-		FinalFantasylization_ForestSong();
-	end
---	The Blackwald
-	function FinalFantasylization_SubzoneTheBlackwald()
-		FinalFantasylization_ForestSong();
-	end
---	The Bradshaw Mill
-	function FinalFantasylization_SubzoneTheBradshawMill()
-		FinalFantasylization_ContestedSong();
-	end
---	Crowley Orchard
-	function FinalFantasylization_SubzoneCrowleyOrchard()
-		FinalFantasylization_ForestSong();
-	end
---	Crowley Stable Grounds
-	function FinalFantasylization_SubzoneCrowleyStableGrounds()
-		FinalFantasylization_ForestSong();
-	end
---	Duskmist Shore
-	function FinalFantasylization_SubzoneDuskmistShore()
-		FinalFantasylization_ForestSong();
-	end
---	Emberstone Mine
-	function FinalFantasylization_SubzoneEmberstoneMine()
-		FinalFantasylization_CaveSong();
-	end
---	Emberstone Village
-	function FinalFantasylization_SubzoneEmberstoneVillage()
-		FinalFantasylization_HostileSong();
-	end
---	Forsaken Forward Command
-	function FinalFantasylization_SubzoneForsakenForwardCommand()
-		FinalFantasylization_ForestSong();
-	end
---	Galewatch Lighthouse
-	function FinalFantasylization_SubzoneGalewatchLighthouse()
-		FinalFantasylization_ForestSong();
-	end
---	The Greymane Wall
-	function FinalFantasylization_SubzoneTheGreymaneWall()
-		FinalFantasylization_ForestSong();
-	end
---	Hailwood Marsh
-	function FinalFantasylization_SubzoneHailwoodMarsh()
-		FinalFantasylization_ForestSong();
-	end
---	Hammond Farmstead
-	function FinalFantasylization_SubzoneHammondFarmstead()
-		FinalFantasylization_ForestSong();
-	end
---	Hayward Fishery
-	function FinalFantasylization_SubzoneHaywardFishery()
-		FinalFantasylization_ForestSong();
-	end
---	The Headlands
-	function FinalFantasylization_SubzoneTheHeadlands()
-		FinalFantasylization_ForestSong();
-	end
---	King's Gate
-	function FinalFantasylization_SubzoneKingsGate()
-		FinalFantasylization_ForestSong();
-	end
---	Koroth's Den
-	function FinalFantasylization_SubzoneKorothsDen()
-		FinalFantasylization_HostileSong();
-	end
---	Livery Outpost
-	function FinalFantasylization_SubzoneLiveryOutpost()
-		FinalFantasylization_ForestSong();
-	end
---	Northern Headlands
-	function FinalFantasylization_SubzoneNorthernHeadlands()
-		FinalFantasylization_ForestSong();
-	end
---	Northgate River
-	function FinalFantasylization_SubzoneNorthgateRiver()
-		FinalFantasylization_LakeSong();
-	end
---	Northgate Woods
-	function FinalFantasylization_SubzoneNorthgateWoods()
-		FinalFantasylization_ForestSong();
-	end
---	Queen's Gate
-	function FinalFantasylization_SubzoneQueensGate()
-		FinalFantasylization_ForestSong();
-	end
---	Rygna's Lair
-	function FinalFantasylization_SubzoneRygnasLair()
-		FinalFantasylization_ForestSong();
-	end
---	Stagecoach Crash Site
-	function FinalFantasylization_SubzoneStagecoachCrashSite()
-		FinalFantasylization_ForestSong();
-	end
---	Tal'doren
-	function FinalFantasylization_SubzoneTaldoren()
-		FinalFantasylization_ForestSong();
-	end
---	Tempest's Reach
-	function FinalFantasylization_SubzoneTempestsReach()
-		FinalFantasylization_ForestSong();
-	end
---	Wahl Cottage
-	function FinalFantasylization_SubzoneWahlCottage()
-		FinalFantasylization_ForestSong();
-	end
---	Wood's End Cabin
-	function FinalFantasylization_SubzoneWoodsEndCabin()
-		FinalFantasylization_ForestSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Gilneas City : Worgen
---'====================================================================================
---	Zone: Gilneas City
-	function FinalFantasylization_EasternKingdomsGilneasCity()
-		FinalFantasylization_BattleGround();
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsGilneasCityResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsGilneasCitySwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	SUBZONES:
---	Cathedral Quarter
-	function FinalFantasylization_GilneasCity_SubzoneCathedralQuarter()
-		FinalFantasylization_BattleGround();
-	end
---		Light's Dawn Cathedral
-	function FinalFantasylization_GilneasCity_SubzoneLightsDawnCathedral()
-		FinalFantasylization_BattleGround();
-	end
---	Greymane Court
-	function FinalFantasylization_GilneasCity_SubzoneGreymaneCourt()
-		FinalFantasylization_BattleGround();
-	end
---	Merchant Square
-	function FinalFantasylization_GilneasCity_SubzoneMerchantSquare()
-		FinalFantasylization_PlayMusic(S .. Alliance8Town);
-		FinalFantasylization_debugMsg("Alliance8Town")
-	end
---	Military District
-	function FinalFantasylization_GilneasCity_SubzoneMilitaryDistrict()
-		FinalFantasylization_BattleGround();
-	end
---		Stoneward Prison
-	function FinalFantasylization_GilneasCity_SubzoneStonewardPrison()
-		FinalFantasylization_BattleGround();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Hillsbrad Foothills
---'====================================================================================
---	Zone: Hillsbrad Foothills
-	function FinalFantasylization_EasternKingdomsHillsbradFoothills()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsHillsbradFoothillsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsHillsbradFoothillsSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Corrahn's Dagger
-	function FinalFantasylization_AllianceTownCorrahnsDagger()
-		FinalFantasylization_AllianceTowns();
-	end
---		Gavin's Naze
-	function FinalFantasylization_AllianceTownGavinsNaze()
-		FinalFantasylization_AllianceTowns();
-	end
---		Sofera's Naze
-	function FinalFantasylization_AllianceTownSoferasNaze()
-		FinalFantasylization_AllianceTowns();
-	end
---		The Headland
-	function FinalFantasylization_AllianceTownTheHeadland()
-		FinalFantasylization_AllianceTowns();
-	end
---		Purgation Isle
-	function FinalFantasylization_AllianceTownPurgationIsle()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde
---		Eastpoint Tower
-	function FinalFantasylization_HordeTownEastpointTower()
-		FinalFantasylization_HordeTowns();
-	end
---		Ruins of Southshore
-	function FinalFantasylization_HordeTownRuinsofSouthshore()
-		FinalFantasylization_HordeTowns();
-	end
---		Sludgeguard Tower
-	function FinalFantasylization_HordeTownSludgeguardTower()
-		FinalFantasylization_HordeTowns();
-	end
---		Southpoint Gate
-	function FinalFantasylization_HordeTownSouthpointGate()
-		FinalFantasylization_HordeTowns();
-	end
---		Strahnbrad
-	function FinalFantasylization_HordeTownStrahnbrad()
-		FinalFantasylization_HordeTowns();
-	end
---		Tarren Mill
-	function FinalFantasylization_HordeTownTarrenMill()
-		FinalFantasylization_HordeTowns();
-	end
---		The Sludge Fields
-	function FinalFantasylization_HordeTownTheSludgeFields()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Brazie Farmstead
-	function FinalFantasylization_NeutralTownBrazieFarmstead()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Alterac Mountains
-	function FinalFantasylization_SubzoneAlteracMountains()
-
-	end
---		Chillwind Point
-	function FinalFantasylization_SubzoneChillwindPoint()
-
-	end
---		Crushridge Hold
-	function FinalFantasylization_SubzoneCrushridgeHold()
-
-	end
---		Dandred's Fold
-	function FinalFantasylization_SubzoneDandredsFold()
-
-	end
---		Gallows' Corner
-	function FinalFantasylization_SubzoneGallowsCorner()
-
-	end
---		Growless Cave
-	function FinalFantasylization_SubzoneGrowlessCave()
-
-	end
---		Ravenholdt Manor
-	function FinalFantasylization_SubzoneRavenholdtManor()
-			FinalFantasylization_PlayMusic(S .. Horde8Town);
-			FinalFantasylization_debugMsg("Horde8Town")
-	end
---		Ruins of Alterac
-	function FinalFantasylization_SubzoneRuinsofAlterac()
-
-	end
---		Slaughter Hollow
-	function FinalFantasylization_SubzoneSlaughterHollow()
-
-	end
---		The Uplands
-	function FinalFantasylization_SubzoneTheUplands()
-		FinalFantasylization_LandSong();
-	end
---	Azurelode Mine
-	function FinalFantasylization_SubzoneAzurelodeMine()
-		FinalFantasylization_PlagueSong();
-	end
---	Dalaran Crater
-	function FinalFantasylization_SubzoneDalaranCrater()
-		FinalFantasylization_ContestedSong()
-	end
---	Darrow Hill
-	function FinalFantasylization_SubzoneDarrowHill()
-
-	end
---	Dun Garok
-	function FinalFantasylization_SubzoneDunGarok()
-
-	end
---	Durnholde Keep
-	function FinalFantasylization_SubzoneDurnholdeKeep()
-		FinalFantasylization_PlagueSong();
-	end
---	Eastern Strand
-	function FinalFantasylization_SubzoneEasternStrand()
-
-	end
---	Lordamere Lake
-	function FinalFantasylization_SubzoneLordamereLake()
-		FinalFantasylization_LakeSong();
-	end
---	Misty Shore
-	function FinalFantasylization_SubzoneMistyShore()
-
-	end
---	Nethander Stead
-	function FinalFantasylization_SubzoneNethanderStead()
-
-	end
---	Thoradin's Wall
-	function FinalFantasylization_SubzoneThoradinsWall()
-
-	end
---	Western Strand
-	function FinalFantasylization_SubzoneWesternStrand()
-
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: The Hinterlands
---'====================================================================================
---	Zone: The Hinterlands
-	function FinalFantasylization_EasternKingdomsTheHinterlands()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_ContestedSong();
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsTheHinterlandsResting()
-		FinalFantasylization_Sleeping();
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsTheHinterlandsSwimming()
-		FinalFantasylization_Swimming(1);
-	end
---	TOWNS:
---	Alliance:
---		Aerie Peak
-	function FinalFantasylization_AllianceTownAeriePeak()
-		FinalFantasylization_AllianceTowns();
-	end
---		Stormfeather Outpost
-	function FinalFantasylization_AllianceTownStormfeatherOutpost()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde
---		Hiri'watha Research Station
-	function FinalFantasylization_HordeTownHiriwathaResearchStation()
-		FinalFantasylization_HordeTowns();
-	end
---		Revantusk Village
-	function FinalFantasylization_HordeTownRevantuskVillage()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Wildhammer Keep
-	function FinalFantasylization_SubzoneWildhammerKeep()
-
-	end
---	Agol'watha
-	function FinalFantasylization_SubzoneAgolwatha()
-
-	end
---	Altar of Zul
-	function FinalFantasylization_SubzoneAltarofZulp()
-
-	end
---	Bogen's Ledge
-	function FinalFantasylization_SubzoneBogensLedge()
-
-	end
---	The Creeping Ruin
-	function FinalFantasylization_SubzoneTheCreepingRuin()
-
-	end
---	Featherbeard's Hovel
-	function FinalFantasylization_SubzoneFeatherbeardsHovel()
-
-	end
---	The Forbidding Sea
-	function FinalFantasylization_SubzoneTheForbiddingSea()
-
-	end
---	Jintha'Alor
-	function FinalFantasylization_SubzoneJinthaAlor()
-
-	end
---	Overlook Cliffs
-	function FinalFantasylization_SubzoneOverlookCliffs()
-		FinalFantasylization_ForestSong();
-	end
---	Plaguemist Ravine
-	function FinalFantasylization_SubzonePlaguemistRavine()
-
-	end
---	Quel'Danil Lodge
-	function FinalFantasylization_SubzoneQuelDanilLodge()
-
-	end
---	Seradane
-	function FinalFantasylization_SubzoneSeradane()
-
-	end
---	Shaol'watha
-	function FinalFantasylization_SubzoneShaolwatha()
-
-	end
---	Shadra'Alor
-	function FinalFantasylization_SubzoneShadraAlor()
-
-	end
---	Shindigger's Camp
-	function FinalFantasylization_SubzoneShindiggersCamp()
-
-	end
---	Skulk Rock
-	function FinalFantasylization_SubzoneSkulkRock()
-		FinalFantasylization_CaveSong();
-	end
---	Valorwind Lake
-	function FinalFantasylization_SubzoneValorwindLake()
-
-	end
---	Zun'watha
-	function FinalFantasylization_SubzoneZunwatha()
-
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Loch Modan : Alliance
---'====================================================================================
---	Zone: Loch Modan
-	function FinalFantasylization_EasternKingdomsLochModan()
-		FinalFantasylization_FriendlySong();
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsLochModanResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsLochModanSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Algaz Station
-	function FinalFantasylization_AllianceTownAlgazStation()
-		FinalFantasylization_AllianceTowns();
-	end
---		The Farstrider Lodge
-	function FinalFantasylization_AllianceTownTheFarstriderLodge()
-		FinalFantasylization_AllianceTowns();
-	end
---		Thelsamar
-	function FinalFantasylization_AllianceTownThelsamar()
-		FinalFantasylization_AllianceTowns();
-	end
---			Stoutlager Inn
-	function FinalFantasylization_AllianceTownStoutlagerInn()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Dun Algaz
-	function FinalFantasylization_SubzoneDunAlgaz()
-		FinalFantasylization_FriendlySong();
-	end
---	Grizzlepaw Ridge
-	function FinalFantasylization_SubzoneGrizzlepawRidge()
-		FinalFantasylization_FriendlySong();
-	end
---	Ironband's Excavation Site
-	function FinalFantasylization_SubzoneIronbandsExcavationSite()
-		FinalFantasylization_FriendlySong();
-	end
---		Ironwing Cavern
-	function FinalFantasylization_SubzoneIronwingCavern()
-		FinalFantasylization_CaveSong();
-	end
---	The Loch
-	function FinalFantasylization_SubzoneTheLoch()
-		FinalFantasylization_PlagueSong();
-	end
---		Twilight Camp
-	function FinalFantasylization_SubzoneTwilightCamp()
-		FinalFantasylization_SwampSong();
-	end
---	Mo'grosh Stronghold
-	function FinalFantasylization_SubzoneMogroshStronghold()
-		FinalFantasylization_LandSong();
-	end
---	North Gate Pass
-	function FinalFantasylization_SubzoneNorthGatePass()
-		FinalFantasylization_FriendlySong();
-	end
---	Silver Stream Mine
-	function FinalFantasylization_SubzoneSilverStreamMine()
-		FinalFantasylization_CaveSong();
-	end
---	South Gate Pass
-	function FinalFantasylization_SubzoneSouthGatePass()
-		FinalFantasylization_FriendlySong();
-	end
---	Stonesplinter Valley
-	function FinalFantasylization_SubzoneStonesplinterValley()
-		FinalFantasylization_FriendlySong();
-	end
---	Stonewrought Dam
-	function FinalFantasylization_SubzoneStonewroughtDam()
-		FinalFantasylization_ContestedSong();
-	end
---	Valley of Kings
-	function FinalFantasylization_SubzoneValleyofKings()
-		FinalFantasylization_FriendlySong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Northern Stranglethorn
---'====================================================================================
---	Zone: Northern Stranglethorn
-	function FinalFantasylization_EasternKingdomsNorthernStranglethorn()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsNorthernStranglethornResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsNorthernStranglethornSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Fort Livingston
-	function FinalFantasylization_AllianceTownFortLivingston()
-		FinalFantasylization_AllianceTowns();
-	end
---		Rebel Camp
-	function FinalFantasylization_AllianceTownRebelCamp()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Bambala
-	function FinalFantasylization_HordeTownBambala()
-		FinalFantasylization_HordeTowns();
-	end
---		Grom'gol Base Camp
-	function FinalFantasylization_HordeTownGromgolBaseCamp()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Nesingwary's Expedition
-	function FinalFantasylization_NeutralTownNesingwarysExpedition()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Bal'lal Ruins
-	function FinalFantasylization_SubzoneBallalRuins()
-		FinalFantasylization_BeachSong()
-	end
---	Balia'mah Ruins
-	function FinalFantasylization_SubzoneBaliamahRuins()
-		FinalFantasylization_ForestSong()
-	end
---	The Great Sea
-	function FinalFantasylization_SubzoneTheGreatSea()
-		FinalFantasylization_WaterSong()
-	end
---	Kal'ai Ruins
-	function FinalFantasylization_SubzoneKalaiRuins()
-		FinalFantasylization_WarySong()
-	end
---	Kurzen's Compound
-	function FinalFantasylization_SubzoneKurzensCompound()
-		FinalFantasylization_ForestSong()
-	end
---	Lake Nazferiti
-	function FinalFantasylization_SubzoneLakeNazferiti()
-		FinalFantasylization_LakeSong();
-	end
---	Mizjah Ruins
-	function FinalFantasylization_SubzoneMizjahRuins()
-		FinalFantasylization_ForestSong()
-	end
---	Mosh'Ogg Ogre Mound
-	function FinalFantasylization_SubzoneMoshOggOgreMound()
-		FinalFantasylization_ForestSong()
-	end
---	Ruins of Zul'Kunda
-	function FinalFantasylization_SubzoneRuinsofZulKunda()
-		FinalFantasylization_ForestSong()
-	end
---	Ruins of Zul'Mamwe
-	function FinalFantasylization_SubzoneRuinsofZulMamwe()
-		FinalFantasylization_ForestSong()
-	end
---	The Savage Coast
-	function FinalFantasylization_SubzoneTheSavageCoast()
-		FinalFantasylization_BeachSong()
-	end
---	The Stockpile
-	function FinalFantasylization_SubzoneTheStockpile()
-		FinalFantasylization_ForestSong()
-	end
---	The Sundering
-	function FinalFantasylization_SubzoneTheSundering()
-		FinalFantasylization_WaterSong()
-	end
---	Tkashi Ruins
-	function FinalFantasylization_SubzoneTkashiRuins()
-		FinalFantasylization_ForestSong()
-	end
---	Venture Co. Base Camp
-	function FinalFantasylization_SubzoneVentureCoBaseCamp()
-			FinalFantasylization_PlayMusic(S .. Alliance10Town);
-			FinalFantasylization_debugMsg("Alliance10Town")
-	end
---	Venture Co. Operations Center
-	function FinalFantasylization_SubzoneVentureCoOperationsCenter()
-			FinalFantasylization_PlayMusic(S .. Alliance8Town);
-			FinalFantasylization_debugMsg("Alliance8Town")
-	end
---	The Vile Reef
-	function FinalFantasylization_SubzoneTheVileReef()
-		FinalFantasylization_LakeSong()
-	end
---	Yojamba Isle
-	function FinalFantasylization_SubzoneYojambaIsle()
-		FinalFantasylization_BeachSong()
-	end
---	Ziata'jai Ruins
-	function FinalFantasylization_SubzoneZiatajaiRuins()
-		FinalFantasylization_ForestSong()
-	end
---	Zul'Gurub
-	function FinalFantasylization_SubzoneZulGurub()
-		FinalFantasylization_WarySong()
-	end
---	Zuuldaia Ruins
-	function FinalFantasylization_SubzoneZuuldaiaRuins()
-		FinalFantasylization_BeachSong()
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Plaguelands: The Scarlet Enclave : Death Knight Start
---'====================================================================================
---	Zone: Plaguelands: The Scarlet Enclave
-	function FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclave()
-		FinalFantasylization_BattleGround();
-	end
---	Zone Events:
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsPlaguelandsTheScarletEnclaveSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	SUBZONES:
---		Acherus: The Ebon Hold
-	function FinalFantasylization_DeathKnight_Start_AcherusTheEbonHold()
-			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
-			FinalFantasylization_debugMsg("EbonHoldSong")
-	end
---			Hall of Command
-	function FinalFantasylization_DeathKnight_Start_HallofCommand()
-			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
-			FinalFantasylization_debugMsg("EbonHoldSong")
-	end
---			The Heart of Acherus
-	function FinalFantasylization_DeathKnight_Start_TheHeartofAcherus()
-			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
-			FinalFantasylization_debugMsg("EbonHoldSong")
-	end
---		Browman Mill
-	function FinalFantasylization_DeathKnight_Start_BrowmanMill()
-		FinalFantasylization_BattleGround();
-	end
---		Crypt of Remembrance
-	function FinalFantasylization_DeathKnight_Start_CryptofRemembrance()
-			FinalFantasylization_PlayMusic(S .. EbonHoldSong);
-			FinalFantasylization_debugMsg("EbonHoldSong")
-	end
---		Death's Breach
-	function FinalFantasylization_DeathKnight_Start_DeathsBreach()
-		FinalFantasylization_SwampSong();
-	end
---		Havenshire
-	function FinalFantasylization_DeathKnight_Start_Havenshire()
-		FinalFantasylization_BattleGround();
-	end
---			Havenshire Farms
-	function FinalFantasylization_DeathKnight_Start_HavenshireFarms()
-		FinalFantasylization_BattleGround();
-	end
---			Havenshire Lumber Mill
-	function FinalFantasylization_DeathKnight_Start_HavenshireLumberMill()
-		FinalFantasylization_BattleGround();
-	end
---			Havenshire Mine
-	function FinalFantasylization_DeathKnight_Start_HavenshireMine()
-		FinalFantasylization_CaveSong();
-	end
---			Havenshire Stables
-	function FinalFantasylization_DeathKnight_Start_HavenshireStables()
-		FinalFantasylization_BattleGround();
-	end
---		King's Harbor
-	function FinalFantasylization_DeathKnight_Start_KingsHarbor()
-		FinalFantasylization_BattleGround();
-	end
---		Light's Hope Chapel
-	function FinalFantasylization_DeathKnight_Start_LightsHopeChapel()
-		FinalFantasylization_BattleGround();
-	end
---		Light's Point
-	function FinalFantasylization_DeathKnight_Start_LightsPoint()
-		FinalFantasylization_BattleGround();
-	end
---			Light's Point Tower
-	function FinalFantasylization_DeathKnight_Start_LightsPointTower()
-		FinalFantasylization_BattleGround();
-	end
---		New Avalon
-	function FinalFantasylization_DeathKnight_Start_NewAvalon()
-		FinalFantasylization_BattleGround();
-	end
---			Chapel of the Crimson Flame
-	function FinalFantasylization_DeathKnight_Start_ChapeloftheCrimsonFlame()
-		FinalFantasylization_BattleGround();
-	end
---			New Avalon Forge
-	function FinalFantasylization_DeathKnight_Start_NewAvalonForge()
-		FinalFantasylization_BattleGround();
-	end
---			New Avalon Orchard
-	function FinalFantasylization_DeathKnight_Start_NewAvalonOrchard()
-		FinalFantasylization_BattleGround();
-	end
---			New Avalon Town Hall
-	function FinalFantasylization_DeathKnight_Start_NewAvalonTownHall()
-		FinalFantasylization_BattleGround();
-	end
---			Scarlet Hold
-	function FinalFantasylization_DeathKnight_Start_ScarletHold()
-		FinalFantasylization_BattleGround();
-	end
---			Scarlet Tavern
-	function FinalFantasylization_DeathKnight_Start_ScarletTavern()
-		FinalFantasylization_BattleGround();
-	end
---		The Noxious Glade
-	function FinalFantasylization_DeathKnight_Start_TheNoxiousGlade()
-		FinalFantasylization_BattleGround();
-	end
---		The Noxious Pass
-	function FinalFantasylization_DeathKnight_Start_TheNoxiousPass()
-		FinalFantasylization_BattleGround();
-	end
---		The Pestilent Scar
-	function FinalFantasylization_DeathKnight_Start_PestilentScar()
-		FinalFantasylization_BattleGround();
-	end
---		The Scarlet Overlook
-	function FinalFantasylization_DeathKnight_Start_ScarletOverlook()
-		FinalFantasylization_BattleGround();
-	end
---		Tyr's Hand
-	function FinalFantasylization_DeathKnight_Start_TyrsHand()
-		FinalFantasylization_BattleGround();
-	end
---			The Scarlet Basilica
-	function FinalFantasylization_DeathKnight_Start_TheScarletBasilica()
-		FinalFantasylization_BattleGround();
-	end
---			Tyr's Hand Abbey
-	function FinalFantasylization_DeathKnight_Start_TyrsHandAbbey()
-		FinalFantasylization_BattleGround();
-	end
---				Hall of Arms
-	function FinalFantasylization_DeathKnight_Start_HallofArms()
-		FinalFantasylization_BattleGround();
-	end
---				Library Wing
-	function FinalFantasylization_DeathKnight_Start_LibraryWing()
-		FinalFantasylization_BattleGround();
-	end
---				Main Hall
-	function FinalFantasylization_DeathKnight_Start_MainHall()
-		FinalFantasylization_BattleGround();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Redridge Mountains
---'====================================================================================
---	Zone: Redridge Mountains
-	function FinalFantasylization_EasternKingdomsRedridgeMountains()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_LandSong();
-			else
-				FinalFantasylization_ContestedSong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsRedridgeMountainsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsRedridgeMountainsSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Camp Everstill
-	function FinalFantasylization_AllianceTownCampEverstill()
-		FinalFantasylization_AllianceTowns();
-	end
---		Keeshan's Post
-	function FinalFantasylization_AllianceTownKeeshansPost()
-		FinalFantasylization_AllianceTowns();
-	end
---		Lakeshire
-	function FinalFantasylization_AllianceTownLakeshire()
-		FinalFantasylization_AllianceTowns();
-	end
---			Lakeshire Inn
-	function FinalFantasylization_AllianceTownLakeshireInn()
-		FinalFantasylization_AllianceTowns();
-	end
---			Lakeshire Town Hall
-	function FinalFantasylization_AllianceTownLakeshireTownHall()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Alther's Mill
-	function FinalFantasylization_SubzoneAlthersMill()
-		FinalFantasylization_LandSong();
-	end
---	Galardell Valley
-	function FinalFantasylization_SubzoneGalardellValley()
-		FinalFantasylization_LandSong();
-	end
---	Lake Everstill
-	function FinalFantasylization_SubzoneLakeEverstill()
-		FinalFantasylization_LakeSong();
-	end
---	Lakeridge Highway
-	function FinalFantasylization_SubzoneLakeridgeHighway()
-		FinalFantasylization_LandSong();
-	end
---	Redridge Canyons
-	function FinalFantasylization_SubzoneRedridgeCanyons()
-		FinalFantasylization_LandSong();
-	end
---	Render's Camp
-	function FinalFantasylization_SubzoneRendersCamp()
-		FinalFantasylization_LandSong();
-	end
---		Render's Rock
-	function FinalFantasylization_SubzoneRendersRock()
-		FinalFantasylization_LandSong();
-	end
---	Render's Valley
-	function FinalFantasylization_SubzoneRendersValley()
-		FinalFantasylization_LandSong();
-	end
---	Rethban Caverns
-	function FinalFantasylization_SubzoneRethbanCaverns()
-		FinalFantasylization_CaveSong();
-	end
---	Shalewind Canyon
-	function FinalFantasylization_SubzoneShalewindCanyon()
-		FinalFantasylization_LandSong();
-	end
---	Stonewatch
-	function FinalFantasylization_SubzoneStonewatch()
-		FinalFantasylization_LandSong();
-	end
---		Stonewatch Keep
-	function FinalFantasylization_SubzoneStonewatchKeep()
-		FinalFantasylization_LandSong();
-	end
---		Stonewatch Tower
-	function FinalFantasylization_SubzoneStonewatchTower()
-		FinalFantasylization_LandSong();
-	end
---	Stonewatch Falls
-	function FinalFantasylization_SubzoneStonewatchFalls()
-		FinalFantasylization_LakeSong();
-	end
---	Three Corners
-	function FinalFantasylization_SubzoneThreeCorners()
-		FinalFantasylization_LandSong();
-	end
---	Tower of Ilgalar
-	function FinalFantasylization_SubzoneTowerofIlgalar()
-		FinalFantasylization_LandSong();
-	end
---	Yowler's Den
-	function FinalFantasylization_SubzoneYowlersDen()
-		FinalFantasylization_CaveSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Ruins of Gilneas : Undead
---'====================================================================================
---	Zone: Ruins of Gilneas
-	function FinalFantasylization_EasternKingdomsRuinsofGilneas()
-		FinalFantasylization_ForestSong();
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsRuinsofGilneasResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsRuinsofGilneasSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	Undead:
---		TOWN:
---			Forsaken Forward Command
-	function FinalFantasylization_HordeTownForsakenForwardCommand()
-		FinalFantasylization_HordeTowns();
-	end
---		SUBZONES:
---		7th Legion Submarine
-	function FinalFantasylization_Subzone7thLegionSubmarine()
-
-	end
---		Dreadwatch Outpost
-	function FinalFantasylization_SubzoneDreadwatchOutpost()
-
-	end
---		Emberstone Mine
-	function FinalFantasylization_SubzoneEmberstoneMine()
-
-	end
---		Emberstone Village
-	function FinalFantasylization_SubzoneEmberstoneVillage()
-
-	end
---		Gilneas City
-	function FinalFantasylization_SubzoneGilneasCity()
-
-	end
---			Light's Dawn Cathedral
-	function FinalFantasylization_SubzoneLightsDawnCathedral()
-
-	end
---			Stoneward Prison
-	function FinalFantasylization_SubzoneStonewardPrison()
-
-	end
---		The Greymane Wall
-	function FinalFantasylization_SubzoneTheGreymaneWall()
-
-	end
---		Northern Headlands
-	function FinalFantasylization_SubzoneNorthernHeadlands()
-
-	end
---		Rutsak's Guard
-	function FinalFantasylization_SubzoneRutsaksGuard()
-
-	end
---		Tempest's Reach
-	function FinalFantasylization_SubzoneTempestsReach()
-
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Searing Gorge
---'====================================================================================
---	Zone: Searing Gorge
-	function FinalFantasylization_EasternKingdomsSearingGorge()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsSearingGorgeResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsSearingGorgeSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Neutral:
---		Iron Summit
-	function FinalFantasylization_NeutralTownIronSummit()
-		FinalFantasylization_NeutralTowns();
-	end
---		Thorium Advance
-	function FinalFantasylization_NeutralTownThoriumAdvance()
-		FinalFantasylization_NeutralTowns();
-	end
---		Thorium Point
-	function FinalFantasylization_NeutralTownThoriumPoint()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Blackchar Cave
-	function FinalFantasylization_SubzoneBlackcharCave()
-		FinalFantasylization_CaveSong()
-	end
---	Blackrock Mountain
-	function FinalFantasylization_SubzoneBlackrockMountain()
-		FinalFantasylization_PlagueSong()
-	end
---	The Cauldron
-	function FinalFantasylization_SubzoneTheCauldron()
-		FinalFantasylization_PlagueSong()
-	end
---		The Slag Pit
-	function FinalFantasylization_SubzoneTheSlagPit()
-		FinalFantasylization_PlagueSong()
-	end
---	Dustfire Valley
-	function FinalFantasylization_SubzoneDustfireValley()
-		FinalFantasylization_PlagueSong()
-	end
---	Firewatch Ridge
-	function FinalFantasylization_SubzoneFirewatchRidge()
-		FinalFantasylization_PlagueSong()
-	end
---	Grimesilt Dig Site
-	function FinalFantasylization_SubzoneGrimesiltDigSite()
-		FinalFantasylization_PlagueSong()
-	end
---	Pyrox Flats
-	function FinalFantasylization_SubzonePyroxFlats()
-		FinalFantasylization_PlagueSong()
-	end
---	The Sea of Cinders
-	function FinalFantasylization_SubzoneTheSeaofCinders()
-		FinalFantasylization_PlagueSong()
-	end
---	Stonewrought Pass
-	function FinalFantasylization_SubzoneStonewroughtPass()
-		FinalFantasylization_PlagueSong()
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Silverpine Forest
---'====================================================================================
---	Zone: Silverpine Forest
-	function FinalFantasylization_EasternKingdomsSilverpineForest()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_PlagueSong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsSilverpineForestResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsSilverpineForestSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Horde:
---		The Forsaken Front
-	function FinalFantasylization_HordeTownTheForsakenFront()
-		FinalFantasylization_HordeTowns();
-	end
---		Forsaken High Command
-	function FinalFantasylization_HordeTownForsakenHighCommand()
-		FinalFantasylization_HordeTowns();
-	end
---		Forsaken Rear Guard
-	function FinalFantasylization_HordeTownForsakenRearGuard()
-		FinalFantasylization_HordeTowns();
-	end
---		The Sepulcher
-	function FinalFantasylization_HordeTownTheSepulcher()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	7th Legion Base Camp
-	function FinalFantasylization_Subzone7thLegionBaseCamp()
-
-	end
---	Ambermill *
-	function FinalFantasylization_SubzoneAmbermill()
-		FinalFantasylization_PlayMusic(S .. Alliance10Town);
-		FinalFantasylization_debugMsg("Alliance10Town")
-	end
---	The Battlefront
-	function FinalFantasylization_SubzoneTheBattlefront()
-
-	end
---	Beren's Peril
-	function FinalFantasylization_SubzoneBerensPeril()
-
-	end
---	The Dead Field
-	function FinalFantasylization_SubzoneTheDeadField()
-		FinalFantasylization_PlagueSong();
-	end
---	The Decrepit Fields
-	function FinalFantasylization_SubzoneTheDecrepitFields()
-		FinalFantasylization_PlagueSong();
-	end
---	Deep Elem Mine
-	function FinalFantasylization_SubzoneDeepElemMine()
-		FinalFantasylization_CaveSong();
-	end
---	Gilneas Liberation Front Base Camp
-	function FinalFantasylization_SubzoneGilneasLiberationFrontBaseCamp()
-
-	end
---	The Greymane Wall
-	function FinalFantasylization_SubzoneTheGreymaneWall()
-		FinalFantasylization_SwampSong();
-	end
---	The Ivar Patch
-	function FinalFantasylization_SubzoneTheIvarPatch()
-
-	end
---	Lordamere Lake
-	function FinalFantasylization_SubzoneLordamereLake()
-		FinalFantasylization_LakeSong();
-	end
---		The Dawning Isles
-	function FinalFantasylization_SubzoneTheDawningIsles()
-
-	end
---		Fenris Isle
-	function FinalFantasylization_SubzoneFenrisIsle()
-
-	end
---			Fenris Keep
-	function FinalFantasylization_SubzoneFenrisKeep()
-
-	end
---	North Tide's Beachhead
-	function FinalFantasylization_SubzoneNorthTidesBeachhead()
-		FinalFantasylization_WaterSong();
-	end
---	North Tide's Hollow
-	function FinalFantasylization_SubzoneNorthTidesHollow()
-
-	end
---	North Tide's Run
-	function FinalFantasylization_SubzoneNorthTidesRun()
-
-	end
---	Olsen's Farthing
-	function FinalFantasylization_SubzoneOlsensFarthing()
-
-	end
---	Pyrewood Village
-	function FinalFantasylization_SubzonePyrewoodVillage()
-
-	end
---		Pyrewood Chapel
-	function FinalFantasylization_SubzonePyrewoodChapel()
-
-	end
---		Pyrewood Inn *
-	function FinalFantasylization_SubzonePyrewoodInn()
-
-	end
---		Pyrewood Town Hall
-	function FinalFantasylization_SubzonePyrewoodTownHall()
-
-	end
---	Shadowfang Keep
-	function FinalFantasylization_SubzoneShadowfangKeep()
-
-	end
---	The Shining Strand
-	function FinalFantasylization_SubzoneTheShiningStrand()
-		FinalFantasylization_PlagueSong();
-	end
---	The Skittering Dark
-	function FinalFantasylization_SubzoneTheSkitteringDark()
-		FinalFantasylization_PlagueSong();
-	end
---	South Tide's Run
-	function FinalFantasylization_SubzoneSouthTidesRun()
-
-	end
---	Valgan's Field
-	function FinalFantasylization_SubzoneValgansField()
-
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Swamp of Sorrows
---'====================================================================================
---	Zone: Swamp of Sorrows
-	function FinalFantasylization_EasternKingdomsSwampofSorrows()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SwampSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsSwampofSorrowsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsSwampofSorrowsSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		The Harborage
-	function FinalFantasylization_AllianceTownTheHarborage()
-		FinalFantasylization_AllianceTowns();
-	end
---		Marshtide Watch
-	function FinalFantasylization_AllianceTownMarshtideWatch()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Misty Reed Post
-	function FinalFantasylization_HordeTownMistyReedPost()
-		FinalFantasylization_HordeTowns();
-	end
---		Stonard
-	function FinalFantasylization_HordeTownStonard()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Bogpaddle
-	function FinalFantasylization_NeutralTownBogpaddle()
-		FinalFantasylization_NeutralTowns();
-	end
---		Sorrowmurk
-	function FinalFantasylization_NeutralTownSorrowmurk()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:		
---	The Bloodmire
-	function FinalFantasylization_SubzoneTheBloodmire()
-		FinalFantasylization_SwampSong()
-	end
---	Fallow Sanctuary
-	function FinalFantasylization_SubzoneFallowSanctuary()
-		FinalFantasylization_SwampSong()
-	end
---	The Forbidding Sea
-	function FinalFantasylization_SubzoneTheForbiddingSea()
-		FinalFantasylization_WaterSong()
-	end
---	Misty Reed Strand
-	function FinalFantasylization_SubzoneMistyReedStrand()
-		FinalFantasylization_SwampSong()
-	end
---	Misty Valley
-	function FinalFantasylization_SubzoneMistyValley()
-		FinalFantasylization_SwampSong()
-	end
---	Pool of Tears
-	function FinalFantasylization_SubzonePoolofTears()
-		FinalFantasylization_WaterSong()
-	end
---		Temple of Atal'Hakkar
-	function FinalFantasylization_SubzoneTempleofAtalHakkar()
-		FinalFantasylization_PlayMusic(S .. Alliance10Town);
-		FinalFantasylization_debugMsg("Alliance10Town")
-	end
---	Purespring Cavern
-	function FinalFantasylization_SubzonePurespringCavern()
-		FinalFantasylization_CaveSong()
-	end
---	The Shifting Mire
-	function FinalFantasylization_SubzoneTheShiftingMire()
-		FinalFantasylization_SwampSong()
-	end
---	Splinterspear Junction
-	function FinalFantasylization_SubzoneSplinterspearJunction()
-		FinalFantasylization_SwampSong()
-	end
---	Stagalbog
-	function FinalFantasylization_SubzoneStagalbog()
-		FinalFantasylization_SwampSong()
-	end
---		Stagalbog Cave
-	function FinalFantasylization_SubzoneStagalbogCave()
-		FinalFantasylization_CaveSong()
-	end
---'====================================================================================
---' Eastern Kingdoms Zone: Tirisfal Glades - Horde
---'====================================================================================
---	Zone: Tirisfal Glades
-	function FinalFantasylization_EasternKingdomsTirisfalGlades()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_PlagueSong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsTirisfalGladesResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsTirisfalGladesSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Forsaken Start: 
---		Deathknell
-	function FinalFantasylization_Forsaken_Start_Deathknell()
-		FinalFantasylization_PlagueSong();
-	end
---			The Deathknell Graves
-	function FinalFantasylization_Forsaken_Start_TheDeathknellGraves()
-		FinalFantasylization_PlagueSong();
-	end
---			Night Web's Hollow
-	function FinalFantasylization_Forsaken_Start_NightWebsHollow()
-		FinalFantasylization_PlagueSong();
-	end
---			Rotbrain Encampment
-	function FinalFantasylization_Forsaken_Start_RotbrainEncampment()
-		FinalFantasylization_PlagueSong();
-	end
---			Shadow Grave
-	function FinalFantasylization_Forsaken_Start_ShadowGrave()
-		FinalFantasylization_PlagueSong();
-	end
---	Horde:
---		Brill
-	function FinalFantasylization_HordeTownBrill()
-		FinalFantasylization_HordeTowns();
-	end
---			Brill Town Hall
-	function FinalFantasylization_HordeTownBrillTownHall()
-		FinalFantasylization_HordeTowns();
-	end
---			Gallows' End Tavern
-	function FinalFantasylization_HordeTownGallowsEndTavern()
-		FinalFantasylization_HordeTowns();
-	end
---		Ruins of Lordaeron
-	function FinalFantasylization_HordeTownRuinsofLordaeron()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Agamand Mills
-	function FinalFantasylization_SubzoneAgamandMills()
-		FinalFantasylization_PlagueSong();
-	end
---		Agamand Family Crypt
-	function FinalFantasylization_SubzoneAgamandFamilyCrypt()
-		FinalFantasylization_PlagueSong();
-	end
---	Balnir Farmstead
-	function FinalFantasylization_SubzoneBalnirFarmstead()
-		FinalFantasylization_PlagueSong();
-	end
---	Brightwater Lake
-	function FinalFantasylization_SubzoneBrightwaterLake()
-		FinalFantasylization_LakeSong();
-	end
---		Gunther's Retreat
-	function FinalFantasylization_SubzoneGunthersRetreat()
-
-	end
---	The Bulwark
-	function FinalFantasylization_SubzoneTheBulwark()
-		FinalFantasylization_PlayMusic(S .. Horde1Town);
-		FinalFantasylization_debugMsg("Horde1Town")
-	end
---	Calston Estate
-	function FinalFantasylization_SubzoneCalstonEstate()
-		FinalFantasylization_PlayMusic(S .. Horde1Town);
-		FinalFantasylization_debugMsg("Horde1Town")
-	end
---	Cold Hearth Manor
-	function FinalFantasylization_SubzoneColdHearthManor()
-		FinalFantasylization_PlagueSong();
-	end
---	Crusader Outpost
-	function FinalFantasylization_SubzoneCrusaderOutpost()
-		FinalFantasylization_ForestSong();
-	end
---	Death's Watch Waystation
-	function FinalFantasylization_SubzoneDeathsWatchWaystation()
-		FinalFantasylization_PlayMusic(S .. Horde1Town);
-		FinalFantasylization_debugMsg("Horde1Town")
-	end
---	Faol's Rest
-	function FinalFantasylization_SubzoneFaolsRest()
-		FinalFantasylization_PlayerGhost();
-	end
---	Garren's Haunt
-	function FinalFantasylization_SubzoneGarrensHaunt()
-		FinalFantasylization_PlagueSong();
-	end
---	Nightmare Vale
-	function FinalFantasylization_SubzoneNightmareVale()
-
-	end
---	The North Coast
-	function FinalFantasylization_SubzoneTheNorthCoast()
-
-	end
---	Scarlet Monastery
-	function FinalFantasylization_SubzoneScarletMonastery()
-
-	end
---		The Grand Vestibule
-	function FinalFantasylization_SubzoneTheGrandVestibule()
-
-	end
---		Terrace of Repose
-	function FinalFantasylization_SubzoneTerraceofRepose()
-
-	end
---	Crusader's Outpost
-	function FinalFantasylization_SubzoneCrusadersOutpost()
-
-	end
---		Scarlet Palisade
-	function FinalFantasylization_SubzoneScarletPalisade()
-		FinalFantasylization_HostileTowns();
-	end
---	Scarlet Watchtower
-	function FinalFantasylization_SubzoneScarletWatchtower()
-
-	end
---	Scarlet Watch Post
-	function FinalFantasylization_SubzoneScarletWatchPost()
-		FinalFantasylization_HostileTowns();
-	end
---	Solliden Farmstead
-	function FinalFantasylization_SubzoneSollidenFarmstead()
-		FinalFantasylization_HostileTowns();
-	end
---	Stillwater Pond
-	function FinalFantasylization_SubzoneStillwaterPond()
-		FinalFantasylization_LakeSong();
-	end
---	Venomweb Vale
-	function FinalFantasylization_SubzoneVenomwebVale()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_PlagueSong();
-			end
-	end
---		Scarlet Encampment
-	function FinalFantasylization_SubzoneScarletEncampment()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_PlagueSong();
-			end
-	end
---	Whispering Forest
-	function FinalFantasylization_SubzoneWhisperingForest()
-
-	end
---	Whispering Gardens
-	function FinalFantasylization_SubzoneWhisperingGardens()
-
-	end
---	Whispering Shore
-	function FinalFantasylization_SubzoneWhisperingShore()
-		FinalFantasylization_PlagueSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Westfall
---'====================================================================================
---	Zone: Westfall
-	function FinalFantasylization_EasternKingdomsWestfall()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SandSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsWestfallResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsWestfallSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Moonbrook
-	function FinalFantasylization_AllianceTownMoonbrook()
-		FinalFantasylization_AllianceTowns();
-	end
---			Deadmines
-	function FinalFantasylization_SubzoneDeadmines()
-		FinalFantasylization_CaveSong();
-	end
---		Sentinel Hill
-	function FinalFantasylization_AllianceTownSentinelHill()
-		FinalFantasylization_AllianceTowns();
-	end
---				Sentinel Tower
-	function FinalFantasylization_AllianceTownSentinelTower()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Alexston Farmstead
-	function FinalFantasylization_SubzoneAlexstonFarmstead()
-		FinalFantasylization_SandSong();
-	end
---	The Dagger Hills
-	function FinalFantasylization_SubzoneTheDaggerHills()
-		FinalFantasylization_SandSong();
-	end
---	The Dead Acre
-	function FinalFantasylization_SubzoneTheDeadAcre()
-		FinalFantasylization_SandSong();
-	end
---	Demont's Place
-	function FinalFantasylization_SubzoneDemontsPlace()
-		FinalFantasylization_SandSong();
-	end
---	The Dust Plains
-	function FinalFantasylization_SubzoneTheDustPlains()
-		FinalFantasylization_SandSong();
-	end
---		Mortwake's Tower
-	function FinalFantasylization_SubzoneMortwakesTower()
-		FinalFantasylization_ForestSong();
-	end
---	Furlbrow's Pumpkin Farm
-	function FinalFantasylization_SubzoneFurlbrowsPumpkinFarm()
-		FinalFantasylization_SandSong();
-	end
---	Gold Coast Quarry
-	function FinalFantasylization_SubzoneGoldCoastQuarry()
-		FinalFantasylization_CaveSong();
-	end
---	Jangolode Mine
-	function FinalFantasylization_SubzoneJangolodeMine()
-		FinalFantasylization_CaveSong();
-	end
---	The Jansen Stead
-	function FinalFantasylization_SubzoneTheJansenStead()
-		FinalFantasylization_SandSong();
-	end
---	Longshore
-	function FinalFantasylization_SubzoneLongshore()
-		FinalFantasylization_BeachSong();
-	end
---	The Molsen Farm
-	function FinalFantasylization_SubzoneTheMolsenFarm()
-		FinalFantasylization_SandSong();
-	end
---	The Raging Chasm
-	function FinalFantasylization_SubzoneTheRagingChasm()
-		FinalFantasylization_PlayMusic(S .. Horde1Town);
-		FinalFantasylization_debugMsg("Horde1Town")
-	end
---	Saldean's Farm
-	function FinalFantasylization_SubzoneSaldeansFarm()
-		FinalFantasylization_SandSong();
-	end
---	Stendel's Pond
-	function FinalFantasylization_SubzoneStendelsPond()
-		FinalFantasylization_LakeSong();
-	end
---	Westfall Lighthouse
-	function FinalFantasylization_SubzoneWestfallLighthouse()
-		FinalFantasylization_WaterSong();
-	end
---'====================================================================================
---' Eastern Kingdoms Zones: Wetlands : Alliance
---'====================================================================================
---	Zone: Wetlands
-	function FinalFantasylization_EasternKingdomsWetlands()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SwampSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_EasternKingdomsWetlandsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_EasternKingdomsWetlandsSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Greenwarden's Grove
-	function FinalFantasylization_AllianceTownGreenwardensGrove()
-		FinalFantasylization_AllianceTowns();
-	end
---		Menethil Harbor
-	function FinalFantasylization_AllianceTownMenethilHarbor()
-		FinalFantasylization_AllianceTowns();
-	end
---			Deepwater Tavern
-	function FinalFantasylization_AllianceTownDeepwaterTavern()
-		FinalFantasylization_AllianceTowns();
-	end
---			Menethil Keep
-	function FinalFantasylization_AllianceTownMenethilKeep()
-		FinalFantasylization_AllianceTowns();
-	end
---		Slabchisel's Survey
-	function FinalFantasylization_AllianceTownSlabchiselsSurvey()
-		FinalFantasylization_AllianceTowns();
-	end
---		Swiftgear Station
-	function FinalFantasylization_AllianceTownSwiftgearStation()
-		FinalFantasylization_AllianceTowns();
-	end
---		Whelgar's Retreat
-	function FinalFantasylization_AllianceTownWhelgarsRetreat()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Angerfang Encampment
-	function FinalFantasylization_SubzoneAngerfangEncampment()
-		FinalFantasylization_SwampSong()
-	end
---	Baradin Bay
-	function FinalFantasylization_SubzoneBaradinBay()
-		FinalFantasylization_WaterSong()
-	end
---	Black Channel Marsh
-	function FinalFantasylization_SubzoneBlackChannelMarsh()
-		FinalFantasylization_SwampSong()
-	end
---	Bluegill Marsh
-	function FinalFantasylization_SubzoneBluegillMarsh()
-		FinalFantasylization_SwampSong()
-	end
---	Direforge Hill
-	function FinalFantasylization_SubzoneDireforgeHill()
-		FinalFantasylization_ForestSong()
-	end
---	Dun Algaz
-	function FinalFantasylization_SubzoneDunAlgaz()
-		FinalFantasylization_SwampSong()
-	end
---	Dun Modr
-	function FinalFantasylization_SubzoneDunModr()
-		FinalFantasylization_SwampSong()
-	end
---	The Great Sea
-	function FinalFantasylization_SubzoneTheGreatSea()
-		FinalFantasylization_WaterSong()
-	end
---	The Green Belt
-	function FinalFantasylization_SubzoneTheGreenBelt()
-		FinalFantasylization_ForestSong()
-	end
---	Ironbeard's Tomb
-	function FinalFantasylization_SubzoneIronbeardsTomb()
-		FinalFantasylization_CaveSong()
-	end
---	The Lost Fleet
-	function FinalFantasylization_SubzoneTheLostFleet()
-		FinalFantasylization_WaterSong()
-	end
---	Menethil Bay
-	function FinalFantasylization_SubzoneMenethilBay()
-		FinalFantasylization_LakeSong()
-	end
---	Mosshide Fen
-	function FinalFantasylization_SubzoneMosshideFen()
-		FinalFantasylization_SwampSong()
-	end
---	Raptor Ridge
-	function FinalFantasylization_SubzoneRaptorRidge()
-		FinalFantasylization_ForestSong()
-	end
---	Saltspray Glen
-	function FinalFantasylization_SubzoneSaltsprayGlen()
-		FinalFantasylization_SwampSong()
-	end
---	Sundown Marsh
-	function FinalFantasylization_SubzoneSundownMarsh()
-		FinalFantasylization_SwampSong()
-	end
---	Thandol Span
-	function FinalFantasylization_SubzoneThandolSpan()
-		FinalFantasylization_SwampSong()
-	end
---	Thelgen Rock
-	function FinalFantasylization_SubzoneThelgenRock()
-		FinalFantasylization_LandSong()
-	end
---	Whelgar's Excavation Site
-	function FinalFantasylization_SubzoneWhelgarsExcavationSite()
-		FinalFantasylization_CaveSong()
-	end
-
-
---#########################################################################################
---##   KALIMDOR ZONES
---#########################################################################################
---'====================================================================================
---' Kalimdor Capital: Darnassus : Alliance
---'====================================================================================
---	Zone: Darnassus
-	function FinalFantasylization_Kalimdor_Darnassus()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_Kalimdor_DarnassusResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_Kalimdor_DarnassusSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	SUBZONES:
---	Cenarion Enclave
-	function FinalFantasylization_Darnassus_SubzoneCenarionEnclave()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---	Craftsmen's Terrace
-	function FinalFantasylization_Darnassus_SubzoneCraftsmensTerrace()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---	Howling Oak
-	function FinalFantasylization_Darnassus_SubzoneTheHowlingOak()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---	The Temple Gardens
-	function FinalFantasylization_Darnassus_SubzoneTheTempleGardens()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---	The Temple of the Moon
-	function FinalFantasylization_Darnassus_SubzoneTempleoftheMoon()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---	Tradesmen's Terrace
-	function FinalFantasylization_Darnassus_SubzoneTradesmensTerrace()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---	Warrior's Terrace
-	function FinalFantasylization_Darnassus_SubzoneWarriorsTerrace()
-		FinalFantasylization_PlayMusic(S .. DarnassusSong);
-		FinalFantasylization_debugMsg("DarnassusSong")
-	end
---'====================================================================================
---' Kalimdor Capital: The Exodar : Alliance
---'====================================================================================
---	Zone: The Exodar
-	function FinalFantasylization_Kalimdor_TheExodar()
-		FinalFantasylization_PlayMusic(S .. ExodarSong);
-		FinalFantasylization_debugMsg("ExodarSong")
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_Kalimdor_TheExodarResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_Kalimdor_TheExodarSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	SUBZONES:
---	The Crystal Hall
-	function FinalFantasylization_TheExodar_SubzoneTheCrystalHall()
-		FinalFantasylization_PlayMusic(S .. ExodarSong);
-		FinalFantasylization_debugMsg("ExodarSong")
-	end
---	Seat of the Naaru
-	function FinalFantasylization_TheExodar_SubzoneSeatoftheNaaru()
-		FinalFantasylization_PlayMusic(S .. ExodarSong);
-		FinalFantasylization_debugMsg("ExodarSong")
-	end
---		The Exobar
-	function FinalFantasylization_TheExodar_SubzoneTheExobar()
-		FinalFantasylization_PlayMusic(S .. ExodarSong);
-		FinalFantasylization_debugMsg("ExodarSong")
-	end
---	Traders' Tier
-	function FinalFantasylization_TheExodar_SubzoneTradersTier()
-		FinalFantasylization_PlayMusic(S .. ExodarSong);
-		FinalFantasylization_debugMsg("ExodarSong")
-	end
---	The Vault of Lights
-	function FinalFantasylization_TheExodar_SubzoneTheVaultofLights()
-		FinalFantasylization_PlayMusic(S .. ExodarSong);
-		FinalFantasylization_debugMsg("ExodarSong")
-	end
---'====================================================================================
---' Kalimdor Capital: Orgrimmar : Horde
---'====================================================================================
---	Zone: Orgrimmar
-	function FinalFantasylization_Kalimdor_Orgrimmar()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_Kalimdor_OrgrimmarResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_Kalimdor_OrgrimmarSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	SUBZONES:
---	Cleft of Shadow
-	function FinalFantasylization_Orgrimmar_SubzoneCleftofShadow()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		Ragefire Chasm
-	function FinalFantasylization_Orgrimmar_SubzoneRagefireChasm()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	The Drag
-	function FinalFantasylization_Orgrimmar_SubzoneTheDrag()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	Gates of Orgrimmar
-	function FinalFantasylization_Orgrimmar_SubzoneGatesofOrgrimmar()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		Engineering Works
-	function FinalFantasylization_Orgrimmar_SubzoneEngineeringWorks()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	Hall of Legends
-	function FinalFantasylization_Orgrimmar_SubzoneHallofLegends()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	Valley of Honor
-	function FinalFantasylization_Orgrimmar_SubzoneValleyofHonor()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		Hall of the Brave
-	function FinalFantasylization_Orgrimmar_SubzoneHalloftheBrave()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		The Ring of Valor
-	function FinalFantasylization_Orgrimmar_SubzoneTheRingofValor()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		The Wyvern's Tail
-	function FinalFantasylization_Orgrimmar_SubzoneTheWyvernsTail()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	Valley of Spirits
-	function FinalFantasylization_Orgrimmar_SubzoneValleyofSpirits()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	Valley of Strength
-	function FinalFantasylization_Orgrimmar_SubzoneValleyofStrength()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		The Broken Tusk
-	function FinalFantasylization_Orgrimmar_SubzoneTheBrokenTusk()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		Grommash Hold
-	function FinalFantasylization_Orgrimmar_SubzoneGrommashHold()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---	Valley of Wisdom
-	function FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		Miwana's Longhouse
-	function FinalFantasylization_Orgrimmar_SubzoneMiwanasLonghouse()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---		The Western Earthshrine
-	function FinalFantasylization_Orgrimmar_SubzoneTheWesternEarthshrine()
-		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
-		FinalFantasylization_debugMsg("OrgrimmarSong")
-	end
---'====================================================================================
---' Kalimdor Capital: Thunder Bluff : Horde
---'====================================================================================
---	Zone: Thunder Bluff
-	function FinalFantasylization_Kalimdor_ThunderBluff()
-		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
-		FinalFantasylization_debugMsg("ThunderBluffSong")
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_Kalimdor_ThunderBluffResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_Kalimdor_ThunderBluffSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	SUBZONES:
---	Elder Rise
-	function FinalFantasylization_ThunderBluff_SubzoneElderRise()
-		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
-		FinalFantasylization_debugMsg("ThunderBluffSong")
-	end
---	Hunter Rise
-	function FinalFantasylization_ThunderBluff_SubzoneHunterRise()
-		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
-		FinalFantasylization_debugMsg("ThunderBluffSong")
-	end
---	Spirit Rise
-	function FinalFantasylization_ThunderBluff_SubzoneSpiritRise()
-		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
-		FinalFantasylization_debugMsg("ThunderBluffSong")
-	end
---		The Pools of Vision
-	function FinalFantasylization_ThunderBluff_SubzoneThePoolsofVision()
-		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
-		FinalFantasylization_debugMsg("ThunderBluffSong")
-	end
---'====================================================================================
---' Kalimdor Zones: Ashenvale
---'====================================================================================
---	Zone: Ashenvale
-	function FinalFantasylization_KalimdorAshenvale()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorAshenvaleResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorAshenvaleSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Astranaar
-	function FinalFantasylization_AllianceTownAstranaar()
-		FinalFantasylization_AllianceTowns();
-	end
---		Blackfathom Camp
-	function FinalFantasylization_AllianceTownBlackfathomCamp()
-		FinalFantasylization_AllianceTowns();
-	end
---		Bolyun's Camp
-	function FinalFantasylization_AllianceTownBolyunsCamp()
-		FinalFantasylization_AllianceTowns();
-	end
---		Forest Song
-	function FinalFantasylization_AllianceTownForestSong()
-		FinalFantasylization_AllianceTowns();
-	end
---		House of Edune
-	function FinalFantasylization_AllianceTownHouseofEdune()
-		FinalFantasylization_AllianceTowns();
-	end
---		Maestra's Post
-	function FinalFantasylization_AllianceTownMaestrasPost()
-		FinalFantasylization_AllianceTowns();
-	end
---		Orendil's Retreat
-	function FinalFantasylization_AllianceTownOrendilsRetreat()
-		FinalFantasylization_AllianceTowns();
-	end
---		Raynewood Retreat
-	function FinalFantasylization_AllianceTownRaynewoodRetreat()
-		FinalFantasylization_AllianceTowns();
-	end
---			Raynewood Tower
-		function FinalFantasylization_AllianceTownRaynewoodTower()
-		FinalFantasylization_AllianceTowns();
-	end
---		Silverwing Outpost
-	function FinalFantasylization_AllianceTownSilverwingOutpost()
-		FinalFantasylization_AllianceTowns();
-	end
---		Stardust Spire
-	function FinalFantasylization_AllianceTownStardustSpire()
-		FinalFantasylization_AllianceTowns();
-	end
---		The Shrine of Aessina
-	function FinalFantasylization_AllianceTownTheShrineofAessina()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Hellscream's Watch
-	function FinalFantasylization_HordeTownHellscreamsWatch()
-		FinalFantasylization_HordeTowns();
-	end
---		Kargathia Keep
-	function FinalFantasylization_HordeTownKargathiaKeep()
-		FinalFantasylization_HordeTowns();
-	end
---		Silverwind Refuge
-	function FinalFantasylization_HordeTownSilverwindRefuge()
-		FinalFantasylization_HordeTowns();
-	end
---		The Skunkworks
-	function FinalFantasylization_HordeTownTheSkunkworks()
-		FinalFantasylization_HordeTowns();
-	end
---		Splintertree Post
-	function FinalFantasylization_HordeTownSplintertreePost()
-		FinalFantasylization_HordeTowns();
-	end
---			Splintertree Mine
-	function FinalFantasylization_HordeTownSplintertreeMine()
-		FinalFantasylization_CaveSong();
-	end
---		Warsong Labor Camp
-	function FinalFantasylization_HordeTownWarsongLaborCamp()
-		FinalFantasylization_HordeTowns();
-	end
---		Zoram'gar Outpost
-	function FinalFantasylization_HordeTownZoramgarOutpost()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:	
---	Bathran's Haunt
-	function FinalFantasylization_SubzoneBathransHaunt()
-		FinalFantasylization_ForestSong();
-	end
---	Blackfathom Deeps
-	function FinalFantasylization_SubzoneBlackfathomDeeps()
-		FinalFantasylization_WaterSong();
-	end
---	Bloodtooth Camp
-	function FinalFantasylization_SubzoneBloodtoothCamp()
-		FinalFantasylization_ForestSong();
-	end
---	Bough Shadow
-	function FinalFantasylization_SubzoneBoughShadow()
-		FinalFantasylization_ForestSong();
-	end
---	Demon Fall Canyon
-	function FinalFantasylization_SubzoneDemonFallCanyon()
-		FinalFantasylization_PlagueSong();
-	end
---		Demon Fall Ridge
-	function FinalFantasylization_SubzoneDemonFallRidge()
-		FinalFantasylization_PlagueSong();
-	end
---	The Dor'Danil Barrow Den
-	function FinalFantasylization_SubzoneTheDorDanilBarrowDen()
-		FinalFantasylization_CaveSong();
-	end
---	Falfarren River
-	function FinalFantasylization_SubzoneFalfarrenRiver()
-		FinalFantasylization_LakeSong();
-	end
---	Fallen Sky Lake
-	function FinalFantasylization_SubzoneFallenSkyLake()
-		FinalFantasylization_LakeSong();
-	end
---	Felfire Hill
-	function FinalFantasylization_SubzoneFelfireHill()
-		FinalFantasylization_PlagueSong();
-	end
---	Fire Scar Shrine
-	function FinalFantasylization_SubzoneFireScarShrine()
-		FinalFantasylization_ForestSong();
-	end
---	Greenpaw Village
-	function FinalFantasylization_SubzoneGreenpawVillage()
-		FinalFantasylization_ForestSong();
-	end
---	The Howling Vale
-	function FinalFantasylization_SubzoneTheHowlingVale()
-		FinalFantasylization_ForestSong();
-	end
---	Remains of Iris Lake
-	function FinalFantasylization_SubzoneRemainsofIrisLake()
-		FinalFantasylization_LakeSong();
-	end
---	Lake Falathim
-	function FinalFantasylization_SubzoneLakeFalathim()
-		FinalFantasylization_PlagueSong();
-	end
---	Moonwell of Purity
-	function FinalFantasylization_SubzoneMoonwellofPurity()
-		FinalFantasylization_ForestSong();
-	end
---	Moonwell of Cleansing
-	function FinalFantasylization_SubzoneMoonwellofCleansing()
-		FinalFantasylization_ForestSong();
-	end
---	The Mor'shan Rampart
-	function FinalFantasylization_SubzoneTheMorshanRampart()
-		FinalFantasylization_ForestSong();
-	end
---	Mystral Lake
-	function FinalFantasylization_SubzoneMystralLake()
-		FinalFantasylization_LakeSong();
-	end
---	Night Run
-	function FinalFantasylization_SubzoneNightRun()
-		FinalFantasylization_ForestSong();
-	end
---	Nightsong Woods
-	function FinalFantasylization_SubzoneNightsongWoods()
-		FinalFantasylization_ForestSong();
-	end
---	The Ruins of Ordil'Aran
-	function FinalFantasylization_SubzoneTheRuinsofOrdilAran()
-		FinalFantasylization_PlagueSong();
-	end
---	The Ruins of Stardust
-	function FinalFantasylization_SubzoneTheRuinsofStardust()
-		FinalFantasylization_ForestSong();
-	end
---	Satyrnaar
-	function FinalFantasylization_SubzoneSatyrnaar()
-		FinalFantasylization_PlagueSong();
-	end
---	The Shady Nook
-	function FinalFantasylization_SubzoneTheShadyNook()
-		FinalFantasylization_ForestSong();
-	end
---	Silverwing Grove
-	function FinalFantasylization_SubzoneSilverwingGrove()
-		FinalFantasylization_ForestSong();
-	end
---	Southfury River
-	function FinalFantasylization_SubzoneSouthfuryRiver()
-		FinalFantasylization_WaterSong();
-	end
---	The Talondeep Path
-	function FinalFantasylization_SubzoneTheTalondeepPath()
-		FinalFantasylization_ForestSong();
-	end
---		Talondeep Pass
-	function FinalFantasylization_SubzoneTalondeepPass()
-		FinalFantasylization_ForestSong();
-	end
---	Thistlefur Village
-	function FinalFantasylization_SubzoneThistlefurVillage()
-		FinalFantasylization_ForestSong();
-	end
---		Thistlefur Hold
-	function FinalFantasylization_SubzoneThistlefurHold()
-		FinalFantasylization_ForestSong();
-	end
---	Thunder Peak
-	function FinalFantasylization_SubzoneThunderPeak()
-		FinalFantasylization_ForestSong();
-	end
---	Warsong Lumber Camp
-	function FinalFantasylization_SubzoneWarsongLumberCamp()
-		FinalFantasylization_BattleGround();
-	end
---	Xavian
-	function FinalFantasylization_SubzoneXavian()
-		FinalFantasylization_PlagueSong();
-	end
---	The Zoram Strand
-	function FinalFantasylization_SubzoneTheZoramStrand()
-		FinalFantasylization_WaterSong();
-	end
---		Ruuzel's Isle
-	function FinalFantasylization_SubzoneRuuzelsIsle()
-		FinalFantasylization_WaterSong();
-	end
---'====================================================================================
---' Kalimdor Zones: Azshara : Horde
---'====================================================================================
---	Zone: Azshara
-	function FinalFantasylization_KalimdorAzshara()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_ContestedSong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorAzsharaResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorAzsharaSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Horde:
---		Bilgewater Harbor
-	function FinalFantasylization_HordeTownBilgewaterHarbor()
-		FinalFantasylization_HordeTowns();
-	end
---		Gallywix Pleasure Palace
-	function FinalFantasylization_HordeTownGallywixPleasurePalace()
-		FinalFantasylization_HordeTowns();
-	end
---		Northern Rocketway Exchange
-	function FinalFantasylization_HordeTownNorthernRocketwayExchange()
-		FinalFantasylization_HordeTowns();
-	end
---		Orgrimmar Rear Gate
-	function FinalFantasylization_HordeTownOrgrimmarRearGate()
-		FinalFantasylization_HordeTowns();
-	end
---		Orgrimmar Rocketway Exchange
-	function FinalFantasylization_HordeTownOrgrimmarRocketwayExchange()
-		FinalFantasylization_HordeTowns();
-	end
---		The Secret Lab
-	function FinalFantasylization_HordeTownTheSecretLab()
-		FinalFantasylization_HordeTowns();
-	end
---		Southern Rocketway Terminus
-	function FinalFantasylization_HordeTownSouthernRocketwayTerminus()
-		FinalFantasylization_HordeTowns();
-	end
---		Valormok
-	function FinalFantasylization_HordeTownValormok()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	The Ancient Grove
-	function FinalFantasylization_SubzoneTheAncientGrove()
-
-	end
---	*Arcane Pinnacle
-	function FinalFantasylization_SubzoneArcanePinnacle()
-
-	end
---	Bay of Storms
-	function FinalFantasylization_SubzoneBayofStorms()
-
-	end
---		Hetaera's Clutch
-	function FinalFantasylization_SubzoneHetaerasClutch()
-
-	end
---		Scalebeard's Cave
-	function FinalFantasylization_SubzoneScalebeardsCave()
-
-	end
---	*Bear's Head
-	function FinalFantasylization_SubzoneBearsHead()
-
-	end
---	Bitter Reaches
-	function FinalFantasylization_SubzoneBitterReaches()
-
-	end
---	Blackmaw Hold
-	function FinalFantasylization_SubzoneBlackmawHold()
-
-	end
---	*Darnassian Base Camp
-	function FinalFantasylization_SubzoneDarnassianBaseCamp()
-
-	end
---	Forlorn Ridge
-	function FinalFantasylization_SubzoneForlornRidge()
-
-	end
---	The Great Sea
-	function FinalFantasylization_SubzoneTheGreatSea()
-
-	end
---	Haldarr Encampment
-	function FinalFantasylization_SubzoneHaldarrEncampment()
-
-	end
---	*Hull of the Foebreaker
-	function FinalFantasylization_SubzoneHulloftheFoebreaker()
-
-	end
---	Jagged Reef
-	function FinalFantasylization_SubzoneJaggedReef()
-
-	end
---	Lake Mennar
-	function FinalFantasylization_SubzoneLakeMennar()
-
-	end
---	Legash Encampment
-	function FinalFantasylization_SubzoneLegashEncampment()
-
-	end
---	Mountainfoot Strip Mine
-	function FinalFantasylization_SubzoneMountainfootStripMine()
-
-	end
---	Ravencrest Monument
-	function FinalFantasylization_SubzoneRavencrestMonument()
-
-	end
---	Ruins of Arkkoran
-	function FinalFantasylization_SubzoneRuinsofArkkoran()
-
-	end
---	Ruins of Eldarath
-	function FinalFantasylization_SubzoneRuinsofEldarath()
-
-	end
---		Temple of Zin-Malor
-	function FinalFantasylization_SubzoneTempleofZinMalor()
-
-	end
---	Ruins of Nordressa
-	function FinalFantasylization_SubzoneRuinsofNordressa()
-
-	end
---	The Ruined Reaches
-	function FinalFantasylization_SubzoneTheRuinedReaches()
-
-	end
---		Rethress Sanctum
-	function FinalFantasylization_SubzoneRethressSanctum()
-
-	end
---	Sable Ridge
-	function FinalFantasylization_SubzoneSableRidge()
-
-	end
---	Scalebeard's Cave
-	function FinalFantasylization_SubzoneScalebeardsCave()
-
-	end
---	Shadowsong Shrine
-	function FinalFantasylization_SubzoneShadowsongShrine()
-
-	end
---	The Shattered Strand
-	function FinalFantasylization_SubzoneTheShatteredStrand()
-
-	end
---	Southfury River
-	function FinalFantasylization_SubzoneSouthfuryRiver()
-
-	end
---	Southridge Beach
-	function FinalFantasylization_SubzoneSouthridgeBeach()
-
-	end
---	Storm Cliffs
-	function FinalFantasylization_SubzoneStormCliffs()
-
-	end
---	*Talrendis Point
-	function FinalFantasylization_SubzoneTalrendisPoint()
-
-	end
---	Timbermaw Hold
-	function FinalFantasylization_SubzoneTimbermawHold()
-
-	end
---	Tower of Eldara
-	function FinalFantasylization_SubzoneTowerofEldara()
-
-	end
---	Trial of Fire
-	function FinalFantasylization_SubzoneTrialofFire()
-
-	end
---	Trial of Frost
-	function FinalFantasylization_SubzoneTrialofFrost()
-
-	end
---	Trial of Shadow
-	function FinalFantasylization_SubzoneTrialofShadow()
-
-	end
---	Ursolan
-	function FinalFantasylization_SubzoneUrsolan()
-
-	end
---'====================================================================================
---' Kalimdor Zones: Azuremyst Isle : Draenei
---'====================================================================================
---	Zone: Azuremyst Isle
-	function FinalFantasylization_KalimdorAzuremystIsle()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorAzuremystIsleResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorAzuremystIsleSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Draenei Start:
---		Crash Site
-	function FinalFantasylization_Draenei_Start_CrashSite()
-		FinalFantasylization_AllianceTowns();
-	end
---			Ammen Fields
-	function FinalFantasylization_Draenei_Start_AmmenFields()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---			Ammen Vale
-	function FinalFantasylization_Draenei_Start_AmmenVale()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---			Nestlewood Hills
-	function FinalFantasylization_Draenei_Start_NestlewoodHills()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---			Nestlewood Thicket
-	function FinalFantasylization_Draenei_Start_NestlewoodThicket()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---			Shadow Ridge
-	function FinalFantasylization_Draenei_Start_ShadowRidge()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---			Silverline Lake
-	function FinalFantasylization_Draenei_Start_SilverlineLake()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Alliance:
---		Azure Watch
-	function FinalFantasylization_AllianceTownAzureWatch()
-		FinalFantasylization_AllianceTowns();
-	end
---		Odesyus' Landing
-	function FinalFantasylization_AllianceTownOdesyusLanding()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Ammen Ford
-	function FinalFantasylization_SubzoneAmmenFord()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Bristlelimb Village
-	function FinalFantasylization_SubzoneBristlelimbVillage()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Emberglade
-	function FinalFantasylization_SubzoneEmberglade()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Fairbridge Strand
-	function FinalFantasylization_SubzoneFairbridgeStrand()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Geezle's Camp
-	function FinalFantasylization_SubzoneGeezlesCamp()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Menagerie Wreckage
-	function FinalFantasylization_SubzoneMenagerieWreckage()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Moongraze Woods
-	function FinalFantasylization_SubzoneMoongrazeWoods()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Moonwing Den
-	function FinalFantasylization_SubzoneMoonwingDen()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Pod Cluster
-	function FinalFantasylization_SubzonePodCluster()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Pod Wreckage
-	function FinalFantasylization_SubzonePodWreckage()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Sacred Grove
-	function FinalFantasylization_SubzoneTheSacredGrove()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Silting Shore
-	function FinalFantasylization_SubzoneSiltingShore()
-		FinalFantasylization_WaterSong();
-	end
---	Silvermyst Isle
-	function FinalFantasylization_SubzoneSilvermystIsle()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Stillpine Hold
-	function FinalFantasylization_SubzoneStillpineHold()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Veiled Sea
-	function FinalFantasylization_SubzoneTheVeiledSea()
-		FinalFantasylization_WaterSong();
-	end
---	Tides' Hollow
-	function FinalFantasylization_SubzoneTidesHollow()
-		FinalFantasylization_WaterSong();
-	end
---	Traitor's Cove
-	function FinalFantasylization_SubzoneTraitorsCove()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Valaar's Berth
-	function FinalFantasylization_SubzoneValaarsBerth()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Wildwind Path
-	function FinalFantasylization_SubzoneWildwindPath()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Wildwind Peak
-	function FinalFantasylization_SubzoneWildwindPeak()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Wrathscale Point
-	function FinalFantasylization_SubzoneWrathscalePoint()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---'====================================================================================
---' Kalimdor Zones: Bloodmyst Isle
---'====================================================================================
---	Zone: Bloodmyst Isle
-	function FinalFantasylization_KalimdorBloodmystIsle()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorBloodmystIsleResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorBloodmystIsleSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Blood Watch
-	function FinalFantasylization_AllianceTownBloodWatch()
-		FinalFantasylization_AllianceTowns();
-	end
---		Kessel's Crossing
-	function FinalFantasylization_AllianceTownKesselsCrossing()
-		FinalFantasylization_AllianceTowns();
-	end
---		Vindicator's Rest
-	function FinalFantasylization_AllianceTownVindicatorsRest()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Amberweb Pass
-	function FinalFantasylization_SubzoneAmberwebPass()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Axxarien
-	function FinalFantasylization_SubzoneAxxarien()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Beryl Coast
-	function FinalFantasylization_SubzoneBerylCoast()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Blacksilt Shore
-	function FinalFantasylization_SubzoneBlacksiltShore()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Bladewood
-	function FinalFantasylization_SubzoneBladewood()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Bloodcurse Isle
-	function FinalFantasylization_SubzoneBloodcurseIsle()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Bloodcursed Reef
-	function FinalFantasylization_SubzoneTheBloodcursedReef()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Bloodwash
-	function FinalFantasylization_SubzoneTheBloodwash()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Bristlelimb Enclave
-	function FinalFantasylization_SubzoneBristlelimbEnclave()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Crimson Reach
-	function FinalFantasylization_SubzoneTheCrimsonReach()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Cryo-Core
-	function FinalFantasylization_SubzoneTheCryoCore()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Foul Pool
-	function FinalFantasylization_SubzoneTheFoulPool()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Hidden Reef
-	function FinalFantasylization_SubzoneTheHiddenReef()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Lost Fold
-	function FinalFantasylization_SubzoneTheLostFold()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Middenvale
-	function FinalFantasylization_SubzoneMiddenvale()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Mystwood
-	function FinalFantasylization_SubzoneMystwood()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Nazzivian
-	function FinalFantasylization_SubzoneNazzivian()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Ragefeather Ridge
-	function FinalFantasylization_SubzoneRagefeatherRidge()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Ruins of Loreth'Aran
-	function FinalFantasylization_SubzoneRuinsofLorethAran()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Talon Stand
-	function FinalFantasylization_SubzoneTalonStand()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Tel'athion's Camp
-	function FinalFantasylization_SubzoneTelathionsCamp()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Veiled Sea
-	function FinalFantasylization_SubzoneTheVeiledSea()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Vector Coil
-	function FinalFantasylization_SubzoneTheVectorCoil()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Veridian Point
-	function FinalFantasylization_SubzoneVeridianPoint()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	The Warp Piston
-	function FinalFantasylization_SubzoneTheWarpPiston()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Wrathscale Lair
-	function FinalFantasylization_SubzoneWrathscaleLair()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Wyrmscar Island
-	function FinalFantasylization_SubzoneWyrmscarIsland()	
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlagueSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---'====================================================================================
---' Kalimdor Zones: Darkshore : Alliance
---'====================================================================================
---	Zone: Darkshore
-	function FinalFantasylization_KalimdorDarkshore()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorDarkshoreResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorDarkshoreSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Auberdine Refugee Camp
-	function FinalFantasylization_AllianceTownAuberdineRefugeeCamp()
-		FinalFantasylization_AllianceTowns();
-	end
---		Grove of the Ancients
-	function FinalFantasylization_AllianceTownGroveoftheAncients()
-		FinalFantasylization_AllianceTowns();
-	end
---		Lor'danel
-	function FinalFantasylization_AllianceTownLordanel()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Ameth'Aran
-	function FinalFantasylization_SubzoneAmethAran()
-		FinalFantasylization_PlagueSong();
-	end
---	Bashal'Aran
-	function FinalFantasylization_SubzoneBashalAran()
-		FinalFantasylization_PlagueSong();
-	end
---	Bashal'Aran Collapse
-	function FinalFantasylization_SubzoneBashalAranCollapse()
-		FinalFantasylization_PlagueSong();
-	end
---	Blackwood Camp
-	function FinalFantasylization_SubzoneBlackwoodCamp()
-		FinalFantasylization_PlayMusic(S .. Alliance10Town);
-		FinalFantasylization_debugMsg("Alliance10Town")
-	end
---	Blackwood Den
-	function FinalFantasylization_SubzoneBlackwoodDen()
-		FinalFantasylization_CaveSong();
-	end
---	Burning Strand
-	function FinalFantasylization_SubzoneTheBlazingStrand()
-		FinalFantasylization_ForestSong();
-	end
---	Cliffspring Falls
-	function FinalFantasylization_SubzoneCliffspringFalls()
-		FinalFantasylization_WaterSong();
-	end
---	Cliffspring Hollow
-	function FinalFantasylization_SubzoneCliffspringHollow()
-		FinalFantasylization_CaveSong();
-	end
---	Cliffspring River
-	function FinalFantasylization_SubzoneCliffspringRiver()
-		FinalFantasylization_WaterSong();
-	end
---	Earthshatter Cavern
-	function FinalFantasylization_SubzoneEarthshatterCavern()
-		FinalFantasylization_CaveSong();
-	end
---	The Eye of the Vortex
-	function FinalFantasylization_SubzoneTheEyeoftheVortex()
-		FinalFantasylization_PlayMusic(S .. Alliance10Town);
-		FinalFantasylization_debugMsg("Alliance10Town")
-	end
---	The Long Wash
-	function FinalFantasylization_SubzoneTheLongWash()
-		FinalFantasylization_WaterSong();
-	end
---	The Master's Glaive
-	function FinalFantasylization_SubzoneTheMastersGlaive()
-		FinalFantasylization_SwampSong();
-	end
---	Maw of the Void
-	function FinalFantasylization_SubzoneMawoftheVoid()
-		FinalFantasylization_WaterSong();
-	end
---	Mist's Edge
-	function FinalFantasylization_SubzoneMistsEdge()
-		FinalFantasylization_WaterSong();
-	end
---	Moontouched Den
-	function FinalFantasylization_SubzoneMoontouchedDen()
-		FinalFantasylization_CaveSong();
-	end
---	Nazj'vel
-	function FinalFantasylization_SubzoneNazjvel()
-		FinalFantasylization_CaveSong();
-	end
---	Remtravel's Excavation
-	function FinalFantasylization_SubzoneRemtravelsExcavation()
-		FinalFantasylization_AllianceTowns();
-	end
---	Ruins of Auberdine
-	function FinalFantasylization_SubzoneRuinsofAuberdine()
-		FinalFantasylization_SwampSong();
-	end
---	Ruins of Lornesta
-	function FinalFantasylization_SubzoneRuinsofLornesta()
-		FinalFantasylization_WaterSong();
-	end
---	Ruins of Mathystra
-	function FinalFantasylization_SubzoneRuinsofMathystra()
-		FinalFantasylization_PlagueSong();
-	end
---	Shatterspear Pass
-	function FinalFantasylization_SubzoneShatterspearPass()
-		FinalFantasylization_PlayMusic(S .. BattleGround5);
-		FinalFantasylization_debugMsg("BattleGround5")
-	end
---	Shatterspear Vale
-	function FinalFantasylization_SubzoneShatterspearVale()
-		FinalFantasylization_PlayMusic(S .. BattleGround5);
-		FinalFantasylization_debugMsg("BattleGround5")
-	end
---	Shatterspear War Camp
-	function FinalFantasylization_SubzoneShatterspearWarCamp()
-		FinalFantasylization_PlayMusic(S .. BattleGround5);
-		FinalFantasylization_debugMsg("BattleGround5")
-	end
---	Tower of Althalaxx
-	function FinalFantasylization_SubzoneTowerofAlthalaxx()
-		FinalFantasylization_PlagueSong();
-	end
---	Twilight Shore
-	function FinalFantasylization_SubzoneTwilightShore()
-		FinalFantasylization_WaterSong();
-	end
---	Twilight Vale
-	function FinalFantasylization_SubzoneTwilightVale()
-		FinalFantasylization_ForestSong();
-	end
---	The Veiled Sea
-	function FinalFantasylization_SubzoneTheVeiledSea()
-		FinalFantasylization_WaterSong();
-	end
---	Wildbend River
-	function FinalFantasylization_SubzoneWildbendRiver()
-		FinalFantasylization_WaterSong();
-	end
---	Withering Thicket
-	function FinalFantasylization_SubzoneWitheringThicket()
-		FinalFantasylization_ForestSong();
-	end
---	Wreckage of the Silver Dawning
-	function FinalFantasylization_SubzoneWreckageoftheSilverDawning()
-		FinalFantasylization_LakeSong();
-	end	
---'====================================================================================
---' Kalimdor Zones: Desolace
---'====================================================================================
---	Zone: Desolace
-	function FinalFantasylization_KalimdorDesolace()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SandSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorDesolaceResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorDesolaceSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Nijel's Point
-	function FinalFantasylization_AllianceTownNijelsPoint()
-		FinalFantasylization_AllianceTowns();
-	end
---		Thargad's Camp
-	function FinalFantasylization_AllianceTownThargadsCamp()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Furien's Post
-	function FinalFantasylization_HordeTownFuriensPost()
-		FinalFantasylization_HordeTowns();
-	end
---		Shadowprey Village
-	function FinalFantasylization_HordeTownShadowpreyVillage()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral
---		Ethel Rethor
-	function FinalFantasylization_NeutralTownEthelRethor()
-		FinalFantasylization_NeutralTowns();
-	end
---		Karnum's Glade
-	function FinalFantasylization_NeutralTownKarnumsGlade()
-		FinalFantasylization_NeutralTowns();
-	end
---		Thunk's Abode
-	function FinalFantasylization_NeutralTownThunksAbode()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Bolgan's Hole
-	function FinalFantasylization_SubzoneBolgansHole()
-
-	end
---	Cenarion Wildlands
-	function FinalFantasylization_SubzoneCenarionWildlands()
-
-	end
---	Gelkis Village
-	function FinalFantasylization_SubzoneGelkisVillage()
-
-	end
---	Ghost Walker Post
-	function FinalFantasylization_SubzoneGhostWalkerPost()
-
-	end
---	Kodo Graveyard
-	function FinalFantasylization_SubzoneKodoGraveyard()
-
-	end
---	Magram Territory
-	function FinalFantasylization_SubzoneMagramTerritory()
-
-	end
---	Kormek's Hut
-	function FinalFantasylization_SubzoneKormeksHut()
-
-	end
---	Shok'thokar
-	function FinalFantasylization_SubzoneShokthokar()
-
-	end
---	Mannoroc Coven
-	function FinalFantasylization_SubzoneMannorocCoven()
-
-	end
---	Ranazjar Isle
-	function FinalFantasylization_SubzoneRanazjarIsle()
-
-	end
---	Sar'theris Strand
-	function FinalFantasylization_SubzoneSartherisStrand()
-
-	end
---	Sargeron
-	function FinalFantasylization_SubzoneSargeron()
-
-	end
---	Scrabblescrew's Camp
-	function FinalFantasylization_SubzoneScrabblescrewsCamp()
-
-	end
---	Shadowbreak Ravine
-	function FinalFantasylization_SubzoneShadowbreakRavine()
-
-	end
---	Slitherblade Shore
-	function FinalFantasylization_SubzoneSlitherbladeShore()
-
-	end
---	Tethris Aran
-	function FinalFantasylization_SubzoneTethrisAran()
-
-	end
---	Thunder Axe Fortress
-	function FinalFantasylization_SubzoneThunderAxeFortress()
-
-	end
---	Valley of Bones
-	function FinalFantasylization_SubzoneValleyofBones()
-
-	end
---	Valley of Spears
-	function FinalFantasylization_SubzoneValleyofSpears()
-
-	end
---		Maraudon
-	function FinalFantasylization_SubzoneMaraudon()
-
-	end
---	The Veiled Sea
-	function FinalFantasylization_SubzoneTheVeiledSea()
-
-	end
---'====================================================================================
---' Kalimdor Zones: Durotar : Horde
---'====================================================================================
---	Zone: Durotar
-	function FinalFantasylization_KalimdorDurotar()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_LandSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorDurotarResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorDurotarSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Orc Start:
---		Valley of Trials
-	function FinalFantasylization_Orc_Start_ValleyofTrials()
-		FinalFantasylization_LandSong();
-	end
---			Burning Blade Coven
-	function FinalFantasylization_Orc_Start_BurningBladeCoven()
-		FinalFantasylization_CaveSong();
-	end
---			The Den
-	function FinalFantasylization_Orc_Start_TheDen()
-		FinalFantasylization_HordeTowns();
-	end
---	Troll Start:
---		Echo Isles
-	function FinalFantasylization_Troll_Start_EchoIsles()
-		FinalFantasylization_BeachSong();
-	end
---			Bloodtalon Shore
-	function FinalFantasylization_Troll_Start_BloodtalonShore()
-		FinalFantasylization_BeachSong();
-	end
---			Darkspear Isle
-	function FinalFantasylization_Troll_Start_DarkspearIsle()
-		FinalFantasylization_BeachSong();
-	end
---				Darkspear Hold
-	function FinalFantasylization_Troll_Start_DarkspearHold()
-		FinalFantasylization_BeachSong();
-	end
---				Darkspear Shore
-	function FinalFantasylization_Troll_Start_DarkspearShore()
-		FinalFantasylization_BeachSong();
-	end
---				Darkspear Training Grounds
-	function FinalFantasylization_Troll_Start_DarkspearTrainingGrounds()
-		FinalFantasylization_BeachSong();
-	end
---			Spitescale Cove
-	function FinalFantasylization_Troll_Start_SpitescaleCove()
-		FinalFantasylization_BeachSong();
-	end
---				Spitescale Cavern
-	function FinalFantasylization_Troll_Start_SpitescaleCavern()
-		FinalFantasylization_CaveSong();
-	end
---				Zalazane's Fall
-	function FinalFantasylization_Troll_Start_ZalazanesFall()
-		FinalFantasylization_BeachSong();
-	end
---	Horde:
---		Razor Hill
-	function FinalFantasylization_HordeTownRazorHill()
-		FinalFantasylization_HordeTowns();
-	end
---			Razor Hill Barracks
-	function FinalFantasylization_HordeTownRazorHillBarracks()
-		FinalFantasylization_HordeTowns();
-	end
---		Razor Hill Outskirts
-	function FinalFantasylization_HordeTownRazorHillOutskirts()
-		FinalFantasylization_HordeTowns();
-	end
---			Razor Hill Watchtower
-	function FinalFantasylization_HordeTownRazorHillWatchtower()
-		FinalFantasylization_HordeTowns();
-	end
---		Sen'jin Village
-	function FinalFantasylization_HordeTownSenjinVillage()
-		FinalFantasylization_HordeTowns();
-	end
---		Sen'jin Village Outskirts
-	function FinalFantasylization_HordeTownSenjinVillageOutskirts()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Bladefist Bay
-	function FinalFantasylization_SubzoneBladefistBay()
-		FinalFantasylization_WaterSong();
-	end
---	Darkspear Strand
-	function FinalFantasylization_SubzoneDarkspearStrand()
-		FinalFantasylization_WaterSong();
-	end
---	Deadeye Shore
-	function FinalFantasylization_SubzoneDeadeyeShore()
-		FinalFantasylization_WaterSong();
-	end
---	Dranosh'ar Blockade
-	function FinalFantasylization_SubzoneTheDranosharBlockade()
-		FinalFantasylization_PlayMusic(S .. BattleGround5);
-		FinalFantasylization_debugMsg("BattleGround5")
-	end
---	Drygulch Ravine
-	function FinalFantasylization_SubzoneDrygulchRavine()
-		FinalFantasylization_LandSong();
-	end
---	Dustwind Cave
-	function FinalFantasylization_SubzoneDustwindCave()
-		FinalFantasylization_CaveSong();
-	end
---	The Great Sea
-	function FinalFantasylization_SubzoneTheGreatSea()
-		FinalFantasylization_WaterSong();
-	end
---	Hidden Path
-	function FinalFantasylization_SubzoneHiddenPath()
-		FinalFantasylization_LandSong();
-	end
---	Jaggedswine Farm
-	function FinalFantasylization_SubzoneJaggedswineFarm()
-		FinalFantasylization_LandSong();
-	end
---	Northwatch Foothold
-	function FinalFantasylization_SubzoneNorthwatchFoothold()
-		FinalFantasylization_LandSong();
-	end
---	Razormane Grounds
-	function FinalFantasylization_SubzoneRazormaneGrounds()
-		FinalFantasylization_PlayMusic(S .. Alliance8Town);
-		FinalFantasylization_debugMsg("Alliance8Town")
-	end
---	Razorwind Canyon
-	function FinalFantasylization_SubzoneRazorwindCanyon()
-		FinalFantasylization_LandSong();
-	end
---	Rocktusk Farm
-	function FinalFantasylization_SubzoneRocktuskFarm()
-		FinalFantasylization_LandSong();
-	end
---	Scuttle Coast
-	function FinalFantasylization_SubzoneScuttleCoast()
-		FinalFantasylization_WaterSong();
-	end
---	Shrine of the Dormant Flame
-	function FinalFantasylization_SubzoneShrineoftheDormantFlame()
-		FinalFantasylization_LandSong();
-	end
---	Skull Rock
-	function FinalFantasylization_SubzoneSkullRock()
-		FinalFantasylization_LandSong();
-	end
---	Southfury River
-	function FinalFantasylization_SubzoneSouthfuryRiver()
-		FinalFantasylization_WaterSong();
-	end
---	Southfury Watershed
-	function FinalFantasylization_SubzoneSouthfuryWatershed()
-		FinalFantasylization_WaterSong();
-	end
---	Spirit Rock
-	function FinalFantasylization_SubzoneSpiritRock()
-		FinalFantasylization_LandSong();
-	end
---	Thunder Ridge
-	function FinalFantasylization_SubzoneThunderRidge()
-		FinalFantasylization_LandSong();
-	end
---	Tiragarde Keep
-	function FinalFantasylization_SubzoneTiragardeKeep()
-		FinalFantasylization_PlayMusic(S .. Alliance8Town);
-		FinalFantasylization_debugMsg("Alliance8Town")
-	end
---	Tor'kren Farm
-	function FinalFantasylization_SubzoneTorkrenFarm()
-		FinalFantasylization_LandSong();
-	end
---'====================================================================================
---' Kalimdor Zones: Dustwallow Marsh
---'====================================================================================
---	Zone: Dustwallow Marsh
-	function FinalFantasylization_KalimdorDustwallowMarsh()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SwampSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorDustwallowMarshResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorDustwallowMarshSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Theramore Isle
-	function FinalFantasylization_AllianceTownTheramoreIsle()
-		FinalFantasylization_AllianceTowns();
-	end
---			Foothold Citadel
-	function FinalFantasylization_AllianceTownFootholdCitadel()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Brackenwall Village
-	function FinalFantasylization_HordeTownBrackenwallVillage()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral
---		Mudsprocket
-	function FinalFantasylization_NeutralTownMudsprocket()
-		FinalFantasylization_NeutralTowns();
-	end
---		Tabetha's Farm
-	function FinalFantasylization_NeutralTownTabethasFarm()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Alcaz Island
-	function FinalFantasylization_SubzoneAlcazIsland()
-		FinalFantasylization_ForestSong()
-	end
---	Blackhoof Village
-	function FinalFantasylization_SubzoneBlackhoofVillage()
-		FinalFantasylization_PlayMusic(S .. Alliance10Town);
-		FinalFantasylization_debugMsg("Alliance10Town")
-	end
---	Bloodfen Burrow
-	function FinalFantasylization_SubzoneBloodfenBurrow()
-		FinalFantasylization_SwampSong()
-	end
---	Bluefen
-	function FinalFantasylization_SubzoneBluefen()
-		FinalFantasylization_SwampSong()
-	end
---	Darkmist Cavern
-	function FinalFantasylization_SubzoneDarkmistCavern()
-		FinalFantasylization_CaveSong()
-	end
---	The Dragonmurk
-	function FinalFantasylization_SubzoneTheDragonmurk()
-		FinalFantasylization_SwampSong()
-	end
---		The Den of Flame
-	function FinalFantasylization_SubzoneTheDenofFlame()
-		FinalFantasylization_SwampSong()
-	end
---		Stonemaul Ruins
-	function FinalFantasylization_SubzoneStonemaulRuins()
-		FinalFantasylization_SwampSong()
-	end
---	Dreadmurk Shore
-	function FinalFantasylization_SubzoneDreadmurkShore()
-		FinalFantasylization_WaterSong()
-	end
---	Dustwallow Bay
-	function FinalFantasylization_SubzoneDustwallowBay()
-		FinalFantasylization_WaterSong()
-	end
---		Nat's Landing
-	function FinalFantasylization_SubzoneNatsLanding()
-		FinalFantasylization_BeachSong()
-	end
---		Tidefury Cove
-	function FinalFantasylization_SubzoneTidefuryCove()
-		FinalFantasylization_WaterSong()
-	end
---	The Great Sea
-	function FinalFantasylization_SubzoneTheGreatSea()
-		FinalFantasylization_WaterSong()
-	end
---	Lost Point
-	function FinalFantasylization_SubzoneLostPoint()
-		FinalFantasylization_SwampSong()
-	end
---	North Point Tower
-	function FinalFantasylization_SubzoneNorthPointTower()
-		FinalFantasylization_AllianceTowns();
-	end
---	The Quagmire
-	function FinalFantasylization_SubzoneTheQuagmire()
-		FinalFantasylization_SwampSong()
-	end
---		Beezil's Wreck
-	function FinalFantasylization_SubzoneBeezilsWreck()
-		FinalFantasylization_SwampSong()
-	end
---		Direhorn Post
-	function FinalFantasylization_SubzoneDirehornPost()
-		FinalFantasylization_PlayMusic(S .. Alliance10Town);
-		FinalFantasylization_debugMsg("Alliance10Town")
-	end
---	Sentry Point
-	function FinalFantasylization_SubzoneSentryPoint()
-		FinalFantasylization_AllianceTowns();
-	end
---	Shady Rest Inn
-	function FinalFantasylization_SubzoneShadyRestInn()
-		FinalFantasylization_PlayMusic(S .. DeadSong);
-		FinalFantasylization_debugMsg("DeadSong")
-	end
---	Witch Hill
-	function FinalFantasylization_SubzoneWitchHill()
-		FinalFantasylization_SwampSong()
-	end
---		Swamplight Manor
-	function FinalFantasylization_SubzoneSwamplightManor()
-		FinalFantasylization_WarySong()
-	end
---	Wyrmbog
-	function FinalFantasylization_SubzoneWyrmbog()
-		FinalFantasylization_SwampSong()
-	end
---		Emberstrife's Den
-	function FinalFantasylization_SubzoneEmberstrifesDen()
-		FinalFantasylization_CaveSong()
-	end
---		Onyxia's Lair
-	function FinalFantasylization_SubzoneOnyxiasLair()
-		FinalFantasylization_CaveSong()
-	end
---'====================================================================================
---' Kalimdor Zones: Felwood
---'====================================================================================
---	Zone: Felwood
-	function FinalFantasylization_KalimdorFelwood()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SwampSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorFelwoodResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorFelwoodSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---
---	TOWNS:
---	Alliance:
---		Talonbranch Glade
-	function FinalFantasylization_AllianceTownTalonbranchGlade()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Irontree Clearing
-	function FinalFantasylization_HordeTownIrontreeClearing()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral
---		Emerald Sanctuary
-	function FinalFantasylization_NeutralTownEmeraldSanctuary()
-		FinalFantasylization_NeutralTowns();
-	end
---		Whisperwind Grove
-	function FinalFantasylization_NeutralTownWhisperwindGrove()
-		FinalFantasylization_NeutralTowns();
-	end
---		Wildheart Point
-	function FinalFantasylization_NeutralTownWildheartPoint()
-		FinalFantasylization_NeutralTowns();
-	end
---
---	SUBZONES:
---	Bloodvenom Falls
-	function FinalFantasylization_SubzoneBloodvenomFalls()
-
-	end
---	Bloodvenom Post
-	function FinalFantasylization_SubzoneBloodvenomPost()
-
-	end
---	Bloodvenom River
-	function FinalFantasylization_SubzoneBloodvenomRiver()
-
-	end
---	Deadwood Village
-	function FinalFantasylization_SubzoneDeadwoodVillage()
-
-	end
---	Felpaw Village
-	function FinalFantasylization_SubzoneFelpawVillage()
-
-	end
---	Irontree Woods
-	function FinalFantasylization_SubzoneIrontreeWoods()
-
-	end
---		Irontree Cavern
-	function FinalFantasylization_SubzoneIrontreeCavern()
-
-	end
---	Jadefire Glen
-	function FinalFantasylization_SubzoneJadefireGlen()
-
-	end
---	Jadefire Run
-	function FinalFantasylization_SubzoneJadefireRun()
-
-	end
---	Jaedenar
-	function FinalFantasylization_SubzoneJaedenar()
-
-	end
---		Shadow Hold
-	function FinalFantasylization_SubzoneShadowHold()
-
-	end
---		Shrine of the Deceiver
-	function FinalFantasylization_SubzoneShrineoftheDeceiver()
-
-	end
---	Morlos'Aran
-	function FinalFantasylization_SubzoneMorlosAran()
-
-	end
---	Ruins of Constellas
-	function FinalFantasylization_SubzoneRuinsofConstellas()
-
-	end
---	Shadowlurk Ridge
-	function FinalFantasylization_SubzoneShadowlurkRidge()
-
-	end
---	Shatter Scar Vale
-	function FinalFantasylization_SubzoneShatterScarVale()
-
-	end
---	Timbermaw Hold
-	function FinalFantasylization_SubzoneTimbermawHold()
-
-	end
---'====================================================================================
---' Kalimdor Zones: Feralas
---'====================================================================================
---	Zone: Feralas
-	function FinalFantasylization_KalimdorFeralas()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorFeralasResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorFeralasSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Dreamer's Rest
-	function FinalFantasylization_AllianceTownDreamersRest()
-		FinalFantasylization_AllianceTowns();
-	end
---		Feathermoon Stronghold
-	function FinalFantasylization_AllianceTownFeathermoonStronghold()
-		FinalFantasylization_AllianceTowns();
-	end
---		New Thalanaar
-	function FinalFantasylization_AllianceTownNewThalanaar()
-		FinalFantasylization_AllianceTowns();
-	end
---		Shadebough
-	function FinalFantasylization_AllianceTownShadebough()
-		FinalFantasylization_AllianceTowns();
-	end
---		Tower of Estulan
-	function FinalFantasylization_AllianceTownTowerofEstulan()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Camp Ataya
-	function FinalFantasylization_HordeTownCampAtaya()
-		FinalFantasylization_HordeTowns();
-	end
---		Camp Mojache
-	function FinalFantasylization_HordeTownCampMojache()
-		FinalFantasylization_HordeTowns();
-	end
---		Stonemaul Hold
-	function FinalFantasylization_HordeTownStonemaulHold()
-		FinalFantasylization_HordeTowns();
-	end
---
---	SUBZONES:
---	Dire Maul
-	function FinalFantasylization_SubzoneDireMaul()
-
-	end
---		Broken Commons
-	function FinalFantasylization_SubzoneBrokenCommons()
-
-	end
---		Eldreth Row
-	function FinalFantasylization_SubzoneEldrethRow()
-
-	end
---		The Maul
-	function FinalFantasylization_SubzoneTheMaul()
-
-	end
---	The Forgotten Coast
-	function FinalFantasylization_SubzoneTheForgottenCoast()
-
-	end
---	Gordunni Outpost
-	function FinalFantasylization_SubzoneGordunniOutpost()
-
-	end
---	Grimtotem Compound
-	function FinalFantasylization_SubzoneGrimtotemCompound()
-
-	end
---	High Wilderness
-	function FinalFantasylization_SubzoneHighWilderness()
-
-	end
---		Feral Scar Vale
-	function FinalFantasylization_SubzoneFeralScarVale()
-
-	end
---		Frayfeather Highlands
-	function FinalFantasylization_SubzoneFrayfeatherHighlands()
-
-	end
---		Ruins of Isildien
-	function FinalFantasylization_SubzoneRuinsofIsildien()
-
-	end
---	Jademir Lake
-	function FinalFantasylization_SubzoneJademirLake()
-
-	end
---		Dream Bough Lake
-	function FinalFantasylization_SubzoneDreamBoughLake()
-
-	end
---	Dumont Lariss Pavilion
-	function FinalFantasylization_SubzoneDumontLarissPavilion()
-
-	end
---	Lower Wilds
-	function FinalFantasylization_SubzoneLowerWilds()
-
-	end
---		The Emerald Summit
-	function FinalFantasylization_SubzoneTheEmeraldSummit()
-
-	end
---	Oneiros
-	function FinalFantasylization_SubzoneOneiros()
-
-	end
---	Rage Scar Hold
-	function FinalFantasylization_SubzoneRageScarHold()
-
-	end
---	Ruins of Ravenwind
-	function FinalFantasylization_SubzoneRuinsofRavenwind()
-
-	end
---	Ruins of Solarsal
-	function FinalFantasylization_SubzoneRuinsofSolarsal()
-
-	end
---	Sardor Isle
-	function FinalFantasylization_SubzoneSardorIsle()
-
-	end
---		Ruins of Feathermoon
-	function FinalFantasylization_SubzoneRuinsofFeathermoon()
-
-	end
---	The Steam Pools
-	function FinalFantasylization_SubzoneTheSteamPools()
-
-	end
---	The Twin Colossals
-	function FinalFantasylization_SubzoneTheTwinColossals()
-
-	end
---	The Veiled Sea
-	function FinalFantasylization_SubzoneTheVeiledSea()
-
-	end
---	Verdantis River
-	function FinalFantasylization_SubzoneVerdantisRiver()
-
-	end
---	Wildwind Lake
-	function FinalFantasylization_SubzoneWildwindLake()
-
-	end
---	Woodpaw Hills
-	function FinalFantasylization_SubzoneWoodpawHills()
-
-	end
---		Darkmist Ruins
-	function FinalFantasylization_SubzoneDarkmistRuins()
-
-	end
---		Woodpaw Den
-	function FinalFantasylization_SubzoneWoodpawDen()
-
-	end
---		The Writhing Deep
-	function FinalFantasylization_SubzoneTheWrithingDeep()
-
-	end
---'====================================================================================
---' Kalimdor Zones: Moonglade
---'====================================================================================
---	Zone: Moonglade
-	function FinalFantasylization_KalimdorMoonglade()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorMoongladeResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorMoongladeSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Neutral
---		Nighthaven
-	function FinalFantasylization_NeutralTownNighthaven()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Lake Elune'ara
-	function FinalFantasylization_SubzoneLakeEluneara()
-
-	end
---	Shrine of Remulos
-	function FinalFantasylization_SubzoneShrineofRemulos()
-
-	end
---	Stormrage Barrow Dens
-	function FinalFantasylization_SubzoneStormrageBarrowDens()
-
-	end
---	Timbermaw Hold
-	function FinalFantasylization_SubzoneTimbermawHold()
-
-	end
---'====================================================================================
---' Kalimdor Zones: Mulgore : Horde
---'====================================================================================
---	Zone: Mulgore
-	function FinalFantasylization_KalimdorMulgore()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_ForestSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorMulgoreResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorMulgoreSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Tauren Start:
---		Red Cloud Mesa
-	function FinalFantasylization_Tauren_Start_RedCloudMesa()
-
-	end
---			The Battleboar Pen
-	function FinalFantasylization_Tauren_Start_TheBattleboarPen()
-
-	end
---			Brambleblade Ravine
-	function FinalFantasylization_Tauren_Start_BramblebladeRavine()
-
-	end
---			Camp Narache
-	function FinalFantasylization_Tauren_Start_CampNarache()
-		FinalFantasylization_LandSong();
-	end
---			Fargaze Mesa
-	function FinalFantasylization_Tauren_Start_FargazeMesa()
-
-	end
---			Thornmantle's Hideout
-	function FinalFantasylization_Tauren_Start_ThornmantlesHideout()
-
-	end
---			The Thornsnarl
-	function FinalFantasylization_Tauren_Start_TheThornsnarl()
-
-	end
---	Horde:
---		Bloodhoof Village
-	function FinalFantasylization_HordeTownBloodhoofVillage()
-		FinalFantasylization_HordeTowns();
-	end
---		Camp Sungraze
-	function FinalFantasylization_HordeTownCampSungraze()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:		
---	Bael'dun Digsite
-	function FinalFantasylization_SubzoneBaeldunDigsite()
-
-	end
---	The Golden Plains
-	function FinalFantasylization_SubzoneTheGoldenPlains()
-
-	end
---	The Great Gate
-	function FinalFantasylization_SubzoneTheGreatGate()
-
-	end
---	Kodo Rock
-	function FinalFantasylization_SubzoneKodoRock()
-
-	end
---	Palemane Rock
-	function FinalFantasylization_SubzonePalemaneRock()
-
-	end
---	Ravaged Caravan
-	function FinalFantasylization_SubzoneRavagedCaravan()
-
-	end
---	Red Rocks
-	function FinalFantasylization_SubzoneRedRocks()
-
-	end
---	The Rolling Plains
-	function FinalFantasylization_SubzoneTheRollingPlains()
-
-	end
---	Stonebull Lake
-	function FinalFantasylization_SubzoneStonebullLake()
-
-	end
---	Stonetalon Pass
-	function FinalFantasylization_SubzoneStonetalonPass()
-
-	end
---	Thunderhorn Water Well
-	function FinalFantasylization_SubzoneThunderhornWaterWell()
-
-	end
---	The Venture Co. Mine
-	function FinalFantasylization_SubzoneTheVentureCoMine()
-
-	end
---	Wildmane Water Well
-	function FinalFantasylization_SubzoneWildmaneWaterWell()
-
-	end
---	Windfury Ridge
-	function FinalFantasylization_SubzoneWindfuryRidge()
-
-	end
---	Winterhoof Water Well
-	function FinalFantasylization_SubzoneWinterhoofWaterWell()
-
-	end
---'====================================================================================
---' Kalimdor Zones: Northern Barrens : Horde
---'====================================================================================
---	Zone: Northern Barrens
-	function FinalFantasylization_KalimdorNorthernBarrens()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SandSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorNorthernBarrensResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorNorthernBarrensSwimming()
-		if ( SubZoneName == SZ["The Sludge Fen"] ) then
-			FinalFantasylization_Swimming(2)
-		else
-			FinalFantasylization_Swimming(1)
-		end
-	end
---	TOWNS:
---	Horde:
---		The Crossroads
-	function FinalFantasylization_HordeTownTheCrossroads()
-		FinalFantasylization_HordeTowns();
-	end
---		Darsok's Outpost
-	function FinalFantasylization_HordeTownDarsoksOutpost()
-		FinalFantasylization_HordeTowns();
-	end
---		Dreadmist Camp
-	function FinalFantasylization_HordeTownDreadmistCamp()
-		FinalFantasylization_HordeTowns();
-	end
---		Far Watch Post
-	function FinalFantasylization_HordeTownFarWatchPost()
-		FinalFantasylization_HordeTowns();
-	end
---		Grol'dom Farm
-	function FinalFantasylization_HordeTownGroldomFarm()
-		FinalFantasylization_HordeTowns();
-	end
---		Mor'shan Base Camp
-	function FinalFantasylization_HordeTownMorshanBaseCamp()
-		FinalFantasylization_HordeTowns();
-	end
---		The Mor'shan Rampart
-	function FinalFantasylization_HordeTownTheMorshanRampart()
-		FinalFantasylization_HordeTowns();
-	end
---		Nozzlepot's Outpost
-	function FinalFantasylization_HordeTownNozzlepotsOutpost()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Ratchet
-	function FinalFantasylization_NeutralTownRatchet()
-		FinalFantasylization_NeutralTowns();
-	end
---			Broken Keel Tavern
-	function FinalFantasylization_NeutralTownBrokenKeelTavern()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:		
---	Boulder Lode Mine
-	function FinalFantasylization_SubzoneBoulderLodeMine()
-		FinalFantasylization_CaveSong();
-	end
---	Dreadmist Den
-	function FinalFantasylization_SubzoneDreadmistDen()
-		FinalFantasylization_CaveSong();
-	end
---	Dreadmist Peak
-	function FinalFantasylization_SubzoneDreadmistPeak()
-		FinalFantasylization_PlagueSong();
-	end
---	The Dry Hills
-	function FinalFantasylization_SubzoneTheDryHills()
-		FinalFantasylization_SandSong();
-	end
---	The Forgotten Pools
-	function FinalFantasylization_SubzoneTheForgottenPools()
-		FinalFantasylization_LakeSong();
-	end
---	Fray Island
-	function FinalFantasylization_SubzoneFrayIsland()
-		FinalFantasylization_PlayMusic(S .. Alliance5Town);
-		FinalFantasylization_debugMsg("Alliance5Town")
-	end
---	Gold Road
-	function FinalFantasylization_SubzoneGoldRoad()
-		FinalFantasylization_SandSong();
-	end
---	The Great Divide
-	function FinalFantasylization_SubzoneTheGreatDivide()
-		FinalFantasylization_LandSong();
-	end
---	The Great Sea
-	function FinalFantasylization_SubzoneTheGreatSea()
-		FinalFantasylization_WaterSong();
-	end
---	Lushwater Oasis
-	function FinalFantasylization_SubzoneLushwaterOasis()
-		FinalFantasylization_LakeSong();
-	end
---	The Merchant Coast
-	function FinalFantasylization_SubzoneTheMerchantCoast()
-		FinalFantasylization_WaterSong();
-	end
---	Shrine of the Fallen Warrior
-	function FinalFantasylization_SubzoneShrineoftheFallenWarrior()
-		FinalFantasylization_PlayMusic(S .. Alliance4Town);
-		FinalFantasylization_debugMsg("Alliance4Town")
-	end
---	The Sludge Fen
-	function FinalFantasylization_SubzoneTheSludgeFen()
-		FinalFantasylization_SwampSong();
-	end
---	Southfury River
-	function FinalFantasylization_SubzoneSouthfuryRiver()
-		FinalFantasylization_WaterSong();
-	end
---	The Stagnant Oasis
-	function FinalFantasylization_SubzoneTheStagnantOasis()
-		FinalFantasylization_LakeSong();
-	end
---	Thorn Hill
-	function FinalFantasylization_SubzoneThornHill()
-		FinalFantasylization_CaveSong();
-	end
---	The Tidus Stair
-	function FinalFantasylization_SubzoneTheTidusStair()
-		FinalFantasylization_SandSong();
-	end
---'====================================================================================
---' Kalimdor Zones: Southern Barrens
---'====================================================================================
---	Zone: Southern Barrens
-	function FinalFantasylization_KalimdorSouthernBarrens()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SandSong();
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorSouthernBarrensResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorSouthernBarrensSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Fort Triumph
-	function FinalFantasylization_AllianceTownFortTriumph()
-		FinalFantasylization_AllianceTowns();
-	end
---		Forward Command
-	function FinalFantasylization_AllianceTownForwardCommand()
-		FinalFantasylization_AllianceTowns();
-	end
---		Honor's Stand
-	function FinalFantasylization_AllianceTownHonorsStand()
-		FinalFantasylization_AllianceTowns();
-	end
---		Northwatch Hold
-	function FinalFantasylization_AllianceTownNorthwatchHold()
-		FinalFantasylization_AllianceTowns();
-	end
---		Teegan's Expedition
-	function FinalFantasylization_AllianceTownTeegansExpedition()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Camp Una'fe	
-	function FinalFantasylization_HordeTownCampUnafe()
-		FinalFantasylization_HordeTowns();
-	end
---		Desolation Hold
-	function FinalFantasylization_HordeTownDesolationHold()
-		FinalFantasylization_HordeTowns();
-	end
---		Hunter's Hill
-	function FinalFantasylization_HordeTownHuntersHill()
-		FinalFantasylization_HordeTowns();
-	end
---		Spearhead
-	function FinalFantasylization_HordeTownSpearhead()
-		FinalFantasylization_HordeTowns();
-	end
---		Vendetta Point
-	function FinalFantasylization_HordeTownVendettaPoint()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Firestone Point
-	function FinalFantasylization_NeutralTownFirestonePoint()
-		FinalFantasylization_NeutralTowns();
-	end
---		Overgrown Camp
-	function FinalFantasylization_NeutralTownOvergrownCamp()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Bael Modan
-	function FinalFantasylization_SubzoneBaelModan()
-		FinalFantasylization_PlayMusic(S .. Alliance5Town);
-		FinalFantasylization_debugMsg("Alliance5Town")
-	end
---		Bael'dun Keep
-	function FinalFantasylization_SubzoneBaeldunKeep()
-		FinalFantasylization_PlayMusic(S .. Alliance5Town);
-		FinalFantasylization_debugMsg("Alliance5Town")
-	end
---		Bael Modan Excavation
-	function FinalFantasylization_SubzoneBaelModanExcavation()
-		FinalFantasylization_PlayMusic(S .. Alliance5Town);
-		FinalFantasylization_debugMsg("Alliance5Town")
-	end
---	Battlescar
-	function FinalFantasylization_SubzoneBattlescar()
-		FinalFantasylization_PlayMusic(S .. BattleGround3);
-		FinalFantasylization_debugMsg("BattleGround3")
-	end
---	Fields of Blood
-	function FinalFantasylization_SubzoneFieldsofBlood()
-		FinalFantasylization_LandSong();
-	end
---	Frazzlecraz Motherlode
-	function FinalFantasylization_SubzoneFrazzlecrazMotherlode()
-		FinalFantasylization_LandSong();
-	end
---		Goblin Mine
-	function FinalFantasylization_SubzoneGoblinMine()
-		FinalFantasylization_CaveSong()
-	end
---	The Great Divide
-	function FinalFantasylization_SubzoneTheGreatDivide()
-		FinalFantasylization_LandSong();
-	end
---	The Great Gate
-	function FinalFantasylization_SubzoneTheGreatGate()
-		FinalFantasylization_PlayMusic(S .. BattleGround3);
-		FinalFantasylization_debugMsg("BattleGround3")
-	end
---	The Great Sea
-	function FinalFantasylization_SubzoneTheGreatSea()
-		FinalFantasylization_WaterSong();
-	end
---	The High Road
-	function FinalFantasylization_SubzoneTheHighRoad()
-		FinalFantasylization_LandSong();
-	end
---	The Overgrowth
-	function FinalFantasylization_SubzoneTheOvergrowth()
-		FinalFantasylization_WarySong()
-	end
---		The Nightmare Scar
-	function FinalFantasylization_SubzoneTheNightmareScar()
-		FinalFantasylization_WarySong()
-	end
---	Razorfen Kraul
-	function FinalFantasylization_SubzoneRazorfenKraul()
-		FinalFantasylization_LandSong();
-	end
---	Ruins of Taurajo
-	function FinalFantasylization_SubzoneRuinsofTaurajo()
-		FinalFantasylization_PlayMusic(S .. DeadSong);
-		FinalFantasylization_debugMsg("DeadSong")
-	end
---	Stonetalon Pass
-	function FinalFantasylization_SubzoneStonetalonPass()
-		FinalFantasylization_LandSong();
-	end
---'====================================================================================
---' Kalimdor Zones: Stonetalon Mountains
---'====================================================================================
---	Zone: Stonetalon Mountains
-	function FinalFantasylization_KalimdorStonetalonMountains()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_LandSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorStonetalonMountainsResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorStonetalonMountainsSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Alliance:
---		Farwatcher's Glen
-	function FinalFantasylization_AllianceTownFarwatchersGlen()
-		FinalFantasylization_AllianceTowns();
-	end
---		Mirkfallon Post
-	function FinalFantasylization_AllianceTownMirkfallonPost()
-		FinalFantasylization_AllianceTowns();
-	end
---		Northwatch Expedition Base Camp
-	function FinalFantasylization_AllianceTownNorthwatchExpeditionBaseCamp()
-		FinalFantasylization_AllianceTowns();
-	end
---		Thal'darah Overlook
-	function FinalFantasylization_AllianceTownThaldarahOverlook()
-		FinalFantasylization_AllianceTowns();
-	end
---		Windshear Hold
-	function FinalFantasylization_AllianceTownWindshearHold()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Cliffwalker Post
-	function FinalFantasylization_HordeTownCliffwalkerPost()
-		FinalFantasylization_HordeTowns();
-	end
---		The Fold
-	function FinalFantasylization_HordeTownTheFold()
-		FinalFantasylization_HordeTowns();
-	end
---		Krom'gar Fortress
-	function FinalFantasylization_HordeTownKromgarFortress()
-		FinalFantasylization_HordeTowns();
-	end
---		Malaka'jin
-	function FinalFantasylization_HordeTownMalakajin()
-		FinalFantasylization_HordeTowns();
-	end
---		The Sludgewerks
-	function FinalFantasylization_HordeTownTheSludgewerks()
-		FinalFantasylization_HordeTowns();
-	end
---		Sun Rock Retreat
-	function FinalFantasylization_HordeTownSunRockRetreat()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:	
---	Battlescar Valley
-	function FinalFantasylization_SubzoneBattlescarValley()
-		FinalFantasylization_LandSong()
-	end
---	Boulderslide Ravine
-	function FinalFantasylization_SubzoneBoulderslideRavine()
-		FinalFantasylization_ForestSong()
-	end
---		Boulderslide Cavern
-	function FinalFantasylization_SubzoneBoulderslideCavern()
-		FinalFantasylization_CaveSong()
-	end
---	Camp Aparaje
-	function FinalFantasylization_SubzoneCampAparaje()
-		FinalFantasylization_ForestSong()
-	end
---	The Charred Vale
-	function FinalFantasylization_SubzoneTheCharredVale()
-		FinalFantasylization_LandSong()
-	end
---	Dagger Pass
-	function FinalFantasylization_SubzoneDaggerPass()
-		FinalFantasylization_LandSong()
-	end
---	The Deep Reaches
-	function FinalFantasylization_SubzoneTheDeepReaches()
-		FinalFantasylization_CaveSong()
-	end
---	Greatwood Vale
-	function FinalFantasylization_SubzoneGreatwoodVale()
-		FinalFantasylization_ForestSong()
-	end
---	Grimtotem Post
-	function FinalFantasylization_SubzoneGrimtotemPost()
-		FinalFantasylization_ForestSong()
-	end
---	Mirkfallon Lake
-	function FinalFantasylization_SubzoneMirkfallonLake()
-		FinalFantasylization_LakeSong()
-	end
---	Sishir Canyon
-	function FinalFantasylization_SubzoneSishirCanyon()
-		FinalFantasylization_LandSong()
-	end
---		Ruins of Eldre'thar
-	function FinalFantasylization_SubzoneRuinsofEldrethar()
-		FinalFantasylization_ForestSong()
-	end
---	Stonetalon Peak
-	function FinalFantasylization_SubzoneStonetalonPeak()
-		FinalFantasylization_LandSong()
-	end
---	The Talon Den
-	function FinalFantasylization_SubzoneTheTalonDen()
-		FinalFantasylization_CaveSong()
-	end
---	Talondeep Pass
-	function FinalFantasylization_SubzoneTalondeepPass()
-		FinalFantasylization_LandSong()
-	end
---	Thal'darah Grove
-	function FinalFantasylization_SubzoneThaldarahGrove()
-		FinalFantasylization_ForestSong()
-	end
---	Trueshot Point
-	function FinalFantasylization_SubzoneTrueshotPoint()
-		FinalFantasylization_LandSong()
-	end
---	Unearthed Grounds
-	function FinalFantasylization_SubzoneUnearthedGrounds()
-		FinalFantasylization_LandSong()
-	end
---	Webwinder Hollow
-	function FinalFantasylization_SubzoneWebwinderHollow()
-		FinalFantasylization_PlagueSong()
-	end
---	Webwinder Path
-	function FinalFantasylization_SubzoneWebwinderPath()
-		FinalFantasylization_ForestSong()
-	end
---	Windshear Crag
-	function FinalFantasylization_SubzoneWindshearCrag()
-		FinalFantasylization_LandSong()
-	end
---		Blackwolf River
-	function FinalFantasylization_SubzoneBlackwolfRiver()
-		FinalFantasylization_LakeSong()
-	end
---		Cragpool Lake
-	function FinalFantasylization_SubzoneCragpoolLake()
-		FinalFantasylization_LakeSong()
-	end
---		Windshear Heights
-	function FinalFantasylization_SubzoneWindshearHeights()
-		FinalFantasylization_LandSong()
-	end
---		Windshear Mine
-	function FinalFantasylization_SubzoneWindshearMine()
-		FinalFantasylization_CaveSong()
-	end
---		Windshear Valley
-	function FinalFantasylization_SubzoneWindshearValley()
-		FinalFantasylization_LandSong()
-	end
---'====================================================================================
---' Kalimdor Zones: Tanaris
---'====================================================================================
---	Zone: Tanaris
-	function FinalFantasylization_KalimdorTanaris()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SandSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorTanarisResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorTanarisSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Gunstan's Dig
-	function FinalFantasylization_AllianceTownGunstansDig()
-		FinalFantasylization_AllianceTowns();
-	end
---		Steelspark Station
-	function FinalFantasylization_AllianceTownSteelsparkStation()
-		FinalFantasylization_AllianceTowns();
-	end
---	Horde:
---		Dawnrise Expedition
-	function FinalFantasylization_HordeTownDawnriseExpedition()
-		FinalFantasylization_HordeTowns();
-	end
---		Dunemaul Recruitment Camp
-	function FinalFantasylization_HordeTownDunemaulRecruitmentCamp()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral
---		Bootlegger Outpost
-	function FinalFantasylization_NeutralTownBootleggerOutpost()
-		FinalFantasylization_NeutralTowns();
-	end
---		Gadgetzan
-	function FinalFantasylization_NeutralTownGadgetzan()
-		FinalFantasylization_NeutralTowns();
-	end
---			The Road Warrior
-	function FinalFantasylization_NeutralTownTheRoadWarrior()
-		FinalFantasylization_Sleeping()
-	end
---	SUBZONES:
---	Abyssal Sands
-	function FinalFantasylization_SubzoneAbyssalSands()
-		FinalFantasylization_SandSong()
-	end
---	Broken Pillar
-	function FinalFantasylization_SubzoneBrokenPillar()
-		FinalFantasylization_SandSong()
-	end
---	Caverns of Time
-	function FinalFantasylization_SubzoneCavernsofTime()
-		FinalFantasylization_WarySong()
-	end
---	The Deserted Workshop
-	function FinalFantasylization_SubzoneTheDesertedWorkshop()
-		FinalFantasylization_SandSong()
-	end
---	Dunemaul Compound
-	function FinalFantasylization_SubzoneDunemaulCompound()
-		FinalFantasylization_SandSong()
-	end
---	Eastmoon Ruins
-	function FinalFantasylization_SubzoneEastmoonRuins()
-		FinalFantasylization_SandSong()
-	end
---	The Gaping Chasm
-	function FinalFantasylization_SubzoneTheGapingChasm()
-		FinalFantasylization_SwampSong()
-	end
---	Land's End Beach
-	function FinalFantasylization_SubzoneLandsEndBeach()
-		FinalFantasylization_BeachSong()
-	end
---	Lost Rigger Cove
-	function FinalFantasylization_SubzoneLostRiggerCove()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Noonshade Ruins
-	function FinalFantasylization_SubzoneNoonshadeRuins()
-		FinalFantasylization_LakeSong()
-	end
---	The Noxious Lair
-	function FinalFantasylization_SubzoneTheNoxiousLair()
-		FinalFantasylization_SwampSong()
-	end
---	Sandsorrow Watch
-	function FinalFantasylization_SubzoneSandsorrowWatch()
-		FinalFantasylization_SandSong()
-	end
---	South Seas
-	function FinalFantasylization_SubzoneSouthSeas()
-		FinalFantasylization_WaterSong()
-	end
---	Southbreak Shore
-	function FinalFantasylization_SubzoneSouthbreakShore()
-		FinalFantasylization_BeachSong()
-	end
---	Southmoon Ruins
-	function FinalFantasylization_SubzoneSouthmoonRuins()
-		FinalFantasylization_SandSong()
-	end
---	Steamwheedle Port
-	function FinalFantasylization_SubzoneSteamwheedlePort()
-		FinalFantasylization_LakeSong()
-	end
---	Thistleshrub Valley
-	function FinalFantasylization_SubzoneThistleshrubValley()
-		FinalFantasylization_SandSong()
-	end
---	Valley of the Watchers
-	function FinalFantasylization_SubzoneValleyoftheWatchers()
-		FinalFantasylization_SandSong()
-	end
---		Ruins of Uldum
-	function FinalFantasylization_SubzoneRuinsofUldum()
-		FinalFantasylization_WarySong()
-	end
---	Waterspring Field
-	function FinalFantasylization_SubzoneWaterspringField()
-		FinalFantasylization_LakeSong()
-	end
---	Wavestrider Beach
-	function FinalFantasylization_SubzoneWavestriderBeach()
-		FinalFantasylization_BeachSong()
-	end
---		Zalashji's Den
-	function FinalFantasylization_SubzoneZalashjisDen()
-		FinalFantasylization_LakeSong()
-	end
---	Zul'Farrak
-	function FinalFantasylization_SubzoneZulFarrak()
-		FinalFantasylization_SandSong()
-	end
---'====================================================================================
---' Kalimdor Zones: Teldrassil
---'====================================================================================
---	Zone: Teldrassil
-	function FinalFantasylization_KalimdorTeldrassil()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Alliance7Town);
-				FinalFantasylization_debugMsg("Alliance7Town")
-			else
-				FinalFantasylization_FriendlySong();
-			end
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_KalimdorTeldrassilResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorTeldrassilSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Night Elf Start:
---		Shadowglen
-	function FinalFantasylization_NightElf_Start_Shadowglen()
-		FinalFantasylization_FriendlySong();
-	end
---			Aldrassil
-	function FinalFantasylization_NightElf_Start_Aldrassil()
-		FinalFantasylization_PlayMusic(S .. Alliance7Town);
-		FinalFantasylization_debugMsg("Alliance7Town")
-	end
---			Shadowthread Cave
-	function FinalFantasylization_NightElf_Start_ShadowthreadCave()
-		FinalFantasylization_CaveSong();
-	end
---	Alliance:
---		Dolanaar
-	function FinalFantasylization_AllianceTownDolanaar()
-		FinalFantasylization_AllianceTowns();
-	end
---		Rut'theran Village
-	function FinalFantasylization_AllianceTownRuttheranVillage()
-		FinalFantasylization_AllianceTowns();
-	end
---		Wellspring Hovel
-	function FinalFantasylization_AllianceTownWellspringHovel()
-		FinalFantasylization_AllianceTowns();
-	end
---	SUBZONES:
---	Ban'ethil Hollow
-	function FinalFantasylization_SubzoneBanethilHollow()
-		FinalFantasylization_ForestSong();
-	end
---		Ban'ethil Barrow Den
-	function FinalFantasylization_SubzoneBanethilBarrowDen()
-		FinalFantasylization_SwampSong();
-	end
---		Ban'ethil Barrow Descent
-	function FinalFantasylization_SubzoneBanethilBarrowDescent()
-		FinalFantasylization_SwampSong();
-	end
---	The Cleft
-	function FinalFantasylization_SubzoneTheCleft()
-		FinalFantasylization_ForestSong();
-	end
---	Fel Rock
-	function FinalFantasylization_SubzoneFelRock()
-		FinalFantasylization_CaveSong();
-	end
---	Gnarlpine Hold
-	function FinalFantasylization_SubzoneGnarlpineHold()
-		FinalFantasylization_ForestSong();
-	end
---	Lake Al'Ameth
-	function FinalFantasylization_SubzoneLakeAlAmeth()
-		FinalFantasylization_LakeSong();
-	end
---	The Oracle Glade
-	function FinalFantasylization_SubzoneTheOracleGlade()
-		FinalFantasylization_FriendlySong();
-	end
---	Pools of Arlithrien
-	function FinalFantasylization_SubzonePoolsofArlithrien()
-		FinalFantasylization_LakeSong();
-	end
---	Starbreeze Village
-	function FinalFantasylization_SubzoneStarbreezeVillage()
-		FinalFantasylization_ForestSong();
-	end
---	The Veiled Sea
-	function FinalFantasylization_SubzoneTheVeiledSea()
-		FinalFantasylization_WaterSong();
-	end
---	Wellspring Lake
-	function FinalFantasylization_SubzoneWellspringLake()
-		FinalFantasylization_LakeSong();
-	end
---	Wellspring River
-	function FinalFantasylization_SubzoneWellspringRiver()
-		FinalFantasylization_LakeSong();
-	end
---'====================================================================================
---' Kalimdor Zones: Thousand Needles
---'====================================================================================
---	Zone: Thousand Needles
-	function FinalFantasylization_KalimdorThousandNeedles()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_LakeSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorThousandNeedlesResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorThousandNeedlesSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Horde:
---		Westreach Summit
-	function FinalFantasylization_HordeTownWestreachSummit()
-		FinalFantasylization_HordeTowns();
-	end
---	Neutral:
---		Fizzle & Pozzik's Speedbarge
-	function FinalFantasylization_NeutralTownFizzleandPozziksSpeedbarge()
-		FinalFantasylization_NeutralTowns();
-	end
---			Speedbarge Bar
-	function FinalFantasylization_NeutralTownSpeedbargeBar()
-		FinalFantasylization_Sleeping()
-	end
---		Freewind Post
-	function FinalFantasylization_NeutralTownFreewindPost()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Darkcloud Pinnacle
-	function FinalFantasylization_SubzoneDarkcloudPinnacle()
-		FinalFantasylization_LandSong();
-	end
---		Arikara's Needle
-	function FinalFantasylization_SubzoneArikarasNeedle()
-		FinalFantasylization_LandSong();
-	end
---	The Great Lift
-	function FinalFantasylization_SubzoneTheGreatLift()
-		FinalFantasylization_LandSong();
-	end
---	Highperch
-	function FinalFantasylization_SubzoneHighperch()
-		FinalFantasylization_ForestSong();
-	end
---	Razorfen Downs
-	function FinalFantasylization_SubzoneRazorfenDowns()
-		FinalFantasylization_LandSong();
-	end
---	The Shimmering Deep
-	function FinalFantasylization_SubzoneTheShimmeringDeep()
-		FinalFantasylization_LakeSong();
-	end
---		Mirage Abyss
-	function FinalFantasylization_SubzoneMirageAbyss()
-		FinalFantasylization_LakeSong();
-	end
---		Raceway Ruins
-	function FinalFantasylization_SubzoneRacewayRuins()
-		FinalFantasylization_LakeSong();
-	end
---		Sunken Dig Site
-	function FinalFantasylization_SubzoneSunkenDigSite()
-		FinalFantasylization_LakeSong();
-	end
---	Southsea Holdfast
-	function FinalFantasylization_SubzoneSouthseaHoldfast()
-		FinalFantasylization_LandSong();
-	end
---		The Admiral's Den
-	function FinalFantasylization_SubzoneTheAdmiralsDen()
-		FinalFantasylization_LandSong();
-	end
---	Splithoof Crag
-	function FinalFantasylization_SubzoneSplithoofCrag()
-		FinalFantasylization_LandSong();
-	end
---		Splithoof Hold
-	function FinalFantasylization_SubzoneSplithoofHold()
-		FinalFantasylization_LandSong();
-	end
---	Splithoof Heights
-	function FinalFantasylization_SubzoneSplithoofHeights()
-		FinalFantasylization_LandSong();
-	end
---	Tirth's Haunt
-	function FinalFantasylization_SubzoneTirthsHaunt()
-		FinalFantasylization_WarySong();
-	end
---	Twilight Aerie
-	function FinalFantasylization_SubzoneTwilightAerie()
-		FinalFantasylization_PlagueSong();
-	end
---	Twilight Bulwark
-	function FinalFantasylization_SubzoneTwilightBulwark()
-		FinalFantasylization_PlagueSong();
-	end
---	The Twilight Withering
-	function FinalFantasylization_SubzoneTheTwilightWithering()
-		FinalFantasylization_PlagueSong();
-	end
---	Whitereach Post
-	function FinalFantasylization_SubzoneWhitereachPost()
-		FinalFantasylization_LandSong();
-	end
---'====================================================================================
---' Kalimdor Zones: Uldum
---'====================================================================================
---	Zone: Uldum
-	function FinalFantasylization_KalimdorUldum()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SandSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorUldumResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorUldumSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Neutral:
---		Mar'at
-	function FinalFantasylization_NeutralTownMarat()
-		FinalFantasylization_NeutralTowns();
-	end
---		Oasis of Vir'sar
-	function FinalFantasylization_NeutralTownOasisofVirsar()
-		FinalFantasylization_NeutralTowns();
-	end
---			Sullah's Sideshow
-	function FinalFantasylization_NeutralTownSullahsSideshow()
-		FinalFantasylization_Sleeping()
-	end
---		Ramkahen
-	function FinalFantasylization_NeutralTownRamkahen()
-		FinalFantasylization_NeutralTowns();
-	end
---		Schnottz's Landing
-	function FinalFantasylization_NeutralTownSchnottzsLanding()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Akhenet Fields
-	function FinalFantasylization_SubzoneAkhenetFields()
-
-	end
---	Arsad Trade Post
-	function FinalFantasylization_SubzoneArsadTradePost()
-
-	end
---	Bluff of the South Wind
-	function FinalFantasylization_SubzoneBluffoftheSouthWind()
-
-	end
---	Cloudtop Terrace
-	function FinalFantasylization_SubzoneCloudtopTerrace()
-
-	end
---	Cradle of the Ancients
-	function FinalFantasylization_SubzoneCradleoftheAncients()
-
-	end
---	The Cursed Landing
-	function FinalFantasylization_SubzoneTheCursedLanding()
-
-	end
---	Gate of Hamatep
-	function FinalFantasylization_SubzoneGateofHamatep()
-
-	end
---	The Gate of Unending Cycles
-	function FinalFantasylization_SubzoneTheGateofUnendingCycles()
-
-	end
---		Khartut's Tomb
-	function FinalFantasylization_SubzoneKhartutsTomb()
-
-	end
---	Halls of Origination
-	function FinalFantasylization_SubzoneHallsofOrigination()
-
-	end
---	Keset Pass
-	function FinalFantasylization_SubzoneKesetPass()
-
-	end
---	Lost City of the Tol'vir
-	function FinalFantasylization_SubzoneLostCityoftheTolvir()
-
-	end
---	Maker's Ascent
-	function FinalFantasylization_SubzoneMakersAscent()
-
-	end
---	M.A.C. Diver
-	function FinalFantasylization_SubzoneMACDiver()
-
-	end
---	Mount Akher
-	function FinalFantasylization_SubzoneMountAkher()
-
-	end
---	Nahom
-	function FinalFantasylization_SubzoneNahom()
-
-	end
---	Neferset City
-	function FinalFantasylization_SubzoneNefersetCity()
-
-	end
---	Neferset City Outskirts
-	function FinalFantasylization_SubzoneNefersetCityOutskirts()
-
-	end
---	Obelisk of the Moon
-	function FinalFantasylization_SubzoneObeliskoftheMoon()
-
-	end
---		Chamber of the Moon
-	function FinalFantasylization_SubzoneChamberoftheMoon()
-
-	end
---	Obelisk of the Stars
-	function FinalFantasylization_SubzoneObeliskoftheStars()
-
-	end
---		Chamber of the Stars
-	function FinalFantasylization_SubzoneChamberoftheStars()
-
-	end
---	Obelisk of the Sun
-	function FinalFantasylization_SubzoneObeliskoftheSun()
-
-	end
---		Chamber of the Sun
-	function FinalFantasylization_SubzoneChamberoftheSun()
-
-	end
---	Orsis
-	function FinalFantasylization_SubzoneOrsis()
-
-	end
---	Pilgrim's Precipice
-	function FinalFantasylization_SubzonePilgrimsPrecipice()
-
-	end
---	The Pit of Scales
-	function FinalFantasylization_SubzoneThePitofScales()
-
-	end
---	Ramkahen Legion Outpost
-	function FinalFantasylization_SubzoneRamkahenLegionOutpost()
-
-	end
---	Ruins of Ahmtul
-	function FinalFantasylization_SubzoneRuinsofAhmtul()
-
-	end
---	Ruins of Ammon
-	function FinalFantasylization_SubzoneRuinsofAmmon()
-
-	end
---	Ruins of Khintaset
-	function FinalFantasylization_SubzoneRuinsofKhintaset()
-
-	end
---	Sahket Wastes
-	function FinalFantasylization_SubzoneSahketWastes()
-
-	end
---	Seal of the Sun King
-	function FinalFantasylization_SubzoneSealoftheSunKing()
-
-	end
---	The Steps of Fate
-	function FinalFantasylization_SubzoneTheStepsofFate()
-
-	end
---	Sunstone Terrace
-	function FinalFantasylization_SubzoneSunstoneTerrace()
-
-	end
---	Sunwatcher's Ridge
-	function FinalFantasylization_SubzoneSunwatchersRidge()
-
-	end
---	Surveyors' Outpost
-	function FinalFantasylization_SubzoneSurveyorsOutpost()
-
-	end
---	Tahret Grounds
-	function FinalFantasylization_SubzoneTahretGrounds()
-
-	end
---	Temple of Uldum
-	function FinalFantasylization_SubzoneTempleofUldum()
-
-	end
---	Tomb of the Sun King
-	function FinalFantasylization_SubzoneTomboftheSunKing()
-
-	end
---	Tombs of the Precursors
-	function FinalFantasylization_SubzoneTombsofthePrecursors()
-
-	end
---	The Trail of Devastation
-	function FinalFantasylization_SubzoneTheTrailofDevastation()
-
-	end
---	Vir'naal Dam
-	function FinalFantasylization_SubzoneVirnaalDam()
-
-	end
---	Vir'naal Lake
-	function FinalFantasylization_SubzoneVirnaalLake()
-
-	end
---		Murkdeep Cavern
-	function FinalFantasylization_SubzoneMurkdeepCavern()
-
-	end
---	Vir'naal Oasis
-	function FinalFantasylization_SubzoneVirnaalOasis()
-
-	end
---	Vir'naal River
-	function FinalFantasylization_SubzoneVirnaalRiver()
-
-	end
---	Vir'naal River Delta
-	function FinalFantasylization_SubzoneVirnaalRiverDelta()
-
-	end
---'====================================================================================
---' Kalimdor Zones: Un'Goro Crater
---'====================================================================================
---	Zone: Un'Goro Crater
-	function FinalFantasylization_KalimdorUnGoroCrater()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SwampSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorUnGoroCraterResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorUnGoroCraterSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Neutral:
---		Marshal's Stand
-	function FinalFantasylization_NeutralTownMarshalsStand()
-		FinalFantasylization_NeutralTowns();
-	end
---		Mossy Pile
-	function FinalFantasylization_NeutralTownMossyPile()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:
---	Fire Plume Ridge
-	function FinalFantasylization_SubzoneFirePlumeRidge()
-
-	end
---	Fungal Rock
-	function FinalFantasylization_SubzoneFungalRock()
-
-	end
---	Golakka Hot Springs
-	function FinalFantasylization_SubzoneGolakkaHotSprings()
-
-	end
---	Ironstone Plateau
-	function FinalFantasylization_SubzoneIronstonePlateau()
-
-	end
---	Lakkari Tar Pits
-	function FinalFantasylization_SubzoneLakkariTarPits()
-
-	end
---	Marshal's Refuge
-	function FinalFantasylization_SubzoneMarshalsRefuge()
-
-	end
---	The Marshlands
-	function FinalFantasylization_SubzoneTheMarshlands()
-
-	end
---	The Roiling Gardens
-	function FinalFantasylization_SubzoneTheRoilingGardens()
-
-	end
---	The Screaming Reaches
-	function FinalFantasylization_SubzoneTheScreamingReaches()
-
-	end
---	The Shaper's Terrace
-	function FinalFantasylization_SubzoneTheShapersTerrace()
-
-	end
---	The Slithering Scar
-	function FinalFantasylization_SubzoneTheSlitheringScar()
-
-	end
---	Terror Run
-	function FinalFantasylization_SubzoneTerrorRun()
-
-	end
---	Waygate
-	function FinalFantasylization_SubzoneWaygate()
-
-	end
---'====================================================================================
---' Kalimdor Zones: Winterspring
---'====================================================================================
---	Zone: Winterspring
-	function FinalFantasylization_KalimdorWinterspring()
-		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_SnowSong()
-			else
-				FinalFantasylization_ContestedSong()
-			end
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_KalimdorWinterspringResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_KalimdorWinterspringSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Alliance:
---		Starfall Village
-	function FinalFantasylization_AllianceTownStarfallVillage()
-		FinalFantasylization_AllianceTowns();
-	end
---	Neutral
---		Everlook
-	function FinalFantasylization_NeutralTownEverlook()
-		FinalFantasylization_NeutralTowns();
-	end
---			The Laughing Yeti
-	function FinalFantasylization_NeutralTownTheLaughingYeti()
-		FinalFantasylization_NeutralTowns();
-	end
---		Goodgrub Smoking Pit
-	function FinalFantasylization_NeutralTownGoodgrubSmokingPit()
-		FinalFantasylization_NeutralTowns();
-	end
---		Snowden Chalet
-	function FinalFantasylization_NeutralTownSnowdenChalet()
-		FinalFantasylization_NeutralTowns();	
-	end
---	SUBZONES:
---	Ban'Thallow Barrow Den
-	function FinalFantasylization_SubzoneBanThallowBarrowDen()
-
-	end
---	Caverns of Consumption
-	function FinalFantasylization_SubzoneCavernsofConsumption()
-
-	end
---	Dun Mandarr
-	function FinalFantasylization_SubzoneDunMandarr()
-
-	end
---	Frostfire Hot Springs
-	function FinalFantasylization_SubzoneFrostfireHotSprings()
-
-	end
---	Frostsaber Rock
-	function FinalFantasylization_SubzoneFrostsaberRock()
-
-	end
---	Frostwhisper Gorge
-	function FinalFantasylization_SubzoneFrostwhisperGorge()
-
-	end
---	The Hidden Grove
-	function FinalFantasylization_SubzoneTheHiddenGrove()
-
-	end
---	Ice Thistle Hills
-	function FinalFantasylization_SubzoneIceThistleHills()
-
-	end
---	Lake Kel'Theril
-	function FinalFantasylization_SubzoneLakeKelTheril()
-
-	end
---	Mazthoril
-	function FinalFantasylization_SubzoneMazthoril()
-
-	end
---		Beryl Egress
-	function FinalFantasylization_SubzoneBerylEgress()
-
-	end
---	Moon Horror Den
-	function FinalFantasylization_SubzoneMoonHorrorDen()
-
-	end
---	Owl Wing Thicket
-	function FinalFantasylization_SubzoneOwlWingThicket()
-
-	end
---	The Ruins of Kel'Theril
-	function FinalFantasylization_SubzoneTheRuinsofKelTheril()
-
-	end
---	Timbermaw Post
-	function FinalFantasylization_SubzoneTimbermawPost()
-
-	end
---	Winterfall Village
-	function FinalFantasylization_SubzoneWinterfallVillage()
-
-	end
-
---#########################################################################################
---##   MAELSTROM ZONES
---#########################################################################################		
---'====================================================================================
---' Maelstrom Zones: Kezan : Horde
---'====================================================================================
---	Zone: Kezan
-	function FinalFantasylization_Maelstrom_Kezan()
-		FinalFantasylization_PlayMusic(S .. Alliance1Town);
-		FinalFantasylization_debugMsg("Alliance1Town")
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_Maelstrom_KezanResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_Maelstrom_KezanSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	TOWNS:
---	Goblin Start:
---		Bilgewater Port
-	function FinalFantasylization_Goblin_Start_BilgewaterPort()
-		FinalFantasylization_PlayMusic(S .. Horde2Town);
-		FinalFantasylization_debugMsg("Horde2Town")
-	end
---		Drudgetown
-	function FinalFantasylization_Goblin_Start_Drudgetown()
-		FinalFantasylization_PlayMusic(S .. Alliance10Town);
-		FinalFantasylization_debugMsg("Alliance10Town")
-	end
---		First Bank of Kezan
-	function FinalFantasylization_Goblin_Start_FirstBankofKezan()
-
-	end
---		Gallywix's Villa
-	function FinalFantasylization_Goblin_Start_GallywixsVilla()
-
-	end
---		Gallywix's Yacht
-	function FinalFantasylization_Goblin_Start_GallywixsYacht()
-
-	end
---		Kaja'mine
-	function FinalFantasylization_Goblin_Start_Kajamine()
-		FinalFantasylization_CaveSong();
-	end
---		Kajaro Field
-	function FinalFantasylization_Goblin_Start_KajaroField()
-
-	end
---		KTC Headquarters
-	function FinalFantasylization_Goblin_Start_KTCHeadquarters()
-		FinalFantasylization_PlayMusic(S .. Alliance8Town);
-		FinalFantasylization_debugMsg("Alliance8Town")
-	end
---		The Slick
-	function FinalFantasylization_Goblin_Start_TheSlick()
-
-	end
---		South Seas
-	function FinalFantasylization_Goblin_Start_SouthSeas()
-
-	end
---		Swindle Street
-	function FinalFantasylization_Goblin_Start_SwindleStreet()
-
-	end
---		The Pipe
-	function FinalFantasylization_Goblin_Start_ThePipe()
-
-	end
---'====================================================================================
---' Maelstrom Zones: Lost Isles : Goblin
---'====================================================================================
---	Zone: Lost Isles
-	function FinalFantasylization_MaelstromLostIsles()
-
-	end
---	Zone Event:
---		Player is Resting
-	function FinalFantasylization_MaelstromTheLostIslesResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_MaelstromTheLostIslesSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	Goblin Start:
---	TOWNS:
---	Alliance Beachhead
-	function FinalFantasylization_Goblin_Start_AllianceBeachhead()
-		FinalFantasylization_HordeTowns();
-	end
---	Horde Base Camp
-	function FinalFantasylization_Goblin_Start_HordeBaseCamp()
-		FinalFantasylization_HordeTowns();
-	end
---	Shipwreck Shore
-	function FinalFantasylization_Goblin_Start_ShipwreckShore()
-		FinalFantasylization_HordeTowns();
-	end
---	Town-In-A-Box
-	function FinalFantasylization_Goblin_Start_TownInABox()
-		FinalFantasylization_HordeTowns();
-	end
---	Warchief's Lookout
-	function FinalFantasylization_Goblin_Start_WarchiefsLookout()
-		FinalFantasylization_HordeTowns();
-	end
---	Wild Overlook
-	function FinalFantasylization_Goblin_Start_WildOverlook()
-		FinalFantasylization_HordeTowns();
-	end
---	SUBZONES:
---	Bilgewater Lumber Yard
-	function FinalFantasylization_Goblin_Start_BilgewaterLumberYard()
-
-	end
---	Dire Strait
-	function FinalFantasylization_Goblin_Start_DireStrait()
-
-	end
---	Draka's Fury
-	function FinalFantasylization_Goblin_Start_DrakasFury()
-
-	end
---	Gallywix Docks
-	function FinalFantasylization_Goblin_Start_GallywixDocks()
-
-	end
---	Gallywix Labor Mine
-	function FinalFantasylization_Goblin_Start_GallywixLaborMine()
-
-	end
---	The Great Sea
-	function FinalFantasylization_Goblin_Start_TheGreatSea()
-
-	end
---	Kaja'mite Cavern
-	function FinalFantasylization_Goblin_Start_KajamiteCavern()
-
-	end
---	KTC Oil Platform
-	function FinalFantasylization_Goblin_Start_KTCOilPlatform()
-
-	end
---	Landing Site
-	function FinalFantasylization_Goblin_Start_LandingSite()
-
-	end
---	Lost Caldera
-	function FinalFantasylization_Goblin_Start_LostCaldera()
-
-	end
---	Lost Peak
-	function FinalFantasylization_Goblin_Start_LostPeak()
-
-	end
---	Oomlot Village
-	function FinalFantasylization_Goblin_Start_OomlotVillage()
-
-	end
---	Oostan
-	function FinalFantasylization_Goblin_Start_Oostan()
-
-	end
---	Oostan Nord
-	function FinalFantasylization_Goblin_Start_OostanNord()
-
-	end
---	Oostan Ost
-	function FinalFantasylization_Goblin_Start_OostanOst()
-
-	end
---	Oostan Sor
-	function FinalFantasylization_Goblin_Start_OostanSor()
-
-	end
---	Raptor Rise
-	function FinalFantasylization_Goblin_Start_RaptorRise()
-
-	end
---	Ruins of Vashj'elan
-	function FinalFantasylization_Goblin_Start_RuinsofVashjelan()
-
-	end
---	The Savage Glen
-	function FinalFantasylization_Goblin_Start_TheSavageGlen()
-
-	end
---	Scorched Gully
-	function FinalFantasylization_Goblin_Start_ScorchedGully()
-
-	end
---	Sky Falls
-	function FinalFantasylization_Goblin_Start_SkyFalls()
-
-	end
---	The Slave Pits
-	function FinalFantasylization_Goblin_Start_TheSlavePits()
-
-	end
---	Tranquil Coast
-	function FinalFantasylization_Goblin_Start_TranquilCoast()
-
-	end
---	Vashj'elan Spawning Pool
-	function FinalFantasylization_Goblin_Start_VashjelanSpawningPool()
-
-	end
---	Vengeance Wake
-	function FinalFantasylization_Goblin_Start_VengeanceWake()
-
-	end
---	Verdant Highlands
-	function FinalFantasylization_Goblin_Start_VerdantHighlands()
-
-	end
---	The Vicious Vale
-	function FinalFantasylization_Goblin_Start_TheViciousVale()
-
-	end
---	Volcanoth's Lair
-	function FinalFantasylization_Goblin_Start_VolcanothsLair()
-
-	end
-
-
---#########################################################################################
---##   THE BROKEN ISLES ZONES
---#########################################################################################
---'====================================================================================
---' The Broken Isles Zones: Mardum, the Shattered Abyss (Demon Hunter Start)
---'====================================================================================
---	Zone: Mardum, the Shattered Abyss
-	function FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyss()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyssResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyssSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---	SUBZONES:
---	Cryptic Hollow
-	function FinalFantasylization_SubzoneCrypticHollow()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Despair Ridge
-	function FinalFantasylization_SubzoneDespairRidge()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	The Doom Fortress
-	function FinalFantasylization_SubzoneTheDoomFortress()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	The Fel Hammer
-	function FinalFantasylization_SubzoneTheFelHammer()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Forge of Corruption
-	function FinalFantasylization_SubzoneForgeofCorruption()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Foul Creche
-	function FinalFantasylization_SubzoneFoulCreche()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Illidari Foothold
-	function FinalFantasylization_SubzoneIllidariFoothold()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Inferno Peak
-	function FinalFantasylization_SubzoneInfernoPeak()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Molten Shore
-	function FinalFantasylization_SubzoneMoltenShore()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Seat of Command
-	function FinalFantasylization_SubzoneSeatofCommand()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Soul Engine
-	function FinalFantasylization_SubzoneSoulEngine()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Twisting Nether
-	function FinalFantasylization_SubzoneTwistingNether()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---'====================================================================================
---' The Broken Isles Zones: The Wandering Isle ( Pandaren Start )
---'====================================================================================
---	Zone: The Wandering Isle
-	function FinalFantasylization_TheBrokenIslesTheWanderingIsle()
-		FinalFantasylization_PlayMusic(S .. Misc2Song);
-		FinalFantasylization_debugMsg("Misc2Song")
-	end
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_TheBrokenIslesTheWanderingIsleResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_TheBrokenIslesTheWanderingIsleSwimming()
-		FinalFantasylization_Swimming(1)
-	end
---	TOWNS:
---	Pandaren Start:
---		Shang Xi Training Grounds
-	function FinalFantasylization_Pandaren_Start_ShangXiTrainingGrounds()
-		FinalFantasylization_PlayMusic(S .. Misc2Song);
-		FinalFantasylization_debugMsg("Misc2Song")
-	end
---	Horde:
---		Forlorn Hut
-	function FinalFantasylization_HordeTownForlornHut()
-		FinalFantasylization_HordeTowns();
-	end
--- Neutral:
---	Mandori Village
-	function FinalFantasylization_NeutralTownMandoriVillage()
-		FinalFantasylization_NeutralTowns();
-	end
---	Morning Breeze Village
-	function FinalFantasylization_NeutralTownMorningBreezeVillage()
-		FinalFantasylization_NeutralTowns();
-	end
---	Temple of Five Dawns
-	function FinalFantasylization_NeutralTownTempleofFiveDawns()
-		FinalFantasylization_NeutralTowns();
-	end
---	The Dai-Lo Farmstead
-	function FinalFantasylization_NeutralTownTheDaiLoFarmstead()
-		FinalFantasylization_NeutralTowns();
-	end
---	Wu-Song Village
-	function FinalFantasylization_NeutralTownWuSongVillage()
-		FinalFantasylization_NeutralTowns();
-	end
---	SUBZONES:	
---	Cave of Meditation
-	function FinalFantasylization_SubzoneCaveofMeditation()
-		FinalFantasylization_CaveSong()
-	end
---	Chamber of Whispers
-	function FinalFantasylization_SubzoneChamberofWhispers()
-
-	end
---	The Dawning Span
-	function FinalFantasylization_SubzoneTheDawningSpan()
-
-	end
---	The Dawning Stair
-	function FinalFantasylization_SubzoneTheDawningStair()
-		FinalFantasylization_PlayMusic(S .. Alliance4Town);
-		FinalFantasylization_debugMsg("Alliance4Town")
-	end
---	The Dawning Valley
-	function FinalFantasylization_SubzoneTheDawningValley()
-		FinalFantasylization_PlayMusic(S .. Alliance4Town);
-		FinalFantasylization_debugMsg("Alliance4Town")
-	end
---	The Elders' Path
-	function FinalFantasylization_SubzoneTheEldersPath()
-
-	end
---	Fe-Feng Village
-	function FinalFantasylization_SubzoneFeFengVillage()
-
-	end
---	Fu's Pond
-	function FinalFantasylization_SubzoneFusPond()
-		FinalFantasylization_LakeSong()
-	end
---	Liang's Retreat
-	function FinalFantasylization_SubzoneLiangsRetreat()
-		FinalFantasylization_PlayMusic(S .. Misc2Song);
-		FinalFantasylization_debugMsg("Misc2Song")
-	end
---	Morning Breeze Lake
-	function FinalFantasylization_SubzoneMorningBreezeLake()
-		FinalFantasylization_LakeSong()
-	end
---	Pei-Wu Forest
-	function FinalFantasylization_SubzonePeiWuForest()
-
-	end
---		Pool of the Paw
-	function FinalFantasylization_SubzonePoolofthePaw()
-		FinalFantasylization_LakeSong()
-	end
---	Ridge of Laughing Winds
-	function FinalFantasylization_SubzoneRidgeofLaughingWinds()
-
-	end
---	The Rows
-	function FinalFantasylization_SubzoneTheRows()
-
-	end
---		Ki-Han Brewery
-	function FinalFantasylization_SubzoneKiHanBrewery()
-
-	end
---		Teeming Burrow
-	function FinalFantasylization_SubzoneTeemingBurrow()
-
-	end
---		Virmen Grotto
-	function FinalFantasylization_SubzoneVirmenGrotto()
-
-	end
---	Shrine of Dreaming Stones
-	function FinalFantasylization_SubzoneShrineofDreamingStones()
-
-	end
---	Shrine of Five Dawns
-	function FinalFantasylization_SubzoneShrineofFiveDawns()
-
-	end
---	Shrine of Inner-Light
-	function FinalFantasylization_SubzoneShrineofInnerLight()
-		FinalFantasylization_CaveSong()
-	end
---	The Singing Pools
-	function FinalFantasylization_SubzoneTheSingingPools()
-		FinalFantasylization_LakeSong()
-	end
---		Pool of Reflection
-	function FinalFantasylization_SubzonePoolofReflection()
-
-	end
---	Tranquil Grotto
-	function FinalFantasylization_SubzoneTranquilGrotto()
-		FinalFantasylization_PlayMusic(S .. Alliance4Town);
-		FinalFantasylization_debugMsg("Alliance4Town")
-	end
---	The Wood of Staves
-	function FinalFantasylization_SubzoneTheWoodofStaves()
-
-	end
---	Wreck of the Skyseeker
-	function FinalFantasylization_SubzoneWreckoftheSkyseeker()
-
-	end
---'====================================================================================
---' The Broken Isles Zones: Vault of the Wardens
---'====================================================================================
---	Zone: Vault of the Wardens
-	function FinalFantasylization_TheBrokenIslesVaultoftheWardens()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---
---	Zone Events:
---		Player is Resting
-	function FinalFantasylization_TheBrokenIslesVaultoftheWardensResting()
-		FinalFantasylization_Sleeping()
-	end
---		Player is Swimming
-	function FinalFantasylization_TheBrokenIslesVaultoftheWardensSwimming()
-		FinalFantasylization_Swimming(2)
-	end
---
---	SUBZONES:
---	Fallen Passage
-	function FinalFantasylization_SubzoneFallenPassage()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Chamber of Night
-	function FinalFantasylization_SubzoneChamberofNight()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	The Demon Ward
-	function FinalFantasylization_SubzoneTheDemonWard()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---		Vault of Ice
-	function FinalFantasylization_SubzoneVaultofIce()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---		Vault of Law
-	function FinalFantasylization_SubzoneVaultofLaw()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---		Vault of Mirrors
-	function FinalFantasylization_SubzoneVaultofMirrors()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Illidari Ward
-	function FinalFantasylization_SubzoneIllidariWard()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---		Vault of Silence
-	function FinalFantasylization_SubzoneVaultofSilence()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Tomb of the Penitent
-	function FinalFantasylization_SubzoneTombofthePenitent()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	Vault of the Betrayer
-	function FinalFantasylization_SubzoneVaultoftheBetrayer()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
---	The Warden's Court
-	function FinalFantasylization_SubzoneTheWardensCourt()
-		FinalFantasylization_PlayMusic(S .. BattleGround1);
-		FinalFantasylization_debugMsg("BattleGround1")
-	end
-
+	--########################
+	--## ZONES
+	--########################
+	FFz = {
+		Zone = {
+			[ 1 ] = { -- Durotar	-	Kalimdor
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = LandSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Horde:
+				["Razor Hill"] = { Type = "Town", Faction = "Horde" },
+					["Razor Hill Barracks"] = { Type = "Town", Faction = "Horde" },
+				["Razor Hill Outskirts"] = { Type = "Town", Faction = "Horde" },
+					["Razor Hill Watchtower"] = { Type = "Town", Faction = "Horde" },
+				["Sen'jin Village"] = { Type = "Town", Faction = "Horde" },
+				["Sen'jin Village Outskirts"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Bladefist Bay"] = { Type = "Subzone", Music = WaterSong },
+				["Darkspear Strand"] = { Type = "Subzone", Music = WaterSong },
+				["Deadeye Shore"] = { Type = "Subzone", Music = WaterSong },
+				["The Dranosh'ar Blockade"] = { Type = "Subzone", Music = BattleGround5 },
+				["Drygulch Ravine"] = { Type = "Subzone", Music = LandSong },
+				["Dustwind Cave"] = { Type = "Subzone", Music = CaveSong },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Hidden Path"] = { Type = "Subzone", Music = LandSong },
+				["Jaggedswine Farm"] = { Type = "Subzone", Music = LandSong },
+				["Northwatch Foothold"] = { Type = "Subzone", Music = LandSong },
+				["Razormane Grounds"] = { Type = "Subzone", Music = Alliance8Town },
+				["Razorwind Canyon"] = { Type = "Subzone", Music = LandSong },
+				["Rocktusk Farm"] = { Type = "Subzone", Music = LandSong },
+				["Scuttle Coast"] = { Type = "Subzone", Music = WaterSong },
+				["Shrine of the Dormant Flame"] = { Type = "Subzone", Music = LandSong },
+				["Skull Rock"] = { Type = "Subzone", Music = LandSong },
+				["Southfury River"] = { Type = "Subzone", Music = WaterSong },
+				["Southfury Watershed"] = { Type = "Subzone", Music = WaterSong },
+				["Spirit Rock"] = { Type = "Subzone", Music = LandSong },
+				["Thunder Ridge"] = { Type = "Subzone", Music = LandSong },
+				["Tiragarde Keep"] = { Type = "Subzone", Music = Alliance8Town },
+				["Tor'kren Farm"] = { Type = "Subzone", Music = LandSong },
+			},
+			[ 7 ] = { -- Mulgore	-	Kalimdor
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = LandSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Horde:
+				["Bloodhoof Village"] = { Type = "Town", Faction = "Horde" },
+				["Camp Sungraze"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Bael'dun Digsite"] = { Type = "Subzone", Music = nil },
+				["The Golden Plains"] = { Type = "Subzone", Music = nil },
+				["The Great Gate"] = { Type = "Subzone", Music = nil },
+				["Kodo Rock"] = { Type = "Subzone", Music = nil },
+				["Palemane Rock"] = { Type = "Subzone", Music = nil },
+				["Ravaged Caravan"] = { Type = "Subzone", Music = nil },
+				["Red Rocks"] = { Type = "Subzone", Music = nil },
+				["The Rolling Plains"] = { Type = "Subzone", Music = LandSong },
+				["Stonebull Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Stonetalon Pass"] = { Type = "Subzone", Music = nil },
+				["Thunderhorn Water Well"] = { Type = "Subzone", Music = nil },
+				["The Venture Co. Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Wildmane Water Well"] = { Type = "Subzone", Music = nil },
+				["Windfury Ridge"] = { Type = "Subzone", Music = nil },
+				["Winterhoof Water Well"] = { Type = "Subzone", Music = LandSong },
+			},
+			[ 10 ] = { -- Northern Barrens	-	Kalimdor
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Horde:
+				["The Crossroads"] = { Type = "Town", Faction = "Horde" },
+				["Darsok's Outpost"] = { Type = "Town", Faction = "Horde" },
+				["Dreadmist Camp"] = { Type = "Town", Faction = "Horde" },
+				["Far Watch Post"] = { Type = "Town", Faction = "Horde" },
+				["Grol'dom Farm"] = { Type = "Town", Faction = "Horde" },
+				["Mor'shan Base Camp"] = { Type = "Town", Faction = "Horde" },
+				["The Mor'shan Rampart"] = { Type = "Town", Faction = "Horde" },
+				["Nozzlepot's Outpost"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral
+				["Ratchet"] = { Type = "Town", Faction = "Neutral" },
+				["Broken Keel Tavern"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Boulder Lode Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Dreadmist Den"] = { Type = "Subzone", Music = CaveSong },
+				["Dreadmist Peak"] = { Type = "Subzone", Music = PlagueSong },
+				["The Dry Hills"] = { Type = "Subzone", Music = SandSong },
+				["The Forgotten Pools"] = { Type = "Subzone", Music = LakeSong },
+				["Fray Island"] = { Type = "Subzone", Music = Alliance5Town },
+				["Gold Road"] = { Type = "Subzone", Music = SandSong },
+				["The Great Divide"] = { Type = "Subzone", Music = LandSong },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Lushwater Oasis"] = { Type = "Subzone", Music = LakeSong },
+				["The Merchant Coast"] = { Type = "Subzone", Music = WaterSong },
+				["Shrine of the Fallen Warrior"] = { Type = "Subzone", Music = Alliance4Town },
+				["The Sludge Fen"] = { Type = "Subzone", Music = SwampSong, Swim = 2 },
+				["Southfury River"] = { Type = "Subzone", Music = WaterSong },
+				["The Stagnant Oasis"] = { Type = "Subzone", Music = LakeSong },
+				["Thorn Hill"] = { Type = "Subzone", Music = CaveSong },
+				["The Tidus Stair"] = { Type = "Subzone", Music = SandSong },
+			},
+			[ 14 ] = { -- Arathi Highlands	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 1,
+				Music1 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Faldir's Cove"] = { Type = "Town", Faction = "Alliance" },
+				["Refuge Pointe"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Galen's Fall"] = { Type = "Town", Faction = "Horde" },
+				["Go'Shek Farm"] = { Type = "Town", Faction = "Horde" },
+				["Hammerfall"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Boulder'gor"] = { Type = "Subzone", Music = LandSong },
+				["Boulderfist Outpost"] = { Type = "Subzone", Music = CaveSong },
+				["Boulderfist Hall"] = { Type = "Subzone", Music = CaveSong },
+				["Circle of East Binding"] = { Type = "Subzone", Music = ContestedSong },
+				["Circle of Inner Binding"] = { Type = "Subzone", Music = ContestedSong },
+				["Circle of Outer Binding"] = { Type = "Subzone", Music = ContestedSong },
+				["Circle of West Binding"] = { Type = "Subzone", Music = ContestedSong },
+				["Dabyrie's Farmstead"] = { Type = "Subzone", Music = ContestedSong },
+				["The Drowned Reef"] = { Type = "Subzone", Music = WaterSong },
+				["Drywhisker Gorge"] = { Type = "Subzone", Music = LandSong },
+				["The Forbidding Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Northfold Manor"] = { Type = "Subzone", Music = ContestedSong },
+				["Stromgarde Keep"] = { Type = "Subzone", Music = PlagueSong },
+				["Crypt"] = { Type = "Subzone", Music = CaveSong },
+				["The Sanctum"] = { Type = "Subzone", Music = ContestedSong },
+				["The Tower of Arathor"] = { Type = "Subzone", Music = PlagueSong },
+				["Thandol Span"] = { Type = "Subzone", Music = ContestedSong },
+				["Thoradin's Wall"] = { Type = "Subzone", Music = ContestedSong },
+				["Witherbark Village"] = { Type = "Subzone", Music = ForestSong },
+			},
+			[ 15 ] = { -- Badlands	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Dragon's Mouth"] = { Type = "Town", Faction = "Alliance" },
+				["Dustwind Dig"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Bloodwatcher Point"] = { Type = "Town", Faction = "Horde" },
+				["New Kargath"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Fuselight"] = { Type = "Town", Faction = "Neutral" },
+				["Fuselight-by-the-Sea"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Agmond's End"] = { Type = "Subzone", Music = SandSong },
+				["Angor Fortress"] = { Type = "Subzone", Music = SandSong },
+				["Apocryphan's Rest"] = { Type = "Subzone", Music = nil },
+				["Camp Boff"] = { Type = "Subzone", Music = SandSong },
+				["Camp Cagg"] = { Type = "Subzone", Music = SandSong },
+				["Camp Kosh"] = { Type = "Subzone", Music = SandSong },
+				["Crypt"] = { Type = "Subzone", Music = CaveSong },
+				["Dustbelch Grotto"] = { Type = "Subzone", Music = SandSong },
+				["The Dustbowl"] = { Type = "Subzone", Music = SandSong },
+				["Dustwind Gulch"] = { Type = "Subzone", Music = SandSong },
+				["Hammertoe's Digsite"] = { Type = "Subzone", Music = SandSong },
+				["The Hidden Clutch"] = { Type = "Subzone", Music = CaveSong },
+				["Lethlor Ravine"] = { Type = "Subzone", Music = SandSong },
+				["The Maker's Terrace"] = { Type = "Subzone", Music = SandSong },
+				["Mirage Flats"] = { Type = "Subzone", Music = SandSong },
+				["Rhea's Camp"] = { Type = "Subzone", Music = SandSong },
+				["Ruins of Kargath"] = { Type = "Subzone", Music = SandSong },
+				["Scar of the Worldbreaker"] = { Type = "Subzone", Music = PlagueSong },
+				["Tomb of the Watchers"] = { Type = "Subzone", Music = SandSong },
+				["Uldaman"] = { Type = "Subzone", Music = CaveSong },
+				["Uldaman Entrance"] = { Type = "Subzone", Music = CaveSong },
+			},
+			[ 17 ] = { -- Blasted Lands	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Nethergarde Keep"] = { Type = "Town", Faction = "Alliance" },
+				["Shattered Beachhead"] = { Type = "Town", Faction = "Alliance" },
+				["Surwich"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Okril'lon Hold"] = { Type = "Town", Faction = "Horde" },
+				["Shattered Landing"] = { Type = "Town", Faction = "Horde" },
+				["Sunveil Excursion"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Altar of Storms"] = { Type = "Subzone", Music = WarySong },
+				["The Dark Portal"] = { Type = "Subzone", Music = BattleGround2 },
+				["Dreadmaul Furnace"] = { Type = "Subzone", Music = nil },
+				["Dreadmaul Post"] = { Type = "Subzone", Music = SandSong },
+				["The Forbidding Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Nethergarde Mines"] = { Type = "Subzone", Music = CaveSong },
+				["Nethergarde Supply Camps"] = { Type = "Subzone", Music = SandSong },
+				["The Forge Grounds"] = { Type = "Subzone", Music = SandSong },
+				["The Red Reaches"] = { Type = "Subzone", Music = SandSong },
+				["Bloodwash Cavern"] = { Type = "Subzone", Music = CaveSong },
+				["Bloodwash Fighting Pits"] = { Type = "Subzone", Music = SandSong },
+				["Bloodwash Shrine"] = { Type = "Subzone", Music = SandSong },
+				["Rockpool Village"] = { Type = "Subzone", Music = SandSong },
+				["Rise of the Defiler"] = { Type = "Subzone", Music = SandSong },
+				["Serpent's Coil"] = { Type = "Subzone", Music = SandSong },
+				["Shattershore"] = { Type = "Subzone", Music = SandSong },
+				["The Shattered Front"] = { Type = "Subzone", Music = SandSong },
+				["The Tainted Forest"] = { Type = "Subzone", Music = PlagueSong },
+				["Maldraz"] = { Type = "Subzone", Music = WarySong },
+				["The Tainted Scar"] = { Type = "Subzone", Music = SwampSong },
+			},
+			[ 18 ] = { -- Tirisfal Glades	-	Eastern Kingdoms
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = PlagueSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Horde:
+				["Brill"] = { Type = "Town", Faction = "Horde" },
+				["Brill Town Hall"] = { Type = "Town", Faction = "Horde" },
+				["Gallows' End Tavern"] = { Type = "Town", Faction = "Horde" },
+				["Ruins of Lordaeron"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Agamand Mills"] = { Type = "Subzone", Music = PlagueSong },
+				["Agamand Family Crypt"] = { Type = "Subzone", Music = PlagueSong },
+				["Balnir Farmstead"] = { Type = "Subzone", Music = PlagueSong },
+				["Brightwater Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Gunther's Retreat"] = { Type = "Subzone", Music = nil },
+				["The Bulwark"] = { Type = "Subzone", Music = Horde1Town },
+				["Calston Estate"] = { Type = "Subzone", Music = Horde1Town },
+				["Cold Hearth Manor"] = { Type = "Subzone", Music = PlagueSong },
+				["Crusader Outpost"] = { Type = "Subzone", Music = ForestSong },
+				["Death's Watch Waystation"] = { Type = "Subzone", Music = Horde1Town },
+				["Faol's Rest"] = { Type = "Subzone", Music = DeadSong },
+				["Garren's Haunt"] = { Type = "Subzone", Music = PlagueSong },
+				["Nightmare Vale"] = { Type = "Subzone", Music = nil },
+				["The North Coast"] = { Type = "Subzone", Music = nil },
+				["Scarlet Monastery"] = { Type = "Subzone", Music = WarySong },
+				["The Grand Vestibule"] = { Type = "Subzone", Music = WarySong },
+				["Terrace of Repose"] = { Type = "Subzone", Music = WarySong },
+				["Crusader's Outpost"] = { Type = "Subzone", Music = HostileSong },
+				["Scarlet Palisade"] = { Type = "Subzone", Music = HostileSong },
+				["Scarlet Watchtower"] = { Type = "Subzone", Music = HostileSong },
+				["Scarlet Watch Post"] = { Type = "Subzone", Music = HostileSong },
+				["Solliden Farmstead"] = { Type = "Subzone", Music = HostileSong },
+				["Stillwater Pond"] = { Type = "Subzone", Music = LakeSong },
+				["Venomweb Vale"] = { Type = "Subzone", Music = nil },
+				["Scarlet Encampment"] = { Type = "Subzone", Music = nil },
+				["Whispering Forest"] = { Type = "Subzone", Music = nil },
+				["Whispering Gardens"] = { Type = "Subzone", Music = nil },
+				["Whispering Shore"] = { Type = "Subzone", Music = PlagueSong },
+			},
+			[ 21 ] = { -- Silverpine Forest	-	Eastern Kingdoms
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = PlagueSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Horde:
+				["The Forsaken Front"] = { Type = "Town", Faction = "Horde" },
+				["Forsaken High Command"] = { Type = "Town", Faction = "Horde" },
+				["Forsaken Rear Guard"] = { Type = "Town", Faction = "Horde" },
+				["The Sepulcher"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["7th Legion Base Camp"] = { Type = "Subzone", Music = nil },
+				["Ambermill"] = { Type = "Subzone", Music = Alliance10Town },
+				["The Battlefront"] = { Type = "Subzone", Music = BattleGround1 },
+				["Beren's Peril"] = { Type = "Subzone", Music = nil },
+				["The Dead Field"] = { Type = "Subzone", Music = PlagueSong },
+				["The Decrepit Fields"] = { Type = "Subzone", Music = PlagueSong },
+				["Deep Elem Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Gilneas Liberation Front Base Camp"] = { Type = "Subzone", Music = Alliance1Town },
+				["The Greymane Wall"] = { Type = "Subzone", Music = SwampSong },
+				["The Ivar Patch"] = { Type = "Subzone", Music = nil },
+				["Lordamere Lake"] = { Type = "Subzone", Music = LakeSong },
+				["The Dawning Isles"] = { Type = "Subzone", Music = nil },
+				["Fenris Isle"] = { Type = "Subzone", Music = nil },
+				["Fenris Keep"] = { Type = "Subzone", Music = nil },
+				["North Tide's Beachhead"] = { Type = "Subzone", Music = WaterSong },
+				["North Tide's Hollow"] = { Type = "Subzone", Music = nil },
+				["North Tide's Run"] = { Type = "Subzone", Music = nil },
+				["Olsen's Farthing"] = { Type = "Subzone", Music = nil },
+				["Pyrewood Village"] = { Type = "Subzone", Music = PlagueSong },
+				["Pyrewood Chapel"] = { Type = "Subzone", Music = PlagueSong },
+				["Pyrewood Inn"] = { Type = "Subzone", Music = PlagueSong },
+				["Pyrewood Town Hall"] = { Type = "Subzone", Music = PlagueSong },
+				["Shadowfang Keep"] = { Type = "Subzone", Music = SwampSong },
+				["The Shining Strand"] = { Type = "Subzone", Music = PlagueSong },
+				["The Skittering Dark"] = { Type = "Subzone", Music = PlagueSong },
+				["South Tide's Run"] = { Type = "Subzone", Music = nil },
+				["Valgan's Field"] = { Type = "Subzone", Music = nil },
+			},
+			[ 22 ] = { -- Western Plaguelands	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = ForestSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Chillwind Camp"] = { Type = "Town", Faction = "Alliance" },
+				["Felstone Field"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Andorhal"] = { Type = "Town", Faction = "Horde" },
+				["The Bulwark"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Hearthglen"] = { Type = "Town", Faction = "Neutral" },
+				["The Menders' Stead"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Charred Outpost"] = { Type = "Subzone", Music = PlagueSong },
+				["Dalson's Farm"] = { Type = "Subzone", Music = nil },
+				["Darrowmere Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Caer Darrow"] = { Type = "Subzone", Music = nil },
+				["Scholomance"] = { Type = "Subzone", Music = SwampSong },
+				["Gahrron's Withering"] = { Type = "Subzone", Music = PlagueSong },
+				["Mardenholde Keep"] = { Type = "Subzone", Music = nil },
+				["Taelan's Tower"] = { Type = "Subzone", Music = nil },
+				["Malicia's Outpost"] = { Type = "Subzone", Music = nil },
+				["Northridge Lumber Camp"] = { Type = "Subzone", Music = nil },
+				["Plaguemist Ravine"] = { Type = "Subzone", Music = nil },
+				["Redpine Dell"] = { Type = "Subzone", Music = nil },
+				["Sorrow Hill"] = { Type = "Subzone", Music = nil },
+				["Path of Uther"] = { Type = "Subzone", Music = nil },
+				["Sorrow Hill Crypt"] = { Type = "Subzone", Music = nil },
+				["Uther's Tomb"] = { Type = "Subzone", Music = nil },
+				["Thondroril River"] = { Type = "Subzone", Music = nil },
+				["The Weeping Cave"] = { Type = "Subzone", Music = nil },
+				["The Writhing Haunt"] = { Type = "Subzone", Music = nil },
+			},
+			[ 23 ] = { -- Eastern Plaguelands	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = ForestSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Neutral:
+				["Acherus: The Ebon Hold"] = { Type = "Town", Faction = "Neutral", Music = EbonHoldSong },
+				["Light's Hope Chapel"] = { Type = "Town", Faction = "Neutral" },
+				["Sanctum of Light"] = { Type = "Town", Faction = "Neutral", Music = FriendlySong },
+				["Tyr's Hand"] = { Type = "Town", Faction = "Neutral" },
+				["Tyr's Hand Abbey"] = { Type = "Town", Faction = "Neutral" },
+				["Hall of Arms"] = { Type = "Town", Faction = "Neutral" },
+				["Main Hall"] = { Type = "Town", Faction = "Neutral" },
+				["Library Wing"] = { Type = "Town", Faction = "Neutral" },
+				["Crown Guard Tower"] = { Type = "Town", Faction = "Neutral" },
+				["Light's Shield Tower"] = { Type = "Town", Faction = "Neutral" },
+				["Eastwall Tower"] = { Type = "Town", Faction = "Neutral" },
+				["Northpass Tower"] = { Type = "Town", Faction = "Neutral" },
+				["Plaguewood Tower"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Blackwood Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Browman Mill"] = { Type = "Subzone", Music = nil },
+				["Corin's Crossing"] = { Type = "Subzone", Music = nil },
+				["Darrowshire"] = { Type = "Subzone", Music = WarySong },
+				["Darrowshire Hunting Grounds"] = { Type = "Subzone", Music = nil },
+				["Death Cultist Base Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Death's Step"] = { Type = "Subzone", Music = nil },
+				["Eastwall Gate"] = { Type = "Subzone", Music = nil },
+				["The Fungal Vale"] = { Type = "Subzone", Music = nil },
+				["The Infectis Scar"] = { Type = "Subzone", Music = SwampSong },
+				["Ix'lar's Domain"] = { Type = "Subzone", Music = nil },
+				["Lake Mereldar"] = { Type = "Subzone", Music = LakeSong },
+				["Crypt"] = { Type = "Subzone", Music = WarySong },
+				["The Marris Stead"] = { Type = "Subzone", Music = nil },
+				["Northdale"] = { Type = "Subzone", Music = nil },
+				["The Noxious Glade"] = { Type = "Subzone", Music = nil },
+				["Pestilent Scar"] = { Type = "Subzone", Music = nil },
+				["Plaguewood"] = { Type = "Subzone", Music = nil },
+				["Terrordale"] = { Type = "Subzone", Music = nil },
+				["Quel'Lithien Lodge"] = { Type = "Subzone", Music = nil },
+				["Ruins of the Scarlet Enclave"] = { Type = "Subzone", Music = nil },
+				["Death's Breach"] = { Type = "Subzone", Music = nil },
+				["Siege Vise"] = { Type = "Subzone", Music = nil },
+				["Stratholme"] = { Type = "Subzone", Music = WarySong },
+				["Terrorweb Tunnel"] = { Type = "Subzone", Music = nil },
+				["Thondroril River"] = { Type = "Subzone", Music = nil },
+				["The Scarlet Basilica"] = { Type = "Subzone", Music = nil },
+				["The Undercroft"] = { Type = "Subzone", Music = nil },
+				["Zul'Mashar"] = { Type = "Subzone", Music = nil },
+				["Mazra'Alor"] = { Type = "Subzone", Music = nil },
+			},
+			[ 25 ] = { -- Hillsbrad Foothills	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Corrahn's Dagger"] = { Type = "Town", Faction = "Alliance" },
+				["Gavin's Naze"] = { Type = "Town", Faction = "Alliance" },
+				["Sofera's Naze"] = { Type = "Town", Faction = "Alliance" },
+				["The Headland"] = { Type = "Town", Faction = "Alliance" },
+				["Purgation Isle"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde
+				["Eastpoint Tower"] = { Type = "Town", Faction = "Horde" },
+				["Ruins of Southshore"] = { Type = "Town", Faction = "Horde" },
+				["Sludgeguard Tower"] = { Type = "Town", Faction = "Horde" },
+				["Southpoint Gate"] = { Type = "Town", Faction = "Horde" },
+				["Strahnbrad"] = { Type = "Town", Faction = "Horde" },
+				["Tarren Mill"] = { Type = "Town", Faction = "Horde" },
+				["The Sludge Fields"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Brazie Farmstead"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Alterac Mountains"] = { Type = "Subzone", Music = nil },
+				["Chillwind Point"] = { Type = "Subzone", Music = nil },
+				["Crushridge Hold"] = { Type = "Subzone", Music = nil },
+				["Dandred's Fold"] = { Type = "Subzone", Music = nil },
+				["Gallows' Corner"] = { Type = "Subzone", Music = nil },
+				["Growless Cave"] = { Type = "Subzone", Music = nil },
+				["Ravenholdt Manor"] = { Type = "Subzone", Music = Horde8Town },
+				["Ruins of Alterac"] = { Type = "Subzone", Music = nil },
+				["Slaughter Hollow"] = { Type = "Subzone", Music = nil },
+				["The Uplands"] = { Type = "Subzone", Music = LandSong },
+				["Azurelode Mine"] = { Type = "Subzone", Music = PlagueSong },
+				["Dalaran Crater"] = { Type = "Subzone", Music = ContestedSong },
+				["Darrow Hill"] = { Type = "Subzone", Music = nil },
+				["Dun Garok"] = { Type = "Subzone", Music = nil },
+				["Durnholde Keep"] = { Type = "Subzone", Music = PlagueSong },
+				["Eastern Strand"] = { Type = "Subzone", Music = nil },
+				["Lordamere Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Misty Shore"] = { Type = "Subzone", Music = nil },
+				["Nethander Stead"] = { Type = "Subzone", Music = nil },
+				["Thoradin's Wall"] = { Type = "Subzone", Music = nil },
+				["Western Strand"] = { Type = "Subzone", Music = nil },
+			},
+			[ 26 ] = { -- The Hinterlands	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Aerie Peak"] = { Type = "Town", Faction = "Alliance" },
+				["Stormfeather Outpost"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde
+				["Hiri'watha Research Station"] = { Type = "Town", Faction = "Horde" },
+				["Revantusk Village"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Wildhammer Keep"] = { Type = "Subzone", Music = nil },
+				["Agol'watha"] = { Type = "Subzone", Music = nil },
+				["Altar of Zul"] = { Type = "Subzone", Music = nil },
+				["Bogen's Ledge"] = { Type = "Subzone", Music = nil },
+				["The Creeping Ruin"] = { Type = "Subzone", Music = nil },
+				["Featherbeard's Hovel"] = { Type = "Subzone", Music = nil },
+				["The Forbidding Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Jintha'Alor"] = { Type = "Subzone", Music = nil },
+				["Overlook Cliffs"] = { Type = "Subzone", Music = ForestSong },
+				["Plaguemist Ravine"] = { Type = "Subzone", Music = nil },
+				["Quel'Danil Lodge"] = { Type = "Subzone", Music = nil },
+				["Seradane"] = { Type = "Subzone", Music = nil },
+				["Shaol'watha"] = { Type = "Subzone", Music = nil },
+				["Shadra'Alor"] = { Type = "Subzone", Music = nil },
+				["Shindigger's Camp"] = { Type = "Subzone", Music = nil },
+				["Skulk Rock"] = { Type = "Subzone", Music = CaveSong },
+				["Valorwind Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Zun'watha"] = { Type = "Subzone", Music = LandSong },
+			},
+			[ 27 ] = { -- Dun Morogh	-	Eastern Kingdoms
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = SnowSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Amberstill Ranch"] = { Type = "Town", Faction = "Alliance" },
+				["Gates of Ironforge"] = { Type = "Town", Faction = "Alliance" },
+				["Gol'Bolar Quarry"] = { Type = "Town", Faction = "Alliance" },
+				["Ironforge Airfield"] = { Type = "Town", Faction = "Alliance" },
+				["Kharanos"] = { Type = "Town", Faction = "Alliance" },
+				["Thunderbrew Distillery"] = { Type = "Town", Faction = "Alliance" },
+				["Misty Pine Refuge"] = { Type = "Town", Faction = "Alliance" },
+				["North Gate Outpost"] = { Type = "Town", Faction = "Alliance" },
+				["Steelgrill's Depot"] = { Type = "Town", Faction = "Alliance" },
+				["South Gate Outpost"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Bahrum's Post"] = { Type = "Subzone", Music = SnowSong },
+				["Frostmane Front"] = { Type = "Subzone", Music = SnowSong },
+				["Frostmane Retreat"] = { Type = "Subzone", Music = SnowSong },
+				["The Grizzled Den"] = { Type = "Subzone", Music = SnowSong },
+				["Gol'Bolar Quarry Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Helm's Bed Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Ironband's Compound"] = { Type = "Subzone", Music = SnowSong },
+				["The Mountain Den"] = { Type = "Subzone", Music = CaveSong },
+				["North Gate Pass"] = { Type = "Subzone", Music = SnowSong },
+				["Shimmer Ridge"] = { Type = "Subzone", Music = SnowSong },
+				["South Gate Pass"] = { Type = "Subzone", Music = SnowSong },
+				["The Tundrid Hills"] = { Type = "Subzone", Music = SnowSong },
+			},
+			[ 30 ] = {	-- New Tinkertown	-	Dun Morogh
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = SnowSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Brewnall Village"] = { Type = "Town", Faction = "Alliance" },
+				["New Tinkertown"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Chill Breeze Valley"] = { Type = "Subzone", Music = SnowSong },
+				["Crushcog's Arsenal"] = { Type = "Subzone", Music = SnowSong },
+				["Frostmane Hold"] = { Type = "Subzone", Music = SnowSong },
+				["Gnomeregan"] = { Type = "Subzone", Music = HostileSong },
+				["The Clockwerk Run"] = { Type = "Subzone", Music = HostileSong },
+				["Loading Room"] = { Type = "Subzone", Music = HostileSong },
+				["The Old Dormitory"] = { Type = "Subzone", Music = HostileSong },
+				["Train Depot"] = { Type = "Subzone", Music = HostileSong },
+				["Workshop Entrance"] = { Type = "Subzone", Music = HostileSong },
+				["Iceflow Lake"] = { Type = "Subzone", Music = SnowSong },
+				["The Toxic Airfield"] = { Type = "Subzone", Music = PlagueSong },
+			},
+			[ 32 ] = { -- Searing Gorge	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Neutral:
+				["Iron Summit"] = { Type = "Town", Faction = "Neutral" },
+				["Thorium Advance"] = { Type = "Town", Faction = "Neutral" },
+				["Thorium Point"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Blackchar Cave"] = { Type = "Subzone", Music = CaveSong },
+				["Blackrock Mountain"] = { Type = "Subzone", Music = PlagueSong },
+				["The Cauldron"] = { Type = "Subzone", Music = PlagueSong },
+				["The Slag Pit"] = { Type = "Subzone", Music = PlagueSong },
+				["Dustfire Valley"] = { Type = "Subzone", Music = PlagueSong },
+				["Firewatch Ridge"] = { Type = "Subzone", Music = PlagueSong },
+				["Grimesilt Dig Site"] = { Type = "Subzone", Music = PlagueSong },
+				["Pyrox Flats"] = { Type = "Subzone", Music = PlagueSong },
+				["The Sea of Cinders"] = { Type = "Subzone", Music = PlagueSong },
+				["Stonewrought Pass"] = { Type = "Subzone", Music = PlagueSong },
+			},
+			[ 33 ] = { -- Blackrock Mountain - 33 - Blackrock Spire, 34 - Blackrock Caverns, 35 - Blackrock Depths
+				Faction = "Contested",
+				Songs = 1,
+				Music1 = CaveSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Shadowforge City"] = { Type = "Capital", Music = IronforgeSong },
+				--	SUBZONES:
+				["Blackrock Caverns"] = { Type = "Subzone", Music = nil },
+				["Blackrock Depths"] = { Type = "Subzone", Music = nil },
+				["Blackrock Spire"] = { Type = "Subzone", Music = nil },
+				["Blackwing Lair"] = { Type = "Subzone", Music = nil },
+				["Blackwing Descent"] = { Type = "Subzone", Music = nil },
+				["The Grinding Quarry"] = { Type = "Subzone", Music = nil },
+				["The Masonary"] = { Type = "Subzone", Music = nil },
+				["Molten Core"] = { Type = "Subzone", Music = nil },
+				["The Molten Span"] = { Type = "Subzone", Music = nil },
+				["Forgewright's Tomb"] = { Type = "Subzone", Music = nil },
+			},
+			[ 36 ] = { -- Burning Steppes	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Morgan's Vigil"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Flame Crest"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Chiselgrip"] = { Type = "Town", Faction = "Neutral" },
+				["Flamestar Post"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Altar of Storms"] = { Type = "Subzone", Music = PlagueSong },
+				["Blackrock Mountain"] = { Type = "Subzone", Music = PlagueSong },
+				["Blackrock Pass"] = { Type = "Subzone", Music = PlagueSong },
+				["Blackrock Stronghold"] = { Type = "Subzone", Music = PlagueSong },
+				["Black Tooth Hovel"] = { Type = "Subzone", Music = PlagueSong },
+				["The Pillar of Ash"] = { Type = "Subzone", Music = PlagueSong },
+				["Dreadmaul Rock"] = { Type = "Subzone", Music = PlagueSong },
+				["Firegut Furnace"] = { Type = "Subzone", Music = PlagueSong },
+				["The Skull Warren"] = { Type = "Subzone", Music = PlagueSong },
+				["Fields of Honor"] = { Type = "Subzone", Music = PlagueSong },
+				["Ruins of Thaurissan"] = { Type = "Subzone", Music = PlagueSong },
+				["Slither Rock"] = { Type = "Subzone", Music = PlagueSong },
+				["Terror Wing Path"] = { Type = "Subzone", Music = PlagueSong },
+				["Valley of Ashes"] = { Type = "Subzone", Music = PlagueSong },
+				["The Whelping Downs"] = { Type = "Subzone", Music = PlagueSong },
+			},
+			[ 37 ] = { -- Elwynn Forest	-	Eastern Kingdoms
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				["Eastvale Logging Camp"] = { Type = "Town", Faction = "Alliance" },
+				["Goldshire"] = { Type = "Town", Faction = "Alliance" },
+				["Lion's Pride Inn"] = { Type = "Town", Faction = "Alliance" },
+				["Brackwell Pumpkin Patch"] = { Type = "Town", Faction = "Alliance" },
+				["The Maclure Vineyards"] = { Type = "Town", Faction = "Alliance" },
+				["Ridgepoint Tower"] = { Type = "Town", Faction = "Alliance" },
+				["The Stonefield Farm"] = { Type = "Town", Faction = "Alliance" },
+				["Westbrook Garrison"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Crystal Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Fargodeep Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Forest's Edge"] = { Type = "Subzone", Music = ForestSong },
+				["Goldtooth's Den"] = { Type = "Subzone", Music = ForestSong },
+				["Hogger Hill"] = { Type = "Subzone", Music = ForestSong },
+				["Jasperlode Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Jerod's Landing"] = { Type = "Subzone", Music = ForestSong },
+				["Mirror Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Mirror Lake Orchard"] = { Type = "Subzone", Music = ForestSong },
+				["Stone Cairn Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Heroes' Vigil"] = { Type = "Subzone", Music = Alliance4Town },
+				["Thunder Falls"] = { Type = "Subzone", Music = LakeSong },
+				["Tower of Azora"] = { Type = "Subzone", Music = ForestSong },
+			},
+			[ 42 ] = { -- Deadwind Pass	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 1,
+				Music1 = SwampSong,
+				Sleep = true,
+				Swim = 2,
+				--	SUBZONES:
+				["Abandoned Kirin Tor Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Alturus' Sanctum"] = { Type = "Subzone", Music = SwampSong },
+				["Ariden's Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Forgotten Crypt"] = { Type = "Subzone", Music = SwampSong },
+				["Deadman's Crossing"] = { Type = "Subzone", Music = SwampSong },
+				["Deadwind Ravine"] = { Type = "Subzone", Music = SwampSong },
+				["Karazhan"] = { Type = "Subzone", Music = WarySong },
+				["Karazhan Catacombs"] = { Type = "Subzone", Music = CaveSong },
+				["The Master's Cellar"] = { Type = "Subzone", Music = SwampSong },
+				["Morgan's Plot"] = { Type = "Subzone", Music = SwampSong },
+				["Sleeping Gorge"] = { Type = "Subzone", Music = SwampSong },
+				["The Vice"] = { Type = "Subzone", Music = SwampSong },
+				["Grosh'gok Compound"] = { Type = "Subzone", Music = SwampSong },
+			},
+			[ 47 ] = { -- Duskwood	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Darkshire"] = { Type = "Town", Faction = "Alliance" },
+				["Darkshire Town Hall"] = { Type = "Town", Faction = "Alliance" },
+				["Scarlet Raven Tavern"] = { Type = "Town", Faction = "Alliance" },
+				["Raven Hill"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Addle's Stead"] = { Type = "Subzone", Music = PlagueSong },
+				["Beggar's Haunt"] = { Type = "Subzone", Music = PlagueSong },
+				["Brightwood Grove"] = { Type = "Subzone", Music = PlagueSong },
+				["The Darkened Bank"] = { Type = "Subzone", Music = PlagueSong },
+				["Forlorn Rowe"] = { Type = "Subzone", Music = PlagueSong },
+				["The Hushed Bank"] = { Type = "Subzone", Music = WaterSong },
+				["Manor Mistmantle"] = { Type = "Subzone", Music = PlagueSong },
+				["Raven Hill Cemetery"] = { Type = "Subzone", Music = PlagueSong },
+				["Dawning Wood Catacombs"] = { Type = "Subzone", Music = CaveSong },
+				["Roland's Doom"] = { Type = "Subzone", Music = PlagueSong },
+				["The Rotting Orchard"] = { Type = "Subzone", Music = PlagueSong },
+				["Tranquil Gardens Cemetery"] = { Type = "Subzone", Music = PlagueSong },
+				["Twilight Grove"] = { Type = "Subzone", Music = PlagueSong },
+				["Vul'Gol Ogre Mound"] = { Type = "Subzone", Music = PlagueSong },
+				["The Yorgen Farmstead"] = { Type = "Subzone", Music = PlagueSong },
+			},
+			[ 48 ] = { -- Loch Modan	-	Eastern Kingdoms
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = FriendlySong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Algaz Station"] = { Type = "Town", Faction = "Alliance" },
+				["The Farstrider Lodge"] = { Type = "Town", Faction = "Alliance" },
+				["Thelsamar"] = { Type = "Town", Faction = "Alliance" },
+				["Stoutlager Inn"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Dun Algaz"] = { Type = "Subzone", Music = FriendlySong },
+				["Grizzlepaw Ridge"] = { Type = "Subzone", Music = FriendlySong },
+				["Ironband's Excavation Site"] = { Type = "Subzone", Music = FriendlySong },
+				["Ironwing Cavern"] = { Type = "Subzone", Music = CaveSong },
+				["The Loch"] = { Type = "Subzone", Music = PlagueSong },
+				["Twilight Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Mo'grosh Stronghold"] = { Type = "Subzone", Music = LandSong },
+				["North Gate Pass"] = { Type = "Subzone", Music = FriendlySong },
+				["Silver Stream Mine"] = { Type = "Subzone", Music = CaveSong },
+				["South Gate Pass"] = { Type = "Subzone", Music = FriendlySong },
+				["Stonesplinter Valley"] = { Type = "Subzone", Music = FriendlySong },
+				["Stonewrought Dam"] = { Type = "Subzone", Music = ContestedSong },
+				["Valley of Kings"] = { Type = "Subzone", Music = FriendlySong },
+			},
+			[ 49 ] = { -- Redridge Mountains	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = LandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Camp Everstill"] = { Type = "Town", Faction = "Alliance" },
+				["Keeshan's Post"] = { Type = "Town", Faction = "Alliance" },
+				["Lakeshire"] = { Type = "Town", Faction = "Alliance" },
+				["Lakeshire Inn"] = { Type = "Town", Faction = "Alliance" },
+				["Lakeshire Town Hall"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Alther's Mill"] = { Type = "Subzone", Music = LandSong },
+				["Galardell Valley"] = { Type = "Subzone", Music = LandSong },
+				["Lake Everstill"] = { Type = "Subzone", Music = LakeSong },
+				["Lakeridge Highway"] = { Type = "Subzone", Music = LandSong },
+				["Redridge Canyons"] = { Type = "Subzone", Music = LandSong },
+				["Render's Camp"] = { Type = "Subzone", Music = LandSong },
+				["Render's Rock"] = { Type = "Subzone", Music = LandSong },
+				["Render's Valley"] = { Type = "Subzone", Music = LandSong },
+				["Rethban Caverns"] = { Type = "Subzone", Music = CaveSong },
+				["Shalewind Canyon"] = { Type = "Subzone", Music = LandSong },
+				["Stonewatch"] = { Type = "Subzone", Music = LandSong },
+				["Stonewatch Keep"] = { Type = "Subzone", Music = LandSong },
+				["Stonewatch Tower"] = { Type = "Subzone", Music = LandSong },
+				["Stonewatch Falls"] = { Type = "Subzone", Music = LakeSong },
+				["Three Corners"] = { Type = "Subzone", Music = LandSong },
+				["Tower of Ilgalar"] = { Type = "Subzone", Music = LandSong },
+				["Yowler's Den"] = { Type = "Subzone", Music = CaveSong },
+			},
+			[ 50 ] = { -- Northern Stranglethorn	-	Stranglethorn Vale
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Fort Livingston"] = { Type = "Town", Faction = "Alliance" },
+				["Rebel Camp"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Bambala"] = { Type = "Town", Faction = "Horde" },
+				["Grom'gol Base Camp"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Nesingwary's Expedition"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Bal'lal Ruins"] = { Type = "Subzone", Music = BeachSong },
+				["Balia'mah Ruins"] = { Type = "Subzone", Music = ForestSong },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Kal'ai Ruins"] = { Type = "Subzone", Music = WarySong },
+				["Kurzen's Compound"] = { Type = "Subzone", Music = ForestSong },
+				["Lake Nazferiti"] = { Type = "Subzone", Music = LakeSong },
+				["Mizjah Ruins"] = { Type = "Subzone", Music = ForestSong },
+				["Mosh'Ogg Ogre Mound"] = { Type = "Subzone", Music = ForestSong },
+				["Ruins of Zul'Kunda"] = { Type = "Subzone", Music = ForestSong },
+				["Ruins of Zul'Mamwe"] = { Type = "Subzone", Music = ForestSong },
+				["The Savage Coast"] = { Type = "Subzone", Music = BeachSong },
+				["The Stockpile"] = { Type = "Subzone", Music = ForestSong },
+				["The Sundering"] = { Type = "Subzone", Music = WaterSong },
+				["Tkashi Ruins"] = { Type = "Subzone", Music = ForestSong },
+				["Venture Co. Base Camp"] = { Type = "Subzone", Music = Alliance10Town },
+				["Venture Co. Operations Center"] = { Type = "Subzone", Music = Alliance8Town },
+				["The Vile Reef"] = { Type = "Subzone", Music = LakeSong },
+				["Yojamba Isle"] = { Type = "Subzone", Music = BeachSong },
+				["Ziata'jai Ruins"] = { Type = "Subzone", Music = ForestSong },
+				["Zul'Gurub"] = { Type = "Subzone", Music = WarySong },
+				["Zuuldaia Ruins"] = { Type = "Subzone", Music = BeachSong },
+			},
+			[ 51 ] = { -- Swamp of Sorrows	-	Eastern Kingdoms
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SwampSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["The Harborage"] = { Type = "Town", Faction = "Alliance" },
+				["Marshtide Watch"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Misty Reed Post"] = { Type = "Town", Faction = "Horde" },
+				["Stonard"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Bogpaddle"] = { Type = "Town", Faction = "Neutral" },
+				["Sorrowmurk"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["The Bloodmire"] = { Type = "Subzone", Music = SwampSong },
+				["Fallow Sanctuary"] = { Type = "Subzone", Music = SwampSong },
+				["The Forbidding Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Misty Reed Strand"] = { Type = "Subzone", Music = SwampSong },
+				["Misty Valley"] = { Type = "Subzone", Music = SwampSong },
+				["Pool of Tears"] = { Type = "Subzone", Music = WaterSong },
+				["Temple of Atal'Hakkar"] = { Type = "Subzone", Music = Alliance10Town },
+				["Purespring Cavern"] = { Type = "Subzone", Music = CaveSong },
+				["The Shifting Mire"] = { Type = "Subzone", Music = SwampSong },
+				["Splinterspear Junction"] = { Type = "Subzone", Music = SwampSong },
+				["Stagalbog"] = { Type = "Subzone", Music = SwampSong },
+				["Stagalbog Cave"] = { Type = "Subzone", Music = CaveSong },
+			},
+			[ 52 ] = { -- Westfall	-	Eastern Kingdoms
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Moonbrook"] = { Type = "Town", Faction = "Alliance" },
+				["Sentinel Hill"] = { Type = "Town", Faction = "Alliance" },
+				["Sentinel Tower"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Alexston Farmstead"] = { Type = "Subzone", Music = SandSong },
+				["Deadmines"] = { Type = "Subzone", Music = CaveSong },
+				["The Dagger Hills"] = { Type = "Subzone", Music = SandSong },
+				["The Dead Acre"] = { Type = "Subzone", Music = SandSong },
+				["Demont's Place"] = { Type = "Subzone", Music = SandSong },
+				["The Dust Plains"] = { Type = "Subzone", Music = SandSong },
+				["Mortwake's Tower"] = { Type = "Subzone", Music = ForestSong },
+				["Furlbrow's Pumpkin Farm"] = { Type = "Subzone", Music = SandSong },
+				["Gold Coast Quarry"] = { Type = "Subzone", Music = CaveSong },
+				["Jangolode Mine"] = { Type = "Subzone", Music = CaveSong },
+				["The Jansen Stead"] = { Type = "Subzone", Music = SandSong },
+				["Longshore"] = { Type = "Subzone", Music = BeachSong },
+				["The Molsen Farm"] = { Type = "Subzone", Music = SandSong },
+				["The Raging Chasm"] = { Type = "Subzone", Music = Horde1Town },
+				["Saldean's Farm"] = { Type = "Subzone", Music = SandSong },
+				["Stendel's Pond"] = { Type = "Subzone", Music = LakeSong },
+				["Westfall Lighthouse"] = { Type = "Subzone", Music = WaterSong },
+			},
+			[ 56 ] = { -- Wetlands	-	Eastern Kingdoms
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = SwampSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Greenwarden's Grove"] = { Type = "Town", Faction = "Alliance" },
+				["Menethil Harbor"] = { Type = "Town", Faction = "Alliance" },
+				["Deepwater Tavern"] = { Type = "Town", Faction = "Alliance" },
+				["Menethil Keep"] = { Type = "Town", Faction = "Alliance" },
+				["Slabchisel's Survey"] = { Type = "Town", Faction = "Alliance" },
+				["Swiftgear Station"] = { Type = "Town", Faction = "Alliance" },
+				["Whelgar's Retreat"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Angerfang Encampment"] = { Type = "Subzone", Music = SwampSong },
+				["Baradin Bay"] = { Type = "Subzone", Music = WaterSong },
+				["Black Channel Marsh"] = { Type = "Subzone", Music = SwampSong },
+				["Bluegill Marsh"] = { Type = "Subzone", Music = SwampSong },
+				["Direforge Hill"] = { Type = "Subzone", Music = ForestSong },
+				["Dun Algaz"] = { Type = "Subzone", Music = SwampSong },
+				["Dun Modr"] = { Type = "Subzone", Music = SwampSong },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["The Green Belt"] = { Type = "Subzone", Music = ForestSong },
+				["Ironbeard's Tomb"] = { Type = "Subzone", Music = CaveSong },
+				["The Lost Fleet"] = { Type = "Subzone", Music = WaterSong },
+				["Menethil Bay"] = { Type = "Subzone", Music = LakeSong },
+				["Mosshide Fen"] = { Type = "Subzone", Music = SwampSong },
+				["Raptor Ridge"] = { Type = "Subzone", Music = ForestSong },
+				["Saltspray Glen"] = { Type = "Subzone", Music = SwampSong },
+				["Sundown Marsh"] = { Type = "Subzone", Music = SwampSong },
+				["Thandol Span"] = { Type = "Subzone", Music = SwampSong },
+				["Thelgen Rock"] = { Type = "Subzone", Music = LandSong },
+				["Whelgar's Excavation Site"] = { Type = "Subzone", Music = CaveSong },
+			},
+			[ 57 ] = { -- Teldrassil	-	Kalimdor
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = Alliance7Town,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Dolanaar"] = { Type = "Town", Faction = "Alliance" },
+				["Rut'theran Village"] = { Type = "Town", Faction = "Alliance" },
+				["Wellspring Hovel"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Ban'ethil Hollow"] = { Type = "Subzone", Music = ForestSong },
+				["Ban'ethil Barrow Den"] = { Type = "Subzone", Music = SwampSong },
+				["Ban'ethil Barrow Descent"] = { Type = "Subzone", Music = SwampSong },
+				["The Cleft"] = { Type = "Subzone", Music = ForestSong },
+				["Fel Rock"] = { Type = "Subzone", Music = CaveSong },
+				["Gnarlpine Hold"] = { Type = "Subzone", Music = ForestSong },
+				["Lake Al'Ameth"] = { Type = "Subzone", Music = LakeSong },
+				["The Oracle Glade"] = { Type = "Subzone", Music = FriendlySong },
+				["Pools of Arlithrien"] = { Type = "Subzone", Music = LakeSong },
+				["Starbreeze Village"] = { Type = "Subzone", Music = ForestSong },
+				["The Veiled Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Wellspring Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Wellspring River"] = { Type = "Subzone", Music = LakeSong },
+			},
+			[ 62 ] = { -- Darkshore	-	Kalimdor
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Auberdine Refugee Camp"] = { Type = "Town", Faction = "Alliance" },
+				["Grove of the Ancients"] = { Type = "Town", Faction = "Alliance" },
+				["Lor'danel"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Ameth'Aran"] = { Type = "Subzone", Music = PlagueSong },
+				["Bashal'Aran"] = { Type = "Subzone", Music = PlagueSong },
+				["Bashal'Aran Collapse"] = { Type = "Subzone", Music = PlagueSong },
+				["Blackwood Camp"] = { Type = "Subzone", Music = Alliance10Town },
+				["Blackwood Den"] = { Type = "Subzone", Music = CaveSong },
+				["Burning Strand"] = { Type = "Subzone", Music = ForestSong },
+				["Cliffspring Falls"] = { Type = "Subzone", Music = WaterSong },
+				["Cliffspring Hollow"] = { Type = "Subzone", Music = CaveSong },
+				["Cliffspring River"] = { Type = "Subzone", Music = WaterSong },
+				["Earthshatter Cavern"] = { Type = "Subzone", Music = CaveSong },
+				["The Eye of the Vortex"] = { Type = "Subzone", Music = Alliance10Town },
+				["The Long Wash"] = { Type = "Subzone", Music = WaterSong },
+				["The Master's Glaive"] = { Type = "Subzone", Music = SwampSong },
+				["Maw of the Void"] = { Type = "Subzone", Music = WaterSong },
+				["Mist's Edge"] = { Type = "Subzone", Music = WaterSong },
+				["Moontouched Den"] = { Type = "Subzone", Music = CaveSong },
+				["Nazj'vel"] = { Type = "Subzone", Music = CaveSong },
+				["Remtravel's Excavation"] = { Type = "Subzone", Music = WaterSong },
+				["Ruins of Auberdine"] = { Type = "Subzone", Music = SwampSong },
+				["Ruins of Lornesta"] = { Type = "Subzone", Music = WaterSong },
+				["Ruins of Mathystra"] = { Type = "Subzone", Music = PlagueSong },
+				["Shatterspear Pass"] = { Type = "Subzone", Music = BattleGround5 },
+				["Shatterspear Vale"] = { Type = "Subzone", Music = BattleGround5 },
+				["Shatterspear War Camp"] = { Type = "Subzone", Music = BattleGround5 },
+				["Tower of Althalaxx"] = { Type = "Subzone", Music = PlagueSong },
+				["Twilight Shore"] = { Type = "Subzone", Music = WaterSong },
+				["Twilight Vale"] = { Type = "Subzone", Music = ForestSong },
+				["The Veiled Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Wildbend River"] = { Type = "Subzone", Music = WaterSong },
+				["Withering Thicket"] = { Type = "Subzone", Music = ForestSong },
+				["Wreckage of the Silver Dawning"] = { Type = "Subzone", Music = LakeSong },
+			},
+			[ 63 ] = { -- Ashenvale	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Astranaar"] = { Type = "Town", Faction = "Alliance" },
+				["Blackfathom Camp"] = { Type = "Town", Faction = "Alliance" },
+				["Bolyun's Camp"] = { Type = "Town", Faction = "Alliance" },
+				["Forest Song"] = { Type = "Town", Faction = "Alliance" },
+				["House of Edune"] = { Type = "Town", Faction = "Alliance" },
+				["Maestra's Post"] = { Type = "Town", Faction = "Alliance" },
+				["Orendil's Retreat"] = { Type = "Town", Faction = "Alliance" },
+				["Raynewood Retreat"] = { Type = "Town", Faction = "Alliance" },
+				["Raynewood Tower"] = { Type = "Town", Faction = "Alliance" },
+				["Silverwing Outpost"] = { Type = "Town", Faction = "Alliance" },
+				["Stardust Spire"] = { Type = "Town", Faction = "Alliance" },
+				["The Shrine of Aessina"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Hellscream's Watch"] = { Type = "Town", Faction = "Horde" },
+				["Kargathia Keep"] = { Type = "Town", Faction = "Horde" },
+				["Silverwind Refuge"] = { Type = "Town", Faction = "Horde" },
+				["The Skunkworks"] = { Type = "Town", Faction = "Horde" },
+				["Splintertree Post"] = { Type = "Town", Faction = "Horde" },
+				["Warsong Labor Camp"] = { Type = "Town", Faction = "Horde" },
+				["Zoram'gar Outpost"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Bathran's Haunt"] = { Type = "Subzone", Music = ForestSong },
+				["Blackfathom Deeps"] = { Type = "Subzone", Music = WaterSong },
+				["Bloodtooth Camp"] = { Type = "Subzone", Music = ForestSong },
+				["Bough Shadow"] = { Type = "Subzone", Music = ForestSong },
+				["Demon Fall Canyon"] = { Type = "Subzone", Music = PlagueSong },
+				["Demon Fall Ridge"] = { Type = "Subzone", Music = PlagueSong },
+				["The Dor'Danil Barrow Den"] = { Type = "Subzone", Music = CaveSong },
+				["Falfarren River"] = { Type = "Subzone", Music = LakeSong },
+				["Fallen Sky Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Felfire Hill"] = { Type = "Subzone", Music = PlagueSong },
+				["Fire Scar Shrine"] = { Type = "Subzone", Music = ForestSong },
+				["Greenpaw Village"] = { Type = "Subzone", Music = ForestSong },
+				["The Howling Vale"] = { Type = "Subzone", Music = ForestSong },
+				["Remains of Iris Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Lake Falathim"] = { Type = "Subzone", Music = PlagueSong },
+				["Moonwell of Purity"] = { Type = "Subzone", Music = ForestSong },
+				["Moonwell of Cleansing"] = { Type = "Subzone", Music = ForestSong },
+				["The Mor'shan Rampart"] = { Type = "Subzone", Music = ForestSong },
+				["Mystral Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Night Run"] = { Type = "Subzone", Music = ForestSong },
+				["Nightsong Woods"] = { Type = "Subzone", Music = ForestSong },
+				["The Ruins of Ordil'Aran"] = { Type = "Subzone", Music = PlagueSong },
+				["Splintertree Mine"] = { Type = "Subzone", Music = CaveSong },
+				["The Ruins of Stardust"] = { Type = "Subzone", Music = ForestSong },
+				["Satyrnaar"] = { Type = "Subzone", Music = PlagueSong },
+				["The Shady Nook"] = { Type = "Subzone", Music = ForestSong },
+				["Silverwing Grove"] = { Type = "Subzone", Music = ForestSong },
+				["Southfury River"] = { Type = "Subzone", Music = WaterSong },
+				["The Talondeep Path"] = { Type = "Subzone", Music = ForestSong },
+				["Talondeep Pass"] = { Type = "Subzone", Music = ForestSong },
+				["Thistlefur Village"] = { Type = "Subzone", Music = ForestSong },
+				["Thistlefur Hold"] = { Type = "Subzone", Music = ForestSong },
+				["Thunder Peak"] = { Type = "Subzone", Music = ForestSong },
+				["Warsong Lumber Camp"] = { Type = "Subzone", Music = BattleGround1 },
+				["Xavian"] = { Type = "Subzone", Music = PlagueSong },
+				["The Zoram Strand"] = { Type = "Subzone", Music = WaterSong },
+				["Ruuzel's Isle"] = { Type = "Subzone", Music = WaterSong },
+			},
+			[ 64 ] = { -- Thousand Needles	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = LakeSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Horde:
+				["Westreach Summit"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Fizzle & Pozzik's Speedbarge"] = { Type = "Town", Faction = "Neutral" },
+				["Speedbarge Bar"] = { Type = "Town", Faction = "Neutral" },
+				["Freewind Post"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Darkcloud Pinnacle"] = { Type = "Subzone", Music = LandSong },
+				["Arikara's Needle"] = { Type = "Subzone", Music = LandSong },
+				["The Great Lift"] = { Type = "Subzone", Music = LandSong },
+				["Highperch"] = { Type = "Subzone", Music = ForestSong },
+				["Razorfen Downs"] = { Type = "Subzone", Music = LandSong },
+				["The Shimmering Deep"] = { Type = "Subzone", Music = LakeSong },
+				["Mirage Abyss"] = { Type = "Subzone", Music = LakeSong },
+				["Raceway Ruins"] = { Type = "Subzone", Music = LakeSong },
+				["Sunken Dig Site"] = { Type = "Subzone", Music = LakeSong },
+				["Southsea Holdfast"] = { Type = "Subzone", Music = LandSong },
+				["The Admiral's Den"] = { Type = "Subzone", Music = LandSong },
+				["Splithoof Crag"] = { Type = "Subzone", Music = LandSong },
+				["Splithoof Hold"] = { Type = "Subzone", Music = LandSong },
+				["Splithoof Heights"] = { Type = "Subzone", Music = LandSong },
+				["Tirth's Haunt"] = { Type = "Subzone", Music = WarySong },
+				["Twilight Aerie"] = { Type = "Subzone", Music = SwampSong },
+				["Twilight Bulwark"] = { Type = "Subzone", Music = SwampSong },
+				["The Twilight Withering"] = { Type = "Subzone", Music = SwampSong },
+				["Whitereach Post"] = { Type = "Subzone", Music = LandSong },
+			},
+			[ 65 ] = { -- Stonetalon Mountains	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = LandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Farwatcher's Glen"] = { Type = "Town", Faction = "Alliance" },
+				["Mirkfallon Post"] = { Type = "Town", Faction = "Alliance" },
+				["Northwatch Expedition Base Camp"] = { Type = "Town", Faction = "Alliance" },
+				["Thal'darah Overlook"] = { Type = "Town", Faction = "Alliance" },
+				["Windshear Hold"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Cliffwalker Post"] = { Type = "Town", Faction = "Horde" },
+				["The Fold"] = { Type = "Town", Faction = "Horde" },
+				["Krom'gar Fortress"] = { Type = "Town", Faction = "Horde" },
+				["Malaka'jin"] = { Type = "Town", Faction = "Horde" },
+				["The Sludgewerks"] = { Type = "Town", Faction = "Horde" },
+				["Sun Rock Retreat"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Battlescar Valley"] = { Type = "Subzone", Music = LandSong },
+				["Boulderslide Ravine"] = { Type = "Subzone", Music = ForestSong },
+				["Boulderslide Cavern"] = { Type = "Subzone", Music = CaveSong },
+				["Camp Aparaje"] = { Type = "Subzone", Music = ForestSong },
+				["The Charred Vale"] = { Type = "Subzone", Music = LandSong },
+				["Dagger Pass"] = { Type = "Subzone", Music = LandSong },
+				["The Deep Reaches"] = { Type = "Subzone", Music = CaveSong },
+				["Greatwood Vale"] = { Type = "Subzone", Music = ForestSong },
+				["Grimtotem Post"] = { Type = "Subzone", Music = ForestSong },
+				["Mirkfallon Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Sishir Canyon"] = { Type = "Subzone", Music = LandSong },
+				["Ruins of Eldre'thar"] = { Type = "Subzone", Music = ForestSong },
+				["Stonetalon Peak"] = { Type = "Subzone", Music = LandSong },
+				["The Talon Den"] = { Type = "Subzone", Music = CaveSong },
+				["Talondeep Pass"] = { Type = "Subzone", Music = LandSong },
+				["Thal'darah Grove"] = { Type = "Subzone", Music = ForestSong },
+				["Trueshot Point"] = { Type = "Subzone", Music = LandSong },
+				["Unearthed Grounds"] = { Type = "Subzone", Music = LandSong },
+				["Webwinder Hollow"] = { Type = "Subzone", Music = PlagueSong },
+				["Webwinder Path"] = { Type = "Subzone", Music = ForestSong },
+				["Windshear Crag"] = { Type = "Subzone", Music = LandSong },
+				["Blackwolf River"] = { Type = "Subzone", Music = LakeSong },
+				["Cragpool Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Windshear Heights"] = { Type = "Subzone", Music = LandSong },
+				["Windshear Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Windshear Valley"] = { Type = "Subzone", Music = LandSong },
+			},
+			[ 66 ] = { -- Desolace	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Nijel's Point"] = { Type = "Town", Faction = "Alliance" },
+				["Thargad's Camp"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Furien's Post"] = { Type = "Town", Faction = "Horde" },
+				["Shadowprey Village"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral
+				["Ethel Rethor"] = { Type = "Town", Faction = "Neutral" },
+				["Karnum's Glade"] = { Type = "Town", Faction = "Neutral" },
+				["Thunk's Abode"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Bolgan's Hole"] = { Type = "Subzone", Music = nil },
+				["Cenarion Wildlands"] = { Type = "Subzone", Music = nil },
+				["Gelkis Village"] = { Type = "Subzone", Music = nil },
+				["Ghost Walker Post"] = { Type = "Subzone", Music = nil },
+				["Kodo Graveyard"] = { Type = "Subzone", Music = nil },
+				["Magram Territory"] = { Type = "Subzone", Music = nil },
+				["Kormek's Hut"] = { Type = "Subzone", Music = nil },
+				["Shok'thokar"] = { Type = "Subzone", Music = nil },
+				["Mannoroc Coven"] = { Type = "Subzone", Music = nil },
+				["Ranazjar Isle"] = { Type = "Subzone", Music = nil },
+				["Sar'theris Strand"] = { Type = "Subzone", Music = nil },
+				["Sargeron"] = { Type = "Subzone", Music = nil },
+				["Scrabblescrew's Camp"] = { Type = "Subzone", Music = nil },
+				["Shadowbreak Ravine"] = { Type = "Subzone", Music = nil },
+				["Slitherblade Shore"] = { Type = "Subzone", Music = nil },
+				["Tethris Aran"] = { Type = "Subzone", Music = nil },
+				["Thunder Axe Fortress"] = { Type = "Subzone", Music = nil },
+				["Valley of Bones"] = { Type = "Subzone", Music = nil },
+				["Valley of Spears"] = { Type = "Subzone", Music = nil },
+				["Maraudon"] = { Type = "Subzone", Music = nil },
+				["The Veiled Sea"] = { Type = "Subzone", Music = nil },
+			},
+			[ 69 ] = { -- Feralas	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Dreamer's Rest"] = { Type = "Town", Faction = "Alliance" },
+				["Feathermoon Stronghold"] = { Type = "Town", Faction = "Alliance" },
+				["New Thalanaar"] = { Type = "Town", Faction = "Alliance" },
+				["Shadebough"] = { Type = "Town", Faction = "Alliance" },
+				["Tower of Estulan"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Camp Ataya"] = { Type = "Town", Faction = "Horde" },
+				["Camp Mojache"] = { Type = "Town", Faction = "Horde" },
+				["Stonemaul Hold"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Dire Maul"] = { Type = "Subzone", Music = nil },
+				["Broken Commons"] = { Type = "Subzone", Music = nil },
+				["Eldreth Row"] = { Type = "Subzone", Music = nil },
+				["The Maul"] = { Type = "Subzone", Music = nil },
+				["The Forgotten Coast"] = { Type = "Subzone", Music = nil },
+				["Gordunni Outpost"] = { Type = "Subzone", Music = nil },
+				["Grimtotem Compound"] = { Type = "Subzone", Music = nil },
+				["High Wilderness"] = { Type = "Subzone", Music = nil },
+				["Feral Scar Vale"] = { Type = "Subzone", Music = nil },
+				["Frayfeather Highlands"] = { Type = "Subzone", Music = nil },
+				["Ruins of Isildien"] = { Type = "Subzone", Music = nil },
+				["Jademir Lake"] = { Type = "Subzone", Music = nil },
+				["Dream Bough Lake"] = { Type = "Subzone", Music = nil },
+				["Dumont Lariss Pavilion"] = { Type = "Subzone", Music = nil },
+				["Lower Wilds"] = { Type = "Subzone", Music = nil },
+				["The Emerald Summit"] = { Type = "Subzone", Music = nil },
+				["Oneiros"] = { Type = "Subzone", Music = nil },
+				["Rage Scar Hold"] = { Type = "Subzone", Music = nil },
+				["Ruins of Ravenwind"] = { Type = "Subzone", Music = nil },
+				["Ruins of Solarsal"] = { Type = "Subzone", Music = nil },
+				["Sardor Isle"] = { Type = "Subzone", Music = nil },
+				["Ruins of Feathermoon"] = { Type = "Subzone", Music = nil },
+				["The Steam Pools"] = { Type = "Subzone", Music = nil },
+				["The Twin Colossals"] = { Type = "Subzone", Music = nil },
+				["The Veiled Sea"] = { Type = "Subzone", Music = nil },
+				["Verdantis River"] = { Type = "Subzone", Music = nil },
+				["Wildwind Lake"] = { Type = "Subzone", Music = nil },
+				["Woodpaw Hills"] = { Type = "Subzone", Music = nil },
+				["Darkmist Ruins"] = { Type = "Subzone", Music = nil },
+				["Woodpaw Den"] = { Type = "Subzone", Music = nil },
+				["The Writhing Deep"] = { Type = "Subzone", Music = nil },
+			},
+			[ 70 ] = { -- Dustwallow Marsh	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SwampSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Theramore Isle"] = { Type = "Town", Faction = "Alliance" },
+				["Foothold Citadel"] = { Type = "Town", Faction = "Alliance" },
+				["North Point Tower"] = { Type = "Town", Faction = "Alliance" },
+				["Sentry Point"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Brackenwall Village"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Mudsprocket"] = { Type = "Town", Faction = "Neutral" },
+				["Tabetha's Farm"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Alcaz Island"] = { Type = "Subzone", Music = ForestSong },
+				["Blackhoof Village"] = { Type = "Subzone", Music = Alliance10Town },
+				["Bloodfen Burrow"] = { Type = "Subzone", Music = SwampSong },
+				["Bluefen"] = { Type = "Subzone", Music = SwampSong },
+				["Darkmist Cavern"] = { Type = "Subzone", Music = CaveSong },
+				["The Dragonmurk"] = { Type = "Subzone", Music = SwampSong },
+				["The Den of Flame"] = { Type = "Subzone", Music = SwampSong },
+				["Stonemaul Ruins"] = { Type = "Subzone", Music = SwampSong },
+				["Dreadmurk Shore"] = { Type = "Subzone", Music = WaterSong },
+				["Dustwallow Bay"] = { Type = "Subzone", Music = WaterSong },
+				["Nat's Landing"] = { Type = "Subzone", Music = BeachSong },
+				["Tidefury Cove"] = { Type = "Subzone", Music = WaterSong },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Lost Point"] = { Type = "Subzone", Music = SwampSong },
+				["The Quagmire"] = { Type = "Subzone", Music = SwampSong },
+				["Beezil's Wreck"] = { Type = "Subzone", Music = SwampSong },
+				["Direhorn Post"] = { Type = "Subzone", Music = Alliance10Town },
+				["Shady Rest Inn"] = { Type = "Subzone", Music = DeadSong },
+				["Witch Hill"] = { Type = "Subzone", Music = SwampSong },
+				["Swamplight Manor"] = { Type = "Subzone", Music = WarySong },
+				["Wyrmbog"] = { Type = "Subzone", Music = SwampSong },
+				["Emberstrife's Den"] = { Type = "Subzone", Music = CaveSong },
+				["Onyxia's Lair"] = { Type = "Subzone", Music = CaveSong },
+			},
+			[ 71 ] = { -- Tanaris	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Gunstan's Dig"] = { Type = "Town", Faction = "Alliance" },
+				["Steelspark Station"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Dawnrise Expedition"] = { Type = "Town", Faction = "Horde" },
+				["Dunemaul Recruitment Camp"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Bootlegger Outpost"] = { Type = "Town", Faction = "Neutral" },
+				["Gadgetzan"] = { Type = "Town", Faction = "Neutral" },
+				["The Road Warrior"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Abyssal Sands"] = { Type = "Subzone", Music = SandSong },
+				["Broken Pillar"] = { Type = "Subzone", Music = SandSong },
+				["Caverns of Time"] = { Type = "Subzone", Music = WarySong },
+				["The Deserted Workshop"] = { Type = "Subzone", Music = SandSong },
+				["Dunemaul Compound"] = { Type = "Subzone", Music = SandSong },
+				["Eastmoon Ruins"] = { Type = "Subzone", Music = SandSong },
+				["The Gaping Chasm"] = { Type = "Subzone", Music = SwampSong },
+				["Land's End Beach"] = { Type = "Subzone", Music = BeachSong },
+				["Lost Rigger Cove"] = { Type = "Subzone", Music = BattleGround1 },
+				["Noonshade Ruins"] = { Type = "Subzone", Music = LakeSong },
+				["The Noxious Lair"] = { Type = "Subzone", Music = SwampSong },
+				["Sandsorrow Watch"] = { Type = "Subzone", Music = SandSong },
+				["South Seas"] = { Type = "Subzone", Music = WaterSong },
+				["Southbreak Shore"] = { Type = "Subzone", Music = BeachSong },
+				["Southmoon Ruins"] = { Type = "Subzone", Music = SandSong },
+				["Steamwheedle Port"] = { Type = "Subzone", Music = LakeSong },
+				["Thistleshrub Valley"] = { Type = "Subzone", Music = SandSong },
+				["Valley of the Watchers"] = { Type = "Subzone", Music = SandSong },
+				["Ruins of Uldum"] = { Type = "Subzone", Music = WarySong },
+				["Waterspring Field"] = { Type = "Subzone", Music = LakeSong },
+				["Wavestrider Beach"] = { Type = "Subzone", Music = BeachSong },
+				["Zalashji's Den"] = { Type = "Subzone", Music = LakeSong },
+				["Zul'Farrak"] = { Type = "Subzone", Music = SandSong },
+			},
+			[ 76 ] = { -- Azshara	-	Kalimdor
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Horde:
+				["Bilgewater Harbor"] = { Type = "Town", Faction = "Horde" },
+				["Gallywix Pleasure Palace"] = { Type = "Town", Faction = "Horde" },
+				["Northern Rocketway Exchange"] = { Type = "Town", Faction = "Horde" },
+				["Orgrimmar Rear Gate"] = { Type = "Town", Faction = "Horde" },
+				["Orgrimmar Rocketway Exchange"] = { Type = "Town", Faction = "Horde" },
+				["The Secret Lab"] = { Type = "Town", Faction = "Horde" },
+				["Southern Rocketway Terminus"] = { Type = "Town", Faction = "Horde" },
+				["Valormok"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["The Ancient Grove"] = { Type = "Subzone", Music = nil },
+				["Arcane Pinnacle"] = { Type = "Subzone", Music = nil },
+				["Bay of Storms"] = { Type = "Subzone", Music = nil },
+				["Hetaera's Clutch"] = { Type = "Subzone", Music = nil },
+				["Scalebeard's Cave"] = { Type = "Subzone", Music = nil },
+				["Bear's Head"] = { Type = "Subzone", Music = nil },
+				["Bitter Reaches"] = { Type = "Subzone", Music = nil },
+				["Blackmaw Hold"] = { Type = "Subzone", Music = nil },
+				["Darnassian Base Camp"] = { Type = "Subzone", Music = nil },
+				["Forlorn Ridge"] = { Type = "Subzone", Music = nil },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Haldarr Encampment"] = { Type = "Subzone", Music = nil },
+				["Hull of the Foebreaker"] = { Type = "Subzone", Music = nil },
+				["Jagged Reef"] = { Type = "Subzone", Music = nil },
+				["Lake Mennar"] = { Type = "Subzone", Music = nil },
+				["Legash Encampment"] = { Type = "Subzone", Music = nil },
+				["Mountainfoot Strip Mine"] = { Type = "Subzone", Music = nil },
+				["Ravencrest Monument"] = { Type = "Subzone", Music = nil },
+				["Ruins of Arkkoran"] = { Type = "Subzone", Music = nil },
+				["Ruins of Eldarath"] = { Type = "Subzone", Music = nil },
+				["Temple of Zin-Malor"] = { Type = "Subzone", Music = nil },
+				["Ruins of Nordressa"] = { Type = "Subzone", Music = nil },
+				["The Ruined Reaches"] = { Type = "Subzone", Music = nil },
+				["Rethress Sanctum"] = { Type = "Subzone", Music = nil },
+				["Sable Ridge"] = { Type = "Subzone", Music = nil },
+				["Scalebeard's Cave"] = { Type = "Subzone", Music = nil },
+				["Shadowsong Shrine"] = { Type = "Subzone", Music = nil },
+				["The Shattered Strand"] = { Type = "Subzone", Music = nil },
+				["Southfury River"] = { Type = "Subzone", Music = nil },
+				["Southridge Beach"] = { Type = "Subzone", Music = nil },
+				["Storm Cliffs"] = { Type = "Subzone", Music = nil },
+				["Talrendis Point"] = { Type = "Subzone", Music = nil },
+				["Timbermaw Hold"] = { Type = "Subzone", Music = nil },
+				["Tower of Eldara"] = { Type = "Subzone", Music = nil },
+				["Trial of Fire"] = { Type = "Subzone", Music = nil },
+				["Trial of Frost"] = { Type = "Subzone", Music = nil },
+				["Trial of Shadow"] = { Type = "Subzone", Music = nil },
+				["Ursolan"] = { Type = "Subzone", Music = nil },
+			},
+			[ 77 ] = { -- Felwood	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SwampSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Talonbranch Glade"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Irontree Clearing"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral
+				["Emerald Sanctuary"] = { Type = "Town", Faction = "Neutral" },
+				["Whisperwind Grove"] = { Type = "Town", Faction = "Neutral" },
+				["Wildheart Point"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Bloodvenom Falls"] = { Type = "Subzone", Music = nil },
+				["Bloodvenom Post"] = { Type = "Subzone", Music = nil },
+				["Bloodvenom River"] = { Type = "Subzone", Music = nil },
+				["Deadwood Village"] = { Type = "Subzone", Music = nil },
+				["Felpaw Village"] = { Type = "Subzone", Music = nil },
+				["Irontree Woods"] = { Type = "Subzone", Music = nil },
+				["Irontree Cavern"] = { Type = "Subzone", Music = nil },
+				["Jadefire Glen"] = { Type = "Subzone", Music = nil },
+				["Jadefire Run"] = { Type = "Subzone", Music = nil },
+				["Jaedenar"] = { Type = "Subzone", Music = nil },
+				["Shadow Hold"] = { Type = "Subzone", Music = nil },
+				["Shrine of the Deceiver"] = { Type = "Subzone", Music = nil },
+				["Morlos'Aran"] = { Type = "Subzone", Music = nil },
+				["Ruins of Constellas"] = { Type = "Subzone", Music = nil },
+				["Shadowlurk Ridge"] = { Type = "Subzone", Music = nil },
+				["Shatter Scar Vale"] = { Type = "Subzone", Music = nil },
+				["Timbermaw Hold"] = { Type = "Subzone", Music = nil },
+			},
+			[ 78 ] = { -- Un'Goro Crater	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SwampSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Neutral:
+				["Marshal's Stand"] = { Type = "Town", Faction = "Neutral" },
+				["Mossy Pile"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Fire Plume Ridge"] = { Type = "Subzone", Music = nil },
+				["Fungal Rock"] = { Type = "Subzone", Music = nil },
+				["Golakka Hot Springs"] = { Type = "Subzone", Music = nil },
+				["Ironstone Plateau"] = { Type = "Subzone", Music = nil },
+				["Lakkari Tar Pits"] = { Type = "Subzone", Music = nil },
+				["Marshal's Refuge"] = { Type = "Subzone", Music = nil },
+				["The Marshlands"] = { Type = "Subzone", Music = nil },
+				["The Roiling Gardens"] = { Type = "Subzone", Music = nil },
+				["The Screaming Reaches"] = { Type = "Subzone", Music = nil },
+				["The Shaper's Terrace"] = { Type = "Subzone", Music = nil },
+				["The Slithering Scar"] = { Type = "Subzone", Music = nil },
+				["Terror Run"] = { Type = "Subzone", Music = nil },
+				["Waygate"] = { Type = "Subzone", Music = nil },
+			},
+			[ 80 ] = { -- Moonglade	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Neutral:
+				["Nighthaven"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Lake Elune'ara"] = { Type = "Subzone", Music = LakeSong },
+				["Shrine of Remulos"] = { Type = "Subzone", Music = nil },
+				["Stormrage Barrow Dens"] = { Type = "Subzone", Music = nil },
+				["Timbermaw Hold"] = { Type = "Subzone", Music = CaveSong },
+			},
+			[ 81 ] = { -- Silithus	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Staghelm Point"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Southwind Village"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Cenarion Hold"] = { Type = "Town", Faction = "Neutral" },
+				["The Oasis Inn"] = { Type = "Town", Faction = "Neutral" },
+				["Magni's Encampment"] = { Type = "Town", Faction = "Neutral" },
+				["Valor's Rest"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Bones of Grakkarond"] = { Type = "Subzone", Music = nil },
+				["Chamber of the Heart"] = { Type = "Subzone", Music = FriendlySong },
+				["The Crystal Vale"] = { Type = "Subzone", Music = nil },
+				["Ravaged Twilight Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Hive'Ashi"] = { Type = "Subzone", Music = nil },
+				["Hive'Regal"] = { Type = "Subzone", Music = nil },
+				["Hive'Zora"] = { Type = "Subzone", Music = nil },
+				["The Scarab Wall"] = { Type = "Subzone", Music = nil },
+				["The Scarab Dais"] = { Type = "Subzone", Music = nil },
+				["Silithus: The Wound"] = { Type = "Subzone", Music = nil },
+				["The Swarming Pillar"] = { Type = "Subzone", Music = nil },
+				["Twilight Base Camp"] = { Type = "Subzone", Music = SwampSong },
+				["Twilight Outpost"] = { Type = "Subzone", Music = SwampSong },
+				["Twilight Post"] = { Type = "Subzone", Music = nil },
+				["The Veiled Sea"] = { Type = "Subzone", Music = WaterSong },
+			},
+			[ 83 ] = { -- Winterspring	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SnowSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Starfall Village"] = { Type = "Town", Faction = "Alliance" },
+				--	Neutral:
+				["Everlook"] = { Type = "Town", Faction = "Neutral" },
+				["The Laughing Yeti"] = { Type = "Town", Faction = "Neutral" },
+				["Goodgrub Smoking Pit"] = { Type = "Town", Faction = "Neutral" },
+				["Snowden Chalet"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Ban'Thallow Barrow Den"] = { Type = "Subzone", Music = nil },
+				["Caverns of Consumption"] = { Type = "Subzone", Music = nil },
+				["Dun Mandarr"] = { Type = "Subzone", Music = nil },
+				["Frostfire Hot Springs"] = { Type = "Subzone", Music = nil },
+				["Frostsaber Rock"] = { Type = "Subzone", Music = nil },
+				["Frostwhisper Gorge"] = { Type = "Subzone", Music = nil },
+				["The Hidden Grove"] = { Type = "Subzone", Music = nil },
+				["Ice Thistle Hills"] = { Type = "Subzone", Music = nil },
+				["Lake Kel'Theril"] = { Type = "Subzone", Music = nil },
+				["Mazthoril"] = { Type = "Subzone", Music = nil },
+				["Beryl Egress"] = { Type = "Subzone", Music = nil },
+				["Moon Horror Den"] = { Type = "Subzone", Music = nil },
+				["Owl Wing Thicket"] = { Type = "Subzone", Music = nil },
+				["The Ruins of Kel'Theril"] = { Type = "Subzone", Music = nil },
+				["Timbermaw Post"] = { Type = "Subzone", Music = nil },
+				["Winterfall Village"] = { Type = "Subzone", Music = nil },
+			},
+			[ 84 ] = { -- Stormwind City	-	Eastern Kingdoms
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = StormwindCitySong,
+				Sleep = false,
+				Swim = 1,
+				--	SUBZONES:
+				["The Canals"] = { Type = "Capital", Music = StormwindCitySong },
+				["Cathedral Square"] = { Type = "Capital", Music = StormwindCitySong },
+				["Cathedral of Light"] = { Type = "Capital", Music = StormwindCitySong },
+				["Deeprun Tram"] = { Type = "Subzone", Music = LakeSong },
+				["Bizmo's Brawlpub"] = { Type = "Subzone", Music = BattleGround2 },
+				["Dwarven District"] = { Type = "Capital", Music = StormwindCitySong },
+				["Cut-Throat Alley"] = { Type = "Capital", Music = StormwindCitySong },
+				["Mage Quarter"] = { Type = "Capital", Music = StormwindCitySong },
+				["The Slaughtered Lamb"] = { Type = "Capital", Music = StormwindCitySong },
+				["Wizard's Sanctum"] = { Type = "Capital", Music = StormwindCitySong },
+				["The Old Barracks"] = { Type = "Capital", Music = StormwindCitySong },
+				["Old Town"] = { Type = "Capital", Music = StormwindCitySong },
+				["Champions' Hall"] = { Type = "Capital", Music = StormwindCitySong },
+				["Command Center"] = { Type = "Capital", Music = StormwindCitySong },
+				["SI:7"] = { Type = "Capital", Music = StormwindCitySong },
+				["Stormwind City Cemetery"] = { Type = "Capital", Music = StormwindCitySong },
+				["Stormwind City Outskirts"] = { Type = "Capital", Music = StormwindCitySong },
+				["Lion's Rest"] = { Type = "Capital", Music = StormwindCitySong },
+				["Olivia's Pond"] = { Type = "Capital", Music = StormwindCitySong },
+				["The Wollerton Stead"] = { Type = "Capital", Music = StormwindCitySong },
+				["The Eastern Earthshrine"] = { Type = "Capital", Music = StormwindCitySong },
+				["Stormwind Harbor"] = { Type = "Capital", Music = StormwindCitySong },
+				["Stormwind Keep"] = { Type = "Capital", Music = StormwindCitySong },
+				["Petitioner's Chamber"] = { Type = "Capital", Music = StormwindCitySong },
+				["Royal Gallery"] = { Type = "Capital", Music = StormwindCitySong },
+				["Royal Library"] = { Type = "Capital", Music = StormwindCitySong },
+				["War Room"] = { Type = "Capital", Music = StormwindCitySong },
+				["Stormwind Lake"] = { Type = "Capital", Music = StormwindCitySong },
+				["Trade District"] = { Type = "Capital", Music = StormwindCitySong },
+				["Gryphon Roost"] = { Type = "Capital", Music = StormwindCitySong },
+				["Valley of Heroes"] = { Type = "Capital", Music = StormwindCitySong },
+			},
+			[ 85 ] = { -- Orgrimmar	-	Kalimdor
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = OrgrimmarSong,
+				Sleep = false,
+				Swim = 1,
+				--	SUBZONES:
+				["Cleft of Shadow"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Ragefire Chasm"] = { Type = "Capital", Music = OrgrimmarSong },
+				["The Drag"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Gates of Orgrimmar"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Engineering Works"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Hall of Legends"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Valley of Honor"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Hall of the Brave"] = { Type = "Capital", Music = OrgrimmarSong },
+				["The Ring of Valor"] = { Type = "Capital", Music = OrgrimmarSong },
+				["The Wyvern's Tail"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Valley of Spirits"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Valley of Strength"] = { Type = "Capital", Music = OrgrimmarSong },
+				["The Broken Tusk"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Grommash Hold"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Valley of Wisdom"] = { Type = "Capital", Music = OrgrimmarSong },
+				["Miwana's Longhouse"] = { Type = "Capital", Music = OrgrimmarSong },
+				["The Western Earthshrine"] = { Type = "Capital", Music = OrgrimmarSong },
+			},
+			[ 87 ] = { -- Ironforge	-	Eastern Kingdoms
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = IronforgeSong,
+				Sleep = false,
+				Swim = 1,
+				--	SUBZONES:
+				["The Commons"] = { Type = "Capital", Music = IronforgeSong },
+				["The Stonefire Tavern"] = { Type = "Capital", Music = IronforgeSong },
+				["Vault of Ironforge"] = { Type = "Capital", Music = IronforgeSong },
+				["The Forlorn Cavern"] = { Type = "Capital", Music = IronforgeSong },
+				["Gates of Ironforge"] = { Type = "Capital", Music = IronforgeSong },
+				["The Great Forge"] = { Type = "Capital", Music = IronforgeSong },
+				["The High Seat"] = { Type = "Capital", Music = IronforgeSong },
+				["Cask 'n' Anvil"] = { Type = "Capital", Music = IronforgeSong },
+				["Hall of Explorers"] = { Type = "Capital", Music = IronforgeSong },
+				["The Library"] = { Type = "Capital", Music = IronforgeSong },
+				["The Military Ward"] = { Type = "Capital", Music = IronforgeSong },
+				["Hall of Arms"] = { Type = "Capital", Music = IronforgeSong },
+				["The Mystic Ward"] = { Type = "Capital", Music = IronforgeSong },
+				["Hall of Mysteries"] = { Type = "Capital", Music = IronforgeSong },
+				["Old Ironforge"] = { Type = "Capital", Music = IronforgeSong },
+				["Tinker Town"] = { Type = "Capital", Music = IronforgeSong },
+				["Deeprun Tram"] = { Type = "Capital", Music = IronforgeSong },
+			},
+			[ 88 ] = { -- Thunder Bluff	-	Kalimdor
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = ThunderBluffSong,
+				Sleep = false,
+				Swim = 1,
+				--	SUBZONES:
+				["Elder Rise"] = { Type = "Capital", Music = ThunderBluffSong },
+				["Hunter Rise"] = { Type = "Capital", Music = ThunderBluffSong },
+				["Spirit Rise"] = { Type = "Capital", Music = ThunderBluffSong },
+				["The Pools of Vision"] = { Type = "Capital", Music = ThunderBluffSong },
+			},
+			[ 89 ] = { -- Darnassus	-	Kalimdor
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = DarnassusSong,
+				Sleep = false,
+				Swim = 1,
+				--	SUBZONES:
+				["Cenarion Enclave"] = { Type = "Capital", Music = DarnassusSong },
+				["Craftsmen's Terrace"] = { Type = "Capital", Music = DarnassusSong },
+				["Howling Oak"] = { Type = "Capital", Music = DarnassusSong },
+				["The Temple Gardens"] = { Type = "Capital", Music = DarnassusSong },
+				["The Temple of the Moon"] = { Type = "Capital", Music = DarnassusSong },
+				["Tradesmen's Terrace"] = { Type = "Capital", Music = DarnassusSong },
+				["Warrior's Terrace"] = { Type = "Capital", Music = DarnassusSong },
+			},
+			[ 90 ] = { -- Undercity	-	Eastern Kingdoms
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = UndercitySong,
+				Sleep = false,
+				Swim = 2,
+				--	SUBZONES:
+				["Apothecarium"] = { Type = "Capital", Music = UndercitySong },
+				["Canals"] = { Type = "Capital", Music = UndercitySong },
+				["Magic Quarter"] = { Type = "Capital", Music = UndercitySong },
+				["Rogues' Quarter"] = { Type = "Capital", Music = UndercitySong },
+				["Royal Quarter"] = { Type = "Capital", Music = UndercitySong },
+				["Ruins of Lordaeron"] = { Type = "Capital", Music = UndercitySong },
+				["Sewers"] = { Type = "Capital", Music = UndercitySong },
+				["Trade Quarter"] = { Type = "Capital", Music = UndercitySong },
+				["War Quarter"] = { Type = "Capital", Music = UndercitySong },
+			},
+			[ 94 ] = { -- Eversong Woods	-	Eastern Kingdoms
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Horde:
+				["Fairbreeze Village"] = { Type = "Town", Faction = "Horde" },
+				["Falconwing Square"] = { Type = "Town", Faction = "Horde" },
+				["Farstrider Retreat"] = { Type = "Town", Faction = "Horde" },
+				["Saltheril's Haven"] = { Type = "Town", Faction = "Horde" },
+				["Thuron's Livery"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Azurebreeze Coast"] = { Type = "Subzone", Music = WaterSong },
+				["The Dead Scar"] = { Type = "Subzone", Music = SwampSong },
+				["Duskwither Ground"] = { Type = "Subzone", Music = ForestSong },
+				["Duskwither Spire"] = { Type = "Subzone", Music = ForestSong },
+				["East Sanctum"] = { Type = "Subzone", Music = SwampSong },
+				["Elrendar Falls"] = { Type = "Subzone", Music = LakeSong },
+				["Golden Strand"] = { Type = "Subzone", Music = WaterSong },
+				["Goldenbough Pass"] = { Type = "Subzone", Music = ForestSong },
+				["Huntress of the Sun"] = { Type = "Subzone", Music = PlagueSong },
+				["Lake Elrendar"] = { Type = "Subzone", Music = LakeSong },
+				["The Living Wood"] = { Type = "Subzone", Music = ForestSong },
+				["North Sanctum"] = { Type = "Subzone", Music = ForestSong },
+				["Ruins of Silvermoon"] = { Type = "Subzone", Music = PlagueSong },
+				["Commons Hall"] = { Type = "Subzone", Music = PlagueSong },
+				["Dawning Lane"] = { Type = "Subzone", Music = Misc1Song },
+				["Feth's Way"] = { Type = "Subzone", Music = PlagueSong },
+				["Skulking Row"] = { Type = "Subzone", Music = PlagueSong },
+				["Runestone Falithas"] = { Type = "Subzone", Music = PlagueSong },
+				["Runestone Shan'dor"] = { Type = "Subzone", Music = PlagueSong },
+				["Sunsail Anchorage"] = { Type = "Subzone", Music = LakeSong },
+				["The Scorched Grove"] = { Type = "Subzone", Music = SwampSong },
+				["The Shepherd's Gate"] = { Type = "Subzone", Music = SilvermoonCitySong },
+				["Stillwhisper Pond"] = { Type = "Subzone", Music = LakeSong },
+				["Tor'Watha"] = { Type = "Subzone", Music = LandSong },
+				["Tranquil Shore"] = { Type = "Subzone", Music = WaterSong },
+				["West Sanctum"] = { Type = "Subzone", Music = ForestSong },
+				["Zeb'Watha"] = { Type = "Subzone", Music = LandSong },
+			},
+			[ 95 ] = { -- Ghostlands	-	Eastern Kingdoms
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = PlagueSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Horde:
+				["Farstrider Enclave"] = { Type = "Town", Faction = "Horde" },
+				["Sanctum of the Sun"] = { Type = "Town", Faction = "Horde" },
+				["Tranquillien"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Amani Catacombs"] = { Type = "Subzone", Music = LandSong },
+				["Amani Mountains"] = { Type = "Subzone", Music = LandSong },
+				["Amani Pass"] = { Type = "Subzone", Music = LandSong },
+				["Andilien Estate"] = { Type = "Subzone", Music = PlagueSong },
+				["An'daroth"] = { Type = "Subzone", Music = PlagueSong },
+				["An'owyn"] = { Type = "Subzone", Music = PlagueSong },
+				["An'telas"] = { Type = "Subzone", Music = PlagueSong },
+				["Bleeding Ziggurat"] = { Type = "Subzone", Music = PlagueSong },
+				["Dawnstar Spire"] = { Type = "Subzone", Music = PlagueSong },
+				["The Dead Scar"] = { Type = "Subzone", Music = SwampSong },
+				["Deatholme"] = { Type = "Subzone", Music = SwampSong },
+				["Elrendar Crossing"] = { Type = "Subzone", Music = WaterSong },
+				["Elrendar River"] = { Type = "Subzone", Music = WaterSong },
+				["Goldenmist Village"] = { Type = "Subzone", Music = PlagueSong },
+				["Hatchet Hills"] = { Type = "Subzone", Music = PlagueSong },
+				["Howling Ziggurat"] = { Type = "Subzone", Music = PlagueSong },
+				["Isle of Tribulations"] = { Type = "Subzone", Music = PlagueSong },
+				["Lake Elrendar"] = { Type = "Subzone", Music = LakeSong },
+				["Sanctum of the Moon"] = { Type = "Subzone", Music = PlagueSong },
+				["Shalandis Isle"] = { Type = "Subzone", Music = DarnassusSong },
+				["Suncrown Village"] = { Type = "Subzone", Music = PlagueSong },
+				["Sungraze Peak"] = { Type = "Subzone", Music = PlagueSong },
+				["Thalassian Pass"] = { Type = "Subzone", Music = PlagueSong },
+				["Thalassian Range"] = { Type = "Subzone", Music = PlagueSong },
+				["Tower of the Damned"] = { Type = "Subzone", Music = PlagueSong },
+				["Underlight Mines"] = { Type = "Subzone", Music = PlagueSong },
+				["Windrunner Spire"] = { Type = "Subzone", Music = PlagueSong },
+				["Windrunner Village"] = { Type = "Subzone", Music = PlagueSong },
+				["Zeb'Nowa"] = { Type = "Subzone", Music = LandSong },
+				["Zeb'Sora"] = { Type = "Subzone", Music = LandSong },
+				["Zeb'Tela"] = { Type = "Subzone", Music = LandSong },
+			},
+			[ 97 ] = { -- Azuremyst Isle	-	Kalimdor
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Azure Watch"] = { Type = "Town", Faction = "Alliance" },
+				["Odesyus' Landing"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Ammen Ford"] = { Type = "Subzone", Music = nil },
+				["Bristlelimb Village"] = { Type = "Subzone", Music = HostileSong },
+				["Emberglade"] = { Type = "Subzone", Music = nil },
+				["Fairbridge Strand"] = { Type = "Subzone", Music = BeachSong },
+				["Geezle's Camp"] = { Type = "Subzone", Music = HostileSong },
+				["Menagerie Wreckage"] = { Type = "Subzone", Music = nil },
+				["Moongraze Woods"] = { Type = "Subzone", Music = ForestSong },
+				["Moonwing Den"] = { Type = "Subzone", Music = nil },
+				["Pod Cluster"] = { Type = "Subzone", Music = PlagueSong },
+				["Pod Wreckage"] = { Type = "Subzone", Music = PlagueSong },
+				["The Sacred Grove"] = { Type = "Subzone", Music = nil },
+				["Silting Shore"] = { Type = "Subzone", Music = WaterSong },
+				["Silvermyst Isle"] = { Type = "Subzone", Music = nil },
+				["Stillpine Hold"] = { Type = "Subzone", Music = Alliance10Town },
+				["The Veiled Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Tides' Hollow"] = { Type = "Subzone", Music = WarySong },
+				["Traitor's Cove"] = { Type = "Subzone", Music = WarySong },
+				["Valaar's Berth"] = { Type = "Subzone", Music = nil },
+				["Wildwind Path"] = { Type = "Subzone", Music = nil },
+				["Wildwind Peak"] = { Type = "Subzone", Music = nil },
+				["Wrathscale Point"] = { Type = "Subzone", Music = WarySong },
+			},
+			[ 100 ] = nil, -- Hellfire Peninsula	-	Outland
+			[ 102 ] = nil, -- Zangarmarsh	-	Outland
+			[ 103 ] = { -- The Exodar	-	Kalimdor
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = ExodarSong,
+				Sleep = false,
+				Swim = 1,
+				--	SUBZONES:
+				["The Crystal Hall"] = { Type = "Capital", Music = ExodarSong },
+				["Seat of the Naaru"] = { Type = "Capital", Music = ExodarSong },
+				["The Exobar"] = { Type = "Capital", Music = ExodarSong },
+				["Traders' Tier"] = { Type = "Capital", Music = ExodarSong },
+				["The Vault of Lights"] = { Type = "Capital", Music = ExodarSong },
+			},
+			[ 104 ] = nil, -- Shadowmoon Valley	-	Outland
+			[ 105 ] = nil, -- Blade's Edge Mountains	-	Outland
+			[ 106 ] = { -- Bloodmyst Isle	-	Kalimdor
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = PlagueSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Blood Watch"] = { Type = "Town", Faction = "Alliance" },
+				["Kessel's Crossing"] = { Type = "Town", Faction = "Alliance" },
+				["Vindicator's Rest"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Amberweb Pass"] = { Type = "Subzone", Music = nil },
+				["Axxarien"] = { Type = "Subzone", Music = nil },
+				["Beryl Coast"] = { Type = "Subzone", Music = PlagueSong },
+				["Blacksilt Shore"] = { Type = "Subzone", Music = PlagueSong },
+				["Bladewood"] = { Type = "Subzone", Music = HostileSong },
+				["Bloodcurse Isle"] = { Type = "Subzone", Music = nil },
+				["The Bloodcursed Reef"] = { Type = "Subzone", Music = PlagueSong },
+				["The Bloodwash"] = { Type = "Subzone", Music = PlagueSong },
+				["Bristlelimb Enclave"] = { Type = "Subzone", Music = HostileSong },
+				["The Crimson Reach"] = { Type = "Subzone", Music = nil },
+				["The Cryo-Core"] = { Type = "Subzone", Music = nil },
+				["The Foul Pool"] = { Type = "Subzone", Music = nil },
+				["The Hidden Reef"] = { Type = "Subzone", Music = PlagueSong },
+				["The Lost Fold"] = { Type = "Subzone", Music = PlagueSong },
+				["Middenvale"] = { Type = "Subzone", Music = PlagueSong },
+				["Mystwood"] = { Type = "Subzone", Music = nil },
+				["Nazzivian"] = { Type = "Subzone", Music = HostileSong },
+				["Ragefeather Ridge"] = { Type = "Subzone", Music = nil },
+				["Ruins of Loreth'Aran"] = { Type = "Subzone", Music = WarySong },
+				["Talon Stand"] = { Type = "Subzone", Music = nil },
+				["Tel'athion's Camp"] = { Type = "Subzone", Music = nil },
+				["The Veiled Sea"] = { Type = "Subzone", Music = WaterSong },
+				["The Vector Coil"] = { Type = "Subzone", Music = nil },
+				["Veridian Point"] = { Type = "Subzone", Music = nil },
+				["The Warp Piston"] = { Type = "Subzone", Music = nil },
+				["Wrathscale Lair"] = { Type = "Subzone", Music = WarySong },
+				["Wyrmscar Island"] = { Type = "Subzone", Music = nil },
+			},
+			[ 107 ] = nil, -- Nagrand	-	Outland
+			[ 108 ] = nil, -- Terokkar Forest	-	Outland
+			[ 109 ] = nil, -- Netherstorm	-	Outland
+			[ 110 ] = { -- Silvermoon City	-	Eastern Kingdoms
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = SilvermoonCitySong,
+				Sleep = false,
+				Swim = 1,
+				--	SUBZONES:
+				["The Bazaar"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["The Bank of Silvermoon"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Blades & Axes"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["General Goods"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Keelen's Trustworthy Tailoring"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Shields of Silver"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Silvermoon Finery"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Court of the Sun"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Sunfury Spire"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Inner Sanctum"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Farstriders' Square"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["The Hall of Blood"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["The Rangers' Lodge"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Murder Row"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["The Sanctum"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["The Royal Exchange"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["The Hall of Respite"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Silvermoon Jewelery"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["The Reliquary"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Royal Exchange Auction House"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Royal Exchange Bank"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Silvermoon City Inn"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["The Shepherd's Gate"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Walk of Elders"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Silvermoon Registry"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Velaani's Arcane Goods"] = { Type = "Capital", Music = SilvermoonCitySong },
+				["Wayfarer's Rest"] = { Type = "Capital", Music = SilvermoonCitySong },
+			},
+			[ 111 ] = nil, -- Shattrath City	-	Outland
+			[ 114 ] = nil, -- Borean Tundra	-	Northrend
+			[ 115 ] = nil, -- Dragonblight	-	Northrend
+			[ 116 ] = nil, -- Grizzly Hills	-	Northrend
+			[ 117 ] = nil, -- Howling Fjord	-	Northrend
+			[ 118 ] = nil, -- Icecrown	-	Northrend
+			[ 119 ] = nil, -- Sholazar Basin	-	Northrend
+			[ 120 ] = nil, -- The Storm Peaks	-	Northrend
+			[ 121 ] = nil, -- Zul'Drak	-	Northrend
+			[ 122 ] = nil, -- Isle of Quel'Danas	-	Eastern Kingdoms
+			[ 123 ] = nil, -- Wintergrasp	-	Northrend
+			[ 124 ] = { -- Plaguelands: The Scarlet Enclave	-	Eastern Plaguelands
+				Faction = "Neutral",
+				Songs = 5,
+				Music1 = BattleGround1,
+				Music2 = BattleGround2,
+				Music3 = BattleGround3,
+				Music4 = BattleGround4,
+				Music5 = BattleGround5,
+				Sleep = false,
+				Swim = 2,
+				--	SUBZONES:
+				["Acherus: The Ebon Hold"] = { Type = "Subzone", Music = EbonHoldSong },
+				["Hall of Command"] = { Type = "Subzone", Music = EbonHoldSong },
+				["The Heart of Acherus"] = { Type = "Subzone", Music = EbonHoldSong },
+				["Browman Mill"] = { Type = "Subzone", Music = nil },
+				["Crypt of Remembrance"] = { Type = "Subzone", Music = EbonHoldSong },
+				["Death's Breach"] = { Type = "Subzone", Music = SwampSong },
+				["Havenshire"] = { Type = "Subzone", Music = nil },
+				["Havenshire Farms"] = { Type = "Subzone", Music = nil },
+				["Havenshire Lumber Mill"] = { Type = "Subzone", Music = nil },
+				["Havenshire Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Havenshire Stables"] = { Type = "Subzone", Music = nil },
+				["King's Harbor"] = { Type = "Subzone", Music = nil },
+				["Light's Hope Chapel"] = { Type = "Subzone", Music = nil },
+				["Light's Point"] = { Type = "Subzone", Music = nil },
+				["Light's Point Tower"] = { Type = "Subzone", Music = nil },
+				["New Avalon"] = { Type = "Subzone", Music = nil },
+				["Chapel of the Crimson Flame"] = { Type = "Subzone", Music = nil },
+				["New Avalon Forge"] = { Type = "Subzone", Music = nil },
+				["New Avalon Orchard"] = { Type = "Subzone", Music = nil },
+				["New Avalon Town Hall"] = { Type = "Subzone", Music = nil },
+				["Scarlet Hold"] = { Type = "Subzone", Music = nil },
+				["Scarlet Tavern"] = { Type = "Subzone", Music = nil },
+				["The Noxious Glade"] = { Type = "Subzone", Music = PlagueSong },
+				["The Noxious Pass"] = { Type = "Subzone", Music = PlagueSong },
+				["The Pestilent Scar"] = { Type = "Subzone", Music = SwampSong },
+				["The Scarlet Overlook"] = { Type = "Subzone", Music = nil },
+				["Tyr's Hand"] = { Type = "Subzone", Music = nil },
+				["The Scarlet Basilica"] = { Type = "Subzone", Music = nil },
+				["Tyr's Hand Abbey"] = { Type = "Subzone", Music = nil },
+				["Hall of Arms"] = { Type = "Subzone", Music = nil },
+				["Library Wing"] = { Type = "Subzone", Music = nil },
+				["Main Hall"] = { Type = "Subzone", Music = nil },
+			},
+			[ 127 ] = nil, -- Crystalsong Forest	-	Northrend
+			[ 170 ] = nil, -- Hrothgar's Landing	-	Northrend
+			[ 174 ] = { -- The Lost Isles	-	The Maelstrom
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = BeachSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Horde:
+				["Alliance Beachhead"] = { Type = "Town", Faction = "Horde" },
+				["Horde Base Camp"] = { Type = "Town", Faction = "Horde" },
+				["Shipwreck Shore"] = { Type = "Town", Faction = "Horde" },
+				["Town-In-A-Box"] = { Type = "Town", Faction = "Horde" },
+				["Warchief's Lookout"] = { Type = "Town", Faction = "Horde" },
+				["Wild Overlook"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Bilgewater Lumber Yard"] = { Type = "Subzone", Music = nil },
+				["Dire Strait"] = { Type = "Subzone", Music = nil },
+				["Draka's Fury"] = { Type = "Subzone", Music = nil },
+				["Gallywix Docks"] = { Type = "Subzone", Music = nil },
+				["Gallywix Labor Mine"] = { Type = "Subzone", Music = nil },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["Kaja'mite Cavern"] = { Type = "Subzone", Music = nil },
+				["KTC Oil Platform"] = { Type = "Subzone", Music = SwampSong },
+				["Landing Site"] = { Type = "Subzone", Music = nil },
+				["Lost Caldera"] = { Type = "Subzone", Music = nil },
+				["Lost Peak"] = { Type = "Subzone", Music = nil },
+				["Oomlot Village"] = { Type = "Subzone", Music = nil },
+				["Oostan"] = { Type = "Subzone", Music = nil },
+				["Oostan Nord"] = { Type = "Subzone", Music = nil },
+				["Oostan Ost"] = { Type = "Subzone", Music = nil },
+				["Oostan Sor"] = { Type = "Subzone", Music = nil },
+				["Raptor Rise"] = { Type = "Subzone", Music = nil },
+				["Ruins of Vashj'elan"] = { Type = "Subzone", Music = nil },
+				["The Savage Glen"] = { Type = "Subzone", Music = nil },
+				["Scorched Gully"] = { Type = "Subzone", Music = nil },
+				["Sky Falls"] = { Type = "Subzone", Music = nil },
+				["The Slave Pits"] = { Type = "Subzone", Music = nil },
+				["Tranquil Coast"] = { Type = "Subzone", Music = nil },
+				["Vashj'elan Spawning Pool"] = { Type = "Subzone", Music = nil },
+				["Vengeance Wake"] = { Type = "Subzone", Music = nil },
+				["Verdant Highlands"] = { Type = "Subzone", Music = nil },
+				["The Vicious Vale"] = { Type = "Subzone", Music = nil },
+				["Volcanoth's Lair"] = { Type = "Subzone", Music = nil },
+			},
+			[ 179 ] = {	-- Gilneas	-	Eastern Kingdoms
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = ForestSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Duskhaven"] = { Type = "Town", Faction = "Alliance" },
+				["Greymane Manor"] = { Type = "Town", Faction = "Alliance", Music = Alliance8Town },
+				["Keel Harbor"] = { Type = "Town", Faction = "Alliance" },
+				["Stormglen Village"] = { Type = "Town", Faction = "Alliance" },
+				["Tal'doren"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Aderic's Repose"] = { Type = "Subzone", Music = DeadSong },
+				["Allen Farmstead"] = { Type = "Subzone", Music = ForestSong },
+				["The Bite"] = { Type = "Subzone", Music = ForestSong },
+				["The Blackwald"] = { Type = "Subzone", Music = WarySong },
+				["The Bradshaw Mill"] = { Type = "Subzone", Music = ContestedSong },
+				["Crowley Orchard"] = { Type = "Subzone", Music = WarySong },
+				["Crowley Stable Grounds"] = { Type = "Subzone", Music = WarySong },
+				["Duskmist Shore"] = { Type = "Subzone", Music = BattleGround1 },
+				["Emberstone Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Emberstone Village"] = { Type = "Subzone", Music = HostileSong },
+				["Forsaken Forward Command"] = { Type = "Subzone", Music = BattleGround1 },
+				["Galewatch Lighthouse"] = { Type = "Subzone", Music = ForestSong },
+				["The Greymane Wall"] = { Type = "Subzone", Music = ForestSong },
+				["Hailwood Marsh"] = { Type = "Subzone", Music = ForestSong },
+				["Hammond Farmstead"] = { Type = "Subzone", Music = ForestSong },
+				["Hayward Fishery"] = { Type = "Subzone", Music = BattleGround1 },
+				["The Headlands"] = { Type = "Subzone", Music = ForestSong },
+				["King's Gate"] = { Type = "Subzone", Music = ForestSong },
+				["Koroth's Den"] = { Type = "Subzone", Music = HostileSong },
+				["Livery Outpost"] = { Type = "Subzone", Music = ForestSong },
+				["Northern Headlands"] = { Type = "Subzone", Music = ForestSong },
+				["Northgate River"] = { Type = "Subzone", Music = LakeSong },
+				["Northgate Woods"] = { Type = "Subzone", Music = ForestSong },
+				["Queen's Gate"] = { Type = "Subzone", Music = ForestSong },
+				["Rygna's Lair"] = { Type = "Subzone", Music = ForestSong },
+				["Stagecoach Crash Site"] = { Type = "Subzone", Music = ForestSong },
+				["Tempest's Reach"] = { Type = "Subzone", Music = ForestSong },
+				["Wahl Cottage"] = { Type = "Subzone", Music = ForestSong },
+				["Wood's End Cabin"] = { Type = "Subzone", Music = ForestSong },
+			},
+			[ 194 ] = { -- Kezan	-	The Maelstrom
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = Alliance10Town,
+				Sleep = true,
+				Swim = 2,
+				--	SUBZONES:
+				["Bilgewater Port"] = { Type = "Subzone", Music = Horde2Town },
+				["Drudgetown"] = { Type = "Subzone", Music = Alliance10Town },
+				["First Bank of Kezan"] = { Type = "Subzone", Music = nil },
+				["Gallywix's Villa"] = { Type = "Subzone", Music = nil },
+				["Gallywix's Yacht"] = { Type = "Subzone", Music = nil },
+				["Kaja'mine"] = { Type = "Subzone", Music = nil },
+				["Kajaro Field"] = { Type = "Subzone", Music = nil },
+				["KTC Headquarters"] = { Type = "Subzone", Music = Alliance8Town },
+				["The Slick"] = { Type = "Subzone", Music = nil },
+				["South Seas"] = { Type = "Subzone", Music = WaterSong },
+				["Swindle Street"] = { Type = "Subzone", Music = nil },
+				["The Pipe"] = { Type = "Subzone", Music = nil },
+			},
+			[ 198 ] = nil, -- Mount Hyjal	-	Kalimdor
+			[ 199 ] = { -- Southern Barrens	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Fort Triumph"] = { Type = "Town", Faction = "Alliance" },
+				["Forward Command"] = { Type = "Town", Faction = "Alliance" },
+				["Honor's Stand"] = { Type = "Town", Faction = "Alliance" },
+				["Northwatch Hold"] = { Type = "Town", Faction = "Alliance" },
+				["Teegan's Expedition"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Camp Una'fe	"] = { Type = "Town", Faction = "Horde" },
+				["Desolation Hold"] = { Type = "Town", Faction = "Horde" },
+				["Hunter's Hill"] = { Type = "Town", Faction = "Horde" },
+				["Spearhead"] = { Type = "Town", Faction = "Horde" },
+				["Vendetta Point"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Firestone Point"] = { Type = "Town", Faction = "Neutral" },
+				["Overgrown Camp"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Bael Modan"] = { Type = "Subzone", Music = Alliance5Town },
+				["Bael'dun Keep"] = { Type = "Subzone", Music = Alliance5Town },
+				["Bael Modan Excavation"] = { Type = "Subzone", Music = Alliance5Town },
+				["Battlescar"] = { Type = "Subzone", Music = BattleGround3 },
+				["Fields of Blood"] = { Type = "Subzone", Music = LandSong },
+				["Frazzlecraz Motherlode"] = { Type = "Subzone", Music = LandSong },
+				["Goblin Mine"] = { Type = "Subzone", Music = CaveSong },
+				["The Great Divide"] = { Type = "Subzone", Music = LandSong },
+				["The Great Gate"] = { Type = "Subzone", Music = BattleGround3 },
+				["The Great Sea"] = { Type = "Subzone", Music = WaterSong },
+				["The High Road"] = { Type = "Subzone", Music = LandSong },
+				["The Overgrowth"] = { Type = "Subzone", Music = WarySong },
+				["The Nightmare Scar"] = { Type = "Subzone", Music = WarySong },
+				["Razorfen Kraul"] = { Type = "Subzone", Music = LandSong },
+				["Ruins of Taurajo"] = { Type = "Subzone", Music = DeadSong },
+				["Stonetalon Pass"] = { Type = "Subzone", Music = LandSong },
+			},
+			[ 201 ] = nil, -- Kelp'thar Forest	-	Vashj'ir
+			[ 202 ] = { -- Gilneas City	-	Gilneas
+				Faction = "Alliance",
+				Songs = 5,
+				Music1 = BattleGround1,
+				Music2 = BattleGround2,
+				Music3 = BattleGround3,
+				Music4 = BattleGround4,
+				Music5 = BattleGround5,
+				Sleep = true,
+				Swim = 2,
+				--	SUBZONES:
+				["Cathedral Quarter"] = { Type = "Subzone", Music = nil },
+				["Light's Dawn Cathedral"] = { Type = "Subzone", Music = nil },
+				["Greymane Court"] = { Type = "Subzone", Music = nil },
+				["Merchant Square"] = { Type = "Subzone", Music = Alliance8Town },
+				["Military District"] = { Type = "Subzone", Music = nil },
+				["Stoneward Prison"] = { Type = "Subzone", Music = nil },
+			},
+			[ 203 ] = nil, -- Vashj'ir	-	Eastern Kingdoms
+			[ 204 ] = { -- Abyssal Depths	-	Vashj'ir
+				Faction = "Contested",
+				Songs = 4,
+				Music1 = LakeSong,
+				Music2 = WaterSong,
+				Music3 = Swim1Song,
+				Music4 = Swim2Song,
+				Sleep = true,
+				--	TOWNS:
+				--	Alliance:
+				["Darkbreak Cove"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Tenebrous Cavern"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Abandoned Reef"] = { Type = "Subzone", Music = nil },
+				["Abyssal Breach"] = { Type = "Subzone", Music = nil },
+				["The Abyssal Maw"] = { Type = "Subzone", Music = nil },
+				["The Cerebrillum"] = { Type = "Subzone", Music = nil },
+				["Coldlight Chasm"] = { Type = "Subzone", Music = nil },
+				["Deepfin Ridge"] = { Type = "Subzone", Music = nil },
+				["Fireplume Trench"] = { Type = "Subzone", Music = nil },
+				["Korthun's End"] = { Type = "Subzone", Music = nil },
+				["L'ghorek"] = { Type = "Subzone", Music = nil },
+				["The Lightless Reaches"] = { Type = "Subzone", Music = nil },
+				["Nightmare Depths"] = { Type = "Subzone", Music = nil },
+				["The Overlook"] = { Type = "Subzone", Music = nil },
+				["Promontory Point"] = { Type = "Subzone", Music = nil },
+				["The Scalding Chasm"] = { Type = "Subzone", Music = nil },
+				["Seabrush"] = { Type = "Subzone", Music = nil },
+				["Sira'kess Front"] = { Type = "Subzone", Music = nil },
+				["Thermal Vents"] = { Type = "Subzone", Music = nil },
+				["Underlight Canyon"] = { Type = "Subzone", Music = nil },
+				["The Undershell"] = { Type = "Subzone", Music = nil },
+			},
+			[ 205 ] = nil, -- Shimmering Expanse	-	Vashj'ir
+			[ 207 ] = nil, -- Deepholm	-	The Maelstrom
+			[ 210 ] = { -- The Cape of Stranglethorn	-	Stranglethorn Vale
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Explorers' League Digsite"] = { Type = "Town", Faction = "Alliance" },
+				--	Horde:
+				["Hardwrench Hideaway"] = { Type = "Town", Faction = "Horde" },
+				--	Neutral:
+				["Booty Bay"] = { Type = "Town", Faction = "Neutral" },
+				["The Salty Sailor Tavern"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["The Crystal Shore"] = { Type = "Subzone", Music = WaterSong },
+				["Crystalvein Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Gurubashi Arena"] = { Type = "Subzone", Music = BattleGround1 },
+				["The Great Arena"] = { Type = "Subzone", Music = BattleGround1 },
+				["Battle Ring"] = { Type = "Subzone", Music = HostileSong },
+				["Jaguero Isle"] = { Type = "Subzone", Music = BeachSong },
+				["Janeiro's Point"] = { Type = "Subzone", Music = Misc1Song },
+				["Mistvale Valley"] = { Type = "Subzone", Music = ForestSong },
+				["Spirit Den"] = { Type = "Subzone", Music = CaveSong },
+				["Nek'mani Wellspring"] = { Type = "Subzone", Music = LakeSong },
+				["Ruins of Aboraz"] = { Type = "Subzone", Music = WaterSong },
+				["Ruins of Jubuwal"] = { Type = "Subzone", Music = ForestSong },
+				["South Seas"] = { Type = "Subzone", Music = WaterSong },
+				["Southern Savage Coast"] = { Type = "Subzone", Music = WaterSong },
+				["The Sundering"] = { Type = "Subzone", Music = WaterSong },
+				["Wild Shore"] = { Type = "Subzone", Music = WaterSong },
+			},
+			[ 217 ] = { -- Ruins of Gilneas	-	Eastern Kingdoms
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = ForestSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Horde:
+				["Forsaken Forward Command"] = { Type = "Town", Faction = "Horde" },
+				--		SUBZONES:
+				["7th Legion Submarine"] = { Type = "Subzone", Music = WaterSong },
+				["Dreadwatch Outpost"] = { Type = "Subzone", Music = nil },
+				["Emberstone Mine"] = { Type = "Subzone", Music = CaveSong },
+				["Emberstone Village"] = { Type = "Subzone", Music = nil },
+				["Gilneas City"] = { Type = "Subzone", Music = nil },
+				["Light's Dawn Cathedral"] = { Type = "Subzone", Music = nil },
+				["Stoneward Prison"] = { Type = "Subzone", Music = nil },
+				["The Greymane Wall"] = { Type = "Subzone", Music = ForestSong },
+				["Northern Headlands"] = { Type = "Subzone", Music = nil },
+				["Rutsak's Guard"] = { Type = "Subzone", Music = nil },
+				["Tempest's Reach"] = { Type = "Subzone", Music = nil },
+			},
+			[ 224 ] = nil, -- Stranglethorn Vale	-	Eastern Kingdoms
+			[ 241 ] = nil, -- Twilight Highlands	-	Eastern Kingdoms
+			[ 244 ] = nil, -- Tol Barad	-	Eastern Kingdoms
+			[ 245 ] = nil, -- Tol Barad Peninsula	-	Eastern Kingdoms
+			[ 249 ] = { -- Uldum	-	Kalimdor
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = SandSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Neutral:
+				["Mar'at"] = { Type = "Town", Faction = "Neutral" },
+				["Oasis of Vir'sar"] = { Type = "Town", Faction = "Neutral" },
+				["Sullah's Sideshow"] = { Type = "Town", Faction = "Neutral" },
+				["Ramkahen"] = { Type = "Town", Faction = "Neutral" },
+				["Schnottz's Landing"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Akhenet Fields"] = { Type = "Subzone", Music = nil },
+				["Arsad Trade Post"] = { Type = "Subzone", Music = nil },
+				["Bluff of the South Wind"] = { Type = "Subzone", Music = nil },
+				["Cloudtop Terrace"] = { Type = "Subzone", Music = nil },
+				["Cradle of the Ancients"] = { Type = "Subzone", Music = nil },
+				["The Cursed Landing"] = { Type = "Subzone", Music = nil },
+				["Gate of Hamatep"] = { Type = "Subzone", Music = nil },
+				["The Gate of Unending Cycles"] = { Type = "Subzone", Music = nil },
+				["Khartut's Tomb"] = { Type = "Subzone", Music = nil },
+				["Halls of Origination"] = { Type = "Subzone", Music = nil },
+				["Keset Pass"] = { Type = "Subzone", Music = nil },
+				["Lost City of the Tol'vir"] = { Type = "Subzone", Music = nil },
+				["Maker's Ascent"] = { Type = "Subzone", Music = nil },
+				["M.A.C. Diver"] = { Type = "Subzone", Music = nil },
+				["Mount Akher"] = { Type = "Subzone", Music = nil },
+				["Nahom"] = { Type = "Subzone", Music = nil },
+				["Neferset City"] = { Type = "Subzone", Music = nil },
+				["Neferset City Outskirts"] = { Type = "Subzone", Music = nil },
+				["Obelisk of the Moon"] = { Type = "Subzone", Music = nil },
+				["Chamber of the Moon"] = { Type = "Subzone", Music = nil },
+				["Obelisk of the Stars"] = { Type = "Subzone", Music = nil },
+				["Chamber of the Stars"] = { Type = "Subzone", Music = nil },
+				["Obelisk of the Sun"] = { Type = "Subzone", Music = nil },
+				["Chamber of the Sun"] = { Type = "Subzone", Music = nil },
+				["Orsis"] = { Type = "Subzone", Music = nil },
+				["Pilgrim's Precipice"] = { Type = "Subzone", Music = nil },
+				["The Pit of Scales"] = { Type = "Subzone", Music = nil },
+				["Ramkahen Legion Outpost"] = { Type = "Subzone", Music = nil },
+				["Ruins of Ahmtul"] = { Type = "Subzone", Music = nil },
+				["Ruins of Ammon"] = { Type = "Subzone", Music = nil },
+				["Ruins of Khintaset"] = { Type = "Subzone", Music = nil },
+				["Sahket Wastes"] = { Type = "Subzone", Music = nil },
+				["Seal of the Sun King"] = { Type = "Subzone", Music = nil },
+				["The Steps of Fate"] = { Type = "Subzone", Music = nil },
+				["Sunstone Terrace"] = { Type = "Subzone", Music = nil },
+				["Sunwatcher's Ridge"] = { Type = "Subzone", Music = nil },
+				["Surveyors' Outpost"] = { Type = "Subzone", Music = nil },
+				["Tahret Grounds"] = { Type = "Subzone", Music = nil },
+				["Temple of Uldum"] = { Type = "Subzone", Music = nil },
+				["Tomb of the Sun King"] = { Type = "Subzone", Music = nil },
+				["Tombs of the Precursors"] = { Type = "Subzone", Music = nil },
+				["The Trail of Devastation"] = { Type = "Subzone", Music = nil },
+				["Vir'naal Dam"] = { Type = "Subzone", Music = nil },
+				["Vir'naal Lake"] = { Type = "Subzone", Music = nil },
+				["Murkdeep Cavern"] = { Type = "Subzone", Music = nil },
+				["Vir'naal Oasis"] = { Type = "Subzone", Music = nil },
+				["Vir'naal River"] = { Type = "Subzone", Music = nil },
+				["Vir'naal River Delta"] = { Type = "Subzone", Music = nil },
+			},
+			[ 276 ] = nil, -- The Maelstrom	-	The Maelstrom
+			[ 327 ] = { -- Ahn'Qiraj: The Fallen Kingdom	-	Kalimdor
+				Faction = "Neutral",
+				Songs = 1,
+				Music1 = SandSong,
+				Sleep = true,
+				Swim = 1,
+				--	SUBZONES:
+				["Ruins of Ahn'Qiraj"] = { Type = "Subzone", Music = nil },
+				["Temple of Ahn'Qiraj"] = { Type = "Subzone", Music = nil },
+			},
+			[ 371 ] = nil, -- The Jade Forest	-	Pandaria
+			[ 376 ] = nil, -- Valley of the Four Winds	-	Pandaria
+			[ 378 ] = {	-- The Wandering Isle	-	Azeroth
+				Faction = "Neutral",
+				Songs = 1,
+				Music1 = Misc2Song,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				["Shang Xi Training Grounds"] = { Type = "Town", Faction = "Neutral", Music = Misc2Song },
+				["Forlorn Hut"] = { Type = "Subzone", Music = nil },
+				["Mandori Village"] = { Type = "Town", Faction = "Neutral" },
+				["Morning Breeze Village"] = { Type = "Town", Faction = "Neutral" },
+				["Temple of Five Dawns"] = { Type = "Town", Faction = "Neutral" },
+				["The Dai-Lo Farmstead"] = { Type = "Town", Faction = "Neutral" },
+				["Wu-Song Village"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Cave of Meditation"] = { Type = "Subzone", Music = CaveSong },
+				["Chamber of Whispers"] = { Type = "Subzone", Music = nil },
+				["The Dawning Span"] = { Type = "Subzone", Music = nil },
+				["The Dawning Stair"] = { Type = "Subzone", Music = Alliance4Town },
+				["The Dawning Valley"] = { Type = "Subzone", Music = Alliance4Town },
+				["The Elders' Path"] = { Type = "Subzone", Music = nil },
+				["Fe-Feng Village"] = { Type = "Subzone", Music = nil },
+				["Fu's Pond"] = { Type = "Subzone", Music = LakeSong },
+				["Liang's Retreat"] = { Type = "Subzone", Music = Misc2Song },
+				["Morning Breeze Lake"] = { Type = "Subzone", Music = LakeSong },
+				["Pei-Wu Forest"] = { Type = "Subzone", Music = nil },
+				["Pool of the Paw"] = { Type = "Subzone", Music = LakeSong },
+				["Ridge of Laughing Winds"] = { Type = "Subzone", Music = nil },
+				["The Rows"] = { Type = "Subzone", Music = nil },
+				["Ki-Han Brewery"] = { Type = "Subzone", Music = nil },
+				["Teeming Burrow"] = { Type = "Subzone", Music = nil },
+				["Virmen Grotto"] = { Type = "Subzone", Music = nil },
+				["Shrine of Dreaming Stones"] = { Type = "Subzone", Music = nil },
+				["Shrine of Five Dawns"] = { Type = "Subzone", Music = nil },
+				["Shrine of Inner-Light"] = { Type = "Subzone", Music = CaveSong },
+				["The Singing Pools"] = { Type = "Subzone", Music = LakeSong },
+				["Pool of Reflection"] = { Type = "Subzone", Music = nil },
+				["Tranquil Grotto"] = { Type = "Subzone", Music = Alliance4Town },
+				["The Wood of Staves"] = { Type = "Subzone", Music = nil },
+				["Wreck of the Skyseeker"] = { Type = "Subzone", Music = nil },
+			},
+			[ 379 ] = nil, -- Kun-Lai Summit	-	Pandaria
+			[ 388 ] = nil, -- Townlong Steppes	-	Pandaria
+			[ 390 ] = nil, -- Vale of Eternal Blossoms	-	Pandaria
+			[ 418 ] = nil, -- Krasarang Wilds	-	Pandaria
+			[ 422 ] = nil, -- Dread Wastes	-	Pandaria
+			[ 425 ] = { -- Northshire	-	Elwynn Forest
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Northshire Abbey"] = { Type = "Town", Faction = "Alliance" },
+				["Hall of Arms"] = { Type = "Town", Faction = "Alliance" },
+				["Library Wing"] = { Type = "Town", Faction = "Alliance" },
+				["Main Hall"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Echo Ridge Mine"] = { Type = "Subzone", Music = ForestSong },
+				["Northshire River"] = { Type = "Subzone", Music = LakeSong },
+				["Northshire Valley"] = { Type = "Subzone", Music = ForestSong },
+				["Northshire Vineyards"] = { Type = "Subzone", Music = HostileSong },
+			},
+			[ 427 ] = {	-- Coldridge Valley	-	Dun Morogh
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = SnowSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Alliance:
+				["Anvilmar"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Coldridge Valley"] = { Type = "Subzone", Music = SnowSong },
+				["Coldridge Pass"] = { Type = "Subzone", Music = SnowSong },
+				["Frostmane Hovel"] = { Type = "Subzone", Music = CaveSong },
+				["Whitebeard's Encampment"] = { Type = "Subzone", Music = SnowSong },
+			},
+			[ 433 ] = nil, -- The Veiled Stair	-	Pandaria
+			[ 460 ] = { -- Shadowglen	-	Teldrassil
+				Faction = "Alliance",
+				Songs = 1,
+				Music1 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	SUBZONES:
+				["Shadowglen"] = { Type = "Subzone", Music = FriendlySong },
+				["Aldrassil"] = { Type = "Subzone", Music = Alliance7Town },
+				["Shadowthread Cave"] = { Type = "Subzone", Music = CaveSong },
+			},
+			[ 461 ] = { -- Valley of Trials - Orc Start:
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = LandSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	SUBZONES:
+				["Valley of Trials"] = { Type = "Zone", Faction = "Horde", Music = LandSong },
+				["Burning Blade Coven"] = { Type = "Subzone", Music = CaveSong },
+				["The Den"] = { Type = "Subzone", Music = CaveSong },
+			},
+			[ 462 ] = { -- Camp Narache - Tauren Start:
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = LandSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	SUBZONES:
+				["Red Cloud Mesa"] = { Type = "Subzone", Music = LandSong },
+				["The Battleboar Pen"] = { Type = "Subzone", Music = ForestSong },
+				["Brambleblade Ravine"] = { Type = "Subzone", Music = ForestSong },
+				["Camp Narache"] = { Type = "Subzone", Music = LandSong },
+				["Fargaze Mesa"] = { Type = "Subzone", Music = LandSong },
+				["Thornmantle's Hideout"] = { Type = "Subzone", Music = ForestSong },
+				["The Thornsnarl"] = { Type = "Subzone", Music = ForestSong },
+			},
+			[ 463 ] = { -- Echo Isles - Troll Start:
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = BeachSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 1,
+				--	TOWNS:
+				--	Horde:
+				["Darkspear Hold"] = { Type = "Town", Faction = "Horde" },
+				["Darkspear Shore"] = { Type = "Town", Faction = "Horde" },
+				["Darkspear Training Grounds"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Bloodtalon Shore"] = { Type = "Subzone", Music = BeachSong },
+				["Darkspear Isle"] = { Type = "Subzone", Music = BeachSong },
+				["Spitescale Cove"] = { Type = "Subzone", Music = BeachSong },
+				["Spitescale Cavern"] = { Type = "Subzone", Music = CaveSong },
+				["Zalazane's Fall"] = { Type = "Subzone", Music = BeachSong },
+			},
+			[ 465 ] = { -- Deathknell	-	Tirisfal Glades
+				Faction = "Horde",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = PlagueSong,
+				Sleep = true,
+				Swim = 2,
+				--	SUBZONES:
+				["Deathknell"] = { Type = "Subzone", Music = PlagueSong },
+				["The Deathknell Graves"] = { Type = "Subzone", Music = PlagueSong },
+				["Night Web's Hollow"] = { Type = "Subzone", Music = PlagueSong },
+				["Rotbrain Encampment"] = { Type = "Subzone", Music = PlagueSong },
+				["Shadow Grave"] = { Type = "Subzone", Music = PlagueSong },
+			},
+			[ 467 ] = { -- Sunstrider Isle	-	Eversong Woods
+				Faction = "Horde",
+				Songs = 1,
+				Music1 = FriendlySong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				-- Horde:
+				["The Sunspire"] = { Type = "Town", Faction = "Horde" },
+				--	SUBZONES:
+				["Sunstrider Isle"] = { Type = "Subzone", Music = FriendlySong },
+				["Falthrien Academy"] = { Type = "Subzone", Music = Horde7Town },
+				["Shrine of Dath'Remar"] = { Type = "Subzone", Music = DalaranSong },
+			},
+			[ 468 ] = { -- Ammen Vale	-	Azuremyst Isle
+				Faction = "Alliance",
+				Songs = 2,
+				Music1 = PlagueSong,
+				Music2 = FriendlySong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Alliance:
+				["Crash Site"] = { Type = "Town", Faction = "Alliance" },
+				--	SUBZONES:
+				["Ammen Fields"] = { Type = "Subzone", Music = nil },
+				["Ammen Vale"] = { Type = "Subzone", Music = nil },
+				["Nestlewood Hills"] = { Type = "Subzone", Music = nil },
+				["Nestlewood Thicket"] = { Type = "Subzone", Music = nil },
+				["Shadow Ridge"] = { Type = "Subzone", Music = nil },
+				["Silverline Lake"] = { Type = "Subzone", Music = nil },
+			},
+			[ 469 ] = nil, -- New Tinkertown	-	Dun Morogh
+			[ 504 ] = nil, -- Isle of Thunder	-	Pandaria
+			[ 507 ] = nil, -- Isle of Giants	-	Pandaria
+			[ 525 ] = nil, -- Frostfire Ridge	-	Draenor
+			[ 534 ] = nil, -- Tanaan Jungle	-	Draenor
+			[ 535 ] = nil, -- Talador	-	Draenor
+			[ 539 ] = nil, -- Shadowmoon Valley	-	Draenor
+			[ 542 ] = nil, -- Spires of Arak	-	Draenor
+			[ 543 ] = nil, -- Gorgrond	-	Draenor
+			[ 550 ] = nil, -- Nagrand	-	Draenor
+			[ 554 ] = nil, -- Timeless Isle	-	Pandaria
+			[ 588 ] = nil, -- Ashran	-	Draenor
+			[ 625 ] = nil, -- Dalaran	-	Broken Isles
+			[ 630 ] = nil, -- Azsuna	-	Broken Isles
+			[ 634 ] = nil, -- Stormheim	-	Broken Isles
+			[ 641 ] = nil, -- Val'sharah	-	Broken Isles
+			[ 646 ] = nil, -- Broken Shore	-	Broken Isles
+			[ 650 ] = nil, -- Highmountain	-	Broken Isles
+			[ 672 ] = {	-- Mardum, the Shattered Abyss	-	Broken Isles
+				Faction = "Contested",
+				Songs = 1,
+				Music1 = BattleGround1,
+				Sleep = true,
+				Swim = 2,
+				--	SUBZONES:
+				["Cryptic Hollow"] = { Type = "Subzone", Music = nil },
+				["Despair Ridge"] = { Type = "Subzone", Music = nil },
+				["The Doom Fortress"] = { Type = "Subzone", Music = nil },
+				["The Fel Hammer"] = { Type = "Subzone", Music = nil },
+				["Forge of Corruption"] = { Type = "Subzone", Music = nil },
+				["Foul Creche"] = { Type = "Subzone", Music = nil },
+				["Illidari Foothold"] = { Type = "Subzone", Music = nil },
+				["Inferno Peak"] = { Type = "Subzone", Music = nil },
+				["Molten Shore"] = { Type = "Subzone", Music = nil },
+				["Seat of Command"] = { Type = "Subzone", Music = nil },
+				["Soul Engine"] = { Type = "Subzone", Music = nil },
+				["Twisting Nether"] = { Type = "Subzone", Music = nil },
+			},
+			[ 680 ] = nil, -- Suramar	-	Broken Isles
+			[ 739 ] = nil, -- Trueshot Lodge	-	Highmountain
+			[ 790 ] = nil, -- Eye of Azshara	-	Broken Isles
+			[ 830 ] = nil, -- Krokuun	-	Argus
+			[ 862 ] = nil, -- Zuldazar	-	Zandalar
+			[ 863 ] = nil, -- Nazmir	-	Zandalar
+			[ 864 ] = nil, -- Vol'dun	-	Zandalar
+			[ 882 ] = nil, -- Mac'Aree	-	Argus
+			[ 885 ] = nil, -- Antoran Wastes	-	Argus
+			[ 895 ] = nil, -- Tiragarde Sound	-	Kul Tiras
+			[ 896 ] = nil, -- Drustvar	-	Kul Tiras
+			[ 942 ] = nil, -- Stormsong Valley	-	Kul Tiras
+			[ 997 ] = nil, -- Tirisfal Glades	-
+			[ 998 ] = nil, -- Undercity	-	Ruins of Lordaeron
+			[ 1010 ] = nil, -- The MOTHERLODE!!	-	Kezan
+			[ 1022 ] = nil, -- Uncharted Island	-
+			[ 1032 ] = nil, -- Skittering Hollow	-
+			[ 1033 ] = nil, -- The Rotting Mire	-
+			[ 1034 ] = nil, -- Verdant Wilds	-
+			[ 1035 ] = nil, -- Molten Cay	-
+			[ 1036 ] = nil, -- The Dread Chain	-
+			[ 1037 ] = nil, -- Whispering Reef	-
+			[ 1039 ] = nil, -- Shrine of the Storm	-	Stormsong Valley
+			[ 1041 ] = nil, -- The Underrot	-	Nazmir
+			[ 1158 ] = nil, -- Arathi Highlands	-
+			[ 1161 ] = nil, -- Boralus	-	Tiragarde Sound
+			[ 1165 ] = nil, -- Dazar'alor	-	Zuldazar
+			[ 1169 ] = nil, -- Tol Dagor	-	Kul Tiras
+			[ 1170 ] = nil, -- Gorgrond - Mag'har Scenario	-
+			[ 1187 ] = nil, -- Azsuna	-	Broken Isles
+			[ 1188 ] = nil, -- Val'sharah	-	Broken Isles
+			[ 1189 ] = nil, -- Highmountain	-	Broken Isles
+			[ 1190 ] = nil, -- Stormheim	-	Broken Isles
+			[ 1191 ] = nil, -- Suramar	-	Broken Isles
+			[ 1192 ] = nil, -- Broken Shore	-	Broken Isles
+			[ 1193 ] = nil, -- Zuldazar	-	Zandalar
+			[ 1194 ] = nil, -- Nazmir	-	Zandalar
+			[ 1195 ] = nil, -- Vol'dun	-	Zandalar
+			[ 1196 ] = nil, -- Tiragarde Sound	-	Kul Tiras
+			[ 1197 ] = nil, -- Drustvar	-	Kul Tiras
+			[ 1198 ] = nil, -- Stormsong Valley	-	Kul Tiras
+			[ 1244 ] = nil, -- Arathi Highlands	-	Eastern Kingdoms
+			[ 1245 ] = nil, -- Badlands	-	Eastern Kingdoms
+			[ 1246 ] = nil, -- Blasted Lands	-	Eastern Kingdoms
+			[ 1247 ] = nil, -- Tirisfal Glades	-	Eastern Kingdoms
+			[ 1248 ] = nil, -- Silverpine Forest	-	Eastern Kingdoms
+			[ 1249 ] = nil, -- Western Plaguelands	-	Eastern Kingdoms
+			[ 1250 ] = nil, -- Eastern Plaguelands	-	Eastern Kingdoms
+			[ 1251 ] = nil, -- Hillsbrad Foothills	-	Eastern Kingdoms
+			[ 1252 ] = nil, -- The Hinterlands	-	Eastern Kingdoms
+			[ 1253 ] = nil, -- Dun Morogh	-	Eastern Kingdoms
+			[ 1254 ] = nil, -- Searing Gorge	-	Eastern Kingdoms
+			[ 1255 ] = nil, -- Burning Steppes	-	Eastern Kingdoms
+			[ 1256 ] = nil, -- Elwynn Forest	-	Eastern Kingdoms
+			[ 1257 ] = nil, -- Deadwind Pass	-	Eastern Kingdoms
+			[ 1258 ] = nil, -- Duskwood	-	Eastern Kingdoms
+			[ 1259 ] = nil, -- Loch Modan	-	Eastern Kingdoms
+			[ 1260 ] = nil, -- Redridge Mountains	-	Eastern Kingdoms
+			[ 1261 ] = nil, -- Swamp of Sorrows	-	Eastern Kingdoms
+			[ 1262 ] = nil, -- Westfall	-	Eastern Kingdoms
+			[ 1263 ] = nil, -- Wetlands	-	Eastern Kingdoms
+			[ 1264 ] = nil, -- Stormwind City	-	Eastern Kingdoms
+			[ 1265 ] = nil, -- Ironforge	-	Eastern Kingdoms
+			[ 1266 ] = nil, -- Undercity	-	Eastern Kingdoms
+			[ 1267 ] = nil, -- Eversong Woods	-	Eastern Kingdoms
+			[ 1268 ] = nil, -- Ghostlands	-	Eastern Kingdoms
+			[ 1269 ] = nil, -- Silvermoon City	-	Eastern Kingdoms
+			[ 1270 ] = nil, -- Isle of Quel'Danas	-	Eastern Kingdoms
+			[ 1271 ] = nil, -- Gilneas	-	Eastern Kingdoms
+			[ 1272 ] = nil, -- Vashj'ir	-	Eastern Kingdoms
+			[ 1273 ] = nil, -- Ruins of Gilneas	-	Eastern Kingdoms
+			[ 1274 ] = nil, -- Stranglethorn Vale	-	Eastern Kingdoms
+			[ 1275 ] = nil, -- Twilight Highlands	-	Eastern Kingdoms
+			[ 1276 ] = nil, -- Tol Barad	-	Eastern Kingdoms
+			[ 1277 ] = nil, -- Tol Barad Peninsula	-	Eastern Kingdoms
+			[ 1305 ] = nil, -- Durotar	-	Kalimdor
+			[ 1306 ] = nil, -- Mulgore	-	Kalimdor
+			[ 1307 ] = nil, -- Northern Barrens	-	Kalimdor
+			[ 1308 ] = nil, -- Teldrassil	-	Kalimdor
+			[ 1309 ] = nil, -- Darkshore	-	Kalimdor
+			[ 1310 ] = nil, -- Ashenvale	-	Kalimdor
+			[ 1311 ] = nil, -- Thousand Needles	-	Kalimdor
+			[ 1312 ] = nil, -- Stonetalon Mountains	-	Kalimdor
+			[ 1313 ] = nil, -- Desolace	-	Kalimdor
+			[ 1314 ] = nil, -- Feralas	-	Kalimdor
+			[ 1315 ] = nil, -- Dustwallow Marsh	-	Kalimdor
+			[ 1316 ] = nil, -- Tanaris	-	Kalimdor
+			[ 1317 ] = nil, -- Azshara	-	Kalimdor
+			[ 1318 ] = nil, -- Felwood	-	Kalimdor
+			[ 1319 ] = nil, -- Un'Goro Crater	-	Kalimdor
+			[ 1320 ] = nil, -- Moonglade	-	Kalimdor
+			[ 1321 ] = nil, -- Silithus	-	Kalimdor
+			[ 1322 ] = nil, -- Winterspring	-	Kalimdor
+			[ 1323 ] = nil, -- Thunder Bluff	-	Kalimdor
+			[ 1324 ] = nil, -- Darnassus	-	Kalimdor
+			[ 1325 ] = nil, -- Azuremyst Isle	-	Kalimdor
+			[ 1326 ] = nil, -- The Exodar	-	Kalimdor
+			[ 1327 ] = nil, -- Bloodmyst Isle	-	Kalimdor
+			[ 1328 ] = nil, -- Mount Hyjal	-	Kalimdor
+			[ 1329 ] = nil, -- Southern Barrens	-	Kalimdor
+			[ 1330 ] = nil, -- Uldum	-	Kalimdor
+			[ 1331 ] = nil, -- The Exodar	-	Kalimdor
+			[ 1333 ] = nil, -- Darkshore	-	Kalimdor
+			[ 1334 ] = nil, -- Wintergrasp	-
+			[ 1335 ] = nil, -- Cooking: Impossible	-
+			[ 1336 ] = nil, -- Havenswood	-
+			[ 1337 ] = nil, -- Jorundall	-
+			[ 1339 ] = nil, -- Warsong Gulch	-	Northern Barrens
+			[ 1347 ] = nil, -- Zandalari Treasury	-
+			[ 1355 ] = nil, -- Nazjatar	-
+			[ 1362 ] = nil, -- Shrine of the Storm	-
+			[ 1396 ] = nil, -- Borean Tundra	-	Northrend
+			[ 1397 ] = nil, -- Dragonblight	-	Northrend
+			[ 1398 ] = nil, -- Grizzly Hills	-	Northrend
+			[ 1399 ] = nil, -- Howling Fjord	-	Northrend
+			[ 1400 ] = nil, -- Icecrown	-	Northrend
+			[ 1401 ] = nil, -- Sholazar Basin	-	Northrend
+			[ 1402 ] = nil, -- The Storm Peaks	-	Northrend
+			[ 1403 ] = nil, -- Zul'Drak	-	Northrend
+			[ 1404 ] = nil, -- Wintergrasp	-	Northrend
+			[ 1405 ] = nil, -- Crystalsong Forest	-	Northrend
+			[ 1406 ] = nil, -- Hrothgar's Landing	-	Northrend
+			[ 1408 ] = nil, -- Ashran	-
+			[ 1462 ] = nil, -- Mechagon Island	-	Kul Tiras
+			[ 1476 ] = nil, -- Twilight Highlands	-
+			[ 1478 ] = nil, -- Ashran	-	Draenor
+			[ 1501 ] = nil, -- Crestfall	-
+			[ 1502 ] = nil, -- Snowblossom Village	-
+		},
+
+	};
 
 	--#############
 	--## PVP ZONES
@@ -8320,7 +3006,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. BattleGround5);
 		FinalFantasylization_debugMsg("BattleGround5")
 	end
-		-- Wrath of the Lich King Dungeons	
+		-- Wrath of the Lich King Dungeons
 	function FinalFantasylization_Dungeon_UtgardeKeepSong()
 		FinalFantasylization_PlayMusic(S .. BattleGround5);
 		FinalFantasylization_debugMsg("BattleGround5")
@@ -8415,13 +3101,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 	function FinalFantasylization_WorldElite()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Fighting3Song);
-				FinalFantasylization_debugMsg("Fighting3Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Fighting2Song);
-				FinalFantasylization_debugMsg("Fighting2Song")
-			end
+			x = x + 1
+			FinalFantasylization_PlayMusic(S .. _G[ "Fighting" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Fighting" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_BattlegroundBoss()
 		FinalFantasylization_PlayMusic(S .. Fighting4Song);
@@ -8429,23 +3111,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 	function FinalFantasylization_BattlegroundPVP()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Fighting3Song);
-				FinalFantasylization_debugMsg("Fighting3Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Fighting2Song);
-				FinalFantasylization_debugMsg("Fighting2Song")
-			end
+			x = x + 1
+			FinalFantasylization_PlayMusic(S .. _G[ "Fighting" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Fighting" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_WorldPVP()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Fighting3Song);
-				FinalFantasylization_debugMsg("Fighting3Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Fighting2Song);
-				FinalFantasylization_debugMsg("Fighting2Song")
-			end
+			x = x + 1
+			FinalFantasylization_PlayMusic(S .. _G[ "Fighting" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Fighting" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_WorldNormalPVE()
 		FinalFantasylization_PlayMusic(S .. Fighting1Song);
@@ -8461,135 +3135,24 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 	function FinalFantasylization_NeutralTowns()
 		local x = math.random(1, 20);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Horde1Town);
-				FinalFantasylization_debugMsg("Horde1Town")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. Horde2Town);
-				FinalFantasylization_debugMsg("Horde2Town")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. Horde3Town);
-				FinalFantasylization_debugMsg("Horde3Town")
-			elseif x == 4 then
-				FinalFantasylization_PlayMusic(S .. Horde4Town);
-				FinalFantasylization_debugMsg("Horde4Town")
-			elseif x == 5 then
-				FinalFantasylization_PlayMusic(S .. Horde5Town);
-				FinalFantasylization_debugMsg("Horde5Town")
-			elseif x == 6 then
-				FinalFantasylization_PlayMusic(S .. Horde6Town);
-				FinalFantasylization_debugMsg("Horde6Town")
-			elseif x == 7 then
-				FinalFantasylization_PlayMusic(S .. Horde7Town);
-				FinalFantasylization_debugMsg("Horde7Town")
-			elseif x == 8 then
-				FinalFantasylization_PlayMusic(S .. Horde8Town);
-				FinalFantasylization_debugMsg("Horde8Town")
-			elseif x == 9 then
-				FinalFantasylization_PlayMusic(S .. Horde9Town);
-				FinalFantasylization_debugMsg("Horde9Town")
-			elseif x == 10 then
-				FinalFantasylization_PlayMusic(S .. Horde10Town);
-				FinalFantasylization_debugMsg("Horde10Town")
-			elseif x == 11 then
-				FinalFantasylization_PlayMusic(S .. Alliance1Town);
-				FinalFantasylization_debugMsg("Alliance1Town")
-			elseif x == 12 then
-				FinalFantasylization_PlayMusic(S .. Alliance2Town);
-				FinalFantasylization_debugMsg("Alliance2Town")
-			elseif x == 13 then
-				FinalFantasylization_PlayMusic(S .. Alliance3Town);
-				FinalFantasylization_debugMsg("Alliance3Town")
-			elseif x == 14 then
-				FinalFantasylization_PlayMusic(S .. Alliance4Town);
-				FinalFantasylization_debugMsg("Alliance4Town")
-			elseif x == 15 then
-				FinalFantasylization_PlayMusic(S .. Alliance5Town);
-				FinalFantasylization_debugMsg("Alliance5Town")
-			elseif x == 16 then
-				FinalFantasylization_PlayMusic(S .. Alliance6Town);
-				FinalFantasylization_debugMsg("Alliance6Townn")
-			elseif x == 17 then
-				FinalFantasylization_PlayMusic(S .. Alliance7Town);
-				FinalFantasylization_debugMsg("Alliance7Town")
-			elseif x == 18 then
-				FinalFantasylization_PlayMusic(S .. Alliance8Town);
-				FinalFantasylization_debugMsg("Alliance8Town")
-			elseif x == 19 then
-				FinalFantasylization_PlayMusic(S .. Alliance9Town);
-				FinalFantasylization_debugMsg("Alliance9Town")
-			else
-				FinalFantasylization_PlayMusic(S .. Alliance10Town);
-				FinalFantasylization_debugMsg("Alliance10Town")
+			if x <= 10 then
+				FinalFantasylization_PlayMusic(S .. _G[ "Alliance" .. x .. "Town" ] );
+				FinalFantasylization_debugMsg( tostring( "Alliance" .. x .. "Town" ) )
+			elseif x >= 11 then
+				x = x - 10
+				FinalFantasylization_PlayMusic(S .. _G[ "Horde" .. x .. "Town" ] );
+				FinalFantasylization_debugMsg( tostring( "Horde" .. x .. "Town" ) )
 			end
 	end
 	function FinalFantasylization_AllianceTowns()
 		local x = math.random(1, 10);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Alliance1Town);
-				FinalFantasylization_debugMsg("Alliance1Town")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. Alliance2Town);
-				FinalFantasylization_debugMsg("Alliance2Town")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. Alliance3Town);
-				FinalFantasylization_debugMsg("Alliance3Town")
-			elseif x == 4 then
-				FinalFantasylization_PlayMusic(S .. Alliance4Town);
-				FinalFantasylization_debugMsg("Alliance4Town")
-			elseif x == 5 then
-				FinalFantasylization_PlayMusic(S .. Alliance5Town);
-				FinalFantasylization_debugMsg("Alliance5Town")
-			elseif x == 6 then
-				FinalFantasylization_PlayMusic(S .. Alliance6Town);
-				FinalFantasylization_debugMsg("Alliance6Town")
-			elseif x == 7 then
-				FinalFantasylization_PlayMusic(S .. Alliance7Town);
-				FinalFantasylization_debugMsg("Alliance7Town")
-			elseif x == 8 then
-				FinalFantasylization_PlayMusic(S .. Alliance8Town);
-				FinalFantasylization_debugMsg("Alliance8Town")
-			elseif x == 9 then
-				FinalFantasylization_PlayMusic(S .. Alliance9Town);
-				FinalFantasylization_debugMsg("Alliance9Town")
-			else
-				FinalFantasylization_PlayMusic(S .. Alliance10Town);
-				FinalFantasylization_debugMsg("Alliance10Town")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Alliance" .. x .. "Town" ] );
+			FinalFantasylization_debugMsg( tostring( "Alliance" .. x .. "Town" ) )
 	end
 	function FinalFantasylization_HordeTowns()
 		local x = math.random(1, 10);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Horde1Town);
-				FinalFantasylization_debugMsg("Horde1Town")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. Horde2Town);
-				FinalFantasylization_debugMsg("Horde2Town")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. Horde3Town);
-				FinalFantasylization_debugMsg("Horde3Town")
-			elseif x == 4 then
-				FinalFantasylization_PlayMusic(S .. Horde4Town);
-				FinalFantasylization_debugMsg("Horde4Town")
-			elseif x == 5 then
-				FinalFantasylization_PlayMusic(S .. Horde5Town);
-				FinalFantasylization_debugMsg("Horde5Town")
-			elseif x == 6 then
-				FinalFantasylization_PlayMusic(S .. Horde6Town);
-				FinalFantasylization_debugMsg("Horde6Town")
-			elseif x == 7 then
-				FinalFantasylization_PlayMusic(S .. Horde7Town);
-				FinalFantasylization_debugMsg("Horde7Town")
-			elseif x == 8 then
-				FinalFantasylization_PlayMusic(S .. Horde8Town);
-				FinalFantasylization_debugMsg("Horde8Town")
-			elseif x == 9 then
-				FinalFantasylization_PlayMusic(S .. Horde9Town);
-				FinalFantasylization_debugMsg("Horde9Town")
-			else
-				FinalFantasylization_PlayMusic(S .. Horde10Town);
-				FinalFantasylization_debugMsg("Horde10Town")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Horde" .. x .. "Town" ] );
+			FinalFantasylization_debugMsg( tostring( "Horde" .. x .. "Town" ) )
 	end
 
 	--###############
@@ -8597,22 +3160,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--###############
 	function FinalFantasylization_BattleGround()
 		local x = math.random(1, 5);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. BattleGround1);
-				FinalFantasylization_debugMsg("BattleGround1")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. BattleGround2);
-				FinalFantasylization_debugMsg("BattleGround2")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. BattleGround3);
-				FinalFantasylization_debugMsg("BattleGround3")
-			elseif x == 4 then
-				FinalFantasylization_PlayMusic(S .. BattleGround4);
-				FinalFantasylization_debugMsg("BattleGround4")
-			else
-				FinalFantasylization_PlayMusic(S .. BattleGround5);
-				FinalFantasylization_debugMsg("BattleGround5")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "BattleGround" .. x ] );
+			FinalFantasylization_debugMsg( tostring( "BattleGround" .. x ) )
 	end
 
 	--#############
@@ -8634,7 +3183,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. SleepSong);
 		FinalFantasylization_debugMsg("SleepSong")
 	end
-	
+
 	--#############
 	--## CAMPING
 	--#############
@@ -8646,17 +3195,9 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--#############
 	--## SWIMMING
 	--#############
-	function FinalFantasylization_Swimming(Zone)
-		if Zone == 1 then
-			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming)
-			FinalFantasylization_PlayMusic(S .. SwimSong);  -- Normal Swim song
-			FinalFantasylization_debugMsg("SwimSong") -- Normal Swim song
-			return
-		elseif Zone == 2 then
-			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Swimming2)
-			FinalFantasylization_PlayMusic(S .. DarkSwimSong);  -- alt Swim song
-			FinalFantasylization_debugMsg("DarkSwimSong") -- alt Swim song
-		end
+	function FinalFantasylization_Swimming(x)
+		FinalFantasylization_PlayMusic(S .. _G[ "Swim" .. x .. "Song" ] );
+		FinalFantasylization_debugMsg( tostring( "Swim" .. x .. "Song" ) )
 	end
 
 	--#############
@@ -8664,82 +3205,43 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	--#############
 	function FinalFantasylization_HordeTaxi()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Flying1Song);
-				FinalFantasylization_debugMsg("Flying1Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Flying2Song);
-				FinalFantasylization_debugMsg("Flying2Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_AllianceTaxi()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Flying1Song);
-				FinalFantasylization_debugMsg("Flying1Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Flying2Song);
-				FinalFantasylization_debugMsg("Flying2Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
-	
+
 	--#############
 	--## FLYING
 	--#############
 	function FinalFantasylization_HordeFlying()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Flying1Song);
-				FinalFantasylization_debugMsg("Flying1Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Flying2Song);
-				FinalFantasylization_debugMsg("Flying2Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
 	function FinalFantasylization_AllianceFlying()
 		local x = math.random(1, 2);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Flying1Song);
-				FinalFantasylization_debugMsg("Flying1Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Flying2Song);
-				FinalFantasylization_debugMsg("Flying2Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Flying" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Flying" .. x .. "Song" ) )
 	end
 
 	--#############
 	--## MOUNTED
 	--#############
-	function FinalFantasylization_Mounted()					
+	function FinalFantasylization_Mounted()
 		local x = math.random(1, 3);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Mounted1Song);
-				FinalFantasylization_debugMsg("Mounted1Song")
-			elseif x == 2 then 
-				FinalFantasylization_PlayMusic(S .. Mounted2Song);
-				FinalFantasylization_debugMsg("Mounted2Song")
-			else 
-				FinalFantasylization_PlayMusic(S .. Mounted3Song);
-				FinalFantasylization_debugMsg("Mounted3Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Mounted" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Mounted" .. x .. "Song" ) )
 	end
-	function FinalFantasylization_MountedEscape()		
+	function FinalFantasylization_MountedEscape()
 		local x = math.random(1, 4);
-			if x == 1 then
-				FinalFantasylization_PlayMusic(S .. Escape1Song);
-				FinalFantasylization_debugMsg("Escape1Song")
-			elseif x == 2 then
-				FinalFantasylization_PlayMusic(S .. Escape2Song);
-				FinalFantasylization_debugMsg("Escape2Song")
-			elseif x == 3 then
-				FinalFantasylization_PlayMusic(S .. Escape3Song);
-				FinalFantasylization_debugMsg("Escape3Song")
-			else
-				FinalFantasylization_PlayMusic(S .. Escape4Song);
-				FinalFantasylization_debugMsg("Escape4Song")
-			end
+			FinalFantasylization_PlayMusic(S .. _G[ "Escape" .. x .. "Song" ] );
+			FinalFantasylization_debugMsg( tostring( "Escape" .. x .. "Song" ) )
 	end
-	
+
 --END of music calls
         CoreSavedVariable = soundPackID
         for i = 1, NUM_SOUND_PACKS do -- set NUM_SOUND_PACKS in the Core

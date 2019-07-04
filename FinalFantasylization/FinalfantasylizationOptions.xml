@@ -66,7 +66,7 @@
 	</FontString>
 
 	<!-- FinalFantasylization Minimap Button -->
-	<Button name="FinalFantasylizationMapIcon" movable="true" parent="Minimap" frameStrata="MEDIUM" hidden="true">
+	<Button name="FinalFantasylizationMapIcon" movable="true" parent="Minimap" frameStrata="MEDIUM" hidden="false">
 		<Size><AbsDimension x="32" y="32"/></Size>
 		<Anchors><Anchor point="CENTER" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="16" y="16"/></Offset></Anchor></Anchors>
 
@@ -93,26 +93,20 @@
 		</HighlightTexture>
 
 		<Scripts>
-			<OnLoad>
-				self:RegisterForClicks("LeftButtonDown","RightButtonDown")
-			</OnLoad>
-			<OnClick>
-				if not IsControlKeyDown() then
-					FinalFantasylizationMiniMapButton_OnClick(arg1)
-				else
-					FinalFantasylizationUIDebug_Show()
-				end
-			</OnClick>
+			<OnLoad> self:RegisterForClicks("LeftButtonUp", "RightButtonUp"); </OnLoad>
+			<OnClick> FinalFantasylizationMiniMapButton_OnClick(self, button); </OnClick>
 			<OnMouseDown> if IsShiftKeyDown() then self:StartMoving() end  </OnMouseDown>
-			<OnMouseUp>  self:StopMovingOrSizing(); </OnMouseUp>
+			<OnMouseUp> self:StopMovingOrSizing(); </OnMouseUp>
 			<OnDragStop> self:StopMovingOrSizing(); </OnDragStop>
 			<OnEnter>
-				GameTooltip:SetOwner(self, "BOTTOMLEFT")
-				GameTooltip:SetText("FinalFantasylization")
+				GameTooltip:SetOwner(self, "Anchor_Left");
+				GameTooltip:ClearLines();
+				GameTooltip:AddLine("FinalFantasylization", 1, 1, 1);
+				GameTooltip:AddDoubleLine("Soundpack:", soundPackName, 0.4, 0.8, 1);
+				GameTooltip:AddLine(MiniMapButtonTooltip);
+				GameTooltip:Show();
 			</OnEnter>
-			<OnLeave>
-				GameTooltip:Hide()
-			</OnLeave>
+			<OnLeave> GameTooltip:Hide(); </OnLeave>
 		</Scripts>
 	</Button>
 
