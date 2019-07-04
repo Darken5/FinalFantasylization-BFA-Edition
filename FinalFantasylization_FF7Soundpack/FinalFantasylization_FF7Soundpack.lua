@@ -1,6 +1,6 @@
 --#######################################
 --##
---##	   FinalFantasylization 8.1.0
+--##	   FinalFantasylization 8.1.1
 --##
 --##	     Final Fantasy 7
 --##
