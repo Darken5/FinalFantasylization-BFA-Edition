@@ -336,4 +336,6 @@ MapIDfix = {
 -- Dungeon 
 	[ 499 ]		= 84,	-- Deeprun Tram	-	Stormwind City
 	[ 500 ]		= 84,	-- Deeprun Tram - Bizmo's Brawlpub	-	Stormwind City
+	[ 720 ]		= 672,	-- Mardum, the Shattered Abyss - Upper Command Center	-	Mardum, the Shattered Abyss
+	[ 721 ]		= 672,	-- Mardum, the Shattered Abyss - Lower Command Center	-	Mardum, the Shattered Abyss
 }	

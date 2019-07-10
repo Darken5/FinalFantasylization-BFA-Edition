@@ -151,15 +151,11 @@ end
 function FinalFantasylizationUIFrame_EnableOn_OnClick()
 	FFZlib.ExecuteChatCommand("/ffs " .. EnabledCommand)
 	FinalFantasylizationUIFrame_DisabledWarningLabel:Hide()
-	FinalFantasylization_ClearMusicState();
-	FinalFantasylization_GetMusic()
 end
 
 function FinalFantasylizationUIFrame_EnableOff_OnClick()
 	FFZlib.ExecuteChatCommand("/ffs " .. DisabledCommand)
 	FinalFantasylizationUIFrame_DisabledWarningLabel:Show()
-	StopMusic()
-	FinalFantasylization_ClearMusicState();
 end
 
 function FinalFantasylizationUIFrame_MusicCheck_OnClick()

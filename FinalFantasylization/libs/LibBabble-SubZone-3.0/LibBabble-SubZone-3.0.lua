@@ -24,6 +24,17 @@ private["LibBabble-SubZone-3.0-LoadingLib"] = lib
 
 lib:SetBaseTranslations
 {
+	-- New
+	["Pathfinder's Den"] = "Pathfinder's Den",
+	["Throne of Flame"] = "Throne of Flame",
+	["Fel Pits"] = "Fel Pits",
+	["Stromgarde Keep"] = "Stromgarde Keep",
+	["Gloomtide Strand"] = "Gloomtide Strand",
+	["Lor'danel Landing"] = "Lor'danel Landing",
+	["Cinderfall Grove"] = "Cinderfall Grove",
+	["Blackrock Foundry Overlook"] = "Blackrock Foundry Overlook",
+	
+	-- Original
 	["7th Legion Base Camp"] = "7th Legion Base Camp",
 	["7th Legion Front"] = "7th Legion Front",
 	["7th Legion Submarine"] = "7th Legion Submarine",
