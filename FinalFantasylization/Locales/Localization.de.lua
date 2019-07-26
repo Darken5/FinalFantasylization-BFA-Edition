@@ -237,4 +237,7 @@ test - Aktiviert den Debug-Test
 FinalFantasylization-Gebrauch]]
 	Victory = "Sieg! Sieg!"
 
+	EnterPetBattle = "Player enters pet battle."
+	LeavePetBattle = "Player leaves pet battle."
+
 end

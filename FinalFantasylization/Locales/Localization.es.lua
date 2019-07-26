@@ -190,4 +190,7 @@ debug - Activa o no el modo de verificaci\195\179n
 test - Ejecuta un test de reparaci\195\179n]]
 	Victory = "\194\161Victoria! \194\161Victoria!"
 
+	EnterPetBattle = "Player enters pet battle."
+	LeavePetBattle = "Player leaves pet battle."
+
 end

@@ -226,4 +226,8 @@ monture - Active/suspend la musique de monture
 debug - Active ou non le mode de debogage
 test - Active ou non les tests de debogage]]
 	Victory = "Victoire! Victoire!"
+
+	EnterPetBattle = "Player enters pet battle."
+	LeavePetBattle = "Player leaves pet battle."
+
 end

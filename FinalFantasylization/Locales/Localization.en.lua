@@ -247,6 +247,8 @@ ff7 - switches to Final Fantasy 7 Soundpack
 	PlayerInRaid = "Player in Raid: "
 	AllianceRest = "Alliance player resting. zZz..."
 	HordeRest = "Horde player resting. zZz..."
+	EnterPetBattle = "Player enters pet battle."
+	LeavePetBattle = "Player leaves pet battle."
 	
 -- NEW - Localizatiion section for Area Variables
 
