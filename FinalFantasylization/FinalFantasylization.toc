@@ -1,4 +1,4 @@
-## Interface: 80200
+## Interface: 80205
 ## Version: 8.1.1
 ## Title: FinalFantasylization 8.1.1
 ## Notes: FinalFantasylization plays music and sounds based on different in-game events

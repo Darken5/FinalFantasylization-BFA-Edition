@@ -1268,6 +1268,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				Swim = 2,
 				--	TOWNS:
 				--	Alliance:
+				["Fallowmere Inn"] = { Type = "Town", Faction = "Alliance" },
 				["Farwatcher's Glen"] = { Type = "Town", Faction = "Alliance" },
 				["Mirkfallon Post"] = { Type = "Town", Faction = "Alliance" },
 				["Northwatch Expedition Base Camp"] = { Type = "Town", Faction = "Alliance" },
@@ -1524,6 +1525,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["Ravencrest Monument"] = { Type = "Subzone", Music = nil },
 				["Ruins of Arkkoran"] = { Type = "Subzone", Music = nil },
 				["Ruins of Eldarath"] = { Type = "Subzone", Music = nil },
+				["Ruins of Eldarath "] = { Type = "Subzone", Music = nil },
 				["Temple of Zin-Malor"] = { Type = "Subzone", Music = nil },
 				["Ruins of Nordressa"] = { Type = "Subzone", Music = nil },
 				["The Ruined Reaches"] = { Type = "Subzone", Music = nil },
@@ -3290,6 +3292,13 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 			[ 1406 ] = nil, -- Hrothgar's Landing	-	Northrend
 			[ 1408 ] = nil, -- Ashran	-
 			[ 1462 ] = nil, -- Mechagon Island	-	Kul Tiras
+			[ 1473 ] = {	-- Chamber of Heart
+				Faction = "Contested",
+				Songs = 1,
+				Music1 = ShattrathCitySong,
+				Sleep = false,
+				Swim = 1,
+			},
 			[ 1476 ] = nil, -- Twilight Highlands	-
 			[ 1478 ] = nil, -- Ashran	-	Draenor
 			[ 1501 ] = nil, -- Crestfall	-
