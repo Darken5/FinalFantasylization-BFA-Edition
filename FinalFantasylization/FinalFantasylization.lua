@@ -1,5 +1,5 @@
 -- FinalFantasylization by Darken5
--- Version 8.1.0
+-- Version 8.1.1
 ------------------------------------------------------------
 
 -- FinalFantasylization requires this version of FFZlib:
@@ -38,37 +38,40 @@ LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("FinalFantasylization", {
 
 function FinalFantasylization_OnLoad()
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_LEAVING_WORLD") -- Fires when the player logs out or exits a world area.
-	FinalFantasylizationFrame:RegisterEvent("PLAYER_ENTERING_WORLD") -- Fired when the player enters the world, enters/leaves an instance, or respawns at a graveyard. Also fires any other time the player sees a loading screen. 
+	FinalFantasylizationFrame:RegisterEvent("PLAYER_ENTERING_WORLD") -- Fired when the player enters the world, enters/leaves an instance, or respawns at a graveyard. Also fires any other time the player sees a loading screen.
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_ALIVE") -- This event fires after PLAYER_ENTERING_WORLD
-	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED") -- Fired when the player enters a new zone. Zones are the smallest named subdivions of the game world and are contained within areas (also called regions). Whenever the text over the minimap changes, this event is fired. 
-	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED_INDOORS") -- Fired when a player enters a new zone within a city. 
+	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED") -- Fired when the player enters a new zone. Zones are the smallest named subdivions of the game world and are contained within areas (also called regions). Whenever the text over the minimap changes, this event is fired.
+	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED_INDOORS") -- Fired when a player enters a new zone within a city.
 	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA") -- Fired when the user enters a new zone and a new area. e.g. moving from Duskwood to Stranglethorn Vale.
 	FinalFantasylizationFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_ENTER_COMBAT") -- This event fires when the player initiates melee auto-attack.
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_LEAVE_COMBAT") -- This event fires when the player stops melee auto-attack.
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_REGEN_DISABLED") -- Fired whenever you enter combat, as normal regen rates are disabled during combat.
-	FinalFantasylizationFrame:RegisterEvent("PLAYER_REGEN_ENABLED") -- Fired after ending combat, as regen rates return to normal. Useful for determining when a player has left combat. 
-	FinalFantasylizationFrame:RegisterEvent("PLAYER_XP_UPDATE") --Fired when the player's XP is updated (due quest completion or killing). 
+	FinalFantasylizationFrame:RegisterEvent("PLAYER_REGEN_ENABLED") -- Fired after ending combat, as regen rates return to normal. Useful for determining when a player has left combat.
+	FinalFantasylizationFrame:RegisterEvent("PLAYER_XP_UPDATE") --Fired when the player's XP is updated (due quest completion or killing).
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_PVP_KILLS_CHANGED") -- Fired when you slay another player.
 	FinalFantasylizationFrame:RegisterEvent("CHAT_MSG_COMBAT_FACTION_CHANGE") -- Fires when player's faction changes. ie: "Your reputation with Timbermaw Hold has very slightly increased."
-	FinalFantasylizationFrame:RegisterEvent("PLAYER_UPDATE_RESTING") -- Fired when the player starts or stops resting, i.e. when entering/leaving inns/major towns. 
-	FinalFantasylizationFrame:RegisterEvent("PLAYER_CAMPING") -- Fired when the player is camping 
+	FinalFantasylizationFrame:RegisterEvent("PLAYER_UPDATE_RESTING") -- Fired when the player starts or stops resting, i.e. when entering/leaving inns/major towns.
+	FinalFantasylizationFrame:RegisterEvent("PLAYER_CAMPING") -- Fired when the player is camping
 	FinalFantasylizationFrame:RegisterEvent("UNIT_AURA") -- Fires when a unit loses or gains a buff or debuff.
 	FinalFantasylizationFrame:RegisterEvent("UNIT_HEALTH") -- Fired whenever a units health is affected.
 	FinalFantasylizationFrame:RegisterEvent("UNIT_MODEL_CHANGED") -- Fired when the unit's 3d model changes. (Shapeshift, Polymorph, etc...)
 	FinalFantasylizationFrame:RegisterEvent("UNIT_SPELLCAST_SENT") -- Fires when a request to cast a spell (on behalf of the player or a unit controlled by the player) is sent to the server
-	FinalFantasylizationFrame:RegisterEvent("PLAYER_DEAD") -- Fired when the player has died. 
+	FinalFantasylizationFrame:RegisterEvent("PLAYER_DEAD") -- Fired when the player has died.
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_UNGHOST") -- Fired when the player is alive after being a ghost. Called after one of: Performing a successful corpse run and the player accepts the 'Resurrect Now' box. Accepting a resurrect from another player after releasing from a death. Zoning into an instance where the player is dead. When the player accept a resurrect from a Spirit Healer.
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_CONTROL_GAINED") -- Fires after the PLAYER_CONTROL_LOST event, when control has been restored to the player. (Recover from Mindcontrol, Taxi, etc...)
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_CONTROL_LOST") -- Fires whenever the player is unable to control the character. Examples are when afflicted by fear or when using a taxi. (Mindcontrol, Taxi, etc...)
-	FinalFantasylizationFrame:RegisterEvent("CHAT_MSG_BG_SYSTEM_NEUTRAL") -- Fired for non faction specific events in the battlegrounds such as the battle start announcement. 
-	FinalFantasylizationFrame:RegisterEvent("UPDATE_BATTLEFIELD_STATUS") -- Fired whenever joining a queue, leaving a queue, battlefield to join is changed, when you can join a battlefield, or if somebody wins the battleground. 
-	FinalFantasylizationFrame:RegisterEvent("UPDATE_CHAT_WINDOWS") -- Fired when there's a reason to update the chat windows. 
-	FinalFantasylizationFrame:RegisterEvent("CHAT_MSG_CHANNEL") -- Fired when the client receives a channel message. 
+	FinalFantasylizationFrame:RegisterEvent("CHAT_MSG_BG_SYSTEM_NEUTRAL") -- Fired for non faction specific events in the battlegrounds such as the battle start announcement.
+	FinalFantasylizationFrame:RegisterEvent("UPDATE_BATTLEFIELD_STATUS") -- Fired whenever joining a queue, leaving a queue, battlefield to join is changed, when you can join a battlefield, or if somebody wins the battleground.
+	FinalFantasylizationFrame:RegisterEvent("UPDATE_CHAT_WINDOWS") -- Fired when there's a reason to update the chat windows.
+	FinalFantasylizationFrame:RegisterEvent("CHAT_MSG_CHANNEL") -- Fired when the client receives a channel message.
 	FinalFantasylizationFrame:RegisterEvent("UPDATE_MOUSEOVER_UNIT") -- Fires whenever you mouse over any NPC or PC
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_LEVEL_UP") -- Fires when player levels up
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_GAINS_VEHICLE_DATA") -- Fires when the player gains vehicle-related attributes without necessarily entering a vehicle.
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_LOSES_VEHICLE_DATA"); -- Fires when the player loses vehicle-related attributes without necessarily having been in a vehicle.
+	FinalFantasylizationFrame:RegisterEvent("PET_BATTLE_OPENING_START"); -- Begins the transition between the current UI to the Pet Battle one.
+	FinalFantasylizationFrame:RegisterEvent("PET_BATTLE_OVER"); -- Fired when the pet battle is over, and all combat actions have been resolved.
+	FinalFantasylizationFrame:RegisterEvent("PET_BATTLE_LEVEL_CHANGED"); -- Fired when a battle pet levels.
 	
 	hooksecurefunc("JumpOrAscendStart"	, FinalFantasylization_JumpOrAscendStart);
 
@@ -167,6 +170,23 @@ function FinalFantasylization_OnEvent(self, event, ...)
 			FinalFantasylization_RegenGain = false
 			FinalFantasylization_LevelUpSong()
 		end
+	elseif event == "PET_BATTLE_OPENING_START" then
+		FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. EnterPetBattle)
+		if FinalFantasylizationOptions.Enabled == true then
+			FinalFantasylization_CombatSound()
+			FinalFantasylization_PlayerIsPetBattle = true
+		end
+	elseif event == "PET_BATTLE_OVER" then
+		FinalFantasylization_PlayerIsPetBattle = false
+		FinalFantasylization_RegenGain = true
+		FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. LeavePetBattle)
+		FinalFantasylization_CurrentZone = nil
+		FinalFantasylization_CurrentZoneID = nil
+	elseif event == "PET_BATTLE_LEVEL_CHANGED" then
+		if ( FinalFantasylization_RegenGain == true or FinalFantasylization_RegenGain == false ) and FinalFantasylizationOptions.LevelUp == true and FinalFantasylizationOptions.Sound == true then
+			FinalFantasylization_RegenGain = false
+			FinalFantasylization_LevelUpSong()
+		end
 	end
 --	FinalFantasylization_GetMusic()
 end
@@ -183,6 +203,8 @@ function FinalFantasylization_ClearMusicState()
 	FinalFantasylization_PlayerIsWorlding = false
 	FinalFantasylization_PlayerIsSleeping = false
 	FinalFantasylization_PlayerIsCombat = false
+	FinalFantasylization_PlayerIsPetBattle = false
+	FinalFantasylization_PlayerIsPetBattling = false
 	FinalFantasylization_PlayerIsFlying = false
 	FinalFantasylization_PlayerIsMounted = false
 	FinalFantasylization_PlayerIsEscape = false
@@ -220,138 +242,103 @@ function FinalFantasylization_Command(Command)
 		FinalFantasylizationUI_Show()
 	elseif Lower == EnabledCommand then
 		FinalFantasylization_Options("Enabled", true)
-		FFZlib.Message(FFZlib.Color.Yellow .. EnabledMessage)
 	elseif Lower == DisabledCommand then
 		FinalFantasylization_Options("Enabled", false)
-		FFZlib.Message(FFZlib.Color.Yellow .. DisabledMessage)
 	elseif Lower == DebugCommand then
 		if FinalFantasylizationOptions.Debug == false then
 			FinalFantasylization_Options("Debug", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. DebugOnMessage)
 		else
 			FinalFantasylization_Options("Debug", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. DebugOffMessage)
 		end
 	elseif Lower == MusicCommand then
 		if FinalFantasylizationOptions.Music == false then
 			FinalFantasylization_Options("Music", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. MusicOnMessage)
-			FinalFantasylization_GetMusic()
 		else
-			FinalFantasylization_Options("Music", false)			
-			FFZlib.Message(FFZlib.Color.Yellow .. MusicOffMessage)
+			FinalFantasylization_Options("Music", false)
 		end
 	elseif Lower == SoundCommand then
 		if FinalFantasylizationOptions.Sound == false then
 			FinalFantasylization_Options("Sound", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. SoundOnMessage)
 		else
 			FinalFantasylization_Options("Sound", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. SoundOffMessage)
 		end
 	elseif Lower == DungeonCommand then
 		if FinalFantasylizationOptions.Dungeon == false then
 			FinalFantasylization_Options("Dungeon", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. DungeonOnMessage)
 		else
 			FinalFantasylization_Options("Dungeon", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. DungeonOffMessage)
 		end
 	elseif Lower == MountCommand then
 		if FinalFantasylizationOptions.Mount == false then
 			FinalFantasylization_Options("Mount", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. MountOnMessage)
 		else
 			FinalFantasylization_Options("Mount", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. MountOffMessage)
 		end
 	elseif Lower == SleepCommand then
 		if FinalFantasylizationOptions.Sleep == false then
 			FinalFantasylization_Options("Sleep", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. SleepOnMessage)
 		else
 			FinalFantasylization_Options("Sleep", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. SleepOffMessage)
 		end
 	elseif Lower == SwimCommand then
 		if FinalFantasylizationOptions.Swim == false then
 			FinalFantasylization_Options("Swim", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. SwimOnMessage)
 		else
 			FinalFantasylization_Options("Swim", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. SwimOffMessage)
 		end
 	elseif Lower == DeadCommand then
 		if FinalFantasylizationOptions.Dead == false then
 			FinalFantasylization_Options("Dead", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. DeadOnMessage)
 		else
 			FinalFantasylization_Options("Dead", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. DeadOffMessage)
 		end
 	elseif Lower == FlightCommand then
 		if FinalFantasylizationOptions.Flight == false then
 			FinalFantasylization_Options("Flight", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. FlightOnMessage)
 		else
 			FinalFantasylization_Options("Flight", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. FlightOffMessage)
 		end
 	elseif Lower == CapitalCommand then
 		if FinalFantasylizationOptions.Capital == false then
 			FinalFantasylization_Options("Capital", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. CapitalOnMessage)
 		else
 			FinalFantasylization_Options("Capital", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. CapitalOffMessage)
 		end
 	elseif Lower == CombatCommand then
 		if FinalFantasylizationOptions.Combat == false then
 			FinalFantasylization_Options("Combat", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. CombatOnMessage)
 		else
 			FinalFantasylization_Options("Combat", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. CombatOffMessage)
 		end
 	elseif Lower == FanfareCommand then
 		if FinalFantasylizationOptions.Fanfare == false then
 			FinalFantasylization_Options("Fanfare", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. FanfareOnMessage)
 		else
 			FinalFantasylization_Options("Fanfare", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. FanfareOffMessage)
 		end
 	elseif Lower == LevelUpCommand then
 		if FinalFantasylizationOptions.LevelUp == false then
 			FinalFantasylization_Options("LevelUp", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. LevelUpOnMessage)
 		else
 			FinalFantasylization_Options("LevelUp", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. LevelUpOffMessage)
 		end
 		elseif Lower == RaidCommand then
 		if FinalFantasylizationOptions.Raid == false then
 			FinalFantasylization_Options("Raid", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. RaidOnMessage)
 		else
 			FinalFantasylization_Options("Raid", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. RaidOffMessage)
 		end
 	elseif Lower == ChocoboKwehCommand then
 		if FinalFantasylizationOptions.ChocoboKweh == false then
 			FinalFantasylization_Options("ChocoboKweh", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. ChocoboKwehOnMessage)
 		else
 			FinalFantasylization_Options("ChocoboKweh", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. ChocoboKwehOffMessage)
 		end
 	elseif Lower == BattlegroundCommand then
 		if FinalFantasylizationOptions.Battleground == false then
 			FinalFantasylization_Options("Battleground", true)
-			FFZlib.Message(FFZlib.Color.Yellow .. BattlegroundOnMessage)
 		else
 			FinalFantasylization_Options("Battleground", false)
-			FFZlib.Message(FFZlib.Color.Yellow .. BattlegroundOffMessage)
 		end
 	elseif Lower == TestCommand then
 		uiMapID = C_Map.GetBestMapForUnit("player");
@@ -414,6 +401,7 @@ end
 function FinalFantasylization_Options(Type, Value)
 	FFZlib.Assert(Value == true or Value == false, "New value should be true or false.")
 	FinalFantasylizationOptions[Type] = Value
+	FFZlib.Message(FFZlib.Color.Yellow .. _G[Type .. tostring(Value) .. "Message"])
 	if Value == true then
 		FinalFantasylization_ClearMusicState()
 		FinalFantasylization_OnUpdate(self, elapsed)
@@ -479,7 +467,7 @@ function FinalFantasylization_GetMusic()
 --'====================================================================================
 --'	Sounds
 --'====================================================================================
-		if FinalFantasylization_PlayerIsCombat == false and FinalFantasylization_RegenGain == true and FinalFantasylizationOptions.Fanfare == true and FinalFantasylizationOptions.Sound == true then
+		if FinalFantasylization_PlayerIsCombat == false and FinalFantasylization_PlayerIsPetBattle == false and FinalFantasylization_RegenGain == true and FinalFantasylizationOptions.Fanfare == true and FinalFantasylizationOptions.Sound == true then
 			FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. Victory)
 			FinalFantasylization_Fanfare() -- Battle fanfare call
 			FinalFantasylization_RegenGain = false
@@ -633,6 +621,19 @@ function FinalFantasylization_GetMusic()
 		end
 
 --'====================================================================================
+--'	World Event: Player in Pet Battle
+--'====================================================================================
+		if FinalFantasylization_PlayerIsPetBattle == true and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Combat == true and FinalFantasylizationOptions.Music == true then
+			if FinalFantasylization_PlayerIsPetBattling == false then
+				FinalFantasylization_WorldNormalPVE()
+			end
+			FinalFantasylization_IsPlaying = true
+			FinalFantasylization_PlayerIsPetBattling = true
+		else
+			FinalFantasylization_PlayerIsPetBattling = false
+		end
+
+--'====================================================================================
 --'	World Event: Player is Mounted in Hostile Zone
 --'====================================================================================
 		if IsMounted("player") and ( pvpType == "hostile" ) and FinalFantasylization_IsPlaying == false and FinalFantasylizationOptions.Mount == true and FinalFantasylizationOptions.Music == true then
@@ -697,11 +698,11 @@ function FinalFantasylization_GetMusic()
 --#########################################################################################
 
 	--Remove uiMapInfo.mapType Cosmic, World, and Continent from checks.
-		if not IsInInstance() and not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) and FinalFantasylizationOptions.Music == true then
+		if not ( FinalFantasylization_PlayerIsFlying == true ) and not ( FinalFantasylization_PlayerIsMounting == true ) and not ( FinalFantasylization_PlayerIsHostileMounting == true ) and not ( FinalFantasylization_PlayerIsEscape == true ) and not ( FinalFantasylization_PlayerIsTaxi == true ) and not ( FinalFantasylization_PlayerIsGhosting == true ) and FinalFantasylizationOptions.Music == true then
 			if not ( uiMapInfo == nil ) then
 				if ( uiMapInfo.mapType == ( 0 ) ) or ( uiMapInfo.mapType == ( 1 ) ) or ( uiMapInfo.mapType == ( 2 ) ) then
 					return			
-				elseif ( uiMapInfo.mapType == ( 3 ) or uiMapInfo.mapType == ( 4 ) ) then
+				elseif ( uiMapInfo.mapType == ( 3 ) ) then
 					CurrentZoneID = uiMapInfo.mapID
 				elseif MapIDfix[uiMapInfo.mapID] == nil then
 					FinalFantasylization_debugMsg(FFZlib.Color.Red .. "MapIDfix Error? : ".. FFZlib.Color.Yellow .. uiMapInfo.name .. " : " .. uiMapInfo.mapID) -- for testing purposes this can spam
@@ -723,6 +724,11 @@ function FinalFantasylization_GetMusic()
 			if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and CurrentZoneInfo.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
 				if FinalFantasylization_CurrentZone ~= "Sleeping" then
 					if lSubZoneName and ( CurrentZoneInfo[lSubZoneName].Faction == factionEnglish ) then
+						if factionEnglish == "Alliance" then
+							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. AllianceRest )
+						elseif factionEnglish == "Horde" then
+							FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. HordeRest )
+						end
 						FinalFantasylization_Sleeping();
 					else
 						FinalFantasylization_HostileSong();
@@ -740,6 +746,7 @@ function FinalFantasylization_GetMusic()
 			elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
 				if FinalFantasylization_CurrentZone ~= "Swimming" then
 					FinalFantasylization_CurrentZone = "Swimming"
+					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. Swimming )
 					if lSubZoneName and CurrentZoneInfo[lSubZoneName].Swim then
 						FinalFantasylization_Swimming(CurrentZoneInfo[lSubZoneName].Swim)
 					else
@@ -748,6 +755,7 @@ function FinalFantasylization_GetMusic()
 				else
 					return
 				end
+				
 				FinalFantasylization_IsPlaying = true
 				return
 			elseif CurrentZoneInfo[lSubZoneName] then
@@ -863,13 +871,13 @@ function FinalFantasylization_GetMusic()
 					end
 				end
 			else
-				if lSubZoneName ~= ZoneName and FinalFantasylization_CurrentZone ~= ZoneName and FinalFantasylizationOptions.Debug == true then
+				if lSubZoneName ~= nil and lSubZoneName ~= ZoneName and FinalFantasylization_CurrentZone ~= ZoneName and FinalFantasylizationOptions.Debug == true then
 					FinalFantasylization_debugMsg(FFZlib.Color.Red .. "SubZone Error: " .. FFZlib.Color.Orange .. "|-" .. FFZlib.Color.Blue .. lSubZoneName .. FFZlib.Color.Orange ..  "-| " .. FFZlib.Color.Aqua .. "- Not in FinalFantasylization.")
 					PlaySound(11466, "Master", false) -- "You are not prepared!" - Illidan Stormrage
 				end
 				if FinalFantasylization_CurrentZone ~= ZoneName then
 					FinalFantasylization_CurrentZone = ZoneName
-					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. ZoneName)
+					FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. "ZONE: " .. ZoneName)
 					if CurrentZoneInfo.Songs == 1 then
 						FinalFantasylization_PlayMusic( S .. CurrentZoneInfo.Music1 );
 						FinalFantasylization_debugMsg( tostring( CurrentZoneInfo.Music1 ) )
@@ -1102,7 +1110,7 @@ function FinalFantasylization_JumpOrAscendStart()
 			end
 		until ( active == true )
 		-- Debug
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. creatureName .. ": SpellID = " .. tostring(spellID) .. ", mountID = " .. tostring(mountID) )
+--			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. creatureName .. ": SpellID = " .. tostring(spellID) .. ", mountID = " .. tostring(mountID) )
 		-- Chocobo Kweh
 		if string.match(mountName,'strider') then
 			FinalFantasylization_ChocoboKweh();
