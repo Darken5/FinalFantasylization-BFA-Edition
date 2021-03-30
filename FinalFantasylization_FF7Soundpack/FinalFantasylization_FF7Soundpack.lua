@@ -1,6 +1,6 @@
 --#######################################
 --##
---##	   FinalFantasylization 8.1.1
+--##	   FinalFantasylization 8.1.2
 --##
 --##	     Final Fantasy 7
 --##
@@ -2748,10 +2748,62 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 				["The Vibrant Glade"] = { Type = "Subzone", Music = nil },
 				["West Spear Tower"] = { Type = "Subzone", Music = nil },
 				["Whisper Gulch"] = { Type = "Subzone", Music = nil },
-				["Winter's Breath Lake"] = { Type = "Subzone", Music = nil },				
+				["Winter's Breath Lake"] = { Type = "Subzone", Music = nil },
 			},
 			[ 118 ] = nil, -- Icecrown	-	Northrend
-			[ 119 ] = nil, -- Sholazar Basin	-	Northrend
+			[ 119 ] = { -- Sholazar Basin	-	Northrend
+				Faction = "Contested",
+				Songs = 2,
+				Music1 = ForestSong,
+				Music2 = ContestedSong,
+				Sleep = true,
+				Swim = 2,
+				--	TOWNS:
+				--	Neutral:
+				["Nesingwary Base Camp"] = { Type = "Town", Faction = "Neutral" },
+				["Frenzyheart Hill"] = { Type = "Town", Faction = "Neutral" },
+				["Rainspeaker Canopy"] = { Type = "Town", Faction = "Neutral" },
+				["Kartak's Hold"] = { Type = "Town", Faction = "Neutral" },
+				["Mistwhisper Refuge"] = { Type = "Town", Faction = "Neutral" },
+				["Mosswalker Village"] = { Type = "Town", Faction = "Neutral" },
+				["Sparktouched Haven"] = { Type = "Town", Faction = "Neutral" },
+				["Spearborn Encampment"] = { Type = "Town", Faction = "Neutral" },
+				--	SUBZONES:
+				["Bittertide Lake"] = { Type = "Subzone", Music = nil },
+				["The Bonefields"] = { Type = "Subzone", Music = nil },
+				["The Bones of Nozronn"] = { Type = "Subzone", Music = nil },
+				["Death's Hand Encampment"] = { Type = "Subzone", Music = nil },
+				["Dorian's Outpost"] = { Type = "Subzone", Music = nil },
+				["Frenzyheart River"] = { Type = "Subzone", Music = nil },
+				["The Glimmering Pillar"] = { Type = "Subzone", Music = nil },
+				["Hardknuckle Clearing"] = { Type = "Subzone", Music = nil },
+				["The Lost Lands"] = { Type = "Subzone", Music = nil },
+				["The Avalanche"] = { Type = "Subzone", Music = nil },
+				["The Blight Line"] = { Type = "Subzone", Music = nil },
+				["The Lifeblood Pillar"] = { Type = "Subzone", Music = nil },
+				["The Sundered Shard"] = { Type = "Subzone", Music = nil },
+				["Rainspeaker Rapids"] = { Type = "Subzone", Music = nil },
+				["The Lost Passage"] = { Type = "Subzone", Music = nil },
+				["The Makers' Overlook"] = { Type = "Subzone", Music = nil },
+				["Hall of Communion"] = { Type = "Subzone", Music = nil },
+				["Chamber of Observance"] = { Type = "Subzone", Music = nil },
+				["The Makers' Perch"] = { Type = "Subzone", Music = nil },
+				["The Mosslight Pillar"] = { Type = "Subzone", Music = nil },
+				["The North Sea"] = { Type = "Subzone", Music = nil },
+				["The Path of the Lifewarden"] = { Type = "Subzone", Music = nil },
+				["Swindlegrin's Dig"] = { Type = "Subzone", Music = nil },
+				["River's Heart"] = { Type = "Subzone", Music = nil },
+				["Lakeside Landing"] = { Type = "Subzone", Music = nil },
+				["Sapphire Hive"] = { Type = "Subzone", Music = nil },
+				["The Savage Thicket"] = { Type = "Subzone", Music = nil },
+				["The Seabreach Flow"] = { Type = "Subzone", Music = nil },
+				["The Skyreach Pillar"] = { Type = "Subzone", Music = nil },
+				["The Stormwright's Shelf"] = { Type = "Subzone", Music = nil },
+				["The Suntouched Pillar"] = { Type = "Subzone", Music = nil },
+				["Waygate"] = { Type = "Subzone", Music = nil },
+				["Wildgrowth Mangal"] = { Type = "Subzone", Music = nil },
+				["Wintergrasp River"] = { Type = "Subzone", Music = nil },
+			},
 			[ 120 ] = nil, -- The Storm Peaks	-	Northrend
 			[ 121 ] = { -- Zul'Drak	-	Northrend
 				Faction = "Contested",
